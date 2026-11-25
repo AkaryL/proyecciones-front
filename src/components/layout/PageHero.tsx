@@ -13,6 +13,7 @@ import shadowHero from '../../assets/svg/shadow-hero.svg'
 import { Icon } from '../icons/Icon'
 import type { IconName } from '../icons/iconPaths'
 import { Dropdown, type DropdownOption } from '../ui/Dropdown'
+import { FitText } from './FitText'
 import type { PageVariant } from './PageShell'
 import './PageHero.css'
 
@@ -24,7 +25,7 @@ type Lettering = { src: string; width: number }
  * trazos exactos del diseño; el texto real queda disponible para lectores de
  * pantalla y buscadores.
  */
-const LETTERING: Record<PageVariant, { title: Lettering; banner: Lettering; tagline: Lettering }> = {
+const LETTERING: Partial<Record<PageVariant, { title: Lettering; banner: Lettering; tagline: Lettering }>> = {
   mapa: {
     title: { src: titleMapa, width: 998.4 },
     banner: { src: bannerMapa, width: 940.8 },
@@ -76,7 +77,13 @@ function Chip({ chip }: { chip: HeroChip }) {
       <span className={`hero__chip-text ${chip.font === 'helvetica' ? 'f-h-bold' : 'f-bold'}`}>{chip.text}</span>
     </>
   )
-  if (!chip.select) return <div className="hero__chip hero__chip--static">{content}</div>
+  if (!chip.select) {
+    return (
+      <div className="hero__chip">
+        <div className="hero__chip--static">{content}</div>
+      </div>
+    )
+  }
   return (
     <Dropdown className="hero__chip" {...chip.select}>
       {content}
@@ -86,6 +93,29 @@ function Chip({ chip }: { chip: HeroChip }) {
 
 export function PageHero({ variant, title, banner, chip }: PageHeroProps) {
   const art = LETTERING[variant]
+  // Páginas sin rótulos en el diseño: mismo encabezado, con texto ajustado al ancho de la franja.
+  if (!art) {
+    return (
+      <section className={`hero hero--${variant}`}>
+        <h1 className="hero__title hero__title--text">
+          <FitText className="hero__fit f-black" width={1034} max={140}>
+            {title}
+          </FitText>
+        </h1>
+        <img className="hero__shadow" src={shadowHero} alt="" aria-hidden="true" />
+        <p className="hero__banner hero__banner--text">
+          <FitText className="hero__fit f-bold" width={930} max={53}>
+            {banner}
+          </FitText>
+        </p>
+        <p className="hero__tagline">
+          <span className="sr-only">{TAGLINE}</span>
+          <img className="hero__lettering" src={taglineDiputaciones} style={{ '--w': 1012 } as CSSProperties} alt="" aria-hidden="true" />
+        </p>
+        {chip ? <Chip chip={chip} /> : null}
+      </section>
+    )
+  }
   return (
     <section className={`hero hero--${variant}`}>
       <h1 className="hero__title">

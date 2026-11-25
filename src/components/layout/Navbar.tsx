@@ -13,7 +13,7 @@ const NAV_ITEMS: NavItem[] = [
   { label: 'COMPARATIVO' },
   { label: 'TERRITORIO' },
   { label: 'SIMULACIÓN', to: '/simulacion' },
-  { label: 'FUENTES' },
+  { label: 'FUENTES', to: '/fuentes' },
 ]
 
 /** Menú superior: banda a todo lo ancho con los enlaces repartidos en la ventana. */

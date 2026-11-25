@@ -196,3 +196,54 @@
 .hero--simulacion .hero__chip-text {
   letter-spacing: -0.012em;
 }
+
+/* ---------- Páginas sin rótulos en el diseño (mismo encuadre que Diputaciones) ---------- */
+.hero--documento {
+  --hero-end: 590px;
+  --title-x: 203.1px;
+  --title-base: 268px;
+  --banner-x: 211.3px;
+  --banner-y: 295.3px;
+  --banner-w: 1017.4px;
+  --banner-h: 87.4px;
+  --banner-r: 32.4px;
+  --shadow-x: 253.2px;
+  --shadow-w: 933.7px;
+  --shadow-h: 129.4px;
+  --tagline-x: 212.1px;
+  --tagline-base: 426.3px;
+  --tagline-size: 22.3px;
+  --chip-y: 480px;
+  --chip-w: 420px;
+}
+
+.hero__fit {
+  display: block;
+  font-size: calc(var(--size) * 1px);
+  line-height: 1;
+  white-space: nowrap;
+}
+
+/* título centrado sobre la franja, con la línea base donde la pone el diseño */
+.hero__title--text {
+  left: 0;
+  top: auto;
+  bottom: calc(100% - (var(--title-base) - var(--nav)));
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  color: var(--ink);
+}
+
+.hero__title--text .hero__fit {
+  /* la caja del texto baja hasta su línea base */
+  margin-bottom: -0.14em;
+  letter-spacing: -0.01em;
+}
+
+.hero__banner--text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}

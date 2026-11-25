@@ -21,7 +21,15 @@ npm run lint
 | `/diputaciones` | Diputaciones  | `src/pages/DiputacionesPage.tsx` |
 | `/simulacion`   | Simulación    | `src/pages/SimulacionPage.tsx`   |
 
-Comparativo, Territorio y Fuentes aparecen en el menú pero aún no tienen diseño.
+| `/fuentes`      | Fuentes       | `src/pages/FuentesPage.tsx`      |
+
+Comparativo y Territorio aparecen en el menú pero aún no tienen página.
+
+Fuentes no tiene pantalla en el diseño: usa el mismo encabezado y el contenido
+completo del tablero del motor, tomado tal cual (su HTML ya armado) con
+`node scripts/snapshot-tablero.mjs "ruta/al/paquete"` y pintado con sus propios
+estilos adaptados (`src/styles/tablero.css`, generado por
+`scripts/tablero-css.mjs`). Lo muestra `src/components/tablero/TableroContent.tsx`.
 
 ## Cómo está armado
 

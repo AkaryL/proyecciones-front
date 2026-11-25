@@ -56,3 +56,14 @@
   top: calc(65.069 * var(--u));
   height: calc(4577.622 * var(--u));
 }
+
+/* ---------- Páginas de documentación (alto variable) ---------- */
+.page--documento {
+  --footer-height: 84;
+  background: #f4f4f5;
+}
+
+.page--documento .page__bg {
+  top: calc(65.069 * var(--u));
+  height: calc(4577.622 * var(--u));
+}
