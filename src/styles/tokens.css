@@ -1,0 +1,57 @@
+:root {
+  /*
+   * Escala del diseño
+   * -----------------
+   * Ancho máximo (en px reales) con el que se muestra el artboard de 1440 px.
+   *   1440 -> tamaño real del diseño (100 %)
+   *    960 -> diseño al 67 % (contenido centrado con aire a los lados)
+   * En ventanas más angostas que este valor el sitio se encoge para caber.
+   */
+  --frame-max: 960;
+
+  /* ---------- Tipografía ---------- */
+  --font-gotham: 'Montserrat Variable', 'Montserrat', sans-serif;
+  --font-gotham-black: 'PE Gotham Black', 'Montserrat Variable', sans-serif;
+  --font-helvetica: 'Helvetica Neue', 'Arimo', Arial, sans-serif;
+  --font-arial-black: 'Arial Black', 'Arial Bold', 'PE Gotham Black', sans-serif;
+  --font-myriad: 'Myriad Pro', 'Source Sans 3', sans-serif;
+
+  /* ---------- Tinta ---------- */
+  --ink: #292c31;
+  --ink-strong: #1c2127;
+  --ink-number: #434343;
+  --muted: #687382;
+  --line: #e3e7eb;
+  --track: #e9edf1;
+  --surface-soft: #f0f5f7;
+  --surface-stripe: #f7fafb;
+
+  /* ---------- Marca ---------- */
+  --aqua: #00e4c6;
+  --teal: #00aba5;
+  --teal-deep: #00384b;
+
+  /* ---------- Partidos ---------- */
+  --morena: #c30344;
+  --morena-dark: #9c0b11;
+  --morena-word: #a41419;
+  --mc: #ff8231;
+  --pan: #0064b9;
+  --pan-navy: #002f81;
+  --pri: #00541f;
+  --pri-bright: #00ac52;
+  --pvem: #13a754;
+  --pt: #ff3737;
+
+  /* ---------- Avisos ---------- */
+  --warn-bg: #fff3dd;
+  --warn-line: #ffb43f;
+  --warn-ink: #cb7900;
+
+  /* ---------- Degradados (muestreados del diseño) ---------- */
+  --grad-banner: linear-gradient(90deg, #58e3c4 0%, #3dbea9 15%, #1c998d 29.6%, #06495c 100%);
+  --grad-brand: linear-gradient(90deg, #00e4c6 0%, #00aba5 50%, #00384b 100%);
+  --grad-footer: linear-gradient(90deg, #00e4c6 0%, #00c3b9 40%, #00beb7 45%, #00b2ad 50%, #003049 100%);
+  --grad-footer-up: linear-gradient(0deg, #00e4c6 0%, #00c3b9 40%, #00beb7 45%, #00b2ad 50%, #003049 100%);
+  --grad-navy: linear-gradient(to bottom right, #001326 0%, #002e49 100%);
+}

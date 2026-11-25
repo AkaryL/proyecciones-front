@@ -1,0 +1,1003 @@
+/* ===========================================================================
+ * Página "Simulación" — coordenadas del diseño (artboard 1440 × 4678.5)
+ * Los bloques van en flujo con las separaciones medidas en el PDF; el interior
+ * de cada tarjeta usa posiciones absolutas respecto a la tarjeta.
+ * ======================================================================== */
+.simulacion {
+  padding-bottom: 65.5px;
+}
+
+.sim__tag {
+  margin-left: 90px;
+}
+
+.sim__heading {
+  margin-left: 90px;
+  color: var(--ink-strong);
+  font-size: 34px;
+}
+
+.sim__subheading {
+  margin: 50px 0 0 90px;
+  color: var(--ink-strong);
+  font-size: 26px;
+}
+
+/* ---------------------------------------------------------------------------
+ * Veredicto del motor (y = 588.5 → 998.5)
+ * ------------------------------------------------------------------------ */
+.verdict {
+  width: 1260px;
+  height: 360px;
+  margin: 16px 0 0 90px;
+}
+
+.verdict__icon {
+  position: absolute;
+  left: 36px;
+  top: 30px;
+}
+
+.verdict__title {
+  position: absolute;
+  left: 110px;
+  top: calc(70px - 1em);
+  /* color de la candidatura favorita en el escenario elegido */
+  color: var(--tone, var(--morena));
+  font-size: 32px;
+}
+
+/* al cambiar de escenario, el punto y el rango se deslizan a su nueva posición */
+.vote__dot,
+.vote__range {
+  transition: left 0.45s cubic-bezier(0.22, 1, 0.36, 1), width 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.verdict__odds {
+  position: absolute;
+  left: 84px;
+  top: 139px;
+  width: 152px;
+  height: 152px;
+  text-align: center;
+}
+
+.verdict__donut {
+  width: 152px;
+  height: 152px;
+}
+
+.verdict__odds-value {
+  position: absolute;
+  left: 0;
+  top: calc(86px - 1em);
+  width: 100%;
+  color: var(--ink-strong);
+  font-size: 30px;
+}
+
+.verdict__odds-caption {
+  position: absolute;
+  left: -40px;
+  top: calc(173px - 1em);
+  width: calc(100% + 80px);
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.verdict__divider {
+  position: absolute;
+  left: 319.5px;
+  top: 110px;
+  width: 1px;
+  height: 220px;
+  background: var(--line);
+}
+
+.verdict__chart-title {
+  position: absolute;
+  left: 350px;
+  top: calc(120px - 1em);
+  color: var(--muted);
+  font-size: 12px;
+  letter-spacing: 0.12em;
+}
+
+/* --- Eje (0 % → 60 % en 620 px) --- */
+.verdict__axis {
+  position: absolute;
+  left: 600px;
+  top: 140px;
+  width: 620px;
+  height: 156px;
+}
+
+.verdict__tick {
+  position: absolute;
+  left: calc(var(--at) * 1%);
+  top: 0;
+  height: 100%;
+}
+
+.verdict__tick::before {
+  content: '';
+  position: absolute;
+  left: -0.5px;
+  top: 0;
+  width: 1px;
+  height: 100%;
+  background: var(--track);
+}
+
+.verdict__tick .bl {
+  position: absolute;
+  left: 0;
+  top: calc(178px - 1em);
+  transform: translateX(-50%);
+  color: var(--muted);
+  font-size: 11px;
+}
+
+/* --- Filas por fuerza política --- */
+.vote {
+  position: absolute;
+  left: 0;
+  top: calc(159px + var(--row) * 56px);
+  width: 100%;
+  height: 22px;
+}
+
+.vote__wordmark {
+  position: absolute;
+  left: 350px;
+  top: 0;
+  color: var(--morena-word);
+  font-size: 24px;
+  letter-spacing: -0.04em;
+  --bl: 17px;
+}
+
+.vote__allies {
+  position: absolute;
+  left: 441.3px;
+  top: 0;
+  color: var(--muted);
+  font-size: 10.4px;
+  --bl: 16.6px;
+}
+
+.vote__eagle {
+  position: absolute;
+  left: 351.1px;
+  top: 2.4px;
+  width: 35.7px;
+  height: 19.4px;
+}
+
+.vote__mc {
+  position: absolute;
+  left: 394px;
+  top: 0;
+  color: var(--mc);
+  font-size: 16px;
+  --bl: 18px;
+}
+
+.vote__pan,
+.vote__pri {
+  position: absolute;
+  top: -1px;
+  height: 24px;
+}
+
+.vote__pan .bl,
+.vote__pri .bl {
+  position: absolute;
+  top: 0;
+  --bl: 17px;
+}
+
+.vote__pan {
+  left: 350px;
+  width: 52px;
+  border-radius: 6px;
+  background: var(--pan);
+  color: #fff;
+  font-size: 14px;
+}
+
+.vote__pan .bl {
+  left: 10.7px;
+}
+
+.vote__pri {
+  left: 406px;
+  width: 50px;
+  border-radius: 12px;
+  background: linear-gradient(90deg, #00ac52 0 34%, #fff 34% 66%, #f92323 66% 100%);
+  box-shadow: 0 0 0 0.5px #d0d0d0, inset 0 0 0 0.5px #d0d0d0;
+  color: #181818;
+  font-size: 13px;
+}
+
+.vote__pri .bl {
+  left: 13.8px;
+}
+
+.vote__value,
+.vote__delta {
+  position: absolute;
+  right: calc(100% - 570px);
+  top: 0;
+}
+
+.vote__value {
+  color: var(--ink-strong);
+  font-size: 24px;
+  --bl: 13px;
+}
+
+.vote__delta {
+  color: var(--muted);
+  font-size: 11px;
+  --bl: 31px;
+}
+
+.vote__plot {
+  position: absolute;
+  left: 600px;
+  top: 0;
+  width: 620px;
+  height: 22px;
+}
+
+.vote__track {
+  position: absolute;
+  left: 0;
+  top: 9px;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background: var(--track);
+}
+
+.vote__range {
+  position: absolute;
+  left: calc(var(--from) * 1%);
+  top: 0;
+  width: calc((var(--to) - var(--from)) * 1%);
+  height: 22px;
+  border-radius: 11px;
+  background: color-mix(in srgb, var(--tone) 28%, transparent);
+  box-shadow:
+    0 0 0 0.5px color-mix(in srgb, var(--tone) 60%, transparent),
+    inset 0 0 0 0.5px color-mix(in srgb, var(--tone) 60%, transparent);
+}
+
+.vote__range-label {
+  position: absolute;
+  left: 50%;
+  top: calc(37px - 1em);
+  transform: translateX(-50%);
+  color: var(--muted);
+  font-size: 10.5px;
+}
+
+.vote__dot {
+  position: absolute;
+  left: calc(var(--at) * 1%);
+  top: 11px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--tone);
+  /* contorno blanco de 3 px centrado sobre el borde del punto */
+  box-shadow: 0 0 0 1.5px #fff, inset 0 0 0 1.5px #fff;
+  transform: translate(-50%, -50%);
+}
+
+/* ---------------------------------------------------------------------------
+ * Grupos clave (y = 1062.5 → 2140.5)
+ * ------------------------------------------------------------------------ */
+.sim-groups {
+  margin-top: 64px;
+}
+
+.sim-groups > .sim__heading {
+  margin-top: 10px;
+}
+
+/* --- Fórmula del interés --- */
+.formula {
+  width: 1260px;
+  height: 170px;
+  margin: 53px 0 0 90px;
+}
+
+.formula__title {
+  position: absolute;
+  left: 36px;
+  top: calc(38px - 1em);
+  color: var(--muted);
+  font-size: 12px;
+  letter-spacing: 0.12em;
+}
+
+.formula__term {
+  position: absolute;
+  left: calc(36px + var(--i) * 300px);
+  top: 56px;
+  width: 250px;
+  height: 64px;
+  border-radius: 16px;
+  background: var(--surface-soft);
+}
+
+.formula__badge {
+  position: absolute;
+  left: 16px;
+  top: 12px;
+}
+
+.formula__label {
+  position: absolute;
+  left: 68px;
+  top: 0;
+  color: var(--ink-strong);
+  font-size: 14px;
+  --bl: 37px;
+}
+
+.formula__label--1 {
+  left: 64px;
+  font-size: 13px;
+}
+
+.formula__root {
+  font-family: var(--font-myriad);
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+.formula__operator {
+  position: absolute;
+  left: calc(302.7px + var(--i) * 300px);
+  top: calc(98px - 1em);
+  color: var(--teal);
+  font-size: 26px;
+}
+
+.formula__result {
+  position: absolute;
+  left: 936px;
+  top: 56px;
+  width: 250px;
+  height: 64px;
+  border-radius: 16px;
+  background: var(--grad-brand);
+  color: #fff;
+  font-size: 17px;
+}
+
+.formula__result .icon {
+  position: absolute;
+  left: 16px;
+  top: 20px;
+  width: 24px;
+  height: 24px;
+}
+
+.formula__result .bl {
+  position: absolute;
+  left: 52px;
+  top: 0;
+  --bl: 37px;
+}
+
+/* --- Indicadores --- */
+.kpis {
+  position: relative;
+  height: 124px;
+  margin-top: 30px;
+}
+
+.kpi {
+  position: absolute;
+  left: calc(90px + var(--slot) * 320px);
+  top: 0;
+  width: 300px;
+  height: 124px;
+  border-radius: 20px;
+}
+
+.kpi__label {
+  position: absolute;
+  left: 22px;
+  top: calc(30px - 1em);
+  color: var(--muted);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+}
+
+.kpi__value {
+  position: absolute;
+  left: 22px;
+  top: calc(78px - 1em);
+  color: var(--ink-strong);
+  font-size: 40px;
+}
+
+.kpi__note {
+  position: absolute;
+  left: 22px;
+  top: calc(104px - 1em);
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.kpi__versus {
+  font-size: 34px;
+}
+
+.kpi__versus .bl {
+  position: absolute;
+  top: calc(74px - 1em);
+}
+
+.kpi__versus-mc {
+  left: 22px;
+  color: var(--mc);
+}
+
+.kpi__versus-dot {
+  left: 70px;
+  color: #c8cfd7;
+}
+
+.kpi__versus-morena {
+  left: 90px;
+  color: var(--morena);
+}
+
+.kpi__split {
+  position: absolute;
+  left: 22px;
+  top: 90px;
+  display: flex;
+  width: 256px;
+  height: 12px;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.kpi__split > span {
+  flex: 0 0 calc(var(--v) * 1%);
+  background: var(--tone);
+}
+
+.kpi__caption {
+  position: absolute;
+  left: 22px;
+  top: calc(116px - 1em);
+  color: var(--muted);
+  font-size: 10.5px;
+}
+
+/* --- Mapa de grupos y lectura rápida --- */
+.sim-groups__grid {
+  position: relative;
+  height: 500px;
+  margin-top: 47px;
+}
+
+.group-map {
+  position: absolute;
+  left: 90px;
+  top: 0;
+  width: 840px;
+  height: 500px;
+}
+
+.group-map__head {
+  position: absolute;
+  top: calc(40px - 1em);
+  color: var(--ink-strong);
+  font-size: 13px;
+  letter-spacing: 0.15em;
+}
+
+.group-map__head--men {
+  left: 164px;
+}
+
+.group-map__head--women {
+  left: 582.6px;
+}
+
+.group-map__divider {
+  position: absolute;
+  left: 419.5px;
+  top: 34px;
+  width: 1px;
+  height: 442px;
+  background: var(--line);
+}
+
+.group-map__row {
+  position: absolute;
+  left: 0;
+  top: calc(94px + var(--i) * 66px);
+  width: 100%;
+  height: 48px;
+}
+
+.group-map__age {
+  position: absolute;
+  top: 0;
+  color: var(--ink-strong);
+  font-size: 16px;
+  --bl: 28px;
+}
+
+.group-map__age--men {
+  left: 89.5px;
+}
+
+.group-map__age--women {
+  left: 501.7px;
+}
+
+.group-map__cell {
+  position: absolute;
+  top: 0;
+}
+
+.group-map__cell--men {
+  left: 190.2px;
+}
+
+.group-map__cell--women {
+  left: 608.3px;
+}
+
+.group-chip {
+  position: relative;
+  display: block;
+  width: 150px;
+  height: 48px;
+  border-radius: 12px;
+  background: var(--tone);
+  color: #fff;
+}
+
+.group-chip__title {
+  position: absolute;
+  left: 14px;
+  top: 0;
+  font-size: 15px;
+  --bl: 21px;
+}
+
+.group-chip__note {
+  position: absolute;
+  left: 14px;
+  top: 0;
+  opacity: 0.9;
+  font-size: 10.5px;
+  --bl: 38px;
+}
+
+/* cada celda es un botón que lleva a sus filas de la tabla por grupos de edad */
+button.group-chip {
+  text-align: left;
+  transition: box-shadow 0.16s ease, transform 0.16s ease;
+}
+
+button.group-chip:hover,
+button.group-chip:focus-visible,
+button.group-chip.is-focus {
+  outline: none;
+  box-shadow: 0 0 0 3px #fff, 0 0 0 5px var(--tone);
+  transform: translateY(-1px);
+}
+
+/* celda sin datos: contorno punteado (trazos de 4 px, como en el diseño) */
+.group-chip--empty {
+  display: flex;
+  justify-content: center;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 150 48' preserveAspectRatio='none'%3E%3Crect x='.5' y='.5' width='149' height='47' rx='11.5' fill='none' stroke='%23d4dadf' stroke-dasharray='4 4'/%3E%3C/svg%3E")
+    center / 100% 100% no-repeat;
+  color: #b4bcc6;
+  font-size: 14px;
+}
+
+.group-chip--empty .bl {
+  --bl: 29px;
+}
+
+.quick-reads {
+  position: absolute;
+  left: 960px;
+  top: 0;
+  width: 390px;
+  height: 500px;
+}
+
+.quick-reads__icon {
+  position: absolute;
+  left: 24px;
+  top: 24px;
+}
+
+.quick-reads__title {
+  position: absolute;
+  left: 78px;
+  top: calc(50px - 1em);
+  color: var(--ink-strong);
+  font-size: 13px;
+  letter-spacing: 0.12em;
+}
+
+.quick-read {
+  position: absolute;
+  left: 24px;
+  top: calc(94px + var(--i) * 98px);
+}
+
+.quick-read__icon {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.quick-read__title {
+  position: absolute;
+  left: 54px;
+  top: 0;
+  color: var(--ink-strong);
+  font-size: 15px;
+  --bl: 18px;
+}
+
+.quick-read__text {
+  position: absolute;
+  left: 54px;
+  top: 22px;
+  color: var(--muted);
+  font-size: 12.5px;
+}
+
+.quick-read__text .bl {
+  --bl: 18px;
+}
+
+/* ---------------------------------------------------------------------------
+ * Análisis por grupos de edad (y = 2184.1 → 3642.1)
+ * ------------------------------------------------------------------------ */
+.sim-ages {
+  margin-top: 43.6px;
+}
+
+.sim-ages__subtitle {
+  margin: 17px 0 0 90px;
+  color: var(--muted);
+  font-size: 15px;
+}
+
+.sim-ages__legend {
+  position: relative;
+  width: 1260px;
+  height: 73px;
+  margin: 39px 0 0 90px;
+  border-radius: 24px / 36.5px;
+  background: #fff;
+  box-shadow: inset 0 0 0 1px var(--line);
+}
+
+.sim-ages__parties {
+  position: absolute;
+  left: 17.5px;
+  top: 28.2px;
+}
+
+.sim-ages__legend-note {
+  position: absolute;
+  left: 766.4px;
+  top: calc(39.9px - 1em);
+  color: var(--muted);
+  font-size: 12px;
+}
+
+/* --- Tabla --- */
+.age-table {
+  width: 1260px;
+  height: 1260px;
+  margin: 20px 0 0 90px;
+}
+
+/* líneas bajo el encabezado y sobre la leyenda de medios */
+.age-table::before,
+.age-table::after {
+  content: '';
+  position: absolute;
+  left: 20px;
+  width: 1220px;
+  height: 1px;
+  background: var(--line);
+}
+
+.age-table::before {
+  top: 55.5px;
+}
+
+.age-table::after {
+  top: 1129.5px;
+}
+
+.age-table__head {
+  color: var(--muted);
+  font-size: 11px;
+  letter-spacing: 0.11em;
+}
+
+.age-table__head .bl {
+  position: absolute;
+  left: calc(var(--x) * 1px);
+  top: calc(38px - 1em);
+}
+
+.age-table__rows {
+  position: absolute;
+  left: 0;
+  top: 60px;
+  width: 100%;
+}
+
+.age-row {
+  position: relative;
+  height: 66px;
+}
+
+.age-row--striped::before {
+  content: '';
+  position: absolute;
+  left: 8px;
+  top: 0;
+  width: 1244px;
+  height: 66px;
+  border-radius: 12px;
+  background: var(--surface-stripe);
+}
+
+/* fila resaltada: la que está bajo el cursor o la del grupo señalado en el mapa de grupos */
+.age-row::after {
+  content: '';
+  position: absolute;
+  left: 8px;
+  top: 0;
+  width: 1244px;
+  height: 66px;
+  border-radius: 12px;
+  background: rgb(0 171 165 / 0.07);
+  box-shadow: inset 0 0 0 1.5px var(--teal);
+  opacity: 0;
+  transition: opacity 0.16s ease;
+  pointer-events: none;
+}
+
+.age-row:hover::after,
+.age-row.is-focus::after {
+  opacity: 1;
+}
+
+.age-row__content {
+  position: absolute;
+  left: 0;
+  top: calc((16 + var(--dy, 0)) * 1px);
+  width: 100%;
+  height: 34px;
+}
+
+.age-row__number {
+  position: absolute;
+  left: 20px;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--track);
+  color: var(--ink-strong);
+  font-size: 14px;
+}
+
+.age-row__number .bl {
+  --bl: 22px;
+}
+
+.age-row__name {
+  position: absolute;
+  left: 67px;
+  top: 0;
+  color: var(--ink-strong);
+  font-size: 15px;
+  --bl: 15px;
+}
+
+.age-row__voters {
+  position: absolute;
+  left: 67px;
+  top: 0;
+  color: var(--muted);
+  font-size: 11px;
+  --bl: 35px;
+}
+
+.age-row__bar {
+  position: absolute;
+  left: 318.6px;
+  top: 4px;
+  width: 300px;
+}
+
+.age-row__lead {
+  position: absolute;
+  left: 759.5px;
+  top: 3px;
+  display: flex;
+  justify-content: center;
+  width: 112px;
+  height: 28px;
+  border-radius: 14px;
+  background: var(--tone);
+  color: #fff;
+  font-size: 13px;
+}
+
+.age-row__lead .bl {
+  --bl: 19px;
+}
+
+.age-row__turnout {
+  position: absolute;
+  left: 998.5px;
+  top: -3px;
+  width: 40px;
+  height: 40px;
+  color: var(--ink-strong);
+  font-size: 10px;
+  text-align: center;
+}
+
+.age-row__turnout svg {
+  width: 40px;
+  height: 40px;
+}
+
+.age-row__turnout .bl {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  --bl: 23.5px;
+}
+
+.age-row__media {
+  position: absolute;
+  left: 1149px;
+  top: 7px;
+  display: flex;
+  gap: 6px;
+  color: var(--teal);
+}
+
+.age-row__media .icon {
+  width: 20px;
+  height: 20px;
+}
+
+/* --- Leyenda de medios --- */
+.age-table__legend {
+  position: absolute;
+  left: 8px;
+  top: 1182px;
+  width: 1244px;
+  height: 66px;
+  border-radius: 12px;
+  background: var(--surface-stripe);
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.age-table__legend-item {
+  position: absolute;
+  left: calc(var(--x) * 1px - 8px);
+  top: 24px;
+}
+
+.age-table__legend-item .icon {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 20px;
+  height: 20px;
+  color: var(--teal);
+}
+
+.age-table__legend-item .bl {
+  position: absolute;
+  left: 24px;
+  top: 0;
+  --bl: 14px;
+}
+
+.age-table__footnote {
+  position: absolute;
+  left: 686.1px;
+  top: calc(38px - 1em);
+  font-size: 11.5px;
+}
+
+/* ---------------------------------------------------------------------------
+ * IA generativa: simulador de escenarios (y = 3696.1 → 4529)
+ * ------------------------------------------------------------------------ */
+.sim-ai {
+  margin-top: 54px;
+}
+
+.sim-ai > .sim__heading {
+  margin-top: 20px;
+}
+
+.sim-ai__grid {
+  position: relative;
+  height: 709px;
+  margin-top: 35.9px;
+}
+
+.sim-ai__grid .simulator {
+  position: absolute;
+  left: 86.4px;
+  top: 0;
+}
+
+.sim-ai__panel {
+  position: absolute;
+  left: 869.2px;
+  top: 0;
+  width: 480.8px;
+  height: 709px;
+  border-radius: 41.9px;
+  background: var(--grad-footer-up);
+  color: #fff;
+}
+
+.sim-ai__panel-title {
+  position: absolute;
+  left: 60.7px;
+  top: 115.3px;
+  font-size: 29px;
+}
+
+.sim-ai__panel-title .bl + .bl {
+  --bl: 34.8px;
+}
+
+.sim-ai__panel-text {
+  position: absolute;
+  left: 62.5px;
+  font-size: 21px;
+}
+
+.sim-ai__panel-text .bl {
+  --bl: 25.2px;
+}
+
+.sim-ai__panel-text:nth-of-type(1) {
+  top: 239.7px;
+}
+
+.sim-ai__panel-text:nth-of-type(2) {
+  top: 365.7px;
+}

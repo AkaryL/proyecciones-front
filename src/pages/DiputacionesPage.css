@@ -1,0 +1,679 @@
+/* ===========================================================================
+ * Página "Diputaciones" — coordenadas del diseño (artboard 1440 × 3966.5)
+ * Cada bloque se coloca en flujo con las separaciones medidas en el PDF; el
+ * interior de las tarjetas usa posiciones absolutas respecto a la tarjeta.
+ * ======================================================================== */
+.diputaciones {
+  padding-bottom: 115.9px;
+}
+
+/* ---------------------------------------------------------------------------
+ * Las tres boletas (y = 590 → 1026.5)
+ * ------------------------------------------------------------------------ */
+.ballots__tag {
+  margin-left: 90px;
+}
+
+.ballots__title {
+  margin: 10px 0 0 90px;
+  color: var(--ink-strong);
+  font-size: 34px;
+  letter-spacing: -0.028em;
+}
+
+.ballots__grid {
+  position: relative;
+  height: 309.1px;
+  margin-top: 49.4px;
+}
+
+.ballot {
+  position: absolute;
+  top: 0;
+  width: 400px;
+  height: 309.1px;
+}
+
+.ballot--mayor {
+  left: 90px;
+}
+
+.ballot--local {
+  left: 520px;
+}
+
+.ballot--federal {
+  left: 950px;
+}
+
+.ballot__icon {
+  position: absolute;
+  left: 26px;
+  top: 34.8px;
+}
+
+.ballot__title {
+  position: absolute;
+  left: 94px;
+  top: calc(55.3px - 1em);
+  color: var(--muted);
+  font-size: 21px;
+  letter-spacing: 0.112em;
+  word-spacing: 0;
+}
+
+.ballot--mayor .ballot__title {
+  top: calc(55.2px - 1em);
+  letter-spacing: 0.252em;
+}
+
+.ballot__rule {
+  position: absolute;
+  left: 93.1px;
+  top: 61.8px;
+  width: 277.2px;
+  height: 2px;
+  border-radius: 1px;
+  background: var(--muted);
+  opacity: 0.21;
+}
+
+.ballot__kicker {
+  position: absolute;
+  left: 95.3px;
+  top: calc(85.4px - 1em);
+  color: var(--ink-strong);
+  font-size: 20px;
+  letter-spacing: 0.112em;
+}
+
+.ballot--mayor .ballot__kicker {
+  left: 94.1px;
+  letter-spacing: 0.072em;
+}
+
+/* --- Alcaldía: punteros, corridas y titular --- */
+.ballot__leader {
+  position: absolute;
+  top: 109.9px;
+  display: flex;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 19px;
+}
+
+.ballot__leader .bl {
+  --bl: 47px;
+}
+
+.ballot__leader--morena {
+  left: 28.3px;
+  background: var(--morena);
+}
+
+.ballot__leader--mc {
+  left: 96.3px;
+  background: rgb(255 130 49 / 0.93);
+}
+
+.ballot__share {
+  position: absolute;
+  left: 205.3px;
+  top: calc(145.9px - 1em);
+  /* color de quien queda primero en más corridas */
+  color: var(--tone, var(--morena));
+  font-size: 32px;
+}
+
+.ballot__share-note {
+  position: absolute;
+  left: 205.3px;
+  top: 155.9px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.ballot__share-note .bl + .bl {
+  --bl: 16px;
+}
+
+.ballot__headline {
+  position: absolute;
+  left: 30px;
+  top: calc(235.4px - 1em);
+  color: var(--ink-strong);
+  font-size: 31px;
+}
+
+.ballot__headline em {
+  color: var(--tone, var(--morena));
+  font-style: normal;
+}
+
+.ballot__headline--districts {
+  top: calc(249.4px - 1em);
+}
+
+.ballot__note {
+  position: absolute;
+  left: 30px;
+  top: calc(261.4px - 1em);
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.ballot__note--districts {
+  top: calc(275.4px - 1em);
+}
+
+/* --- Diputaciones: círculos por distrito --- */
+.ballot__districts {
+  position: absolute;
+  left: 32px;
+  top: 118.1px;
+  display: flex;
+  gap: 32px;
+}
+
+.ballot__district {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60px;
+}
+
+.ballot__district-dot {
+  display: flex;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: var(--tone);
+  color: #fff;
+  font-size: 15px;
+}
+
+.ballot__district-dot .bl {
+  --bl: 36px;
+}
+
+.ballot__district-odds {
+  color: var(--muted);
+  font-size: 12px;
+  --bl: 18px;
+}
+
+/* cada círculo es un botón que lleva a la tarjeta del distrito */
+.ballot__district-dot {
+  transition: transform 0.16s ease, box-shadow 0.16s ease;
+}
+
+.ballot__district:hover .ballot__district-dot,
+.ballot__district:focus-visible .ballot__district-dot {
+  box-shadow: 0 0 0 3px #fff, 0 0 0 5px var(--tone);
+  transform: scale(1.06);
+}
+
+.ballot__district:focus-visible {
+  outline: none;
+}
+
+/* ---------------------------------------------------------------------------
+ * 1 · Ayuntamiento de Guadalajara (título y = 1098, tarjeta y = 1188 → 1488)
+ * ------------------------------------------------------------------------ */
+.council-section {
+  margin-top: 71.5px;
+}
+
+.council {
+  width: 1260px;
+  height: 300px;
+  margin: 48px 0 0 90px;
+}
+
+.council__label {
+  position: absolute;
+  top: calc(53px - 1em);
+  color: var(--muted);
+  font-size: 12px;
+  letter-spacing: 0.12em;
+}
+
+.council__label--party {
+  left: 134.8px;
+}
+
+.council__label--bar {
+  left: 380.8px;
+}
+
+.council__row {
+  position: absolute;
+  left: 0;
+  top: calc(97px + var(--row) * 66px);
+  width: 100%;
+  height: 26px;
+}
+
+.council__track {
+  position: absolute;
+  left: 380.8px;
+  top: 0;
+  width: 340px;
+  height: 26px;
+  border-radius: 13px;
+  background: var(--track);
+}
+
+.council__fill {
+  display: block;
+  width: calc(var(--w) * 1px);
+  height: 100%;
+  border-radius: 13px;
+  background: var(--tone);
+}
+
+.council__value {
+  position: absolute;
+  left: 736.8px;
+  top: 0;
+  color: var(--ink-number);
+  font-size: 22px;
+  --bl: 20px;
+}
+
+.council__logo {
+  position: absolute;
+}
+
+.council__logo--morena {
+  left: 132.3px;
+  top: -12.2px;
+  width: 89.7px;
+  height: 50.5px;
+}
+
+.council__allies {
+  position: absolute;
+  left: 224.8px;
+  top: 0;
+  color: var(--muted);
+  font-size: 13px;
+  --bl: 19px;
+}
+
+.council__logo--mc {
+  left: 135.6px;
+  top: 1.5px;
+  width: 143.9px;
+  height: 22.7px;
+}
+
+.council__logo--pan,
+.council__logo--pri {
+  top: 4.1px;
+  width: 72.5px;
+  height: 26.1px;
+}
+
+.council__logo--pan {
+  left: 136.9px;
+}
+
+.council__logo--pri {
+  left: 204.5px;
+}
+
+/* --- Medidor --- */
+.council__gauge {
+  position: absolute;
+  left: 898px;
+  top: 46.4px;
+  width: 235.5px;
+  text-align: center;
+}
+
+.council__gauge-arc {
+  width: 235.5px;
+  height: 130.75px;
+}
+
+.council__gauge > p {
+  position: absolute;
+  left: 0;
+  width: 100%;
+}
+
+.council__gauge-value {
+  top: calc(108px - 1em);
+  color: var(--ink-number);
+  font-size: 56px;
+}
+
+.council__gauge-caption {
+  top: calc(144.5px - 1em);
+  color: var(--tone, var(--morena));
+  font-size: 15.8px;
+}
+
+.council__gauge-sub {
+  top: calc(162.8px - 1em);
+  color: var(--muted);
+  font-size: 14.6px;
+}
+
+.council__gauge > .council__chip {
+  left: 5.7px;
+  top: 183.8px;
+  width: 224px;
+  height: 34px;
+  border-radius: 17px;
+  background: var(--warn-bg);
+  box-shadow: inset 0 0 0 1px var(--warn-line);
+  color: var(--warn-ink);
+  font-size: 11.3px;
+  text-align: left;
+}
+
+.council__chip .icon {
+  position: absolute;
+  left: 12px;
+  top: 7px;
+  width: 20px;
+  height: 20px;
+}
+
+.council__chip .bl {
+  position: absolute;
+  left: 40px;
+  top: 0;
+  --bl: 21.4px;
+}
+
+/* con ventaja clara ya no es un aviso de empate: misma píldora, en tono neutro */
+.council__gauge > .council__chip--firm {
+  background: var(--surface-soft);
+  box-shadow: inset 0 0 0 1px var(--line);
+  color: var(--teal-deep);
+}
+
+/* ---------------------------------------------------------------------------
+ * 2 · Diputación local y federal por distrito (título y = 1554)
+ * ------------------------------------------------------------------------ */
+.districts {
+  /* columna flex: los márgenes entre bloques no se colapsan */
+  display: flex;
+  flex-direction: column;
+  margin-top: 66px;
+}
+
+.districts__legend {
+  margin: 45.4px 0 0 94.4px;
+}
+
+/* Valores base de una tarjeta de distrito; cada tarjeta puede ajustar los suyos
+   con `tune` (ver data/diputaciones.ts). */
+.district {
+  --card-x: 0;
+  --bars-dy: 0;
+  --head-dy: 0;
+  --head-x: 17.5;
+  --button-x: 20.2;
+  --button-y: 149.8;
+  --button-w: 214;
+  --divider-x: 254.5;
+  --divider-y: 24;
+  --gap-before: 55;
+  --shadow-dy: 0;
+  position: relative;
+  margin-top: calc(var(--gap-before) * 1px);
+}
+
+.district__shadow {
+  position: absolute;
+  z-index: 0;
+  left: 108.8px;
+  top: calc(100% + var(--shadow-dy) * 1px);
+  width: 1222.4px;
+  height: 144.6px;
+  pointer-events: none;
+}
+
+.district__card {
+  z-index: 2;
+  width: 1260px;
+  height: 230px;
+  margin-left: calc((90 + var(--card-x)) * 1px);
+}
+
+/* --- Columna izquierda --- */
+.district__head {
+  position: absolute;
+  left: calc(var(--head-x) * 1px);
+  top: calc((43.2 + var(--head-dy)) * 1px);
+}
+
+.district__icon {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.district__name {
+  position: absolute;
+  left: 77.4px;
+  top: calc(25.7px - 1em);
+  color: var(--ink-strong);
+  font-size: 28px;
+}
+
+.district__grid {
+  position: absolute;
+  left: 78.1px;
+  top: 41.1px;
+  width: 17.1px;
+  height: 17.1px;
+  color: var(--teal);
+}
+
+.district__sections {
+  position: absolute;
+  left: 103.7px;
+  top: calc(54.9px - 1em);
+  color: var(--ink-strong);
+  font-size: 13.9px;
+}
+
+.district__map-button {
+  position: absolute;
+  left: calc(var(--button-x) * 1px);
+  top: calc(var(--button-y) * 1px);
+  display: flex;
+  justify-content: center;
+  width: calc(var(--button-w) * 1px);
+  height: 37px;
+  border-radius: 18.5px;
+  background: var(--surface-soft);
+  color: #2f2f2a;
+  font-size: 20.5px;
+}
+
+.district__map-button .bl {
+  --bl: 24.1px;
+}
+
+.district__map-button {
+  transition: background-color 0.16s ease, box-shadow 0.16s ease;
+}
+
+.district__map-button:hover,
+.district__map-button:focus-visible {
+  outline: none;
+  background: #e3eef1;
+  box-shadow: inset 0 0 0 1.5px var(--teal);
+}
+
+.district__divider {
+  position: absolute;
+  left: calc(var(--divider-x) * 1px - 0.5px);
+  top: calc(var(--divider-y) * 1px);
+  width: 1px;
+  height: 182px;
+  background: var(--line);
+}
+
+/* --- Barras --- */
+.district__bars {
+  position: absolute;
+  left: 302px;
+  top: calc(var(--bars-dy) * 1px);
+  width: 913.9px;
+}
+
+.district__bar-label {
+  margin-bottom: 13.1px;
+  color: var(--muted);
+  font-size: 15.7px;
+  letter-spacing: 0.12em;
+  --bl: 33.5px;
+}
+
+.district__bar-label--federal {
+  --bl: 31.3px;
+}
+
+/* --- Mapa desplegable --- */
+.district__drawer {
+  position: relative;
+  z-index: 1;
+  width: 1163.9px;
+  height: 537.5px;
+  margin: -23.2px 0 0 138.1px;
+  border-radius: 0 0 12px 12px;
+  background: #e3e3e3;
+}
+
+.district__map {
+  position: absolute;
+  left: 56.7px;
+  top: 23.2px;
+  width: 1046.6px;
+  height: 490.9px;
+  overflow: hidden;
+}
+
+.district__map .map-view {
+  position: absolute;
+  inset: 0;
+  --map-k: 0.7231;
+}
+
+.district__map .leaflet-bottom.leaflet-right {
+  right: calc(13.7 * var(--u));
+  bottom: calc(-6.4 * var(--u));
+}
+
+.district__panel {
+  position: absolute;
+  z-index: 1;
+  left: 43.6px;
+  top: 1.4px;
+  transform: scale(0.59227);
+  transform-origin: 0 0;
+}
+
+/* leyenda y ficha del mapa embebido: a la derecha, más pequeñas */
+.district__map .map-chrome {
+  --map-chrome-k: 0.74;
+  right: 16px;
+  top: 16px;
+  max-height: calc(100% - 44px);
+}
+
+/* con una ficha abierta el espacio no alcanza para la nota de la leyenda */
+.district__map .map-chrome:has(.map-detail) .map-legend__note {
+  display: none;
+}
+
+.district__map .map-notice {
+  --map-chrome-k: 0.8;
+  left: 58%;
+}
+
+/* ---------------------------------------------------------------------------
+ * Sobre la diputación federal (y = 3415.3 → 3762.8)
+ * ------------------------------------------------------------------------ */
+.federal-notes {
+  z-index: 1;
+  width: 1260px;
+  height: 347.5px;
+  margin: 89.3px 0 0 90px;
+}
+
+.federal-notes__alert {
+  position: absolute;
+  left: 76px;
+  top: 50px;
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--warn-bg);
+  box-shadow: inset 0 0 0 1px var(--warn-line);
+  color: var(--warn-ink);
+}
+
+.federal-notes__alert .icon {
+  width: 26px;
+  height: 26px;
+}
+
+.federal-notes__title {
+  position: absolute;
+  left: 138px;
+  top: calc(82px - 1em);
+  color: var(--ink-strong);
+  font-size: 24px;
+}
+
+.federal-notes__grid {
+  position: absolute;
+  left: 76px;
+  top: 138px;
+  display: grid;
+  grid-template-columns: repeat(3, 410px);
+}
+
+.federal-note {
+  position: relative;
+}
+
+.federal-note__icon {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.federal-note__title {
+  position: absolute;
+  left: 58px;
+  top: calc(28px - 1em);
+  color: var(--ink-strong);
+  font-size: 17px;
+}
+
+.federal-note__text {
+  position: absolute;
+  left: 0;
+  top: 59px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.federal-note__text .bl {
+  --bl: 23px;
+}

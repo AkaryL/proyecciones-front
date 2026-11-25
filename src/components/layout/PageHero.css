@@ -1,0 +1,198 @@
+/*
+ * Encabezado de página. Las coordenadas son las del diseño medidas desde el
+ * borde superior de la página; --nav descuenta el alto del menú.
+ */
+.hero {
+  --nav: 107.7px;
+  position: relative;
+  height: calc(var(--hero-end) - var(--nav));
+}
+
+/* Rótulo vectorial: su lienzo empieza en el origen del texto y mide 1.3 × el
+   cuerpo de alto, con la línea base a 1 em del borde superior. */
+.hero__lettering {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: calc(var(--w) * 1px);
+  height: auto;
+  max-width: none;
+}
+
+.hero__title {
+  position: absolute;
+  left: var(--title-x);
+  top: calc(var(--title-base) - var(--title-size) - var(--nav));
+}
+
+.hero__shadow {
+  position: absolute;
+  left: var(--shadow-x);
+  top: calc(var(--banner-y) + var(--banner-h) - var(--nav));
+  width: var(--shadow-w);
+  height: var(--shadow-h);
+  pointer-events: none;
+}
+
+.hero__banner {
+  position: absolute;
+  left: var(--banner-x);
+  top: calc(var(--banner-y) - var(--nav));
+  width: var(--banner-w);
+  height: var(--banner-h);
+  border-radius: var(--banner-r);
+  background: var(--grad-banner);
+}
+
+.hero__banner .hero__lettering {
+  left: calc(var(--banner-text-x) - var(--banner-x));
+  top: calc(var(--banner-base) - var(--banner-size) - var(--banner-y));
+}
+
+.hero__tagline {
+  position: absolute;
+  left: var(--tagline-x);
+  top: calc(var(--tagline-base) - var(--tagline-size) - var(--nav));
+}
+
+/* ---------- Etiqueta (corte / escenario) ----------
+   Píldora centrada en la página con el ícono y el texto centrados dentro. Mide
+   como mínimo lo que en el diseño y crece si el nombre del escenario es largo. */
+.hero__chip {
+  position: absolute;
+  left: 50%;
+  top: calc(var(--chip-y) - var(--nav));
+  min-width: var(--chip-w);
+  height: 40px;
+  border-radius: 20px;
+  background: #fff;
+  /* contorno de 2 px centrado en el borde de la píldora */
+  box-shadow: 0 0 0 1px var(--teal), inset 0 0 0 1px var(--teal);
+  color: var(--teal-deep);
+  transform: translateX(-50%);
+  transition: box-shadow 0.18s ease, background-color 0.18s ease;
+}
+
+.hero__chip--static,
+.hero__chip .dropdown__button {
+  position: static;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  height: 100%;
+  padding: 0 30px;
+}
+
+.hero__chip .icon {
+  flex: none;
+  width: 22px;
+  height: 22px;
+  margin-top: 9px;
+  color: var(--teal);
+}
+
+.hero__chip-text {
+  display: block;
+  font-size: 15px;
+  line-height: 0;
+  white-space: nowrap;
+}
+
+/* línea base del texto a 25 px del borde superior, como en el diseño */
+.hero__chip-text::before {
+  content: '';
+  display: inline-block;
+  height: 25px;
+}
+
+/* --- con selector de escenario --- */
+.hero__chip.dropdown:hover,
+.hero__chip.dropdown--open {
+  background: #f4fbfa;
+  box-shadow: 0 0 0 1px var(--teal), inset 0 0 0 1px var(--teal), 0 6px 18px rgb(0 171 165 / 0.22);
+}
+
+.hero__chip .dropdown__list {
+  --dropdown-width: 560px;
+}
+
+/* ---------- Mapa ---------- */
+.hero--mapa {
+  --hero-end: 621px;
+  --title-x: 220.8px;
+  --title-base: 351px;
+  --title-size: 236.7px;
+  --banner-x: 222.1px;
+  --banner-y: 374.8px;
+  --banner-w: 995.9px;
+  --banner-h: 85.5px;
+  --banner-r: 21.3px;
+  --banner-text-x: 249.6px;
+  --banner-base: 440.3px;
+  --banner-size: 58px;
+  --shadow-x: 263px;
+  --shadow-w: 913.9px;
+  --shadow-h: 126.7px;
+  --tagline-x: 222.1px;
+  --tagline-base: 506.3px;
+  --tagline-size: 21.9px;
+}
+
+/* ---------- Diputaciones ---------- */
+.hero--diputaciones {
+  --hero-end: 590px;
+  --title-x: 203.1px;
+  --title-base: 268px;
+  --title-size: 96.5px;
+  --banner-x: 211.3px;
+  --banner-y: 295.3px;
+  --banner-w: 1017.4px;
+  --banner-h: 87.4px;
+  --banner-r: 32.4px;
+  --banner-text-x: 254.8px;
+  --banner-base: 356.2px;
+  --banner-size: 52.9px;
+  --shadow-x: 253.2px;
+  --shadow-w: 933.7px;
+  --shadow-h: 129.4px;
+  --tagline-x: 212.1px;
+  --tagline-base: 426.3px;
+  --tagline-size: 22.3px;
+  --chip-y: 480px;
+  --chip-w: 420px;
+}
+
+/* ancho del texto igual al del diseño (Helvetica Neue): así el contenido centrado cae en su sitio */
+.hero--diputaciones .hero__chip-text {
+  letter-spacing: 0.006em;
+}
+
+/* ---------- Simulación ---------- */
+.hero--simulacion {
+  --hero-end: 588.5px;
+  --title-x: 215px;
+  --title-base: 257.5px;
+  --title-size: 102px;
+  --banner-x: 211.3px;
+  --banner-y: 282.2px;
+  --banner-w: 1017.4px;
+  --banner-h: 87.4px;
+  --banner-r: 32.4px;
+  --banner-text-x: 243.7px;
+  --banner-base: 342.1px;
+  --banner-size: 54.8px;
+  --shadow-x: 253.2px;
+  --shadow-w: 933.7px;
+  --shadow-h: 129.4px;
+  --tagline-x: 222.1px;
+  --tagline-base: 420.3px;
+  --tagline-size: 21.9px;
+  --chip-y: 478.5px;
+  --chip-w: 400px;
+}
+
+.hero--simulacion .hero__chip-text {
+  letter-spacing: -0.012em;
+}

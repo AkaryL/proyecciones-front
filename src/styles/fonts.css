@@ -1,0 +1,44 @@
+/*
+ * Tipografías
+ * -----------
+ * El diseño usa Gotham, Helvetica Neue, Arial Black y Myriad Pro (comerciales).
+ * Aquí se cargan las alternativas libres con las métricas más cercanas, medidas
+ * glifo por glifo contra el PDF:
+ *
+ *   Gotham Thin / Book / Medium / Bold / Ultra  ->  Montserrat (variable)
+ *   Gotham Black                                ->  "PE Gotham Black" (ver abajo)
+ *   Helvetica Neue Medium / Bold                ->  Arimo (o Helvetica Neue si está instalada)
+ *   Myriad Pro                                  ->  Source Sans 3
+ *   Arial Black                                 ->  fuente del sistema
+ *
+ * Si se cuenta con la licencia web de Gotham basta con declarar aquí sus
+ * @font-face y apuntar las variables --font-gotham* de tokens.css a esa familia
+ * (y poner en cero las compensaciones de letter-spacing de base.css).
+ */
+@import '@fontsource-variable/montserrat/wght.css';
+@import '@fontsource/arimo/latin-500.css';
+@import '@fontsource/arimo/latin-700.css';
+@import '@fontsource/source-sans-3/latin-400.css';
+
+/*
+ * "PE Gotham Black": familia compuesta que imita a Gotham Black.
+ * Las letras salen de Metropolis Black y las cifras y signos numéricos de
+ * Montserrat ExtraBold, que son los que coinciden en ancho y peso con Gotham.
+ */
+@font-face {
+  font-family: 'PE Gotham Black';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url('../../node_modules/@fontsource/metropolis/files/metropolis-latin-900-normal.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'PE Gotham Black';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url('../../node_modules/@fontsource/montserrat/files/montserrat-latin-800-normal.woff2') format('woff2');
+  /* 0-9  %  +  -  .  =  · */
+  unicode-range: U+0030-0039, U+0025, U+002B, U+002D, U+002E, U+003D, U+00B7;
+}

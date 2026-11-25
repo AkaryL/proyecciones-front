@@ -1,0 +1,176 @@
+/* ===========================================================================
+ * Página "Mapa" — coordenadas del diseño (artboard 1440 × 2163.5)
+ * ======================================================================== */
+
+/* ---------- Tarjetas de indicadores (y = 621 → 956.6) ---------- */
+.stats {
+  position: relative;
+  height: 335.6px;
+}
+
+.stat-card {
+  --cx: 0px; /* corrimiento horizontal del contenido respecto al centro */
+  position: absolute;
+  top: 1.5px;
+  width: 290px;
+  height: 250px;
+  border-radius: 30px;
+  text-align: center;
+}
+
+.stat-card:nth-child(1) {
+  left: 90.5px;
+}
+
+.stat-card:nth-child(2) {
+  left: 413.5px;
+}
+
+.stat-card:nth-child(3) {
+  left: 736.5px;
+}
+
+.stat-card:nth-child(4) {
+  left: 1059.5px;
+}
+
+.stat-card > p {
+  position: absolute;
+  left: var(--cx);
+  width: 100%;
+}
+
+/* --- Claras (partidos) --- */
+.stat-card--light {
+  background: #fff;
+  /* contorno de 3 px centrado sobre el borde */
+  box-shadow: 0 0 0 1.5px #d7d7d7, inset 0 0 0 1.5px #d7d7d7;
+}
+
+.stat-card__panel {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  width: 270px;
+  height: 230px;
+  border-radius: 22px;
+  background: linear-gradient(180deg, #fff 0%, #fff 35.1%, #d5d5d5 100%);
+}
+
+.stat-card__logo {
+  position: absolute;
+}
+
+.stat-card__percent {
+  top: calc(var(--percent-base) - 1em);
+  color: #333;
+  font-size: 46.5px;
+  font-weight: 850;
+  letter-spacing: -0.02em;
+}
+
+.stat-card__caption {
+  top: 183.9px;
+  color: #4d4d4d;
+  font-size: 14.7px;
+}
+
+.stat-card--mc {
+  --cx: -2.3px;
+  --percent-base: 169.9px;
+}
+
+.stat-card--mc .stat-card__logo {
+  left: 61.5px;
+  top: -9.7px;
+  width: 162.5px;
+  height: 162.5px;
+}
+
+.stat-card--morena {
+  --cx: -0.4px;
+  --percent-base: 155.1px;
+}
+
+.stat-card--morena .stat-card__logo {
+  left: 29.6px;
+  top: 3px;
+  width: 229.8px;
+  height: 129.3px;
+}
+
+/* --- Oscuras (territorio) --- */
+.stat-card--dark {
+  background: var(--grad-navy);
+  /* contorno blanco de 4 px centrado sobre el borde */
+  box-shadow: 0 0 0 2px #fff, inset 0 0 0 2px #fff;
+  color: #fff;
+}
+
+.stat-card__figure {
+  top: calc(var(--figure-base) - 1em);
+  font-size: 74px;
+}
+
+.stat-card__label {
+  top: 157.2px;
+  font-size: 16px;
+}
+
+.stat-card__sublabel {
+  top: 176.4px;
+  color: #97b6c1;
+  font-size: 16px;
+}
+
+.stat-card--accent {
+  --figure-base: 129.3px;
+}
+
+.stat-card--accent .stat-card__figure {
+  color: var(--aqua);
+}
+
+.stat-card--plain {
+  --cx: 1.1px;
+  --figure-base: 130.4px;
+}
+
+/* ---------- Mapa (y = 956.6 → 1953.5), banda a todo lo ancho ---------- */
+.map-stage {
+  position: relative;
+  height: calc(996.9 * var(--u));
+  margin-bottom: calc(68.6 * var(--u));
+  overflow: hidden;
+}
+
+.map-stage .map-view {
+  position: absolute;
+  inset: 0;
+}
+
+/* Leyenda y ficha: bajo los botones de zoom, pegadas al borde izquierdo del mapa. */
+.map-stage .map-chrome {
+  --map-chrome-k: 1.1;
+  left: calc(17.2 * var(--u));
+  top: calc(100 * var(--u));
+  max-height: calc(100% - 124 * var(--u));
+}
+
+.map-stage .map-notice {
+  --map-chrome-k: 1.1;
+}
+
+/* El panel de filtros se ancla al frame de 1440 px, encima del mapa. */
+.map-stage__overlay {
+  z-index: 1;
+  height: 0;
+  pointer-events: none;
+}
+
+.map-stage__overlay .filter-panel {
+  position: absolute;
+  left: 1066.9px;
+  top: 0;
+  pointer-events: auto;
+}

@@ -1,0 +1,128 @@
+.stacked-bar {
+  --bar-h: 47px;
+  --bar-sep: 3.9px; /* separador blanco, centrado en la unión de dos segmentos */
+  position: relative;
+}
+
+.stacked-bar--sm {
+  --bar-h: 26px;
+  --bar-sep: 3px;
+}
+
+.stacked-bar__track {
+  display: flex;
+  height: var(--bar-h);
+  border-radius: calc(var(--bar-h) / 2);
+  background: var(--track);
+  overflow: hidden;
+}
+
+.stacked-bar__segment {
+  position: relative;
+  display: flex;
+  flex: 0 0 calc(var(--v) * 1%);
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  background: var(--tone);
+}
+
+/* Separador blanco al final de cada segmento. Como en el diseño, entre dos
+   segmentos solo asoma la mitad izquierda (la otra queda bajo el siguiente
+   color); tras el último se ve completo, centrado en el borde. */
+.stacked-bar__segment::after {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: calc(var(--bar-sep) / 2);
+  background: #fff;
+}
+
+.stacked-bar__segment:last-child::after {
+  right: calc(var(--bar-sep) / -2);
+  width: var(--bar-sep);
+}
+
+.stacked-bar__label {
+  color: #fff;
+  font-family: var(--font-helvetica);
+  font-weight: 700;
+  font-size: 17px;
+  --bl: 13px;
+}
+
+.stacked-bar--sm .stacked-bar__label {
+  font-family: var(--font-gotham-black);
+  font-weight: 900;
+  font-size: 12px;
+  --bl: 8px;
+}
+
+/* Cifras bajo los segmentos pequeños */
+.stacked-bar__notes {
+  display: flex;
+  height: 0;
+}
+
+.stacked-bar__note {
+  display: flex;
+  flex: 0 0 calc(var(--v) * 1%);
+  justify-content: center;
+  min-width: 0;
+  color: var(--tone);
+  font-family: var(--font-helvetica);
+  font-weight: 700;
+  font-size: 14.4px;
+  --bl: 19.6px;
+}
+
+/* ---------- Interacción ---------- */
+.stacked-bar__segment,
+.stacked-bar__note {
+  transition: opacity 0.18s ease;
+}
+
+.stacked-bar__segment:hover {
+  filter: brightness(1.08);
+}
+
+/* Partido no resaltado en la leyenda */
+.stacked-bar__segment.is-dimmed {
+  opacity: 0.2;
+}
+
+.stacked-bar__note.is-dimmed {
+  opacity: 0.25;
+}
+
+/* Etiqueta flotante con el partido y su cifra */
+.stacked-bar__tip {
+  position: absolute;
+  z-index: 5;
+  left: calc(var(--at) * 1%);
+  bottom: calc(100% + 7px);
+  padding: 6px 11px;
+  border-radius: 8px;
+  background: var(--teal-deep);
+  color: #fff;
+  font-family: var(--font-helvetica);
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 1.2;
+  white-space: nowrap;
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+
+.stacked-bar__tip::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  border: 5px solid transparent;
+  border-top-color: var(--teal-deep);
+  transform: translateX(-50%);
+}

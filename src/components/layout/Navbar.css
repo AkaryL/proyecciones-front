@@ -1,0 +1,54 @@
+/* Banda a todo lo ancho de la ventana (fuera del frame): usa var(--u). */
+.navbar {
+  position: relative;
+  z-index: 2;
+  height: calc(107.7 * var(--u));
+  background: url('../../assets/img/nav-gradient.png') center top / 100% calc(108 * var(--u)) no-repeat;
+  overflow: hidden;
+}
+
+/* Los enlaces se reparten en todo el ancho disponible. */
+.navbar__nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  height: 100%;
+}
+
+.navbar__link {
+  position: relative;
+  color: #f1f1f1;
+  font-size: calc(22.84 * var(--u));
+  letter-spacing: -0.02em;
+  /* línea base del texto a 65.49 px del borde superior, como en el diseño */
+  --bl: calc(65.49 * var(--u));
+}
+
+/* Al pasar el cursor por una sección disponible aparece un subrayado. */
+a.navbar__link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: calc(100% + 9 * var(--u));
+  height: calc(3 * var(--u));
+  border-radius: calc(1.5 * var(--u));
+  background: #fff;
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 0.2s ease;
+}
+
+a.navbar__link:hover::after,
+a.navbar__link:focus-visible::after {
+  transform: scaleX(1);
+}
+
+a.navbar__link:focus-visible {
+  outline: none;
+}
+
+/* Secciones que todavía no tienen página */
+.navbar__link--soon {
+  cursor: default;
+}

@@ -1,0 +1,215 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: #fff;
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: geometricPrecision;
+}
+
+#root {
+  width: 100%;
+  overflow-x: clip;
+}
+
+/*
+ * Escala del diseño
+ * -----------------
+ * El artboard mide 1440 px de ancho. `.frame` es su equivalente en la página:
+ * va centrado, mide como máximo --frame-max px reales (tokens.css) y se encoge
+ * con la ventana cuando ésta es más angosta. Todo el CSS se escribe en px del
+ * diseño y el build los convierte a `cqw` (ver vite.config.ts), que dentro de un
+ * `.frame` equivale a "1/1440 del ancho del frame"; así todo el sitio conserva
+ * las proporciones exactas del diseño a cualquier tamaño.
+ *
+ * Fuera de un `.frame` (bandas a todo lo ancho) se usa `var(--u)`: un píxel del
+ * diseño ya escalado, definido en `.page`.
+ */
+.frame {
+  position: relative;
+  width: min(100%, calc(var(--frame-max) * 1PX));
+  margin-inline: auto;
+  container-type: inline-size;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+figure {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+}
+
+img,
+svg {
+  display: block;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1PX;
+  height: 1PX;
+  margin: -1PX;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ---------------------------------------------------------------------------
+ * Texto anclado a su línea base
+ * ---------------------------------------------------------------------------
+ * `.bl` produce una caja cuya arista inferior ES la línea base del texto y cuyo
+ * alto es --bl (por defecto 1em). Así la posición vertical del texto no depende
+ * de las métricas internas de la fuente y coincide con la del diseño.
+ */
+.bl {
+  display: block;
+  line-height: 0;
+  white-space: nowrap;
+}
+
+.bl::before {
+  content: '';
+  display: inline-block;
+  height: var(--bl, 1em);
+}
+
+/* ---------------------------------------------------------------------------
+ * Tonos de partido: definen --tone para barras, puntos y etiquetas
+ * ------------------------------------------------------------------------ */
+.tone-mc {
+  --tone: var(--mc);
+}
+
+.tone-morena {
+  --tone: var(--morena);
+}
+
+.tone-pan {
+  --tone: var(--pan);
+}
+
+.tone-pan-navy {
+  --tone: var(--pan-navy);
+}
+
+.tone-pri {
+  --tone: var(--pri);
+}
+
+.tone-pri-bright {
+  --tone: var(--pri-bright);
+}
+
+.tone-pvem {
+  --tone: var(--pvem);
+}
+
+.tone-pt {
+  --tone: var(--pt);
+}
+
+.tone-neutral {
+  --tone: #cad2d9;
+}
+
+/* ---------------------------------------------------------------------------
+ * Roles tipográficos (equivalencias con las fuentes del diseño)
+ * ------------------------------------------------------------------------ */
+.f-thin {
+  font-family: var(--font-gotham);
+  font-weight: 100;
+}
+
+.f-book {
+  font-family: var(--font-gotham);
+  font-weight: 400;
+  word-spacing: 0.04em;
+}
+
+.f-medium {
+  font-family: var(--font-gotham);
+  font-weight: 540;
+  letter-spacing: -0.008em;
+  word-spacing: 0.04em;
+}
+
+.f-bold {
+  font-family: var(--font-gotham);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  word-spacing: 0.04em;
+}
+
+.f-black {
+  font-family: var(--font-gotham-black);
+  font-weight: 900;
+  letter-spacing: 0.012em;
+  word-spacing: 0.03em;
+}
+
+.f-ultra {
+  font-family: var(--font-gotham);
+  font-weight: 900;
+  letter-spacing: -0.012em;
+}
+
+.f-h-medium {
+  font-family: var(--font-helvetica);
+  font-weight: 500;
+}
+
+.f-h-bold {
+  font-family: var(--font-helvetica);
+  font-weight: 700;
+}
+
+.f-arial-black {
+  font-family: var(--font-arial-black);
+  font-weight: 900;
+}
+
+.f-myriad {
+  font-family: var(--font-myriad);
+  font-weight: 400;
+}

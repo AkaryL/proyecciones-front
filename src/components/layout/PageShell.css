@@ -1,0 +1,58 @@
+.page {
+  /* Un píxel del diseño, ya escalado (misma escala que `.frame`). */
+  --u: min(1px, calc(var(--frame-max) / 1440 * 1PX));
+  position: relative;
+  container-type: inline-size;
+  overflow: hidden;
+  background: #fff;
+}
+
+/* Fondo facetado del diseño: la misma imagen del PDF, girada 180° y colocada
+   con su encuadre original. En ventanas más anchas que el diseño se estira
+   horizontalmente para cubrir los costados. */
+.page__bg {
+  position: absolute;
+  z-index: 0;
+  left: -5.663px;
+  width: 1451.326px;
+  max-width: none;
+  transform: rotate(180deg);
+  pointer-events: none;
+  user-select: none;
+}
+
+.page__main {
+  position: relative;
+  z-index: 1;
+}
+
+/* ---------- Mapa (2163.5 px de alto) ---------- */
+.page--mapa {
+  --footer-height: 91.7;
+  padding-bottom: calc(49.7 * var(--u));
+}
+
+.page--mapa .page__bg {
+  top: calc(-4.224 * var(--u));
+  height: calc(2381.202 * var(--u));
+}
+
+/* ---------- Diputaciones (3966.5 px de alto) ---------- */
+.page--diputaciones {
+  --footer-height: 87.8;
+}
+
+.page--diputaciones .page__bg {
+  top: calc(65.068 * var(--u));
+  height: calc(3846.399 * var(--u));
+}
+
+/* ---------- Simulación (4678.5 px de alto) ---------- */
+.page--simulacion {
+  --footer-height: 84;
+}
+
+.page--simulacion .page__bg {
+  top: calc(65.069 * var(--u));
+  height: calc(4577.622 * var(--u));
+}

@@ -1,0 +1,120 @@
+/* Panel de filtros: 331.1 × 750.3 px en el diseño (marco gris + cuerpo blanco). */
+.filter-panel {
+  position: relative;
+  width: 331.1px;
+  height: 750.3px;
+  border-radius: 0 0 8.7px 8.7px;
+  background: linear-gradient(180deg, #cdcdcd 0%, #fff 48.8%, #fff 100%);
+  font-size: 16.9px;
+}
+
+.filter-panel__body {
+  position: absolute;
+  left: 9.4px;
+  top: 0;
+  width: 312.3px;
+  height: 741.1px;
+  border-radius: 0 0 7px 7px;
+  background: linear-gradient(180deg, #fff 0%, #fff 51.8%, #cdcdcd 100%);
+}
+
+/* ---------- Selector de ámbito ---------- */
+.filter-panel__select {
+  position: absolute;
+  left: 32.7px;
+  top: 60.2px;
+  width: 248.9px;
+  height: 70.7px;
+  border-radius: 35.35px;
+  text-align: left;
+}
+
+.filter-panel__ring {
+  position: absolute;
+  left: -0.5px;
+  top: -0.5px;
+  width: 249.9px;
+  height: 71.7px;
+}
+
+.filter-panel__select-label {
+  position: absolute;
+  left: 29.2px;
+  top: 0;
+  color: #333;
+  --bl: 40.6px;
+}
+
+.filter-panel__chevron {
+  position: absolute;
+  left: 203.9px;
+  top: 32.5px;
+  width: 20.8px;
+  height: 14.2px;
+  transition: transform 0.18s ease;
+}
+
+.filter-panel__select.dropdown--open .filter-panel__chevron {
+  transform: rotate(180deg);
+}
+
+.filter-panel__select .dropdown__list {
+  --dropdown-width: 272px;
+  top: calc(100% + 6px);
+  font-size: 15.5px;
+}
+
+/* ---------- Grupos ---------- */
+.filter-panel__title,
+.filter-panel__option {
+  position: absolute;
+  top: calc(var(--base) * 1px - 1em);
+}
+
+.filter-panel__title {
+  left: 39.8px;
+  color: #000;
+}
+
+.filter-panel__option {
+  left: 38.9px;
+  color: #333;
+  text-align: left;
+  transition: color 0.15s ease;
+}
+
+.filter-panel__group--view .filter-panel__option {
+  left: 39.8px;
+  color: #000;
+}
+
+/* ---------- Interacción ---------- */
+/* zona sensible más alta que el texto, sin mover nada */
+.filter-panel__option::after {
+  content: '';
+  position: absolute;
+  inset: -7px -10px -9px -24px;
+}
+
+.filter-panel__option:hover,
+.filter-panel__option:focus-visible {
+  outline: none;
+  color: var(--teal);
+}
+
+.filter-panel__option.is-selected {
+  color: var(--teal-deep);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+/* punto de la opción elegida, a la izquierda del texto */
+.filter-panel__option.is-selected::after {
+  inset: auto;
+  left: -17px;
+  top: calc(0.66em - 4px);
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--teal);
+}

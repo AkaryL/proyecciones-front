@@ -1,0 +1,18 @@
+/* Banda a todo lo ancho; el texto vive en el frame de 1440 px. */
+.footer {
+  position: relative;
+  z-index: 1;
+  height: calc(var(--footer-height, 91.7) * var(--u));
+  background: var(--grad-footer);
+  overflow: hidden;
+}
+
+.footer__text {
+  position: absolute;
+  top: 0;
+  left: 315.59px;
+  color: #fff;
+  font-size: 16px;
+  letter-spacing: 0.178em;
+  --bl: 48px;
+}
