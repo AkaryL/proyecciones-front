@@ -84,13 +84,6 @@ export const DISTRICT_LAYOUT: Record<string, DistrictLayout> = {
 /** Distrito cuyo mapa aparece desplegado al cargar la página. */
 export const DEFAULT_OPEN_DISTRICT = '8'
 
-/** Encuadre inicial del mapa embebido en la tarjeta de distrito (el del diseño). */
-export const DISTRICT_MAP_VIEW = {
-  center: [19.8904, -103.4239] as [number, number],
-  zoom: 8.024,
-  tileZoom: 8,
-}
-
 /* ------------------------------------------------------------------ */
 /* Sobre la diputación federal                                         */
 /* ------------------------------------------------------------------ */

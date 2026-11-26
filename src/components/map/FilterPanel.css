@@ -51,7 +51,7 @@
   top: 32.5px;
   width: 20.8px;
   height: 14.2px;
-  transition: transform 0.18s ease;
+  transition: transform var(--dur-micro) var(--ease-out);
 }
 
 .filter-panel__select.dropdown--open .filter-panel__chevron {
@@ -80,7 +80,7 @@
   left: 38.9px;
   color: #333;
   text-align: left;
-  transition: color 0.15s ease;
+  transition: color var(--dur-micro) var(--ease-out);
 }
 
 .filter-panel__group--view .filter-panel__option {
@@ -117,4 +117,12 @@
   height: 8px;
   border-radius: 50%;
   background: var(--teal);
+  animation: filter-dot-in var(--dur-small) var(--ease-out) both;
+}
+
+@keyframes filter-dot-in {
+  from {
+    opacity: 0;
+    scale: 0.4;
+  }
 }

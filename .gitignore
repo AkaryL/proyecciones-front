@@ -12,6 +12,11 @@ dist
 dist-ssr
 *.local
 
+# Copia local del paquete del tablero del motor (33 MB, con sus datos crudos).
+# Lo usan Territorio y Comparativo mientras se rehacen en React; se copia a mano
+# (ver README) y no se sube al repositorio.
+public/tablero/
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

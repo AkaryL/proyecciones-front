@@ -407,24 +407,3 @@ export function ficha(seleccion: Seleccion, ctx: Omit<Contexto, 'unidad' | 'ambi
     tema: tema ? { etiqueta: tema.nombre, valor: valorTema == null ? 'Sin dato' : conUnidad(valorTema, tema.unidad, tema.decimales) } : null,
   }
 }
-
-/** Caja [sur-oeste, nor-este] que contiene las secciones del ámbito (todo el municipio si `distrito` < 0). */
-export function limites(mapa: MapaData, distrito: number): [[number, number], [number, number]] {
-  let minLat = 90
-  let maxLat = -90
-  let minLng = 180
-  let maxLng = -180
-  mapa.poligonos.forEach((anillo, i) => {
-    if (distrito >= 0 && mapa.dl[i] !== distrito) return
-    for (let k = 0; k < anillo.length; k += 2) {
-      minLat = Math.min(minLat, anillo[k])
-      maxLat = Math.max(maxLat, anillo[k])
-      minLng = Math.min(minLng, anillo[k + 1])
-      maxLng = Math.max(maxLng, anillo[k + 1])
-    }
-  })
-  return [
-    [minLat, minLng],
-    [maxLat, maxLng],
-  ]
-}

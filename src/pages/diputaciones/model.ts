@@ -1,13 +1,14 @@
 /**
  * Lo que pinta la página de Diputaciones para un escenario: toma las cifras
- * del motor y las deja en la forma y con los textos del diseño.
+ * del motor y las deja en la forma y con los textos del diseño. Las cifras van
+ * como números (la página las anima al cambiar) y los textos ya redactados.
  */
 import { DATOS, type Bloque, type Boleta, type Escenario } from '../../api'
 import type { IconName } from '../../components/icons/iconPaths'
 import { DEFAULT_SCENARIO, DISTRICT_LAYOUT, type DistrictTune } from '../../data/diputaciones'
 import type { BarSegment, PartyTone } from '../../data/parties'
 import { BLOQUE, BLOQUES, barraPorPartido, distritosPorLider, listaDistritos, veredicto, type Veredicto } from '../../lib/electoral'
-import { decimal, porcentaje, porcentajeEntero } from '../../lib/format'
+import { porcentaje } from '../../lib/format'
 
 /** Nombre corto para titulares («Ventaja Morena»). */
 const CORTO: Record<Bloque, string> = { MORENA_ALIADOS: 'Morena', MC: 'MC', PAN_PRI: 'PAN/PRI' }
@@ -23,11 +24,11 @@ export function chipLabel(escenario: Escenario): string {
 /* ------------------------------------------------------------------ */
 
 export type MayorBallot = {
-  /** Medianas de Morena y aliados y de MC (los dos círculos). */
-  leaders: [string, string]
-  /** Tono de quien queda primero en más corridas. */
+  /** Medianas de Morena y aliados y de MC (los dos círculos), en %. */
+  leaders: [number, number]
+  /** Tono de quien queda primero en más corridas y en qué parte de ellas (%). */
   tone: PartyTone
-  winShare: string
+  winShare: number
   winShareNote: [string, string]
   headline: string
   note: string
@@ -43,9 +44,9 @@ export function mayorBallot(escenario: Escenario): MayorBallot {
   const v = veredicto(gana)
   const punteros = [...BLOQUES].sort((a, b) => bloques[b][1] - bloques[a][1]).slice(0, 2)
   return {
-    leaders: [decimal(bloques.MORENA_ALIADOS[1]), decimal(bloques.MC[1])],
+    leaders: [bloques.MORENA_ALIADOS[1], bloques.MC[1]],
     tone: BLOQUE[v.lider].tone,
-    winShare: porcentajeEntero(v.p),
+    winShare: v.p,
     winShareNote: ['de las corridas gana', BLOQUE[v.lider].nombre],
     headline: titular(v),
     note: punteros.map((bloque) => `${BLOQUE[bloque].nombre} ${porcentaje(bloques[bloque][1])}`).join(' · '),
@@ -56,7 +57,7 @@ export function mayorBallot(escenario: Escenario): MayorBallot {
 /* Diputación local y federal: un círculo por distrito                 */
 /* ------------------------------------------------------------------ */
 
-export type DistrictChip = { id: string; tone: PartyTone; probability: string; title: string }
+export type DistrictChip = { id: string; tone: PartyTone; probability: number; title: string }
 
 export type DistrictBallot = {
   kind: 'local' | 'federal'
@@ -89,7 +90,7 @@ export function districtBallots(escenario: Escenario): DistrictBallot[] {
         return {
           id: info.id,
           tone: BLOQUE[v.lider].tone,
-          probability: porcentajeEntero(v.p),
+          probability: v.p,
           title: `Distrito ${info.id}: ${BLOQUE[v.lider].nombre} queda primero en ${porcentaje(v.p)} de las corridas`,
         }
       }),
@@ -109,7 +110,8 @@ export function districtBallots(escenario: Escenario): DistrictBallot[] {
 export type CouncilRow = {
   party: 'morena' | 'mc' | 'pan-pri'
   tone: PartyTone
-  label: string
+  /** Mediana proyectada (%). */
+  value: number
   /** Ancho de la barra en px del diseño (el riel de 340 px equivale a 50 %). */
   barWidth: number
 }
@@ -127,14 +129,14 @@ export function councilRows(escenario: Escenario): CouncilRow[] {
   const { bloques } = escenario.boletas.ayun
   return COUNCIL.map(({ bloque, party, tone }) => {
     const value = bloques[bloque][1]
-    return { party, tone, label: porcentaje(value), barWidth: Number(((Math.min(value, TRACK_MAX) / TRACK_MAX) * TRACK_WIDTH).toFixed(1)) }
+    return { party, tone, value, barWidth: Number(((Math.min(value, TRACK_MAX) / TRACK_MAX) * TRACK_WIDTH).toFixed(1)) }
   })
 }
 
 export type CouncilGauge = {
+  /** Parte de las corridas (%) en que queda primero el puntero. */
   share: number
   tone: PartyTone
-  label: string
   caption: string
   subcaption: string
   /** Aviso bajo el medidor; `tie` usa el estilo ámbar del diseño. */
@@ -145,9 +147,8 @@ export function councilGauge(escenario: Escenario): CouncilGauge {
   const v = veredicto(escenario.boletas.ayun.gana)
   const nombre = BLOQUE[v.lider].nombre
   return {
-    share: v.p / 100,
+    share: v.p,
     tone: BLOQUE[v.lider].tone,
-    label: porcentajeEntero(v.p),
     caption: `gana ${nombre}`,
     subcaption: 'de las corridas',
     chip:

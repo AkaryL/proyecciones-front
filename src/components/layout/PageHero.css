@@ -70,7 +70,7 @@
   box-shadow: 0 0 0 1px var(--teal), inset 0 0 0 1px var(--teal);
   color: var(--teal-deep);
   transform: translateX(-50%);
-  transition: box-shadow 0.18s ease, background-color 0.18s ease;
+  transition: box-shadow var(--dur-micro) var(--ease-out), background-color var(--dur-micro) var(--ease-out);
 }
 
 .hero__chip--static,
@@ -118,26 +118,35 @@
   --dropdown-width: 560px;
 }
 
-/* ---------- Mapa ---------- */
+/* ---------- Mapa ----------
+   El diseño traía «PE 2027» (236.7 px) sobre la franja «PROYECCIONES
+   ELECTORALES»; se pidió el nombre completo como título y el año en la franja,
+   así que aquí título y franja son texto. Para conservar el bloque macizo del
+   diseño el título va en dos líneas del mismo cuerpo, cada una al ancho exacto
+   de la franja, y termina en la misma línea base que tenía «PE 2027». Todo lo
+   demás (franja, sombra, lema y final del encabezado) está donde lo pone el
+   PDF, así que el resto de la página no se mueve. */
 .hero--mapa {
   --hero-end: 621px;
-  --title-x: 220.8px;
   --title-base: 351px;
-  --title-size: 236.7px;
+  --title-gap: 18px;
   --banner-x: 222.1px;
   --banner-y: 374.8px;
   --banner-w: 995.9px;
   --banner-h: 85.5px;
   --banner-r: 21.3px;
-  --banner-text-x: 249.6px;
-  --banner-base: 440.3px;
-  --banner-size: 58px;
   --shadow-x: 263px;
   --shadow-w: 913.9px;
   --shadow-h: 126.7px;
   --tagline-x: 222.1px;
   --tagline-base: 506.3px;
   --tagline-size: 21.9px;
+}
+
+/* el año, solo en la franja: un poco abierto para que se lea como rótulo y no como cifra suelta */
+.hero--mapa .hero__banner--text .hero__fit {
+  margin-right: -0.06em;
+  letter-spacing: 0.06em;
 }
 
 /* ---------- Diputaciones ---------- */
@@ -224,21 +233,31 @@
   white-space: nowrap;
 }
 
-/* título centrado sobre la franja, con la línea base donde la pone el diseño */
+/*
+ * Título de texto, centrado sobre la franja, con la línea base de su última
+ * línea donde la pone el diseño (--title-base). Medidas de la fuente del título
+ * (Metropolis Black): la línea base queda a 0.205 em del borde inferior de la
+ * caja y las mayúsculas empiezan a 0.1075 em del borde superior.
+ */
 .hero__title--text {
   left: 0;
   top: auto;
   bottom: calc(100% - (var(--title-base) - var(--nav)));
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
   color: var(--ink);
 }
 
 .hero__title--text .hero__fit {
-  /* la caja del texto baja hasta su línea base */
-  margin-bottom: -0.14em;
-  letter-spacing: -0.01em;
+  /* la caja termina en la línea base del texto; el espacio entre letras lo pone FitLines */
+  margin-bottom: -0.205em;
+}
+
+/* segunda línea: --title-gap entre la línea base de arriba y el tope de sus mayúsculas */
+.hero__title--text .hero__fit + .hero__fit {
+  margin-top: calc(var(--title-gap, 16px) - 0.1075em);
 }
 
 .hero__banner--text {
@@ -246,4 +265,48 @@
   align-items: center;
   justify-content: center;
   color: #fff;
+}
+
+/* ---------- Movimiento de la etiqueta con selector ---------- */
+.hero__chip.dropdown {
+  transition:
+    box-shadow var(--dur-micro) var(--ease-out),
+    background-color var(--dur-micro) var(--ease-out),
+    scale var(--dur-micro) var(--ease-out);
+}
+
+.hero__chip.dropdown:active {
+  scale: 0.985;
+}
+
+/* el texto del escenario elegido entra con un fundido corto */
+.hero__chip-text.swap-in {
+  animation-duration: var(--dur-medium);
+}
+
+/*
+ * Pista de que la etiqueta se puede tocar: al abrir la página su contorno late
+ * dos veces y se queda quieto. No cambia cómo se ve en reposo.
+ */
+@media (prefers-reduced-motion: no-preference) {
+  .hero__chip.dropdown::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    box-shadow: 0 0 0 0 rgb(0 171 165 / 0.45);
+    animation: hero-chip-hint 1.5s var(--ease-out) 1.2s 2 both;
+    pointer-events: none;
+  }
+}
+
+@keyframes hero-chip-hint {
+  0% {
+    box-shadow: 0 0 0 0 rgb(0 171 165 / 0.45);
+  }
+
+  70%,
+  100% {
+    box-shadow: 0 0 0 14px rgb(0 171 165 / 0);
+  }
 }

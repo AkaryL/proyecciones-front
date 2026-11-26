@@ -17,7 +17,7 @@
 /* ---------- Interacción: cada partido es un botón ---------- */
 .party-legend__item > * {
   cursor: pointer;
-  transition: opacity 0.18s ease;
+  transition: opacity var(--dur-micro) var(--ease-out);
 }
 
 .party-legend__hit {
@@ -27,7 +27,7 @@
   width: calc(var(--w) * 1px);
   height: 74px;
   border-radius: 14px;
-  transition: background-color 0.18s ease, box-shadow 0.18s ease;
+  transition: background-color var(--dur-micro) var(--ease-out), box-shadow var(--dur-micro) var(--ease-out);
 }
 
 .party-legend__hit:hover,

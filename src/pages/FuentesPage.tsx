@@ -13,7 +13,7 @@ const SECTIONS = (fuentes as { secciones: TableroSection[] }).secciones
  */
 export function FuentesPage() {
   return (
-    <PageShell variant="documento">
+    <PageShell variant="documento" title="Fuentes">
       <div className="frame">
         <PageHero
           variant="documento"

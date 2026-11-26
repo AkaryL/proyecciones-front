@@ -1,39 +1,32 @@
 import L from 'leaflet'
 import 'leaflet/dist/leaflet.css'
 import { useEffect, useRef, useState, type RefObject } from 'react'
-import type { MapaData } from '../../api'
+import type { Limites, MapaData } from '../../api'
 import { GUADALAJARA_BOUNDARY } from '../../data/guadalajara'
-import { limites, type Pintura, type Seleccion } from '../../lib/mapLayers'
+import type { Pintura, Seleccion } from '../../lib/mapLayers'
+import { DUR, duracion, prefersReducedMotion } from '../../lib/motion'
 import './MapView.css'
 
 type MapViewProps = {
-  /** Centro inicial [lat, lng]. */
-  center: [number, number]
-  /** Zoom que reproduce el encuadre del diseño con el artboard a tamaño real (1440 px). */
-  zoom: number
-  /**
-   * Nivel de mosaicos de OpenStreetMap que se dibuja en el encuadre inicial.
-   * El diseño usa el nivel 8 ampliado; fijarlo conserva el mismo tamaño de
-   * etiquetas y trazos a cualquier escala de la página.
-   */
-  tileZoom?: number
+  /** Lo que debe caber, ajustado, en el encuadre inicial (el municipio o un distrito). */
+  limites: Limites
   /** Muestra los botones +/− (por defecto sí). */
   zoomControl?: boolean
   className?: string
 
   /** Geometría de las secciones; mientras no llega solo se ve el municipio resaltado. */
   mapa?: MapaData | null
-  /** Cómo colorear las secciones. `null` deja el mapa como en el diseño. */
+  /** Cómo colorear las secciones. `null` deja solo el municipio resaltado. */
   pintura?: Pintura | null
   seleccion?: Seleccion | null
   onSeleccion?: (seleccion: Seleccion | null) => void
   /** Distrito cuyo contorno se destaca siempre (índice), p. ej. el de la tarjeta que abre el mapa. */
   destacado?: number | null
   /**
-   * A dónde debe volar el mapa: `distrito` (índice) o todo el municipio (-1).
-   * Cuando cambia `clave` se reencuadra; con `null` vuelve al encuadre del diseño.
+   * A dónde debe volar el mapa. Solo se mueve cuando cambia `clave` (otro ámbito
+   * o «restablecer»): elegir un filtro no toca la cámara que la persona acomodó.
    */
-  encuadre?: { clave: string; distrito: number } | null
+  encuadre?: { clave: string; limites: Limites }
   /** Elementos que tapan parte del mapa (panel, leyenda): el encuadre los evita. */
   evitar?: RefObject<HTMLElement | null>[]
   /** Se tocó el municipio resaltado en la vista inicial. */
@@ -46,12 +39,13 @@ const TILE_ATTRIBUTION = '&copy; <a href="https://www.openstreetmap.org/copyrigh
 
 const TRAZO = { oscuro: '#06222c', claro: '#ffffff', seleccion: '#5fe3c6' }
 const PANE = { relleno: 'pe-relleno', lineas: 'pe-lineas' }
+/** Opacidad del relleno de las secciones como conjunto (deja entrever las calles). */
+const OPACIDAD_RELLENO = '0.86'
 
-/** Escala actual del diseño (la misma de `.frame`): ancho efectivo del artboard / 1440. */
+/** Escala actual del diseño: ancho con el que se muestra el artboard (el de un `.frame`) / 1440. */
 function designScale() {
-  const root = document.documentElement
-  const frameMax = Number.parseFloat(getComputedStyle(root).getPropertyValue('--frame-max')) || DESIGN_WIDTH
-  return Math.min(root.clientWidth, frameMax) / DESIGN_WIDTH
+  const frame = document.querySelector('.frame')
+  return (frame?.clientWidth || document.documentElement.clientWidth) / DESIGN_WIDTH
 }
 
 const escapeHtml = (text: string) => text.replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c] ?? c)
@@ -61,6 +55,30 @@ function puntos(plano: number[]): L.LatLngTuple[] {
   const salida: L.LatLngTuple[] = []
   for (let k = 0; k < plano.length; k += 2) salida.push([plano[k], plano[k + 1]])
   return salida
+}
+
+/**
+ * Márgenes del encuadre: un aire parejo más lo que tapan los elementos que
+ * flotan sobre el mapa. Cada uno recorta el lado al que está pegado.
+ *
+ * Si el mapa es más alto que la ventana, se encuadra en la parte de arriba que
+ * cabe en una pantalla: lo encuadrado se ve completo, junto con el panel, sin
+ * tener que recorrer la página.
+ */
+function margenes(map: L.Map, evitar: RefObject<HTMLElement | null>[] | undefined): L.FitBoundsOptions {
+  const contenedor = map.getContainer().getBoundingClientRect()
+  const aire = 26 * designScale()
+  const izquierda: L.PointTuple = [aire, aire]
+  const derecha: L.PointTuple = [aire, aire]
+  for (const ref of evitar ?? []) {
+    const caja = ref.current?.getBoundingClientRect()
+    if (!caja || !caja.width || caja.right < contenedor.left || caja.left > contenedor.right) continue
+    if (caja.left + caja.width / 2 < contenedor.left + contenedor.width / 2) izquierda[0] = Math.max(izquierda[0], caja.right - contenedor.left + aire)
+    else derecha[0] = Math.max(derecha[0], contenedor.right - caja.left + aire)
+  }
+  const visible = Math.max(Math.min(contenedor.height, window.innerHeight), 4 * aire)
+  derecha[1] += Math.max(0, contenedor.height - visible)
+  return { paddingTopLeft: izquierda, paddingBottomRight: derecha }
 }
 
 type Capas = {
@@ -75,14 +93,12 @@ type Capas = {
 
 /**
  * Mapa interactivo (Leaflet + OpenStreetMap) con el tratamiento oscuro del diseño.
- * En la vista inicial solo resalta el municipio, como el diseño; al recibir una
+ * Abre encuadrado en `limites` con el municipio resaltado; al recibir una
  * `pintura` dibuja las secciones electorales coloreadas, con etiqueta al pasar
  * el cursor y selección al tocar. El zoom acompaña a la escala de la página.
  */
 export function MapView({
-  center,
-  zoom,
-  tileZoom,
+  limites,
   zoomControl = true,
   className,
   mapa = null,
@@ -90,7 +106,7 @@ export function MapView({
   seleccion = null,
   onSeleccion,
   destacado = null,
-  encuadre = null,
+  encuadre,
   evitar,
   onActivar,
 }: MapViewProps) {
@@ -98,7 +114,7 @@ export function MapView({
   const [map, setMap] = useState<L.Map | null>(null)
   const [capas, setCapas] = useState<Capas | null>(null)
   const resaltadoRef = useRef<L.Polygon | null>(null)
-  const [lat, lng] = center
+  const [[sur, oeste], [norte, este]] = limites
 
   // Los manejadores de Leaflet se crean una vez: leen siempre el valor vigente desde aquí.
   const vivo = useRef({ pintura, onSeleccion, onActivar, evitar, seleccion })
@@ -106,40 +122,26 @@ export function MapView({
     vivo.current = { pintura, onSeleccion, onActivar, evitar, seleccion }
   })
 
-  /* ---------- 1 · Mapa base ---------- */
+  /* ---------- 1 · Mapa base, encuadrado en `limites` ---------- */
   useEffect(() => {
     const container = containerRef.current
     if (!container) return
 
     let scale = designScale()
-    const initialZoom = zoom + Math.log2(scale)
-
-    // Leaflet pediría los mosaicos del nivel redondeado del zoom actual; con este
-    // desfase se piden los del nivel del diseño y se dibujan al tamaño equivalente.
-    const zoomOffset = Math.max(-2, Math.min(2, (tileZoom ?? Math.round(zoom)) - Math.round(initialZoom)))
-    const tileSize = 256 / 2 ** zoomOffset
-    container.style.setProperty('--tile-size', `${tileSize + 1}px`)
-
-    const instance = L.map(container, {
-      center: [lat, lng],
-      zoom: initialZoom,
-      zoomSnap: 0,
-      zoomDelta: 1,
-      zoomControl,
-      scrollWheelZoom: false,
-    })
-
-    L.tileLayer(TILE_URL, {
-      attribution: TILE_ATTRIBUTION,
-      tileSize,
-      zoomOffset,
-      minZoom: 3 - zoomOffset,
-      maxZoom: 19 - zoomOffset,
-    }).addTo(instance)
+    const instance = L.map(container, { zoomSnap: 0, zoomDelta: 1, zoomControl, scrollWheelZoom: false, minZoom: 8, maxZoom: 18 })
+    instance.fitBounds(
+      [
+        [sur, oeste],
+        [norte, este],
+      ],
+      { ...margenes(instance, vivo.current.evitar), animate: false },
+    )
+    L.tileLayer(TILE_URL, { attribution: TILE_ATTRIBUTION, maxZoom: 19 }).addTo(instance)
 
     const resaltado = L.polygon(GUADALAJARA_BOUNDARY, {
       className: 'map-view__highlight',
-      stroke: false,
+      color: '#e6fbee',
+      weight: 2,
       fillOpacity: 1,
       bubblingMouseEvents: false,
     }).addTo(instance)
@@ -169,7 +171,7 @@ export function MapView({
       setMap(null)
       instance.remove()
     }
-  }, [lat, lng, zoom, tileZoom, zoomControl])
+  }, [sur, oeste, norte, este, zoomControl])
 
   /* ---------- 2 · Secciones, límites de distrito y rótulos ---------- */
   useEffect(() => {
@@ -178,7 +180,8 @@ export function MapView({
     // juntas entre secciones vecinas), y encima las líneas, que no interceptan el cursor.
     const paneRelleno = map.getPane(PANE.relleno) ?? map.createPane(PANE.relleno)
     paneRelleno.style.zIndex = '350'
-    paneRelleno.style.opacity = '0.86'
+    paneRelleno.style.opacity = '0'
+    paneRelleno.style.transition = `opacity ${duracion(DUR.small)}ms ease`
     const paneLineas = map.getPane(PANE.lineas) ?? map.createPane(PANE.lineas)
     paneLineas.style.zIndex = '360'
     paneLineas.style.pointerEvents = 'none'
@@ -240,7 +243,9 @@ export function MapView({
         L.tooltip({ permanent: true, direction: 'center', interactive: false, className: 'map-view__label' }).setLatLng(distrito.centro).setContent(`D${distrito.id}`),
       ),
     )
-    const nuevas: Capas = { secciones, relleno: L.layerGroup(secciones), bordes, etiquetas, marcas: L.layerGroup(), cursor, renderer }
+    // los contornos (distrito destacado, selección) existen también sin capa: van siempre en el mapa
+    const marcas = L.layerGroup().addTo(map)
+    const nuevas: Capas = { secciones, relleno: L.layerGroup(secciones), bordes, etiquetas, marcas, cursor, renderer }
     setCapas(nuevas)
 
     return () => {
@@ -250,27 +255,52 @@ export function MapView({
     }
   }, [map, mapa])
 
-  /* ---------- 3 · Pintar la capa elegida ---------- */
+  /* ---------- 3 · Pintar la capa elegida, con fundido ---------- */
+  const pintada = useRef<string | null>(null) // clave de lo que hay pintado; null = solo el municipio
+  const reloj = useRef(0)
   useEffect(() => {
     if (!map) return
-    const resaltado = resaltadoRef.current
+    window.clearTimeout(reloj.current)
+    const relleno = map.getPane(PANE.relleno)
+    // el municipio resaltado se funde con las secciones: sale cuando ellas entran
+    resaltadoRef.current?.getElement()?.classList.toggle('is-oculto', Boolean(capas && pintura))
+
     if (!capas || !pintura) {
-      // vista inicial del diseño: solo el municipio resaltado
-      if (capas) for (const capa of [capas.relleno, capas.bordes, capas.etiquetas, capas.marcas, capas.cursor]) capa.remove()
-      if (resaltado && !map.hasLayer(resaltado)) resaltado.addTo(map)
+      const retirar = () => {
+        if (capas) for (const capa of [capas.relleno, capas.bordes, capas.etiquetas, capas.cursor]) capa.remove()
+        pintada.current = null
+      }
+      if (capas && pintada.current !== null && relleno) {
+        relleno.style.opacity = '0'
+        reloj.current = window.setTimeout(retirar, duracion(DUR.small))
+      } else retirar()
       return
     }
-    resaltado?.remove()
-    capas.secciones.forEach((poligono, i) => poligono.setStyle(estilo(pintura, i)))
-    for (const capa of [capas.relleno, capas.bordes, capas.marcas, capas.cursor, capas.etiquetas]) if (!map.hasLayer(capa)) capa.addTo(map)
-    capas.bordes.bringToFront()
+
+    const pintar = () => {
+      capas.secciones.forEach((poligono, i) => poligono.setStyle(estilo(pintura, i)))
+      for (const capa of [capas.relleno, capas.bordes, capas.cursor, capas.etiquetas]) if (!map.hasLayer(capa)) capa.addTo(map)
+      capas.bordes.bringToFront()
+      pintada.current = pintura.clave
+      // en el cuadro siguiente, para que la opacidad tenga de dónde transicionar
+      requestAnimationFrame(() => {
+        if (relleno) relleno.style.opacity = OPACIDAD_RELLENO
+      })
+    }
+    if (pintada.current === null || pintada.current === pintura.clave) {
+      pintar() // primera capa (entra con fundido) o los mismos colores con datos más recientes
+    } else {
+      // otra capa: la anterior se desvanece, se repinta y entra la nueva
+      if (relleno) relleno.style.opacity = '0'
+      reloj.current = window.setTimeout(pintar, duracion(DUR.small))
+    }
+    return () => window.clearTimeout(reloj.current)
   }, [map, capas, pintura])
 
   /* ---------- 4 · Contornos: distrito destacado y selección ---------- */
   useEffect(() => {
     if (!capas || !mapa) return
     capas.marcas.clearLayers()
-    if (!pintura) return
     const { renderer } = capas
     const trazar = (lineas: L.LatLngTuple[][], color: string, cerrado = false) => {
       // doble trazo: uno oscuro debajo para que el contorno se lea sobre cualquier color
@@ -284,37 +314,29 @@ export function MapView({
     }
     const contorno = (distrito: number) => mapa.bordes.filter((borde) => borde.entre.includes(distrito)).map((borde) => puntos(borde.linea))
     if (destacado !== null && destacado >= 0) trazar(contorno(destacado), TRAZO.claro)
+    if (!pintura) return
     if (seleccion?.unidad === 'dist') trazar(contorno(seleccion.indice), TRAZO.seleccion)
     if (seleccion?.unidad === 'secc') trazar([puntos(mapa.poligonos[seleccion.indice])], TRAZO.seleccion, true)
   }, [capas, mapa, pintura, seleccion, destacado])
 
-  /* ---------- 5 · Encuadre ---------- */
-  const clave = encuadre?.clave ?? null
-  const distrito = encuadre?.distrito ?? -1
-  const haVolado = useRef(false)
+  /* ---------- 5 · Encuadre: vuela solo cuando cambia la clave ---------- */
+  const clave = encuadre?.clave ?? ''
+  const destino = encuadre?.limites ?? limites
+  const destinoRef = useRef(destino)
+  useEffect(() => {
+    destinoRef.current = destino
+  })
+  const inicial = useRef(true)
   useEffect(() => {
     if (!map) return
-    if (clave === null) {
-      if (!haVolado.current) return
-      haVolado.current = false
-      map.flyTo([lat, lng], zoom + Math.log2(designScale()), { duration: 0.9 })
+    if (inicial.current) {
+      inicial.current = false // el encuadre inicial ya lo dejó hecho el montaje
       return
     }
-    if (!mapa) return
-    const contenedor = map.getContainer().getBoundingClientRect()
-    const margen = 28 * designScale()
-    const izquierda: L.PointTuple = [margen, margen]
-    const derecha: L.PointTuple = [margen, margen]
-    for (const ref of vivo.current.evitar ?? []) {
-      const caja = ref.current?.getBoundingClientRect()
-      if (!caja || !caja.width || caja.right < contenedor.left || caja.left > contenedor.right) continue
-      // cada obstáculo recorta el lado del mapa al que está pegado
-      if (caja.left + caja.width / 2 < contenedor.left + contenedor.width / 2) izquierda[0] = Math.max(izquierda[0], caja.right - contenedor.left + margen)
-      else derecha[0] = Math.max(derecha[0], contenedor.right - caja.left + margen)
-    }
-    haVolado.current = true
-    map.flyToBounds(limites(mapa, distrito), { paddingTopLeft: izquierda, paddingBottomRight: derecha, duration: 0.9, maxZoom: 15 })
-  }, [map, mapa, clave, distrito, lat, lng, zoom])
+    const opciones = margenes(map, vivo.current.evitar)
+    if (prefersReducedMotion()) map.fitBounds(destinoRef.current, { ...opciones, animate: false })
+    else map.flyToBounds(destinoRef.current, { ...opciones, duration: 0.9 })
+  }, [map, clave])
 
   return <div ref={containerRef} className={`map-view${pintura ? ' map-view--activo' : ''}${className ? ` ${className}` : ''}`} />
 }

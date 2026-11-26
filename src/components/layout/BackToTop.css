@@ -1,0 +1,64 @@
+/* Botón fijo a la ventana: medidas en píxeles reales (PX), no en los del diseño. */
+.back-to-top {
+  position: fixed;
+  z-index: 60;
+  right: 24PX;
+  bottom: 24PX;
+  width: 46PX;
+  height: 46PX;
+  border-radius: 50%;
+  background: var(--grad-navy);
+  box-shadow:
+    0 0 0 2PX #fff,
+    0 10PX 24PX rgb(0 30 45 / 0.35);
+  animation: back-to-top-in var(--dur-small) var(--ease-out) both;
+  transition:
+    translate var(--dur-micro) var(--ease-out),
+    box-shadow var(--dur-micro) var(--ease-out);
+}
+
+/* flecha hacia arriba dibujada con dos trazos */
+.back-to-top::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 54%;
+  width: 11PX;
+  height: 11PX;
+  border: solid var(--aqua);
+  border-width: 3PX 0 0 3PX;
+  border-radius: 1PX;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.back-to-top:hover {
+  translate: 0 -2PX;
+  box-shadow:
+    0 0 0 2PX #fff,
+    0 14PX 28PX rgb(0 30 45 / 0.45);
+}
+
+.back-to-top:active {
+  translate: 0 0;
+  scale: 0.96;
+}
+
+.back-to-top.is-leaving {
+  animation: back-to-top-out var(--dur-micro) var(--ease-in) both;
+}
+
+@keyframes back-to-top-in {
+  from {
+    opacity: 0;
+    translate: 0 8PX;
+    scale: 0.9;
+  }
+}
+
+@keyframes back-to-top-out {
+  to {
+    opacity: 0;
+    translate: 0 6PX;
+    scale: 0.94;
+  }
+}

@@ -1,0 +1,233 @@
+/*
+ * Inicio de sesión (sin pantalla en el diseño). Medidas en px del artboard de
+ * 1440: a la izquierda el rótulo del inicio a escala, a la derecha la tarjeta
+ * con el formulario, los dos centrados a la misma altura.
+ */
+.login {
+  position: relative;
+  height: 500px;
+  margin-block: 40px;
+}
+
+/*
+ * El rótulo (título, franja y lema) es el encabezado del Mapa dentro de un
+ * frame de 979.2 px: se ve al 68 % y mide 678.9 px de ancho. Va con su borde
+ * izquierdo a 100 px y su centro (a 153.8 px de su borde superior) a media altura.
+ */
+.login__brand.frame {
+  position: absolute;
+  left: -50.1px;
+  top: calc(50% - 153.8px);
+  width: 979.2px;
+  margin: 0;
+}
+
+/* ---------- Tarjeta ---------- */
+.login__card {
+  position: absolute;
+  top: 50%;
+  right: 100px;
+  display: flex;
+  flex-direction: column;
+  width: 470px;
+  padding: 40px 44px 44px;
+  box-shadow:
+    inset 0 0 0 1px var(--line),
+    0 24px 46px -30px rgb(0 40 60 / 0.45);
+  translate: 0 -50%;
+}
+
+.login__title {
+  margin-top: 20px;
+  color: var(--ink-strong);
+  font-size: 34px;
+  line-height: 1.1;
+  letter-spacing: -0.028em;
+}
+
+.login__lead {
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.35;
+}
+
+/* ---------- Campos ---------- */
+.login__field {
+  display: flex;
+  flex-direction: column;
+  margin-top: 6px;
+}
+
+.login__lead + .login__field {
+  margin-top: 28px;
+}
+
+.login__label {
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.2;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.login__control {
+  position: relative;
+}
+
+.login__input {
+  display: block;
+  width: 100%;
+  height: 52px;
+  margin-top: 8px;
+  padding: 0 18px;
+  border: 0;
+  border-radius: 16px;
+  background: var(--surface-soft);
+  box-shadow: inset 0 0 0 1.5px transparent;
+  color: var(--ink-strong);
+  font-size: 17px;
+  transition:
+    background-color var(--dur-micro) var(--ease-out),
+    box-shadow var(--dur-micro) var(--ease-out);
+}
+
+.login__input--con-boton {
+  padding-right: 56px;
+}
+
+.login__input:hover {
+  box-shadow: inset 0 0 0 1.5px var(--line);
+}
+
+/* con el cursor dentro: fondo blanco y contorno turquesa, como la etiqueta de escenario */
+.login__input:focus,
+.login__input:focus-visible {
+  outline: none;
+  background: #fff;
+  box-shadow: inset 0 0 0 2px var(--teal);
+}
+
+.login__input[aria-invalid='true'] {
+  background: var(--warn-bg);
+  box-shadow: inset 0 0 0 1.5px var(--warn-line);
+}
+
+.login__input[aria-invalid='true']:focus {
+  background: #fff;
+  box-shadow: inset 0 0 0 2px var(--warn-line);
+}
+
+/* el autocompletado del navegador no cambia el fondo del campo */
+.login__input:-webkit-autofill {
+  -webkit-text-fill-color: var(--ink-strong);
+  box-shadow:
+    inset 0 0 0 1.5px var(--line),
+    inset 0 0 0 60px var(--surface-soft);
+}
+
+/* ver / ocultar la contraseña */
+.login__ver {
+  position: absolute;
+  top: 14px;
+  right: 8px;
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  color: var(--muted);
+  transition: color var(--dur-micro) var(--ease-out);
+}
+
+.login__ver .icon {
+  width: 22px;
+  height: 22px;
+}
+
+.login__ver:hover,
+.login__ver:focus-visible {
+  color: var(--teal);
+}
+
+/* contraseña a la vista: el ojo va tachado (tocarlo la vuelve a ocultar) */
+.login__ver::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 26px;
+  height: 2px;
+  border-radius: 1px;
+  background: currentColor;
+  box-shadow: 0 0 0 1.5px var(--surface-soft);
+  opacity: 0;
+  rotate: -45deg;
+  scale: 0.4 1;
+  translate: -50% -50%;
+  transition:
+    opacity var(--dur-micro) var(--ease-out),
+    scale var(--dur-small) var(--ease-out);
+}
+
+.login__ver.is-visible::after {
+  opacity: 1;
+  scale: 1 1;
+}
+
+/* renglón del aviso: siempre ocupa su lugar, así la tarjeta no brinca al aparecer */
+.login__error {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 24px;
+  padding-top: 4px;
+  color: var(--warn-ink);
+  font-size: 12.5px;
+  line-height: 1.2;
+}
+
+.login__error .icon {
+  flex: none;
+  width: 14px;
+  height: 14px;
+}
+
+.login__error:not(:empty) {
+  animation: swap-in var(--dur-small) var(--ease-out) both;
+}
+
+/* ---------- Entrar ---------- */
+.login__submit {
+  height: 54px;
+  margin-top: 10px;
+  border-radius: 27px;
+  background: var(--grad-banner);
+  box-shadow: 0 16px 26px -18px rgb(0 40 60 / 0.7);
+  color: #fff;
+  font-size: 15px;
+  letter-spacing: 0.16em;
+  transition:
+    box-shadow var(--dur-micro) var(--ease-out),
+    filter var(--dur-micro) var(--ease-out),
+    scale var(--dur-micro) var(--ease-out),
+    translate var(--dur-micro) var(--ease-out);
+}
+
+.login__submit:hover {
+  box-shadow: 0 20px 30px -18px rgb(0 40 60 / 0.8);
+  filter: brightness(1.06);
+  translate: 0 -1px;
+}
+
+.login__submit:active {
+  scale: 0.985;
+  translate: 0 0;
+}
+
+.login__submit:disabled {
+  cursor: default;
+  filter: saturate(0.6);
+  opacity: 0.75;
+  translate: 0 0;
+}

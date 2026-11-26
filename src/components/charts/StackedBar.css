@@ -10,20 +10,23 @@
 }
 
 .stacked-bar__track {
-  display: flex;
+  position: relative;
   height: var(--bar-h);
   border-radius: calc(var(--bar-h) / 2);
   background: var(--track);
   overflow: hidden;
 }
 
+/* Cada segmento va de --x a --x + --v (en % del riel). */
 .stacked-bar__segment {
-  position: relative;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: calc(var(--x) * 1%);
+  width: calc(var(--v) * 1%);
   display: flex;
-  flex: 0 0 calc(var(--v) * 1%);
   align-items: center;
   justify-content: center;
-  min-width: 0;
   background: var(--tone);
 }
 
@@ -41,7 +44,7 @@
   background: #fff;
 }
 
-.stacked-bar__segment:last-child::after {
+.stacked-bar__segment.is-last::after {
   right: calc(var(--bar-sep) / -2);
   width: var(--bar-sep);
 }
@@ -63,15 +66,17 @@
 
 /* Cifras bajo los segmentos pequeños */
 .stacked-bar__notes {
-  display: flex;
+  position: relative;
   height: 0;
 }
 
 .stacked-bar__note {
+  position: absolute;
+  top: 0;
+  left: calc(var(--x) * 1%);
+  width: calc(var(--v) * 1%);
   display: flex;
-  flex: 0 0 calc(var(--v) * 1%);
   justify-content: center;
-  min-width: 0;
   color: var(--tone);
   font-family: var(--font-helvetica);
   font-weight: 700;
@@ -79,10 +84,15 @@
   --bl: 19.6px;
 }
 
-/* ---------- Interacción ---------- */
+/* ---------- Movimiento e interacción ---------- */
+/* Con cifras nuevas, cada partido se desliza a su nuevo sitio y tamaño. */
 .stacked-bar__segment,
 .stacked-bar__note {
-  transition: opacity 0.18s ease;
+  transition:
+    left var(--dur-large) var(--ease-out),
+    width var(--dur-large) var(--ease-out),
+    opacity var(--dur-small) var(--ease-out),
+    filter var(--dur-micro) var(--ease-out);
 }
 
 .stacked-bar__segment:hover {
@@ -114,7 +124,18 @@
   line-height: 1.2;
   white-space: nowrap;
   transform: translateX(-50%);
+  transform-origin: 50% 100%;
   pointer-events: none;
+  animation: stacked-bar-tip-in var(--dur-micro) var(--ease-out) both;
+  transition: left var(--dur-micro) var(--ease-out);
+}
+
+@keyframes stacked-bar-tip-in {
+  from {
+    opacity: 0;
+    scale: 0.94;
+    translate: 0 3px;
+  }
 }
 
 .stacked-bar__tip::after {

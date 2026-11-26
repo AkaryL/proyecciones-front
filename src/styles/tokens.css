@@ -2,12 +2,20 @@
   /*
    * Escala del diseño
    * -----------------
-   * Ancho máximo (en px reales) con el que se muestra el artboard de 1440 px.
-   *   1440 -> tamaño real del diseño (100 %)
-   *    960 -> diseño al 67 % (contenido centrado con aire a los lados)
-   * En ventanas más angostas que este valor el sitio se encoge para caber.
+   * El artboard de 1440 px se muestra con las proporciones exactas del PDF,
+   * centrado, y ocupa una parte fija del ancho de la ventana (el menú, el
+   * fondo, el mapa y el pie sí van de orilla a orilla).
+   *   --frame-share  parte del ancho de la ventana que ocupa el diseño:
+   *                  1 = de orilla a orilla · 0.8 = al 80 %
+   *   --frame-min    en ventanas angostas el diseño no baja de este ancho (px
+   *                  reales); si la ventana es aún más angosta, la llena
+   *   --frame-max    tope en monitores muy anchos (px reales)
+   * Con estos tres valores se arma --frame-w (PageShell.css), que usan `.frame`
+   * y `--u`; scripts/tablero-css.mjs los lee al generar styles/tablero.css.
    */
-  --frame-max: 960;
+  --frame-share: 0.8;
+  --frame-min: 960;
+  --frame-max: 1920;
 
   /* ---------- Tipografía ---------- */
   --font-gotham: 'Montserrat Variable', 'Montserrat', sans-serif;
@@ -48,10 +56,35 @@
   --warn-line: #ffb43f;
   --warn-ink: #cb7900;
 
+  /*
+   * ---------- Movimiento ----------
+   * Curvas: lo que entra o responde desacelera (--ease-out); lo que se mueve
+   * dentro de la pantalla acelera y frena (--ease-in-out); lo que sale acelera
+   * (--ease-in). Duraciones: la más corta que no se sienta brusca; las salidas
+   * usan la inmediata inferior a su entrada. Todo queda entre 100 y 500 ms.
+   */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --ease-in: cubic-bezier(0.5, 0, 0.75, 0);
+  --dur-micro: 120ms; /* cursor encima, pulsación, foco */
+  --dur-small: 180ms; /* menús, etiquetas flotantes, textos que cambian */
+  --dur-medium: 320ms; /* acordeones y paneles */
+  --dur-large: 520ms; /* barras, donas y cifras que cambian de valor */
+
   /* ---------- Degradados (muestreados del diseño) ---------- */
   --grad-banner: linear-gradient(90deg, #58e3c4 0%, #3dbea9 15%, #1c998d 29.6%, #06495c 100%);
   --grad-brand: linear-gradient(90deg, #00e4c6 0%, #00aba5 50%, #00384b 100%);
   --grad-footer: linear-gradient(90deg, #00e4c6 0%, #00c3b9 40%, #00beb7 45%, #00b2ad 50%, #003049 100%);
   --grad-footer-up: linear-gradient(0deg, #00e4c6 0%, #00c3b9 40%, #00beb7 45%, #00b2ad 50%, #003049 100%);
   --grad-navy: linear-gradient(to bottom right, #001326 0%, #002e49 100%);
+}
+
+/* Quien pide menos movimiento al sistema recibe los cambios sin animación. */
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --dur-micro: 1ms;
+    --dur-small: 1ms;
+    --dur-medium: 1ms;
+    --dur-large: 1ms;
+  }
 }

@@ -1,0 +1,39 @@
+/*
+ * Acordeón: una rejilla de una fila que crece de 0fr a 1fr.
+ *
+ * El recorte lo hace el contenedor, no la fila: a medio camino el navegador da
+ * al contenedor un alto de f × contenido pero a la fila solo f² × contenido, y
+ * recortar en la fila deja un hueco vacío bajo lo que se va descubriendo.
+ */
+.collapse {
+  display: grid;
+  grid-template-rows: 0fr;
+  overflow: hidden;
+  /* al cerrar: algo más rápido */
+  transition: grid-template-rows calc(var(--dur-medium) * 0.8) var(--ease-in-out);
+}
+
+.collapse.is-open {
+  grid-template-rows: 1fr;
+  transition-duration: var(--dur-medium);
+}
+
+/* ya abierto y quieto, deja ver lo que sobresalga (una lista desplegable, una etiqueta) */
+.collapse.is-settled {
+  overflow: visible;
+}
+
+.collapse__inner {
+  min-height: 0;
+}
+
+/* el contenido aparece un poco después de que empieza a abrirse el hueco */
+.collapse__inner > * {
+  opacity: 0;
+  transition: opacity var(--dur-small) var(--ease-in);
+}
+
+.collapse.is-open > .collapse__inner > * {
+  opacity: 1;
+  transition: opacity var(--dur-medium) var(--ease-out) calc(var(--dur-medium) * 0.25);
+}

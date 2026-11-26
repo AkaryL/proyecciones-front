@@ -50,7 +50,7 @@
 /* al cambiar de escenario, el punto y el rango se deslizan a su nueva posición */
 .vote__dot,
 .vote__range {
-  transition: left 0.45s cubic-bezier(0.22, 1, 0.36, 1), width 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+  transition: left var(--dur-large) var(--ease-out), width var(--dur-large) var(--ease-out);
 }
 
 .verdict__odds {
@@ -590,7 +590,7 @@
 /* cada celda es un botón que lleva a sus filas de la tabla por grupos de edad */
 button.group-chip {
   text-align: left;
-  transition: box-shadow 0.16s ease, transform 0.16s ease;
+  transition: box-shadow var(--dur-micro) var(--ease-out), transform var(--dur-micro) var(--ease-out);
 }
 
 button.group-chip:hover,
@@ -781,7 +781,7 @@ button.group-chip.is-focus {
   background: rgb(0 171 165 / 0.07);
   box-shadow: inset 0 0 0 1.5px var(--teal);
   opacity: 0;
-  transition: opacity 0.16s ease;
+  transition: opacity var(--dur-micro) var(--ease-out);
   pointer-events: none;
 }
 
@@ -1000,4 +1000,41 @@ button.group-chip.is-focus {
 
 .sim-ai__panel-text:nth-of-type(2) {
   top: 365.7px;
+}
+
+/* ---------------------------------------------------------------------------
+ * Movimiento
+ * ------------------------------------------------------------------------ */
+
+/* el color del favorito cambia con un fundido al pasar de un escenario a otro */
+.verdict__title {
+  transition: color var(--dur-medium) var(--ease-out);
+}
+
+/* Fila a la que se acaba de llegar desde el mapa de grupos: su marco destella
+   un par de veces para que el ojo la encuentre, y se va. */
+.age-row.is-flash::after {
+  animation: age-row-flash 2s var(--ease-out) both;
+}
+
+@keyframes age-row-flash {
+  0%,
+  100% {
+    opacity: 0;
+  }
+
+  12%,
+  40%,
+  68% {
+    opacity: 1;
+  }
+
+  26%,
+  54% {
+    opacity: 0.35;
+  }
+}
+
+button.group-chip:active {
+  transform: translateY(0) scale(0.98);
 }

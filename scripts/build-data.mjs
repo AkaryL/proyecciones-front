@@ -156,6 +156,29 @@ const escenarios = sim.escenarios.map((escenario) => {
   }
 })
 
+/* Caja [[sur, oeste], [norte, este]] de las secciones que cumplen `filtro` (geometría de pvem_geo.js). */
+const posicionGeo = Object.fromEntries(ids.map((id, i) => [id, i]))
+function caja(filtro) {
+  let sur = 90
+  let norte = -90
+  let oeste = 180
+  let este = -180
+  for (const seccion of geo.secciones) {
+    const i = posicionGeo[String(seccion.s)]
+    if (i === undefined || !filtro(i)) continue
+    for (const [lng, lat] of seccion.poly) {
+      sur = Math.min(sur, lat)
+      norte = Math.max(norte, lat)
+      oeste = Math.min(oeste, lng)
+      este = Math.max(este, lng)
+    }
+  }
+  return [
+    [round(sur, 5), round(oeste, 5)],
+    [round(norte, 5), round(este, 5)],
+  ]
+}
+
 /* Habitantes (Censo 2020) por distrito: suma de sus secciones con censo propio. */
 const variablesPorDistrito = Object.fromEntries(distritos.map((dl) => [dl, json(`grupos_variables_D${dl}.json`)]))
 const iPoblacion = variables.variables.findIndex((v) => v.clave === 'poblacion')
@@ -177,11 +200,14 @@ const escenariosJson = {
   electores: mapaV8.lista_nominal_total,
   habitantes: habitantes.reduce((sum, n) => sum + n, 0),
   secciones: ids.length,
+  // caja que contiene todas las secciones: el encuadre inicial del mapa
+  limites: caja(() => true),
   distritos: distritos.map((id, k) => ({
     id,
     secciones: mapaV8.distritos.n_secciones[k],
     electores: mapaV8.distritos.ln[k],
     habitantes: habitantes[k],
+    limites: caja((i) => dlIndex[i] === k),
     // el D13 solo tiene una franja dentro de Guadalajara: no elige diputado por sí sola
     franja: Boolean(mapaV8.distritos.franja[k]),
   })),
@@ -474,8 +500,8 @@ for (const escenario of sim.escenarios) {
 /* Escritura                                                           */
 /* ------------------------------------------------------------------ */
 
-fs.rmSync(OUT_PUBLIC, { recursive: true, force: true })
-fs.rmSync(OUT_BUNDLE, { recursive: true, force: true })
+// Solo se limpia lo que este script escribe: en OUT_BUNDLE también viven los datos de otros scripts.
+fs.rmSync(path.join(OUT_PUBLIC, 'secciones'), { recursive: true, force: true })
 const rel = (dir) => path.relative(PROJECT, dir).replaceAll('\\', '/')
 const sizes = []
 sizes.push([`${rel(OUT_BUNDLE)}/escenarios.json`, writeJson(OUT_BUNDLE, 'escenarios.json', escenariosJson)])

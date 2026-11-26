@@ -40,12 +40,17 @@ export type Escenario = {
   boletas: Record<Boleta, BoletaDatos>
 }
 
+/** Caja geográfica: [[sur, oeste], [norte, este]]. */
+export type Limites = [[number, number], [number, number]]
+
 export type DistritoInfo = {
   id: string
   secciones: number
   electores: number
   /** Habitantes del Censo 2020. */
   habitantes: number
+  /** Caja que contiene sus secciones (encuadre del mapa). */
+  limites: Limites
   /** Solo una franja del distrito está en Guadalajara: no elige diputado por sí sola. */
   franja: boolean
 }
@@ -66,6 +71,8 @@ export type EscenariosData = {
   electores: number
   habitantes: number
   secciones: number
+  /** Caja que contiene todo el municipio (encuadre inicial del mapa). */
+  limites: Limites
   distritos: DistritoInfo[]
   escenarios: Escenario[]
 }

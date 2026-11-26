@@ -5,7 +5,7 @@ import { AVISO_SENTIMIENTO, ficha as armarFicha, pintar, usaPrediccion, type Cap
 type Opciones = {
   /** Escenario del motor cuyas proyecciones pinta el mapa. */
   escenario: string
-  /** Distrito al que pertenece el mapa (el de la tarjeta que lo abre): se encuadra y se destaca. */
+  /** Distrito al que pertenece el mapa (el de la tarjeta que lo abre): se destaca su contorno. */
   distrito?: string
 }
 
@@ -30,10 +30,12 @@ function useRecurso<T>(clave: string | null, pedir: () => Promise<T>) {
   return { data: estado?.data ?? null, error: Boolean(estado?.error && estado.clave === clave), alDia: estado?.clave === clave }
 }
 
+const indiceDe = (id: string) => DATOS.distritos.findIndex((d) => d.id === id)
+
 /**
  * Estado del mapa interactivo: qué filtro, vista y ámbito están elegidos, qué
  * está seleccionado, y lo que de ahí se deriva (pintura, leyenda, ficha y
- * encuadre). Sin nada elegido el mapa queda como en el diseño.
+ * encuadre). Sin nada elegido el mapa muestra solo el municipio resaltado.
  */
 export function useMapExplorer({ escenario: escenarioId, distrito }: Opciones) {
   const [capa, setCapa] = useState<CapaClave | null>(null)
@@ -43,6 +45,8 @@ export function useMapExplorer({ escenario: escenarioId, distrito }: Opciones) {
   const [ambito, setAmbito] = useState('')
   const [seleccion, setSeleccion] = useState<Seleccion | null>(null)
   const [aviso, setAviso] = useState<string | null>(null)
+  /** Cuántas veces se pidió volver al encuadre inicial (cada una reencuadra el mapa). */
+  const [reencuadres, setReencuadres] = useState(0)
 
   const activo = capa !== null || vista !== null || ambito !== ''
   const escenario = escenarioPorId(escenarioId)
@@ -124,8 +128,22 @@ export function useMapExplorer({ escenario: escenarioId, distrito }: Opciones) {
     setVistaElegida(true)
   }, [])
 
-  const indice = (id: string | undefined) => (id ? DATOS.distritos.findIndex((d) => d.id === id) : -1)
+  /** Quita filtros, vista, ámbito y selección, y devuelve el mapa a su encuadre inicial. */
+  const restablecer = useCallback(() => {
+    setCapa(null)
+    setVista(null)
+    setVistaElegida(false)
+    setAmbito('')
+    setSeleccion(null)
+    setAviso(null)
+    setReencuadres((n) => n + 1)
+  }, [])
+
+  // El contorno destaca el ámbito elegido o, si no hay, el distrito de la tarjeta; la cámara
+  // sigue solo al ámbito: mientras el selector diga «Guadalajara», se ve el municipio completo.
   const foco = ambito || distrito || ''
+  const iFoco = foco ? indiceDe(foco) : -1
+  const iAmbito = ambito ? indiceDe(ambito) : -1
   const cargando = activo && !pintado && !mapa.error && !secciones.error
   const fallo = activo && (mapa.error || (usaPrediccion(capa) && unidad === 'secc' && secciones.error))
 
@@ -142,13 +160,17 @@ export function useMapExplorer({ escenario: escenarioId, distrito }: Opciones) {
     avisarSinDato: () => setAviso(AVISO_SENTIMIENTO),
     seleccionar: setSeleccion,
     activar,
+    restablecer,
     mapa: mapa.data,
     pintura: pintado?.pintura ?? null,
     leyenda: pintado?.leyenda ?? null,
     ficha,
+    /** Encuadre con el que abre el mapa: Guadalajara completa, ajustada al espacio libre. */
+    limites: DATOS.limites,
     /** Distrito cuyo contorno se destaca: el ámbito elegido o el de la tarjeta. */
-    destacado: indice(foco) >= 0 ? indice(foco) : null,
-    encuadre: activo ? { clave: foco || 'municipio', distrito: indice(foco) } : null,
+    destacado: iFoco >= 0 ? iFoco : null,
+    /** A dónde vuela el mapa cuando cambia el ámbito o se restablece. */
+    encuadre: { clave: `${ambito || 'municipio'}|${reencuadres}`, limites: iAmbito >= 0 ? DATOS.distritos[iAmbito].limites : DATOS.limites },
     aviso: fallo ? 'No se pudieron cargar los datos del mapa. Revisa la conexión e inténtalo de nuevo.' : cargando ? 'Cargando el mapa…' : aviso,
   }
 }

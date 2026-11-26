@@ -26,15 +26,25 @@
   mix-blend-mode: normal;
 }
 
-/* Municipio resaltado */
+/* Municipio resaltado (vista inicial): el verde del diseño, translúcido para que
+   a esta escala se alcancen a ver las calles, con su contorno. */
 .map-view__highlight {
   fill: #a3d7b2;
-  fill-opacity: 0.95;
-  transition: fill 0.15s ease;
+  fill-opacity: 0.58;
+  stroke-opacity: 0.95;
+  transition:
+    fill-opacity var(--dur-small) var(--ease-out),
+    opacity var(--dur-small) var(--ease-out);
 }
 
 .map-view__highlight:hover {
-  fill: #c2ecd0;
+  fill-opacity: 0.7;
+}
+
+/* con una capa de datos encima, el resaltado se retira con un fundido */
+.map-view__highlight.is-oculto {
+  opacity: 0;
+  pointer-events: none;
 }
 
 /* ---------- Capas de datos ---------- */

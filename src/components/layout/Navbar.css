@@ -1,10 +1,12 @@
-/* Banda a todo lo ancho de la ventana (fuera del frame): usa var(--u). */
+/* Banda a todo lo ancho de la ventana (fuera del frame): usa var(--u).
+   Sin recorte: el botón de cerrar sesión cuelga por debajo de la banda. */
 .navbar {
   position: relative;
   z-index: 2;
   height: calc(107.7 * var(--u));
   background: url('../../assets/img/nav-gradient.png') center top / 100% calc(108 * var(--u)) no-repeat;
-  overflow: hidden;
+  /* al cambiar de página el menú se queda en su sitio mientras el resto se funde */
+  view-transition-name: navbar;
 }
 
 /* Los enlaces se reparten en todo el ancho disponible. */
@@ -13,6 +15,52 @@
   justify-content: space-around;
   align-items: flex-start;
   height: 100%;
+}
+
+/* cada enlace va en su casilla; la del último sirve de ancla al botón de cerrar sesión */
+.navbar__item {
+  position: relative;
+  display: block;
+}
+
+/* ---------- Cerrar sesión ----------
+   Solo el ícono, centrado bajo «FUENTES», a 12 px de la banda. Su zona de toque
+   (44 px) es mayor que el dibujo. */
+.navbar__logout {
+  position: absolute;
+  left: 50%;
+  top: calc((107.7 + 12) * var(--u));
+  display: grid;
+  place-items: center;
+  width: calc(44 * var(--u));
+  height: calc(44 * var(--u));
+  border-radius: calc(12 * var(--u));
+  color: var(--teal-deep);
+  translate: -50% 0;
+  transition:
+    color var(--dur-micro) var(--ease-out),
+    opacity var(--dur-micro) var(--ease-out);
+}
+
+.navbar__logout .icon {
+  width: calc(30 * var(--u));
+  height: calc(30 * var(--u));
+  transition: translate var(--dur-small) var(--ease-out);
+}
+
+/* al pasar el cursor el ícono toma el turquesa de la marca y la flecha «sale» un poco */
+.navbar__logout:hover,
+.navbar__logout:focus-visible {
+  color: var(--teal);
+}
+
+.navbar__logout:hover .icon,
+.navbar__logout:focus-visible .icon {
+  translate: calc(3 * var(--u)) 0;
+}
+
+.navbar__logout:active {
+  opacity: 0.6;
 }
 
 .navbar__link {
@@ -36,7 +84,7 @@ a.navbar__link::after {
   background: #fff;
   transform: scaleX(0);
   transform-origin: left center;
-  transition: transform 0.2s ease;
+  transition: transform var(--dur-small) var(--ease-out);
 }
 
 a.navbar__link:hover::after,
@@ -48,7 +96,10 @@ a.navbar__link:focus-visible {
   outline: none;
 }
 
-/* Secciones que todavía no tienen página */
-.navbar__link--soon {
-  cursor: default;
+a.navbar__link {
+  transition: opacity var(--dur-micro) var(--ease-out);
+}
+
+a.navbar__link:active {
+  opacity: 0.75;
 }

@@ -1,11 +1,11 @@
 /**
  * Veredicto del motor para un escenario (diputación local), con los textos y
- * la forma que usa la tarjeta del diseño.
+ * la forma que usa la tarjeta del diseño. Las cifras van como números: la
+ * página las escribe (y las anima al cambiar de escenario).
  */
 import { DATOS, type Bloque, type Escenario } from '../../api'
 import type { PartyTone } from '../../data/parties'
 import { BLOQUE, veredicto } from '../../lib/electoral'
-import { conSigno, intervalo, porcentaje } from '../../lib/format'
 
 export const DEFAULT_SCENARIO = DATOS.meta.central
 
@@ -25,19 +25,17 @@ export type ProjectedVote = {
   tone: PartyTone
   /** Mediana proyectada (%). */
   value: number
-  label: string
-  delta?: string
+  /** Cambio frente a S0, en puntos (solo en las filas que lo muestran). */
+  delta?: number
   /** Rango P10–P90 (%), si aplica. */
   range?: [number, number]
-  rangeLabel?: string
 }
 
 export type Verdict = {
   title: string
   tone: PartyTone
-  /** Probabilidad del favorito (0–1) y su texto. */
+  /** Parte de las corridas (%) en que queda primero el favorito. */
   probability: number
-  probabilityLabel: string
   probabilityCaption: string
   chartTitle: string
   /** Escala del eje: de 0 a `axisMax` %, con una marca cada `axisStep`. */
@@ -60,21 +58,14 @@ export function verdict(escenario: Escenario): Verdict {
   return {
     title: v.nivel === 'empate' ? 'EMPATE TÉCNICO' : `${v.nivel === 'gana' ? 'GANA' : 'VENTAJA'} ${titular}`,
     tone: BLOQUE[v.lider].tone,
-    probability: v.p / 100,
-    probabilityLabel: porcentaje(v.p),
+    probability: v.p,
     probabilityCaption: 'probabilidad del favorito',
     chartTitle: 'VOTO LOCAL PROYECTADO · MEDIANA Y RANGO P10–P90',
     axisMax: 60,
     axisStep: 10,
     votes: ROWS.map(({ bloque, party, tone, detail }) => {
       const [p10, p50, p90] = bloques[bloque]
-      return {
-        party,
-        tone,
-        value: p50,
-        label: porcentaje(p50),
-        ...(detail ? { delta: `Δ ${conSigno(delta[bloque])}`, range: [p10, p90] as [number, number], rangeLabel: intervalo(p10, p90) } : {}),
-      }
+      return { party, tone, value: p50, ...(detail ? { delta: delta[bloque], range: [p10, p90] as [number, number] } : {}) }
     }),
   }
 }

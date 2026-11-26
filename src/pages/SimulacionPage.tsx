@@ -1,4 +1,4 @@
-import { useMemo, useState, type CSSProperties } from 'react'
+import { useEffect, useMemo, useRef, useState, type CSSProperties } from 'react'
 import { escenarioPorId } from '../api'
 import logoMcEagle from '../assets/svg/logo-mc-eagle.svg'
 import { Donut } from '../components/charts/Donut'
@@ -8,10 +8,14 @@ import { PageHero } from '../components/layout/PageHero'
 import { PageShell } from '../components/layout/PageShell'
 import { PartyHighlightProvider } from '../components/parties/PartyHighlightProvider'
 import { PartyLegend } from '../components/parties/PartyLegend'
+import { AnimatedNumber } from '../components/ui/AnimatedNumber'
 import { IconBadge } from '../components/ui/IconBadge'
 import { SectionTag } from '../components/ui/SectionTag'
+import { Swap } from '../components/ui/Swap'
 import { AGE_ANALYSIS, GROUP_MAP, INTEREST_FORMULA, KPIS, LEADERS_KPI, MEDIA_LEGEND, QUICK_READS, SIMULATOR, type GroupCell } from '../data/simulacion'
 import { AGE_GROUP_ROWS, type AgeGroupRow } from '../data/simulacionGrupos'
+import { conSigno, intervalo, porcentaje } from '../lib/format'
+import { scrollToElement } from '../lib/motion'
 import { DEFAULT_SCENARIO, SCENARIO_OPTIONS, scenarioLabel, verdict as buildVerdict, type ProjectedVote, type Verdict } from './simulacion/model'
 import { ScenarioSimulator } from './simulacion/ScenarioSimulator'
 import './SimulacionPage.css'
@@ -29,6 +33,10 @@ type GroupFocus = {
   /** Grupo de la fila bajo el cursor en la tabla: resalta su celda en el mapa. */
   fromTable: string | null
   onTable: (group: string | null) => void
+  /** Grupo al que se acaba de saltar desde el mapa: sus filas destellan para ubicarlas. */
+  flash: string | null
+  /** Ir a las filas de un grupo en la tabla. */
+  onGo: (group: string) => void
 }
 
 /** Identificador de fila de la tabla para llegar a ella desde el mapa de grupos. */
@@ -40,6 +48,7 @@ const rowId = (group: string) => `grupo-${group.toLowerCase().replace(/[^a-z0-9]
 
 function VoteRow({ vote, index, axisMax }: { vote: ProjectedVote; index: number; axisMax: number }) {
   const percent = (value: number) => (value / axisMax) * 100
+  const rangeLabel = vote.range ? intervalo(vote.range[0], vote.range[1]) : ''
   return (
     <div className={`vote vote--${vote.party} tone-${vote.tone}`} style={vars({ '--row': index })}>
       {vote.party === 'morena' ? (
@@ -65,14 +74,22 @@ function VoteRow({ vote, index, axisMax }: { vote: ProjectedVote; index: number;
         </>
       ) : null}
 
-      <span className="vote__value bl f-black">{vote.label}</span>
-      {vote.delta ? <span className="vote__delta bl f-bold">{vote.delta}</span> : null}
+      <span className="vote__value bl f-black">
+        <AnimatedNumber value={vote.value} format={porcentaje} />
+      </span>
+      {vote.delta !== undefined ? (
+        <span className="vote__delta bl f-bold">
+          <AnimatedNumber value={vote.delta} format={(delta) => `Δ ${conSigno(delta)}`} />
+        </span>
+      ) : null}
 
       <div className="vote__plot">
         <span className="vote__track" />
         {vote.range ? (
           <span className="vote__range" style={vars({ '--from': percent(vote.range[0]), '--to': percent(vote.range[1]) })}>
-            <span className="vote__range-label bl f-medium">{vote.rangeLabel}</span>
+            <Swap as="span" key={rangeLabel} className="vote__range-label bl f-medium">
+              {rangeLabel}
+            </Swap>
           </span>
         ) : null}
         <span className="vote__dot" style={vars({ '--at': percent(vote.value) })} />
@@ -86,11 +103,16 @@ function VerdictCard({ verdict }: { verdict: Verdict }) {
   return (
     <div className={`verdict card tone-${verdict.tone}`} aria-live="polite">
       <IconBadge className="verdict__icon" icon="trophy" size={56} iconSize={30} />
-      <h2 className="verdict__title bl f-black">{verdict.title}</h2>
+      {/* con otro escenario, el titular nuevo entra con un fundido */}
+      <Swap as="h2" key={verdict.title} className="verdict__title bl f-black">
+        {verdict.title}
+      </Swap>
 
       <div className="verdict__odds">
-        <Donut share={verdict.probability} radius={66} stroke={20} color="var(--tone)" className="verdict__donut" />
-        <p className="verdict__odds-value bl f-black">{verdict.probabilityLabel}</p>
+        <Donut share={verdict.probability / 100} radius={66} stroke={20} color="var(--tone)" className="verdict__donut" />
+        <p className="verdict__odds-value bl f-black">
+          <AnimatedNumber value={verdict.probability} format={porcentaje} />
+        </p>
         <p className="verdict__odds-caption bl f-bold">{verdict.probabilityCaption}</p>
       </div>
 
@@ -118,7 +140,7 @@ function VerdictCard({ verdict }: { verdict: Verdict }) {
 
 function FormulaCard() {
   return (
-    <div className="formula card">
+    <div className="formula card" data-reveal="">
       <p className="formula__title bl f-bold">{INTEREST_FORMULA.title}</p>
       {INTEREST_FORMULA.terms.map((term, index) => (
         <div key={term.label} className="formula__term" style={vars({ '--i': index })}>
@@ -158,7 +180,7 @@ function KpiRow() {
     </article>
   )
   return (
-    <div className="kpis">
+    <div className="kpis" data-reveal="">
       {plain(0, 0)}
       {plain(1, 1)}
       <article className="kpi kpi--leaders card" style={vars({ '--slot': 2 })}>
@@ -184,7 +206,7 @@ function KpiRow() {
 /* Mapa de grupos                                                      */
 /* ------------------------------------------------------------------ */
 
-function GroupChip({ cell, group, fromTable, onMap }: { cell: GroupCell; group: string } & GroupFocus) {
+function GroupChip({ cell, group, fromTable, onMap, onGo }: { cell: GroupCell; group: string } & GroupFocus) {
   if (!cell) {
     return (
       <span className="group-chip group-chip--empty">
@@ -202,7 +224,7 @@ function GroupChip({ cell, group, fromTable, onMap }: { cell: GroupCell; group: 
       onMouseLeave={() => onMap(null)}
       onFocus={() => onMap(group)}
       onBlur={() => onMap(null)}
-      onClick={() => document.getElementById(rowId(group))?.scrollIntoView({ behavior: 'smooth', block: 'center' })}
+      onClick={() => onGo(group)}
     >
       <span className="group-chip__title bl f-black">{cell.title}</span>
       <span className="group-chip__note bl f-medium">{cell.note}</span>
@@ -258,11 +280,11 @@ function QuickReads() {
 /* Análisis por grupos de edad                                         */
 /* ------------------------------------------------------------------ */
 
-function AgeRow({ row, index, first, fromMap, onTable }: { row: AgeGroupRow; index: number; first: boolean } & GroupFocus) {
+function AgeRow({ row, index, first, fromMap, onTable, flash }: { row: AgeGroupRow; index: number; first: boolean } & GroupFocus) {
   return (
     <li
       id={first ? rowId(row.name) : undefined}
-      className={`age-row${index % 2 === 1 ? ' age-row--striped' : ''}${fromMap === row.name ? ' is-focus' : ''}`}
+      className={`age-row${index % 2 === 1 ? ' age-row--striped' : ''}${fromMap === row.name ? ' is-focus' : ''}${flash === row.name ? ' is-flash' : ''}`}
       style={vars({ '--dy': row.offsetY })}
       onMouseEnter={() => onTable(row.name)}
       onMouseLeave={() => onTable(null)}
@@ -299,7 +321,7 @@ function AgeRow({ row, index, first, fromMap, onTable }: { row: AgeGroupRow; ind
 
 function AgeTable(props: GroupFocus) {
   return (
-    <div className="age-table card">
+    <div className="age-table card" data-reveal="">
       <div className="age-table__head f-black" aria-hidden="true">
         <span className="bl" style={vars({ '--x': 68 })}>
           GRUPO
@@ -343,12 +365,27 @@ export function SimulacionPage() {
   const [scenarioId, setScenarioId] = useState(DEFAULT_SCENARIO)
   const [fromMap, setFromMap] = useState<string | null>(null)
   const [fromTable, setFromTable] = useState<string | null>(null)
+  const [flash, setFlash] = useState<string | null>(null)
+  const flashTimer = useRef(0)
+  useEffect(() => () => window.clearTimeout(flashTimer.current), [])
   const escenario = escenarioPorId(scenarioId)
   const verdict = useMemo(() => buildVerdict(escenarioPorId(scenarioId)), [scenarioId])
-  const focus: GroupFocus = { fromMap, onMap: setFromMap, fromTable, onTable: setFromTable }
+
+  /** Desde el mapa de grupos: baja hasta las filas del grupo y las hace destellar para ubicarlas. */
+  const goToGroup = (group: string) => {
+    const row = document.getElementById(rowId(group))
+    if (!row) return
+    scrollToElement(row, { offset: Math.max(24, (window.innerHeight - row.getBoundingClientRect().height) / 2) })
+    window.clearTimeout(flashTimer.current)
+    setFlash(null)
+    // en el cuadro siguiente, para que el destello vuelva a empezar si se repite el mismo grupo
+    requestAnimationFrame(() => setFlash(group))
+    flashTimer.current = window.setTimeout(() => setFlash(null), 2200)
+  }
+  const focus: GroupFocus = { fromMap, onMap: setFromMap, fromTable, onTable: setFromTable, flash, onGo: goToGroup }
 
   return (
-    <PageShell variant="simulacion">
+    <PageShell variant="simulacion" title="Simulación">
       <div className="frame simulacion">
         <PageHero
           variant="simulacion"
@@ -381,7 +418,7 @@ export function SimulacionPage() {
           <FormulaCard />
           <KpiRow />
           <h3 className="sim__subheading bl f-black">Mapa de grupos · quién lidera</h3>
-          <div className="sim-groups__grid">
+          <div className="sim-groups__grid" data-reveal="">
             <GroupMap {...focus} />
             <QuickReads />
           </div>
@@ -406,7 +443,7 @@ export function SimulacionPage() {
             </SectionTag>
           </div>
           <h2 className="sim__heading bl f-black">Simulador de Escenarios Electorales</h2>
-          <div className="sim-ai__grid">
+          <div className="sim-ai__grid" data-reveal="">
             <ScenarioSimulator key={scenarioId} initialScenario={scenarioId} />
             <aside className="sim-ai__panel">
               <h3 className="sim-ai__panel-title f-black">

@@ -1,6 +1,8 @@
 import { useState, type CSSProperties } from 'react'
 import { DATOS, escenarioPorId, type Ambito, type Bloque, type Boleta } from '../../api'
 import { BLOQUE, BLOQUES, textoVeredicto, veredicto } from '../../lib/electoral'
+import { AnimatedNumber } from '../../components/ui/AnimatedNumber'
+import { Swap } from '../../components/ui/Swap'
 import { conSigno, intervalo, porcentaje } from '../../lib/format'
 import './ScenarioSimulator.css'
 
@@ -46,6 +48,7 @@ export function ScenarioSimulator({ initialScenario }: ScenarioSimulatorProps) {
   const esCentral = scenarioId === CENTRAL
   const mueve = escenario.afecta.length === 0 || escenario.afecta.includes(boleta)
   const delta = (bloque: Bloque) => datos.bloques[bloque][1] - base.bloques[bloque][1]
+  const veredictoTexto = distrito?.franja ? `Más votos: ${BLOQUE[v.lider].nombre}` : textoVeredicto(v)
 
   return (
     <div className="simulator">
@@ -90,15 +93,17 @@ export function ScenarioSimulator({ initialScenario }: ScenarioSimulatorProps) {
           </ul>
 
           <div className="simulator__result" aria-live="polite">
-            <p className="simulator__kicker">
-              {escenario.id} · {escenario.rotulo}
-            </p>
-            <p className="simulator__verdict" style={{ '--tone': v.nivel === 'empate' ? '#f3f8fb' : BLOQUE[v.lider].color } as CSSProperties}>
-              {distrito?.franja ? `Más votos: ${BLOQUE[v.lider].nombre}` : textoVeredicto(v)}
-            </p>
+            {/* los textos que cambian con la elección entran con un fundido corto */}
+            <Swap key={escenario.id} className="simulator__kicker">
+              {`${escenario.id} · ${escenario.rotulo}`}
+            </Swap>
+            <Swap key={veredictoTexto} className="simulator__verdict" style={{ '--tone': v.nivel === 'empate' ? '#f3f8fb' : BLOQUE[v.lider].color } as CSSProperties}>
+              {veredictoTexto}
+            </Swap>
             <p className="simulator__odds">
-              {BLOQUE[v.lider].nombre} queda primero en {porcentaje(v.p)} de las corridas
-              {distrito?.franja ? ' · solo la franja de Guadalajara, no elige diputado por sí sola' : ''}
+              {`${BLOQUE[v.lider].nombre} queda primero en `}
+              <AnimatedNumber value={v.p} format={porcentaje} />
+              {` de las corridas${distrito?.franja ? ' · solo la franja de Guadalajara, no elige diputado por sí sola' : ''}`}
             </p>
 
             <div className="simulator__rows">
@@ -110,7 +115,9 @@ export function ScenarioSimulator({ initialScenario }: ScenarioSimulatorProps) {
                 return (
                   <div key={bloque} className="simulator__row">
                     <span className="simulator__name">{BLOQUE[bloque].nombre}</span>
-                    <span className="simulator__value">{porcentaje(p50)}</span>
+                    <span className="simulator__value">
+                      <AnimatedNumber value={p50} format={porcentaje} />
+                    </span>
                     <span className="simulator__track">
                       <span className="simulator__fill" style={{ '--v': (Math.min(p50, ESCALA) / ESCALA) * 100, background: BLOQUE[bloque].color } as CSSProperties} />
                       {!esCentral ? (

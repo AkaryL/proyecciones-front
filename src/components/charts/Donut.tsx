@@ -10,6 +10,9 @@ type DonutProps = {
   className?: string
 }
 
+/** Al cambiar el valor, el arco crece o se recoge hasta el nuevo; el color cambia con un fundido. */
+const TRANSITION = 'stroke-dasharray var(--dur-large) var(--ease-out), stroke var(--dur-small) var(--ease-out)'
+
 /**
  * Dona de avance. Como en el diseño, el arco arranca a las 9 en punto y avanza
  * en el sentido de las manecillas, con remates redondos.
@@ -31,6 +34,7 @@ export function Donut({ share, radius, stroke, color, className }: DonutProps) {
         strokeLinecap="round"
         strokeDasharray={`${dash.toFixed(2)} ${circumference.toFixed(2)}`}
         transform={`rotate(180 ${center} ${center})`}
+        style={{ transition: TRANSITION }}
       />
     </svg>
   )

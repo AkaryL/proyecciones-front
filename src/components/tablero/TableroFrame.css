@@ -1,0 +1,63 @@
+/* Página del tablero del motor incrustada: ocupa el ancho de contenido del diseño. */
+.tablero-frame {
+  position: relative;
+  width: 1260px;
+  margin: 0 90px 110px;
+  overflow: hidden;
+}
+
+.tablero-frame__doc {
+  position: absolute;
+  left: 0;
+  top: 0;
+  border: 0;
+  background: transparent;
+  transform-origin: 0 0;
+  opacity: 0;
+  transition: opacity var(--dur-medium) var(--ease-out);
+}
+
+.tablero-frame__doc.is-ready {
+  opacity: 1;
+}
+
+/* Aviso de carga: un punto que late junto al texto, hasta que el tablero pinta. */
+.tablero-frame__loading {
+  position: absolute;
+  left: 50%;
+  top: 120px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 22px;
+  border-radius: 24px;
+  background: #fff;
+  box-shadow: inset 0 0 0 1px var(--line);
+  color: var(--teal-deep);
+  font-family: var(--font-gotham);
+  font-size: 16px;
+  font-weight: 600;
+  transform: translateX(-50%);
+  transition: opacity var(--dur-small) var(--ease-in);
+}
+
+.tablero-frame__loading::before {
+  content: '';
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--teal);
+  animation: tablero-frame-pulse 1s ease-in-out infinite;
+}
+
+.tablero-frame__loading.is-done {
+  opacity: 0;
+  pointer-events: none;
+}
+
+@keyframes tablero-frame-pulse {
+  50% {
+    opacity: 0.3;
+    scale: 0.7;
+  }
+}

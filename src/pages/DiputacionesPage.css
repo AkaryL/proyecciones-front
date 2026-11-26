@@ -208,13 +208,27 @@
 
 /* cada círculo es un botón que lleva a la tarjeta del distrito */
 .ballot__district-dot {
-  transition: transform 0.16s ease, box-shadow 0.16s ease;
+  transition:
+    transform var(--dur-micro) var(--ease-out),
+    box-shadow var(--dur-micro) var(--ease-out),
+    background-color var(--dur-medium) var(--ease-out);
 }
 
 .ballot__district:hover .ballot__district-dot,
 .ballot__district:focus-visible .ballot__district-dot {
   box-shadow: 0 0 0 3px #fff, 0 0 0 5px var(--tone);
   transform: scale(1.06);
+}
+
+.ballot__district:active .ballot__district-dot {
+  transform: scale(0.97);
+}
+
+/* el color de quien va adelante cambia con un fundido, no de golpe */
+.ballot__share,
+.ballot__headline em,
+.council__gauge-caption {
+  transition: color var(--dur-medium) var(--ease-out);
 }
 
 .ballot__district:focus-visible {
@@ -274,6 +288,8 @@
   height: 100%;
   border-radius: 13px;
   background: var(--tone);
+  /* con otro escenario, la barra crece o encoge hasta su nuevo valor */
+  transition: width var(--dur-large) var(--ease-out);
 }
 
 .council__value {
@@ -506,7 +522,10 @@
 }
 
 .district__map-button {
-  transition: background-color 0.16s ease, box-shadow 0.16s ease;
+  transition:
+    background-color var(--dur-micro) var(--ease-out),
+    box-shadow var(--dur-micro) var(--ease-out),
+    scale var(--dur-micro) var(--ease-out);
 }
 
 .district__map-button:hover,
@@ -514,6 +533,16 @@
   outline: none;
   background: #e3eef1;
   box-shadow: inset 0 0 0 1.5px var(--teal);
+}
+
+/* respuesta al pulsar: se hunde apenas */
+.district__map-button:active {
+  scale: 0.97;
+}
+
+/* al llegar desde un círculo de las boletas, la tarjeta deja aire arriba */
+.district {
+  scroll-margin-top: 20px;
 }
 
 .district__divider {
@@ -546,12 +575,41 @@
 }
 
 /* --- Mapa desplegable --- */
-.district__drawer {
+/* El acordeón asoma por debajo de la tarjeta: abierto, sube 23.2 px para quedar
+   metido bajo ella (como en el diseño); ese margen se anima junto con el alto. */
+.collapse.district__collapse {
   position: relative;
   z-index: 1;
   width: 1163.9px;
+  margin: 0 0 0 138.1px;
+  transition-property: grid-template-rows, margin-top;
+}
+
+.collapse.district__collapse.is-open {
+  margin-top: -23.2px;
+}
+
+/* El mapa sale deslizándose desde abajo de la tarjeta, y regresa igual: va
+   anclado al borde inferior del acordeón (el que se mueve) y no se desvanece. */
+.collapse.district__collapse {
+  align-content: end;
+}
+
+.collapse.district__collapse > .collapse__inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.collapse.district__collapse > .collapse__inner > .district__drawer {
+  flex: none;
+  opacity: 1;
+  transition: none;
+}
+
+.district__drawer {
+  position: relative;
   height: 537.5px;
-  margin: -23.2px 0 0 138.1px;
   border-radius: 0 0 12px 12px;
   background: #e3e3e3;
 }

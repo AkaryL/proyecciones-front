@@ -18,13 +18,16 @@ while (i < css.length) {
   rules.push({ sel: css.slice(i, open).trim().replace(/\s+/g, ' '), body: css.slice(open + 1, j).trim() })
   i = j + 1
 }
-const GLOBAL = /^(\*|html|body|a|a:hover|img|img,svg|button|:focus-visible|\[hidden\]|\.leaflet)/
+// Globales: lo que empieza por un elemento (svg, img, a, button…) o por el comodín alcanzaría a
+// todo el sitio, no solo al contenido del tablero. Cada selector de una lista se evalúa por separado.
+const GLOBAL = /^(\*|[a-z][a-z0-9]*(?![\w-])|:focus-visible|\[hidden\]|\.leaflet)/
 const SHELL = /\.pp-(nav|pie|heroe|pagina|errores|cargando|viendo|chat|mapa|panel|kfila|selector)\b/
 const kept = []
 const dropped = []
 for (const r of rules) {
   if (r.sel.startsWith('@media')) {
-    if (/prefers-reduced-motion/.test(r.sel)) kept.push(r)
+    // «menos movimiento»: se conserva, pero solo para el contenido del tablero
+    if (/prefers-reduced-motion/.test(r.sel)) kept.push({ sel: r.sel, body: r.body.replace(/(^|\})\s*\*\s*\{/g, '$1.tablero *{') })
     else dropped.push(r.sel)
     continue
   }
@@ -43,15 +46,41 @@ const HEAD = `/*
  */
 `
 const escalar = (s) => s.replace(/(-?\d*\.?\d+)px\b/g, (_, n) => (Number(n) === 0 ? '0' : `calc(${n} * var(--tu))`))
-// Las condiciones de @container no admiten variables: sus px se llevan a px reales con la
-// escala habitual del sitio (ampliación 1.18 × diseño al 67 %).
-const ESCALA_FIJA = 1.18 * (960 / 1440)
+
+// Las condiciones de @container no admiten variables, y la escala del sitio depende del ancho de
+// la ventana (un px del tablero mide ZOOM × ancho del frame / 1440). Cada regla se repite por
+// tramos de ancho de ventana, con sus px llevados a px reales con la escala de ese tramo.
+const ZOOM = 1.18 // --tablero-zoom (TableroContent.css)
+const tokens = fs.readFileSync(new URL('../src/styles/tokens.css', import.meta.url), 'utf8')
+const token = (nombre, porDefecto) => Number(new RegExp(`--frame-${nombre}:\\s*([\\d.]+)`).exec(tokens)?.[1] ?? porDefecto)
+const FRAME = { share: token('share', 1), min: token('min', 0), max: token('max', 1440) }
+/** Ancho del artboard para un ancho de ventana: la misma cuenta que --frame-w (PageShell.css). */
+const frame = (ventana) => Math.min(ventana, Math.max(FRAME.min, Math.min(FRAME.share * ventana, FRAME.max)))
+const TOPE = Math.ceil(FRAME.max / FRAME.share) // ventana a partir de la cual el artboard ya no crece
+const tramos = []
+for (let desde = 0, hasta = 360; desde < TOPE; desde = hasta, hasta = Math.min(TOPE, Math.round(hasta * 1.1))) {
+  tramos.push({ desde, hasta, ancho: frame(desde ? Math.sqrt(desde * hasta) : hasta) })
+  if (hasta === TOPE) break
+}
+tramos.push({ desde: TOPE, hasta: Infinity, ancho: FRAME.max })
+const porTramos = (r) =>
+  tramos
+    .map(({ desde, hasta, ancho }) => {
+      const escala = (ZOOM * ancho) / 1440
+      const condicion = r.sel.replace(/(\d*\.?\d+)px\b/g, (_, n) => `${Math.round(Number(n) * escala)}px`)
+      const ventana = [desde ? `(min-width:${desde}px)` : '', hasta === Infinity ? '' : `(max-width:${hasta - 0.02}px)`].filter(Boolean).join(' and ')
+      return `@media ${ventana} {\n${condicion} {\n${r.body}\n}\n}`
+    })
+    .join('\n\n')
+
 for (const r of kept) {
   r.body = escalar(r.body)
-  if (r.sel.startsWith('@container')) r.sel = r.sel.replace(/(\d*\.?\d+)px\b/g, (_, n) => `${Math.round(Number(n) * ESCALA_FIJA)}px`)
-  else if (!r.sel.startsWith('@')) r.sel = escalar(r.sel)
+  if (!r.sel.startsWith('@')) r.sel = escalar(r.sel)
 }
-const text = kept.map(fmt).join('\n\n').replace(/:root \{/, '.tablero {')
+const text = kept
+  .map((r) => (r.sel.startsWith('@container') ? porTramos(r) : fmt(r)))
+  .join('\n\n')
+  .replace(/:root \{/, '.tablero {')
 fs.writeFileSync(out, HEAD + text + '\n')
 console.log('reglas', rules.length, 'conservadas', kept.length, 'descartadas', dropped.length)
 console.log('descartadas:', [...new Set(dropped)].join(' | ').slice(0, 2500))

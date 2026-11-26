@@ -1,38 +1,62 @@
 import { NavLink } from 'react-router-dom'
+import { cerrarSesion } from '../../api/sesion'
+import { esClicNormal, RUTA_LOGIN, useGo } from '../../lib/navigation'
+import { Icon } from '../icons/Icon'
 import './Navbar.css'
 
-type NavItem = {
-  label: string
-  /** Ruta de la sección; las secciones aún sin diseño no navegan. */
-  to?: string
-}
-
-const NAV_ITEMS: NavItem[] = [
+const NAV_ITEMS: { label: string; to: string }[] = [
   { label: 'MAPA', to: '/' },
   { label: 'DIPUTACIONES', to: '/diputaciones' },
-  { label: 'COMPARATIVO' },
-  { label: 'TERRITORIO' },
+  { label: 'COMPARATIVO', to: '/comparativo' },
+  { label: 'TERRITORIO', to: '/territorio' },
   { label: 'SIMULACIÓN', to: '/simulacion' },
   { label: 'FUENTES', to: '/fuentes' },
 ]
 
-/** Menú superior: banda a todo lo ancho con los enlaces repartidos en la ventana. */
-export function Navbar() {
+type NavbarProps = {
+  /** `false` deja solo la banda, sin enlaces ni «cerrar sesión» (pantalla de inicio de sesión). */
+  links?: boolean
+}
+
+/**
+ * Menú superior: banda a todo lo ancho con los enlaces repartidos en la
+ * ventana. Bajo el último enlace cuelga el ícono de cerrar sesión.
+ */
+export function Navbar({ links = true }: NavbarProps) {
+  const go = useGo()
+  const salir = async () => {
+    await cerrarSesion()
+    go(RUTA_LOGIN)
+  }
+
   return (
     <header className="navbar">
-      <nav className="navbar__nav" aria-label="Secciones">
-        {NAV_ITEMS.map((item) =>
-          item.to ? (
-            <NavLink key={item.label} to={item.to} end className="navbar__link bl f-bold">
-              {item.label}
-            </NavLink>
-          ) : (
-            <span key={item.label} className="navbar__link navbar__link--soon bl f-bold" aria-disabled="true" title="Próximamente">
-              {item.label}
+      {links ? (
+        <nav className="navbar__nav" aria-label="Secciones">
+          {NAV_ITEMS.map((item, index) => (
+            <span key={item.label} className="navbar__item">
+              <NavLink
+                to={item.to}
+                end
+                className="navbar__link bl f-bold"
+                onClick={(event) => {
+                  // el cambio de página lleva fundido; con Ctrl/⌘ el enlace abre en otra pestaña como siempre
+                  if (!esClicNormal(event)) return
+                  event.preventDefault()
+                  go(item.to)
+                }}
+              >
+                {item.label}
+              </NavLink>
+              {index === NAV_ITEMS.length - 1 ? (
+                <button type="button" className="navbar__logout" title="Cerrar sesión" aria-label="Cerrar sesión" onClick={() => void salir()}>
+                  <Icon name="logout" />
+                </button>
+              ) : null}
             </span>
-          ),
-        )}
-      </nav>
+          ))}
+        </nav>
+      ) : null}
     </header>
   )
 }

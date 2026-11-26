@@ -4,6 +4,18 @@
  * pensó para leerse a tamaño real, así que aquí se amplía un poco (--tablero-zoom)
  * para que el texto corrido no quede diminuto junto a las páginas del diseño.
  */
+/*
+ * --tu se registra como longitud para que se calcule una sola vez, en `.tablero`
+ * (contra el ancho del frame), y baje ya resuelta. Sin registrar, cada
+ * componente del tablero que es contenedor (las barras apiladas, las tablas)
+ * la recalcularía contra su propio ancho.
+ */
+@property --tu {
+  syntax: '<length>';
+  inherits: true;
+  initial-value: 1PX;
+}
+
 .tablero {
   --tablero-zoom: 1.18;
   --tu: calc(var(--tablero-zoom) * 100cqw / 1440);

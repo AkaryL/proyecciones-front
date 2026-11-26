@@ -27,14 +27,70 @@
   background: rgb(255 255 255 / 0.97);
   box-shadow: 0 calc(10 * var(--mp)) calc(30 * var(--mp)) rgb(0 0 0 / 0.35);
   pointer-events: auto;
-  animation: map-chrome-in 0.2s ease-out;
+  animation: map-chrome-in var(--dur-small) var(--ease-out) both;
 }
 
+/* entran subiendo un poco; salen más rápido, sin desplazarse */
 @keyframes map-chrome-in {
   from {
     opacity: 0;
-    transform: translateY(calc(8 * var(--mp)));
+    translate: 0 calc(8 * var(--mp));
   }
+}
+
+.map-legend.is-leaving,
+.map-detail.is-leaving,
+.map-reset.is-leaving {
+  animation: map-chrome-out var(--dur-micro) var(--ease-in) both;
+  pointer-events: none;
+}
+
+@keyframes map-chrome-out {
+  to {
+    opacity: 0;
+  }
+}
+
+/* ---------- Volver al inicio ---------- */
+.map-reset {
+  align-self: flex-start;
+  flex: none;
+  display: flex;
+  align-items: center;
+  gap: calc(8 * var(--mp));
+  height: calc(36 * var(--mp));
+  padding: 0 calc(16 * var(--mp)) 0 calc(13 * var(--mp));
+  border-radius: calc(18 * var(--mp));
+  background: rgb(4 28 38 / 0.92);
+  box-shadow: 0 calc(6 * var(--mp)) calc(18 * var(--mp)) rgb(0 0 0 / 0.35);
+  color: #fff;
+  font-size: calc(13.5 * var(--mp));
+  font-weight: 700;
+  pointer-events: auto;
+  animation: map-chrome-in var(--dur-small) var(--ease-out) both;
+  transition:
+    background-color var(--dur-micro) var(--ease-out),
+    scale var(--dur-micro) var(--ease-out);
+}
+
+/* flecha circular «deshacer», dibujada con un anillo abierto y su punta */
+.map-reset::before {
+  content: '';
+  width: calc(11 * var(--mp));
+  height: calc(11 * var(--mp));
+  border: calc(2 * var(--mp)) solid var(--aqua);
+  border-left-color: transparent;
+  border-radius: 50%;
+  rotate: -45deg;
+}
+
+.map-reset:hover,
+.map-reset:focus-visible {
+  background: rgb(0 56 75 / 0.96);
+}
+
+.map-reset:active {
+  scale: 0.97;
 }
 
 /* la ficha puede crecer: si no cabe, se desplaza por dentro */
@@ -124,7 +180,7 @@
   height: calc(28 * var(--mp));
   border-radius: 50%;
   background: var(--surface-soft);
-  transition: background-color 0.15s ease;
+  transition: background-color var(--dur-micro) var(--ease-out);
 }
 
 .map-detail__close:hover,
@@ -252,12 +308,17 @@
   line-height: 1.35;
   text-align: center;
   transform: translateX(-50%);
-  animation: map-notice-in 0.2s ease-out;
+  animation: map-notice-in var(--dur-small) var(--ease-out) both;
   pointer-events: none;
+}
+
+.map-notice.is-leaving {
+  animation: map-chrome-out var(--dur-small) var(--ease-in) both;
 }
 
 @keyframes map-notice-in {
   from {
     opacity: 0;
+    translate: 0 calc(-6 * var(--mp));
   }
 }

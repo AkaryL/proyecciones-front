@@ -11,53 +11,61 @@ type StackedBarProps = {
   label?: string
 }
 
-const share = (value: number) => ({ '--v': value }) as CSSProperties
-
 /**
  * Barra apilada de porcentajes por partido, con separadores blancos entre
  * segmentos. Al pasar el cursor muestra el partido y su cifra; si la leyenda
  * tiene un partido resaltado, atenúa los demás.
+ *
+ * Cada segmento se coloca con su inicio y su ancho, y conserva su identidad
+ * (su partido) entre cambios: cuando llegan cifras nuevas, cada partido se
+ * desliza y crece o encoge hasta su nuevo lugar en vez de saltar o cambiar de
+ * color. Para eso el orden en el DOM es fijo; el orden visual lo da la posición.
  */
 export function StackedBar({ segments, size = 'lg', label }: StackedBarProps) {
   const { party: highlighted } = usePartyHighlight()
-  const [hovered, setHovered] = useState<number | null>(null)
+  const [hovered, setHovered] = useState<string | null>(null)
   const hasNotes = segments.some((segment) => segment.note)
-  const dimmed = (segment: BarSegment) => highlighted !== null && TONE_PARTY[segment.tone] !== highlighted
 
-  let tip: { text: string; center: number } | null = null
-  if (hovered !== null && segments[hovered]) {
-    const segment = segments[hovered]
-    const before = segments.slice(0, hovered).reduce((sum, item) => sum + item.value, 0)
-    const party = TONE_PARTY[segment.tone]
-    tip = { text: `${party ? PARTY_NAME[party] : 'Otros'} · ${segment.value}%`, center: before + segment.value / 2 }
-  }
+  const layout = segments.map((segment, index) => ({
+    segment,
+    // dónde empieza: la suma de los segmentos que tiene antes
+    start: segments.slice(0, index).reduce((sum, previous) => sum + previous.value, 0),
+    last: index === segments.length - 1,
+    id: TONE_PARTY[segment.tone] ?? `otro-${index}`,
+  }))
+  const stable = [...layout].sort((a, b) => a.id.localeCompare(b.id))
+  const dimmed = (segment: BarSegment) => highlighted !== null && TONE_PARTY[segment.tone] !== highlighted
+  const place = (item: (typeof layout)[number]) => ({ '--x': item.start, '--v': item.segment.value }) as CSSProperties
+
+  const active = layout.find((item) => item.id === hovered)
+  const party = active ? TONE_PARTY[active.segment.tone] : null
 
   return (
     <div className={`stacked-bar stacked-bar--${size}`} role="img" aria-label={label}>
       <div className="stacked-bar__track" onMouseLeave={() => setHovered(null)}>
-        {segments.map((segment, index) => (
+        {stable.map((item) => (
           <span
-            key={index}
-            className={`stacked-bar__segment tone-${segment.tone}${dimmed(segment) ? ' is-dimmed' : ''}`}
-            style={share(segment.value)}
-            onMouseEnter={() => setHovered(index)}
+            key={item.id}
+            className={`stacked-bar__segment tone-${item.segment.tone}${item.last ? ' is-last' : ''}${dimmed(item.segment) ? ' is-dimmed' : ''}`}
+            style={place(item)}
+            onMouseEnter={() => setHovered(item.id)}
           >
-            {segment.label ? <span className="stacked-bar__label bl">{segment.label}</span> : null}
+            {item.segment.label ? <span className="stacked-bar__label bl">{item.segment.label}</span> : null}
           </span>
         ))}
       </div>
       {hasNotes ? (
         <div className="stacked-bar__notes" aria-hidden="true">
-          {segments.map((segment, index) => (
-            <span key={index} className={`stacked-bar__note tone-${segment.tone}${dimmed(segment) ? ' is-dimmed' : ''}`} style={share(segment.value)}>
-              {segment.note ? <span className="bl">{segment.note}</span> : null}
+          {stable.map((item) => (
+            <span key={item.id} className={`stacked-bar__note tone-${item.segment.tone}${dimmed(item.segment) ? ' is-dimmed' : ''}`} style={place(item)}>
+              {item.segment.note ? <span className="bl">{item.segment.note}</span> : null}
             </span>
           ))}
         </div>
       ) : null}
-      {tip ? (
-        <span className="stacked-bar__tip" style={{ '--at': tip.center } as CSSProperties} aria-hidden="true">
-          {tip.text}
+      {active ? (
+        <span className="stacked-bar__tip" style={{ '--at': active.start + active.segment.value / 2 } as CSSProperties} aria-hidden="true">
+          {`${party ? PARTY_NAME[party] : 'Otros'} · ${active.segment.value}%`}
         </span>
       ) : null}
     </div>

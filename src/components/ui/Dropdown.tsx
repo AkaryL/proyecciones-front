@@ -1,4 +1,5 @@
 import { useEffect, useId, useRef, useState, type KeyboardEvent, type ReactNode } from 'react'
+import { DUR, usePresence } from '../../lib/motion'
 import './Dropdown.css'
 
 export type DropdownOption<T extends string> = {
@@ -24,7 +25,8 @@ type DropdownProps<T extends string> = {
 
 /**
  * Botón con lista desplegable de una sola elección. Se cierra al elegir, con
- * Escape o al tocar fuera, y se puede recorrer con las flechas del teclado.
+ * Escape o al tocar fuera, y se puede recorrer con las flechas del teclado. La
+ * lista entra creciendo desde el botón y sale más rápido de lo que entró.
  */
 export function Dropdown<T extends string>({ options, value, onChange, label, className, children }: DropdownProps<T>) {
   const [open, setOpen] = useState(false)
@@ -33,6 +35,8 @@ export function Dropdown<T extends string>({ options, value, onChange, label, cl
   const buttonRef = useRef<HTMLButtonElement>(null)
   const listRef = useRef<HTMLUListElement>(null)
   const id = useId()
+  // la lista sigue en pantalla mientras dura su salida
+  const list = usePresence(open ? true : null, DUR.micro)
 
   const show = () => {
     setActive(Math.max(0, options.findIndex((option) => option.value === value)))
@@ -65,7 +69,12 @@ export function Dropdown<T extends string>({ options, value, onChange, label, cl
 
   useEffect(() => {
     if (!open) return
-    listRef.current?.querySelector('.is-active')?.scrollIntoView({ block: 'nearest' })
+    const item = listRef.current?.querySelector<HTMLElement>('.is-active')
+    const lista = listRef.current
+    if (!item || !lista) return
+    // se mueve solo la lista (no la página) para dejar a la vista la opción activa
+    if (item.offsetTop < lista.scrollTop) lista.scrollTop = item.offsetTop
+    else if (item.offsetTop + item.offsetHeight > lista.scrollTop + lista.clientHeight) lista.scrollTop = item.offsetTop + item.offsetHeight - lista.clientHeight
   }, [open, active])
 
   const onKeyDown = (event: KeyboardEvent) => {
@@ -100,7 +109,7 @@ export function Dropdown<T extends string>({ options, value, onChange, label, cl
   }
 
   return (
-    <div ref={rootRef} className={`dropdown${open ? ' dropdown--open' : ''}${className ? ` ${className}` : ''}`}>
+    <div ref={rootRef} className={`dropdown${open ? ' dropdown--open' : ''}${list.value ? ' dropdown--shown' : ''}${className ? ` ${className}` : ''}`}>
       <button
         ref={buttonRef}
         type="button"
@@ -120,11 +129,11 @@ export function Dropdown<T extends string>({ options, value, onChange, label, cl
         {children}
       </button>
 
-      {open ? (
+      {list.value ? (
         <ul
           ref={listRef}
           id={id}
-          className="dropdown__list"
+          className={`dropdown__list${list.leaving ? ' is-leaving' : ''}`}
           role="listbox"
           tabIndex={-1}
           aria-label={label}
@@ -140,7 +149,7 @@ export function Dropdown<T extends string>({ options, value, onChange, label, cl
                 role="option"
                 aria-selected={selected}
                 className={`dropdown__option${selected ? ' is-selected' : ''}${index === active ? ' is-active' : ''}`}
-                onPointerEnter={() => setActive(index)}
+                onPointerMove={() => setActive(index)}
                 onClick={() => choose(option)}
               >
                 {option.badge ? <span className="dropdown__badge">{option.badge}</span> : null}

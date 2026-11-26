@@ -1,6 +1,12 @@
 .page {
-  /* Un píxel del diseño, ya escalado (misma escala que `.frame`). */
-  --u: min(1px, calc(var(--frame-max) / 1440 * 1PX));
+  /*
+   * Ancho del artboard en la página: la parte de la ventana que fija tokens.css,
+   * con su mínimo y su tope, y nunca más que la ventana. `100cqw` es aquí el
+   * ancho de `.page` (la ventana sin la barra de desplazamiento).
+   */
+  --frame-w: min(100cqw, max(calc(var(--frame-min) * 1PX), min(calc(var(--frame-share) * 100cqw), calc(var(--frame-max) * 1PX))));
+  /* Un píxel del diseño, ya escalado (misma escala que `.frame`), para las bandas de orilla a orilla. */
+  --u: calc(var(--frame-w) / 1440);
   position: relative;
   container-type: inline-size;
   overflow: hidden;
@@ -55,6 +61,29 @@
 .page--simulacion .page__bg {
   top: calc(65.069 * var(--u));
   height: calc(4577.622 * var(--u));
+}
+
+/* ---------- Inicio de sesión (sin pantalla en el diseño) ----------
+   Ocupa al menos el alto de la ventana: la banda arriba, el pie abajo y el
+   contenido centrado en lo que queda. */
+.page--login {
+  --footer-height: 87.8;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+.page--login .page__main {
+  display: flex;
+  flex: 1;
+  align-items: center;
+}
+
+.page--login .page__bg {
+  top: 0;
+  height: 100%;
+  object-fit: cover;
 }
 
 /* ---------- Páginas de documentación (alto variable) ---------- */

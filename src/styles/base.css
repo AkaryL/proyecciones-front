@@ -27,8 +27,8 @@ body {
  * Escala del diseño
  * -----------------
  * El artboard mide 1440 px de ancho. `.frame` es su equivalente en la página:
- * va centrado, mide como máximo --frame-max px reales (tokens.css) y se encoge
- * con la ventana cuando ésta es más angosta. Todo el CSS se escribe en px del
+ * va centrado y ocupa la parte del ancho de la ventana que fija tokens.css
+ * (--frame-w, armado en PageShell.css). Todo el CSS se escribe en px del
  * diseño y el build los convierte a `cqw` (ver vite.config.ts), que dentro de un
  * `.frame` equivale a "1/1440 del ancho del frame"; así todo el sitio conserva
  * las proporciones exactas del diseño a cualquier tamaño.
@@ -38,9 +38,11 @@ body {
  */
 .frame {
   position: relative;
-  width: min(100%, calc(var(--frame-max) * 1PX));
+  width: var(--frame-w);
   margin-inline: auto;
   container-type: inline-size;
+  /* dentro del frame, un píxel del diseño es 1/1440 de su ancho */
+  --u: calc(100cqw / 1440);
 }
 
 h1,
@@ -212,4 +214,81 @@ svg {
 .f-myriad {
   font-family: var(--font-myriad);
   font-weight: 400;
+}
+
+/* ---------------------------------------------------------------------------
+ * Movimiento (curvas y duraciones en tokens.css)
+ * ------------------------------------------------------------------------ */
+
+/* Los saltos a un ancla dentro de la página se desplazan en vez de cortar. */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Foco visible para quien navega con teclado, igual en todo el sitio. */
+:focus-visible {
+  outline: 2PX solid var(--teal);
+  outline-offset: 2PX;
+}
+
+/* Texto que cambia de contenido: el nuevo aparece con un fundido corto. */
+.swap-in {
+  animation: swap-in var(--dur-small) var(--ease-out) both;
+}
+
+@keyframes swap-in {
+  from {
+    opacity: 0;
+    translate: 0 4px;
+  }
+}
+
+/*
+ * Bloques que entran al ir bajando por la página (una sola vez). Solo se
+ * ocultan cuando el script confirma que están fuera de la vista: sin
+ * JavaScript, al imprimir o con «menos movimiento» se ven siempre.
+ */
+[data-reveal] {
+  transition:
+    opacity var(--dur-large) var(--ease-out),
+    translate var(--dur-large) var(--ease-out);
+}
+
+[data-reveal='pendiente'] {
+  opacity: 0;
+  translate: 0 14px;
+}
+
+@media print, (prefers-reduced-motion: reduce) {
+  [data-reveal='pendiente'] {
+    opacity: 1;
+    translate: none;
+  }
+}
+
+/*
+ * Cambio de página: la nueva aparece con un fundido breve sobre la anterior.
+ * El menú no participa: se queda fijo en su sitio.
+ */
+::view-transition-old(root) {
+  animation: page-out 140ms var(--ease-in) both;
+}
+
+::view-transition-new(root) {
+  animation: page-in 300ms var(--ease-out) both;
+}
+
+@keyframes page-out {
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes page-in {
+  from {
+    opacity: 0;
+    translate: 0 10PX;
+  }
 }
