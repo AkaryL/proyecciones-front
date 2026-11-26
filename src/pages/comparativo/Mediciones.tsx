@@ -11,7 +11,8 @@ const NIVELES: Record<string, 'ambar' | 'gris' | ''> = { alta: '', 'media-alta':
 
 const COLUMNAS: Columna[] = [
   { t: 'Levantamiento', ancho: 'minmax(116px,1fr)' },
-  { t: 'Casa encuestadora', ancho: 'minmax(150px,1.2fr)' },
+  // 182: lo que mide la etiqueta «sin cotejar con el original», que va en un solo renglón
+  { t: 'Casa encuestadora', ancho: 'minmax(182px,1.2fr)' },
   { t: 'Boleta', ancho: 'minmax(96px,.8fr)' },
   { t: 'MC', ancho: '40px', der: true },
   { t: N.nombre('MORENA'), ancho: '56px', der: true },

@@ -25,9 +25,17 @@
   initial-value: 1PX;
 }
 
+/* El --tu de la página, aparte: una tabla que no cabe se da un --tu menor (ver «Ninguna tabla se desliza»). */
+@property --tu-pagina {
+  syntax: '<length>';
+  inherits: true;
+  initial-value: 1PX;
+}
+
 .tablero {
   --tablero-zoom: 1.18;
-  --tu: calc(var(--tablero-zoom) * 100cqw / 1440);
+  --tu-pagina: calc(var(--tablero-zoom) * 100cqw / 1440);
+  --tu: var(--tu-pagina);
 
   /* tipografías y marca del sitio */
   --pp-f-titulo: var(--font-gotham);
@@ -36,11 +44,33 @@
   --pp-g-num: var(--grad-brand);
   --pp-g-icono: var(--grad-brand);
 
-  width: 1260px;
-  margin: 0 90px;
+  /* Todo el ancho del marco (el 80 % de la ventana): son 1,220 px del tablero, lo
+     que piden sus tablas más anchas. Las páginas del diseño dejan 90 px a cada lado. */
+  width: 1440px;
   padding-bottom: 110px;
   color: var(--pp-tinta);
   font-family: var(--pp-f-texto);
+}
+
+/*
+ * Ninguna tabla se desliza de lado. La caja que envuelve a cada tabla o gráfica
+ * (.pp-desliza) es un contenedor, y lo que lleva dentro mide con su propio --tu:
+ * el de la página o, si con ese no cabría, el que hace que su ancho mínimo
+ * (--pp-min-n, en px del tablero; lo pone cada tabla) sea justo el ancho que
+ * hay. Como en el tablero todo se mide en --tu, la tabla entera (letra,
+ * columnas, márgenes) se encoge en proporción en vez de esconder sus últimas
+ * columnas. Sin --pp-min-n no cambia nada.
+ */
+.tablero .pp-desliza {
+  container-type: inline-size;
+}
+
+.tablero .pp-desliza > * {
+  --tu: min(var(--tu-pagina), calc((100cqw - 1PX) / var(--pp-min-n, 1)));
+}
+
+.tablero .pp-serie {
+  --pp-min-n: 640;
 }
 
 .tablero.pp-main {

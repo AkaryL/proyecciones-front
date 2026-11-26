@@ -147,7 +147,8 @@ export function Secciones({ m, lista: elegida, cuantas, onLista, onCuantas }: Pr
     },
     {
       t: 'Va primero',
-      ancho: '150px',
+      // cabe la píldora más larga: «Coalición de Morena 45.6 %»
+      ancho: '174px',
       tip: `Quién tiene la mediana más alta en la sección (MC o una coalición) y su % de voto (quién va adelante se calcula ${POR_COAL}). «${T.PAREJO}» si nadie queda primero en ${pct(N.UMBRAL.VENTAJA, 0)} de las corridas o más (o, sin ese dato, si las dos primeras quedan a menos de ${num(uz != null ? uz : 5)} puntos): entonces no se nombra a nadie. Una sección no elige a nadie.`,
     },
     { t: `MC en ${m.ref.id}`, ancho: '84px', tip: `% de voto de MC en la sección en ${m.ref.id} (mediana).` },

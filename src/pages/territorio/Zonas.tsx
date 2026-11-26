@@ -162,7 +162,8 @@ export function Zonas({ m, orden, abierta, onOrden, onZona }: ZonasProps) {
           },
           {
             t: 'Va primero',
-            ancho: '168px',
+            // cabe la píldora más larga: «Parejo · diferencia 0.2 puntos»
+            ancho: '178px',
             tip: `Quién tiene más votos en la zona (MC o una coalición) y los puntos que le saca al segundo (quién va adelante se calcula ${POR_COAL}). «${T.PAREJO}» ${
               uz != null ? `si las dos primeras quedan a menos de ${num(uz)} puntos` : 'en todas, porque falta el umbral'
             }: entonces no se nombra a nadie. Una zona no elige a nadie.`,
@@ -173,7 +174,8 @@ export function Zonas({ m, orden, abierta, onOrden, onZona }: ZonasProps) {
             ancho: '112px',
             tip: `Años de escuela promedio de la zona (censo por sección) y exposición a la crisis del agua, de menos a más. ${mt.agua_criterio ? `${limpia(String(mt.agua_criterio).split('. ')[0])}.` : ''}`,
           },
-          { t: `Rol · ${rf}`, ancho: '172px', tip: `Rótulo fijo de la zona (${rf}; no sigue los selectores). ${mt.rol_criterio ? limpia(mt.rol_criterio) : ''}` },
+          // cabe el rótulo más largo en un renglón: «fuerte de la coalición de Morena»
+          { t: `Rol · ${rf}`, ancho: '218px', tip: `Rótulo fijo de la zona (${rf}; no sigue los selectores). ${mt.rol_criterio ? limpia(mt.rol_criterio) : ''}` },
         ]}
         filas={filas}
       />

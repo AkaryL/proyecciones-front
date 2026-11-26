@@ -5,7 +5,7 @@
 import { Fragment, type CSSProperties, type ReactNode } from 'react'
 import { N, color, colorSobre, tintaSobre } from '../../../motor'
 import { Etiqueta, Icono, Insignia, Kicker } from './base'
-import { tip, tu } from './util'
+import { anchoNecesario, tip, tu } from './util'
 import { Tarjeta } from './tarjetas'
 
 export type Columna = { t: string; ancho?: string; tip?: string | null; der?: boolean }
@@ -30,15 +30,18 @@ const conCorte = (t: string) =>
     </Fragment>
   ))
 
+/** `minAncho` = ancho que la tabla necesita para leerse bien, en px del tablero; si hay menos, se encoge entera para caber (no se desliza). */
 type RankingProps = { columnas: Columna[]; filas: Celda[][]; minAncho?: number; aria?: string }
 
 /** Tabla clara de ranking dentro de una tarjeta; las columnas con explicación la muestran al tocarlas. */
 export function TablaRanking({ columnas, filas, minAncho = 940, aria }: RankingProps) {
   const plantilla = columnas.map((c) => (c.ancho ? escala(c.ancho) : 'minmax(0,1fr)')).join(' ')
+  // 14 y 20: la separación entre columnas y el margen lateral de las filas (.pp-trank__f en styles/tablero.css)
+  const necesita = anchoNecesario(columnas, minAncho, 14, 20)
   return (
     <Tarjeta variante="sin-relleno plana">
       <div className="pp-desliza">
-        <div className="pp-trank" role="table" aria-label={aria ?? ''} style={{ '--pp-cols': plantilla, ...tu({ '--pp-min-ancho': minAncho }) } as CSSProperties}>
+        <div className="pp-trank" role="table" aria-label={aria ?? ''} style={{ '--pp-cols': plantilla, '--pp-min-n': necesita, ...tu({ '--pp-min-ancho': necesita }) } as CSSProperties}>
           <div className="pp-trank__cab" role="row">
             {columnas.map((c, i) => (
               <span key={i} role="columnheader" className={c.der ? 'pp-der' : undefined} {...tip(c.tip)}>

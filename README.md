@@ -67,6 +67,14 @@ que el original (se compararon con él texto por texto, tooltips incluidos).
   backend** basta darle a `D.configurar(...)` (en `index.ts`) un `lector` que
   traiga cada archivo de la API.
 - El código y los estilos de estas páginas se cargan solo al entrar a ellas.
+- Ocupan **todo el ancho del marco** (las páginas del diseño dejan 90 px a cada
+  lado): es lo que piden sus tablas más anchas. **Ninguna tabla se desliza de
+  lado**: cada una calcula el ancho que necesita (`anchoNecesario` en
+  `kit/util.ts`) y, si hay menos, se encoge entera (letra, columnas y márgenes)
+  hasta caber. Hoy solo pasa con la serie de Comparativo (al 92 %) y, apenas,
+  con las tablas de zonas y de secciones de Territorio (al 98 %). Al agregar una
+  columna hay que darle el ancho de su contenido más largo, para que no se
+  encime con la de al lado.
 
 Dos diferencias a propósito frente al original, en Fuentes: las notas «Huella de
 los archivos» (Validación) y «Dónde se publicó» (Fichas de encuestas) allá salen

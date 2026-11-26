@@ -213,7 +213,8 @@ export function SerieMensual({ v, filtro, onFiltro }: Props) {
 
   const columnas: Columna[] = [
     { t: '', ancho: 'minmax(0,1.3fr)' },
-    { t: 'Fuente', ancho: 'minmax(0,1.5fr)' },
+    // 182: lo que mide la etiqueta «sin cotejar con el original», que va en un solo renglón
+    { t: 'Fuente', ancho: 'minmax(182px,1.5fr)' },
     { t: 'MC', ancho: '48px', der: true },
     ...colsP.map((k) => ({
       t: sigla(k),

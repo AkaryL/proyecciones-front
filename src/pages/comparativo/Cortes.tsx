@@ -103,7 +103,7 @@ export function Cortes({ v }: { v: Estado }) {
       der: true,
       tip: `${N.nombre_largo(k)} (de ${coalicion}). Corte vigente: estimación del motor; cortes anteriores: ${T.REPARTO_ESTIMADO}.`,
     })),
-    { t: 'Margen · coalición', ancho: '64px', der: true, tip: `Puntos de MC menos puntos de la ${coal('MORENA_ALIADOS', v.b)} (mediana; ${POR_COAL}).` },
+    { t: 'Margen · coalición', ancho: '72px', der: true, tip: `Puntos de MC menos puntos de la ${coal('MORENA_ALIADOS', v.b)} (mediana; ${POR_COAL}).` },
     { t: 'Rango del margen', ancho: '124px', tip: `Entre qué valores cae el margen en ${T.CORRIDAS_80}.` },
     {
       t: 'Quién queda primero',

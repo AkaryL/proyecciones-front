@@ -13,6 +13,19 @@ export const tip = (texto: string | null | undefined) => (texto ? { 'data-pp-tip
 export const tu = (vars: Record<string, number | string>): CSSProperties =>
   Object.fromEntries(Object.entries(vars).map(([k, v]) => [k, typeof v === 'number' ? `calc(${v} * var(--tu))` : v])) as CSSProperties
 
+/**
+ * Ancho que una tabla necesita de verdad, en px del tablero: el que declara
+ * (`minAncho`, lo que hace falta para leerla bien) o, si es mayor, lo que suman
+ * los mínimos de sus columnas («172px», «minmax(186px,1.2fr)»), sus separaciones
+ * y sus márgenes. Con este número la tabla se encoge entera cuando hay menos
+ * sitio, en vez de deslizarse de lado (ver tablero-sitio.css).
+ */
+export function anchoNecesario(columnas: { ancho?: string }[], minAncho: number, separacion: number, margen: number): number {
+  const minimo = (ancho?: string) => Number((/^minmax\(\s*([\d.]+)px\s*,/.exec(ancho ?? '') ?? /^([\d.]+)px$/.exec(ancho ?? ''))?.[1] ?? 0)
+  const columnasMinimas = columnas.reduce((suma, c) => suma + minimo(c.ancho), 0) + separacion * Math.max(0, columnas.length - 1) + 2 * margen
+  return Math.max(minAncho, Math.ceil(columnasMinimas))
+}
+
 /** % mínimo de un segmento para llevar su cifra dentro de la barra apilada. */
 export const ROTULO_MIN = 8
 

@@ -9,7 +9,7 @@
  */
 import { createContext, useContext, useState, type CSSProperties, type ReactNode } from 'react'
 import { N, T, esNum, lim, pp, r2, signo } from '../../../motor'
-import { tip, tu } from './util'
+import { anchoNecesario, tip, tu } from './util'
 import type { Columna } from './tablas'
 
 /** Id del punto o de la fila que se está señalando dentro del panel (o null). */
@@ -42,6 +42,7 @@ const idDe = (t: EventTarget | null) => {
 type TablaOscuraProps = {
   columnas: Columna[]
   grupos: GrupoOscuro[]
+  /** Ancho que la tabla necesita para leerse bien, en px del tablero; si hay menos, se encoge entera para caber (no se desliza). */
   minAncho?: number
   aria?: string
   /** La gráfica que va encima de la tabla, dentro del mismo panel. */
@@ -52,6 +53,8 @@ type TablaOscuraProps = {
 export function TablaOscura({ columnas, grupos, minAncho = 820, aria, arriba }: TablaOscuraProps) {
   const [senalado, setSenalado] = useState<string | null>(null)
   const plantilla = columnas.map((c) => (c.ancho ? escala(c.ancho) : 'minmax(0,1fr)')).join(' ')
+  // 12 y 24: la separación entre columnas y el margen lateral de las filas (.pp-tosc__f en styles/tablero.css)
+  const necesita = anchoNecesario(columnas, minAncho, 12, 24)
   return (
     <div
       className="pp-noche"
@@ -62,7 +65,7 @@ export function TablaOscura({ columnas, grupos, minAncho = 820, aria, arriba }: 
     >
       <Senalado.Provider value={senalado}>{arriba}</Senalado.Provider>
       <div className="pp-desliza">
-        <div className="pp-tosc" role="table" aria-label={aria ?? ''} style={{ '--pp-cols': plantilla, ...tu({ '--pp-min-ancho': minAncho }) } as CSSProperties}>
+        <div className="pp-tosc" role="table" aria-label={aria ?? ''} style={{ '--pp-cols': plantilla, '--pp-min-n': necesita, ...tu({ '--pp-min-ancho': necesita }) } as CSSProperties}>
           <div className="pp-tosc__cab" role="row">
             {columnas.map((c, i) => (
               <span key={i} role="columnheader" className={c.der ? 'pp-der' : undefined} {...tip(c.tip)}>
