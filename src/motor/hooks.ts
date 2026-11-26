@@ -9,7 +9,7 @@
  */
 import { useCallback, useEffect, useMemo, useState } from 'react'
 import { useSearchParams } from 'react-router-dom'
-import { D, N, lista, type Boleta, type Estado, type Json } from './index'
+import { BASE_MOTOR, D, N, lista, type Boleta, type Estado, type Json } from './index'
 
 export type EstadoCarga = 'cargando' | 'listo' | 'falta'
 
@@ -91,7 +91,7 @@ export function useVersion(): Version | null {
   const [version, setVersion] = useState<Version | null>(null)
   useEffect(() => {
     let vivo = true
-    fetch(`${import.meta.env.BASE_URL}data/motor/version.json`)
+    fetch(`${BASE_MOTOR}version.json`)
       .then((r) => (r.ok ? r.json() : null))
       .then((v: Version | null) => {
         if (vivo && v?.corte && v.modelo && v.tablero) setVersion(v)

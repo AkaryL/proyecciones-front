@@ -9,9 +9,10 @@
  *   - pp-datos.js  → lectura de los JSON del motor y sus cálculos (`D`)
  * Todo lo que se ve en pantalla está escrito en React sobre estas lecturas.
  *
- * Mientras no haya backend, los JSON se leen de `public/data/motor/` (los copia
- * `npm run data`). Para conectar una API basta cambiar `lector` en
- * `D.configurar(...)`: recibe el nombre del archivo y devuelve su contenido.
+ * Mientras el back no sirva estos archivos, se leen de `public/data/motor/`
+ * (los copia `npm run data`). Para leerlos de la API basta `VITE_MOTOR_URL`
+ * (ver `BASE_MOTOR`); si hiciera falta algo más que una dirección, `D.configurar`
+ * admite un `lector` que recibe el nombre del archivo y devuelve su contenido.
  */
 import './vendor/nombres.js'
 import './vendor/pp-datos.js'
@@ -33,7 +34,15 @@ export const D: Json = raiz.PPDatos
 /** Textos fijos («s/d», «Parejo», «PRELIMINAR»…). */
 export const T: Json = N.TEXTO
 
-D.configurar({ base: `${import.meta.env.BASE_URL}data/motor/`, nombres: N })
+/**
+ * De dónde se leen los JSON del motor (con diagonal al final). Por omisión, de
+ * la copia que va con el front (`public/data/motor/`). Cuando el back los sirva,
+ * basta poner su dirección en `VITE_MOTOR_URL` (ver `.env.example`): debe
+ * devolver cada archivo por su nombre (`…/sim_v8.json`).
+ */
+export const BASE_MOTOR = `${(import.meta.env.VITE_MOTOR_URL ?? `${import.meta.env.BASE_URL}data/motor`).replace(/\/+$/, '')}/`
+
+D.configurar({ base: BASE_MOTOR, nombres: N })
 
 export type Boleta = 'ayun' | 'dip' | 'fed'
 /** Lo que se está viendo: boleta, escenario y distrito ('' = toda Guadalajara). */

@@ -8,9 +8,17 @@
  * Sin argumento usa la variable TABLERO_DIR o, si no existe, la carpeta
  * hermana `SUBIR_ESTE_tablero_2026-11-24_final`.
  *
- * Mientras no haya backend, el front lee estos archivos con `fetch` desde
- * src/api. El día que exista una API basta con cambiar esas funciones: las
- * formas de los datos (src/api/types.ts) son las mismas que salen de aquí.
+ * Estos archivos NO los lee el front: son el paso intermedio hacia el almacén
+ * del back. Después de generarlos:
+ *
+ *   cd ../proyecciones-backend && npm run importar -- ../proyecciones-front
+ *
+ * Las formas que salen de aquí son las de src/api/types.ts, que es el contrato
+ * que devuelve la API.
+ *
+ * Única excepción: public/data/motor, la copia de los JSON del motor que leen
+ * Territorio, Comparativo y Fuentes (src/motor). Esa sí la lee el front y sí se
+ * versiona, mientras el back no sirva esos archivos (ver VITE_MOTOR_URL).
  *
  * Reglas que se respetan del tablero original:
  *  - ninguna cifra se inventa: todo sale del motor o de los cómputos oficiales;
@@ -26,9 +34,9 @@ import { fileURLToPath } from 'node:url'
 const HERE = path.dirname(fileURLToPath(import.meta.url))
 const PROJECT = path.resolve(HERE, '..')
 const SOURCE = path.resolve(process.argv[2] ?? process.env.TABLERO_DIR ?? path.join(PROJECT, '..', 'SUBIR_ESTE_tablero_2026-11-24_final'))
-/** Datos pesados del mapa: se piden con fetch solo cuando hacen falta. */
+/** Salida pesada (mapa y secciones). Se importa al almacén del back. */
 const OUT_PUBLIC = path.join(PROJECT, 'public', 'data')
-/** Resumen de escenarios: va dentro del bundle porque se usa en el primer pintado. */
+/** Resumen de escenarios: lo pide el front al arrancar, vía la API. */
 const OUT_BUNDLE = path.join(PROJECT, 'src', 'data', 'generated')
 
 if (!fs.existsSync(path.join(SOURCE, 'sim_v8.json'))) {
@@ -500,7 +508,7 @@ for (const escenario of sim.escenarios) {
 /* Escritura                                                           */
 /* ------------------------------------------------------------------ */
 
-// Solo se limpia lo que este script escribe: en OUT_BUNDLE también viven los datos de otros scripts.
+// Solo se limpian las carpetas que este script rehace completas (secciones aquí; motor, más abajo).
 fs.rmSync(path.join(OUT_PUBLIC, 'secciones'), { recursive: true, force: true })
 const rel = (dir) => path.relative(PROJECT, dir).replaceAll('\\', '/')
 const sizes = []
@@ -516,6 +524,8 @@ sizes.push([`${rel(OUT_PUBLIC)}/secciones/S*.json (${Object.keys(porEscenario).l
 
 // Estas tres páginas leen los JSON del motor tal cual, con la capa de datos del
 // propio tablero (src/motor/vendor/pp-datos.js): aquí solo se copian los que usan.
+// A diferencia del resto de public/data, esta carpeta la lee el front directo y
+// se versiona, hasta que el back sirva estos archivos.
 const MOTOR = [
   'version.json',
   'sim_v8.json',

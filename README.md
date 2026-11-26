@@ -28,9 +28,9 @@ npm run lint
 El inicio de sesión tampoco tiene pantalla en el diseño: usa su mismo lenguaje
 (el rótulo del inicio a escala, una tarjeta blanca, la píldora de sección y el
 degradado de la franja en el botón). Se llega a él con el ícono de cerrar
-sesión que cuelga bajo «FUENTES» en el menú. **Todavía no hay backend**: el
-formulario solo revisa que los dos campos traigan algo y entra, y no se impide
-abrir las demás páginas sin pasar por él. El punto de conexión es
+sesión que cuelga bajo «FUENTES» en el menú. **Todavía no está conectado al
+back**: el formulario solo revisa que los dos campos traigan algo y entra, y no
+se impide abrir las demás páginas sin pasar por él. El punto de conexión es
 `src/api/sesion.ts` (`iniciarSesion` y `cerrarSesion`).
 
 ### Territorio, Comparativo y Fuentes
@@ -63,9 +63,7 @@ que el original (se compararon con él texto por texto, tooltips incluidos).
   son los módulos de cálculo y de nombres del propio tablero, tal cual (no
   tienen interfaz; se actualizan copiándolos del paquete), `index.ts` los expone
   con sus formatos y `hooks.ts` trae la carga y el estado. Leen los JSON del
-  motor de `public/data/motor/`, que copia `npm run data`. **Para conectar el
-  backend** basta darle a `D.configurar(...)` (en `index.ts`) un `lector` que
-  traiga cada archivo de la API.
+  motor tal cual; de dónde, se explica en «Datos» (por ahora van con el front).
 - El código y los estilos de estas páginas se cargan solo al entrar a ellas.
 - Ocupan **todo el ancho del marco** (las páginas del diseño dejan 90 px a cada
   lado): es lo que piden sus tablas más anchas. **Ninguna tabla se desliza de
@@ -99,7 +97,8 @@ src/
   motor/         capa de datos del motor para las páginas del tablero (vendor/ = sus
                  módulos de cálculo y nombres, sin tocar)
   pages/         una carpeta/archivo por página, con su hoja de estilos
-  data/          los datos que muestra cada página (listos para conectarse a una API)
+  api/           el único acceso a la API del back: funciones y formas del contrato
+  data/          contenido fijo del diseño (textos, grupos clave, acomodos)
   assets/        fondos, logotipos y piezas vectoriales tomadas del PDF
 ```
 
@@ -157,24 +156,72 @@ ajustado al ancho de la franja (`FitLines` y `FitText` en
 Si se cuenta con la licencia web de Gotham, basta declarar sus `@font-face` en
 `src/styles/fonts.css` y apuntar las variables `--font-gotham*` de `tokens.css`.
 
-### Datos (sin backend todavía)
+### Datos (los sirve el back)
 
-El sitio es interactivo pero solo front: lee archivos estáticos generados a
-partir del paquete del motor v8.1 (el tablero anterior).
+Los datos de Mapa, Diputaciones y Simulación vienen de la API del repositorio
+**`proyecciones-backend`**. El front no guarda esas cifras: `src/api/` es el
+único lugar que habla con ella y `src/api/types.ts` es el contrato (el back
+devuelve esas mismas formas).
 
 ```bash
-npm run data -- "ruta/al/paquete_del_tablero"   # regenera los datos
+cp .env.example .env.local        # VITE_API_URL, por omisión http://localhost:3400/api/proyecciones
+# en el otro repositorio: npm start (y npm run sembrar la primera vez)
+npm run dev
 ```
 
-| Archivo                                | Qué trae                                               | Cómo se carga         |
-| -------------------------------------- | ------------------------------------------------------ | --------------------- |
-| `src/data/generated/escenarios.json`   | 18 escenarios × 3 boletas, ciudad y distritos          | dentro del bundle     |
-| `public/data/mapa.json`                | secciones, límites, resultado 2024 y capas temáticas   | `fetch` al usarse     |
-| `public/data/secciones/S*.json`        | predicción por sección de cada escenario (dip. local)  | `fetch` al usarse     |
-| `public/data/motor/*`                  | los JSON del motor tal cual, para Territorio, Comparativo y Fuentes (16 MB) | `fetch` al usarse |
+| Ruta de la API            | Qué trae                                               | Cuándo se pide          |
+| ------------------------- | ------------------------------------------------------ | ----------------------- |
+| `/escenarios`             | 18 escenarios × 3 boletas, ciudad y distritos          | al arrancar el sitio    |
+| `/mapa`                   | secciones, límites, resultado 2024 y capas temáticas   | al entrar al mapa       |
+| `/secciones/:escenario`   | predicción por sección de un escenario (dip. local)    | al elegir un escenario  |
 
-Todo el acceso pasa por `src/api/` (`index.ts` y las formas en `types.ts`): para
-conectar una API basta con reescribir esas funciones.
+`src/main.tsx` pide `/escenarios` **antes** de montar la aplicación e importa
+`App` de forma dinámica después: varios módulos leen `DATOS` al importarse (las
+opciones de los selectores, el escenario central del mapa), así que para cuando
+se evalúan ya está lleno. Si la API no responde, o si su almacén está vacío, se
+ve una pantalla que lo dice (`src/components/layout/Arranque.tsx`).
+
+Dos cosas del contrato que el back debe tener en cuenta:
+
+- `/escenarios` lleva `limites` (la caja de la ciudad y la de cada distrito):
+  con ella el mapa abre encuadrado en Guadalajara. Un almacén importado antes de
+  ese cambio no la trae; mientras tanto el front usa la caja de la ciudad para
+  todo (`src/api/encuadre.ts`) y lo avisa en la consola. Se arregla volviendo a
+  generar e importar los datos.
+- `/fuentes` ya no se usa: Fuentes dejó de ser una copia del HTML del tablero y
+  ahora se arma en React con los JSON del motor (abajo).
+
+#### Los JSON del motor (Territorio, Comparativo y Fuentes)
+
+Estas tres páginas no pasan por `src/api/`: leen los JSON del motor tal cual
+(`sim_v8.json`, `proyecciones.json`, `sim_agentes.json`…, 33 archivos, 16 MB) con
+la capa de datos del propio tablero (`src/motor/`). **El back todavía no los
+sirve**, así que por ahora van con el front, en `public/data/motor/`, y son la
+única carpeta de `public/data/` que se versiona.
+
+Cuando el back los sirva (basta una ruta que devuelva cada archivo por su
+nombre), se pone su dirección en `VITE_MOTOR_URL` y `public/data/motor/` deja de
+versionarse:
+
+```bash
+VITE_MOTOR_URL=http://localhost:3400/api/proyecciones/motor
+```
+
+#### Regenerar el paquete desde el motor
+
+La transformación «paquete del motor → JSON del contrato» todavía vive aquí; su
+salida se importa al almacén del back (ver su README):
+
+```bash
+npm run data -- "ruta/al/paquete_del_tablero"      # escenarios, mapa, secciones y la copia del motor
+cd ../proyecciones-backend && npm run importar -- ../proyecciones-front
+```
+
+Esa salida (`public/data/`, `src/data/generated/`) ya no se versiona: es un paso
+intermedio hacia el back. La excepción es `public/data/motor/`, que el mismo
+comando actualiza y sí se versiona (ver arriba).
+
+#### Cifras que no salen del motor
 
 - `src/api/diseno.ts` sustituye dos celdas (S0 · alcaldía y S1 · diputación
   local) por las cifras del PDF, que salió de una corrida anterior del motor y
