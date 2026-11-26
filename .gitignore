@@ -22,3 +22,8 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Datos: los sirve el back (proyecciones-backend). Lo que generan los scripts
+# del motor es salida local que se importa al almacén del back, no se versiona.
+public/data
+src/data/generated

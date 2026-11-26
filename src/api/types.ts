@@ -143,3 +143,16 @@ export type SeccionesEscenario = {
   /** 1 si la sección está pareja (nadie llega al umbral de ventaja con la mediana más alta). */
   parejo: number[]
 }
+
+/* ------------------------------------------------------------------ */
+/* Fuentes                                                             */
+/* ------------------------------------------------------------------ */
+
+/** Una sección de la página Fuentes: HTML tomado tal cual del tablero del motor. */
+export type TableroSection = { id: string; html: string }
+
+export type FuentesData = {
+  /** Archivo del tablero del que se tomó (null si no hay nada cargado). */
+  origen: string | null
+  secciones: TableroSection[]
+}

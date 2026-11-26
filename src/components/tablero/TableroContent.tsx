@@ -1,11 +1,12 @@
 import { useEffect, useRef, type MouseEvent } from 'react'
 import { useNavigate } from 'react-router-dom'
+import type { TableroSection } from '../../api'
 import logoMorena from '../../assets/img/logo-morena.png'
 import logoMc from '../../assets/svg/logo-mc-horizontal.svg'
 import '../../styles/tablero.css'
 import './TableroContent.css'
 
-export type TableroSection = { id: string; html: string }
+export type { TableroSection }
 
 const LOGOS: Record<string, string> = { logo_mc: logoMc, logo_morena: logoMorena }
 

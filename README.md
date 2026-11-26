@@ -20,7 +20,6 @@ npm run lint
 | `/`             | Mapa          | `src/pages/MapaPage.tsx`         |
 | `/diputaciones` | Diputaciones  | `src/pages/DiputacionesPage.tsx` |
 | `/simulacion`   | Simulación    | `src/pages/SimulacionPage.tsx`   |
-
 | `/fuentes`      | Fuentes       | `src/pages/FuentesPage.tsx`      |
 
 Comparativo y Territorio aparecen en el menú pero aún no tienen página.
@@ -44,7 +43,8 @@ src/
     icons/       íconos vectoriales extraídos del diseño
     ui/          píldoras, círculos con ícono, títulos numerados
   pages/         una carpeta/archivo por página, con su hoja de estilos
-  data/          los datos que muestra cada página (listos para conectarse a una API)
+  api/           el único acceso a la API del back: funciones y formas del contrato
+  data/          contenido fijo del diseño (textos, grupos clave, acomodos)
   assets/        fondos, logotipos y piezas vectoriales tomadas del PDF
 ```
 
@@ -76,23 +76,46 @@ vectoriales del propio diseño, así que son idénticos al PDF.
 Si se cuenta con la licencia web de Gotham, basta declarar sus `@font-face` en
 `src/styles/fonts.css` y apuntar las variables `--font-gotham*` de `tokens.css`.
 
-### Datos (sin backend todavía)
+### Datos (los sirve el back)
 
-El sitio es interactivo pero solo front: lee archivos estáticos generados a
-partir del paquete del motor v8.1 (el tablero anterior).
+Todos los datos vienen de la API del repositorio **`proyecciones-backend`**. El
+front no guarda ninguna cifra: `src/api/` es el único lugar que habla con ella y
+`src/api/types.ts` es el contrato (el back devuelve esas mismas formas).
 
 ```bash
-npm run data -- "ruta/al/paquete_del_tablero"   # regenera los datos
+cp .env.example .env.local        # VITE_API_URL, por omisión http://localhost:3400/api/proyecciones
+# en el otro repositorio: npm start (y npm run sembrar la primera vez)
+npm run dev
 ```
 
-| Archivo                                | Qué trae                                               | Cómo se carga         |
-| -------------------------------------- | ------------------------------------------------------ | --------------------- |
-| `src/data/generated/escenarios.json`   | 18 escenarios × 3 boletas, ciudad y distritos          | dentro del bundle     |
-| `public/data/mapa.json`                | secciones, límites, resultado 2024 y capas temáticas   | `fetch` al usarse     |
-| `public/data/secciones/S*.json`        | predicción por sección de cada escenario (dip. local)  | `fetch` al usarse     |
+| Ruta de la API            | Qué trae                                               | Cuándo se pide          |
+| ------------------------- | ------------------------------------------------------ | ----------------------- |
+| `/escenarios`             | 18 escenarios × 3 boletas, ciudad y distritos          | al arrancar el sitio    |
+| `/mapa`                   | secciones, límites, resultado 2024 y capas temáticas   | al entrar al mapa       |
+| `/secciones/:escenario`   | predicción por sección de un escenario (dip. local)    | al elegir un escenario  |
+| `/fuentes`                | contenido del tablero para la página Fuentes           | al entrar a Fuentes     |
 
-Todo el acceso pasa por `src/api/` (`index.ts` y las formas en `types.ts`): para
-conectar una API basta con reescribir esas funciones.
+`src/main.tsx` pide `/escenarios` **antes** de montar la aplicación e importa
+`App` de forma dinámica después: varios módulos leen `DATOS` al importarse (las
+opciones de los selectores, el escenario central del mapa), así que para cuando
+se evalúan ya está lleno. Si la API no responde, o si su almacén está vacío, se
+ve una pantalla que lo dice (`src/components/layout/Arranque.tsx`).
+
+#### Regenerar el paquete desde el motor
+
+La transformación «paquete del motor → JSON del contrato» todavía vive aquí; su
+salida se importa al almacén del back (ver su README):
+
+```bash
+npm run data -- "ruta/al/paquete_del_tablero"      # escenarios, mapa y secciones
+node scripts/snapshot-tablero.mjs "ruta/al/paquete" # fuentes.json
+cd ../proyecciones-backend && npm run importar -- ../proyecciones-front
+```
+
+Esa salida (`public/data/`, `src/data/generated/`) ya no se versiona: es un paso
+intermedio hacia el back.
+
+#### Cifras que no salen del motor
 
 - `src/api/diseno.ts` sustituye dos celdas (S0 · alcaldía y S1 · diputación
   local) por las cifras del PDF, que salió de una corrida anterior del motor y
