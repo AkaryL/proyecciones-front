@@ -1,0 +1,12 @@
+/* Aviso de carga mientras llega el código de una página que se carga aparte. */
+.pagina-cargando {
+  display: grid;
+  place-items: center;
+  width: 1260px;
+  min-height: 40vh;
+  margin: 0 90px;
+  padding-bottom: 110px;
+  color: #5b6772;
+  font: 600 15px var(--font-helvetica);
+  letter-spacing: 0.02em;
+}

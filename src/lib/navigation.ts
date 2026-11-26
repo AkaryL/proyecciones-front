@@ -10,6 +10,20 @@ export const RUTA_LOGIN = '/login'
 export const RUTA_INICIO = '/'
 
 /**
+ * Ruta de cada página del sitio, por la clave con que la nombran los datos del
+ * motor. Las que el tablero original tenía y aquí todavía no existen (Monitoreo)
+ * no están: un enlace a ellas se muestra sin destino.
+ */
+export const RUTA_DE_PAGINA: Record<string, string> = {
+  mapa: '/',
+  diputaciones: '/diputaciones',
+  simulacion: '/simulacion',
+  territorio: '/territorio',
+  comparativo: '/comparativo',
+  fuentes: '/fuentes',
+}
+
+/**
  * Navegación entre páginas con fundido: la página nueva aparece sobre la
  * anterior en vez de sustituirla de golpe, y siempre abre desde arriba.
  *

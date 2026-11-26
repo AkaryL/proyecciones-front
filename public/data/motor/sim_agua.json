@@ -1,0 +1,88 @@
+{
+ "fecha": "2026-10-06",
+ "titulo": "Crisis del agua sucia · Guadalajara",
+ "doc": "Monitoreo de la crisis del agua (corte 6-oct-2026). Fuentes: CEDHJ, SIAPA, IMDEC, prensa (El Informador, La Jornada, N+), redes (X, TikTok, Facebook vía espejos públicos), Biblioteca de Anuncios de Meta. Clases de evidencia: V verificada, I indicativa, P pendiente.",
+ "hecho_central": "El 6-oct Lemus (MC) anunció TANDEO de agua por 6 meses (−2.5 m³/s, se suspende Las Pintas y Chapala viejo) ante el deterioro de la calidad. Descartó privatizar el SIAPA. Mega marcha convocada el 11-oct en La Minerva.",
+ "indice_escalamiento": {
+   "valor": 61,
+   "max": 100,
+   "nivel": "Escalamiento moderado-alto",
+   "componentes": [
+     {"var": "Crecimiento de reportes", "nivel": "ALTO", "puntaje": 0.70, "peso": 20},
+     {"var": "Intensidad emocional", "nivel": "ALTA", "puntaje": 0.45, "peso": 20},
+     {"var": "Coordinación vecinal", "nivel": "ALTA", "puntaje": 0.70, "peso": 12},
+     {"var": "Cobertura mediática", "nivel": "ALTA", "puntaje": 0.65, "peso": 12},
+     {"var": "Participación de organizaciones", "nivel": "ALTA", "puntaje": 0.65, "peso": 12},
+     {"var": "Paso a protesta física", "nivel": "YA OCURRIÓ", "puntaje": 0.60, "peso": 12},
+     {"var": "Próximo evento movilizador", "nivel": "ACTIVO", "puntaje": 0.60, "peso": 12}
+   ]
+ },
+ "semaforo": [
+   {"dim": "Volumen de conversación", "nivel": "ROJO", "just": "Pico confirmado con crecimiento orgánico y convocatoria activa."},
+   {"dim": "Movilización física", "nivel": "ROJO", "just": "Ya hubo bloqueos con paro de transporte; amenaza creíble de repetición; marcha en días."},
+   {"dim": "Riesgo sanitario narrativo", "nivel": "AMBAR", "just": "Testimonios de afectaciones (piel, garganta); antecedente materia fecal; falta evento clínico documentado."},
+   {"dim": "Desinformación / pauta", "nivel": "AMBAR", "just": "Contenido falso viral con pauta; disputa por la autoría de la marcha."},
+   {"dim": "Confrontación / violencia", "nivel": "AMBAR", "just": "Antimotines desplegados sin confrontación el 5-oct; riesgo si hay uso de fuerza."},
+   {"dim": "Capacidad de descompresión institucional", "nivel": "ROJO", "just": "Descuentos y cambio de director no redujeron la percepción: 97% de vecinos no percibe mejora."}
+ ],
+ "colonias_descuento": [
+   {"municipio": "Guadalajara", "n": 199},
+   {"municipio": "Tlaquepaque", "n": 83},
+   {"municipio": "Zapopan", "n": 49},
+   {"municipio": "Tonalá", "n": 11}
+ ],
+ "reportes_distrito": [
+   {"distrito": "D8 Guadalajara", "n": 128, "gana": "MC", "nota": "epicentro"},
+   {"distrito": "D20 Tonalá", "n": 60, "gana": "Hagamos"},
+   {"distrito": "D14 Tlajomulco", "n": 58, "gana": "Futuro"},
+   {"distrito": "D13 Tlaquepaque", "n": 23, "gana": "PT"}
+ ],
+ "top_colonias": [
+   {"colonia": "Colinas de Tonalá", "n": 60},
+   {"colonia": "Americana", "n": 46},
+   {"colonia": "Jardines del Country", "n": 34},
+   {"colonia": "Miravalle", "n": 34},
+   {"colonia": "Centro", "n": 25},
+   {"colonia": "Del Fresno", "n": 24},
+   {"colonia": "Pinar de la Calma", "n": 23},
+   {"colonia": "Moderna", "n": 23}
+ ],
+ "clusters_territoriales": [
+   {"nombre": "Sur conflictivo (epicentro)", "colonias": "El Sauz, Lomas del 4, Colón Industrial, Del Sur, San Carlos, Lomas de Santa María", "comportamiento": "La conversación digital ya se convirtió en movilización física: 2 de 3 bloqueos del 5-oct y amenaza de reactivarlos."},
+   {"nombre": "Centro-poniente denunciante", "colonias": "Americana, Alcalde Barranquitas, Medrano, Santa Cecilia, La Talpita, San Andrés, El Fresno, Chapalita Inn, Eucaliptos Vallarta", "comportamiento": "Alta densidad de reportes y hubs vecinales organizados (WhatsApp); canal institucional (quejas, folios) además de presión pública."},
+   {"nombre": "Tlaquepaque industrial-habitacional", "colonias": "Fracc. Revolución, Residencial Revolución, El Álamo, Carrillo Puerto, Residencial El Tapatío", "comportamiento": "Evidencia doméstica reiterada (filtros saturados) con etiquetado múltiple a autoridades y medios."}
+ ],
+ "pauta": {
+   "nota": "Biblioteca de Anuncios de Meta, 8-jul a 5-oct (n=53 anuncios con 'SIAPA' o 'agua puerca'). Morena domina la pauta capitalizando contra MC/Lemus.",
+   "bloques": [
+     {"bloque": "Morena", "anuncios": 27, "lider": "Chema Martínez, Mery Pozos"},
+     {"bloque": "Gobierno / MC", "anuncios": 9, "lider": "Siapa Gdl, Gobierno de Jalisco"},
+     {"bloque": "Sin filiación (pro-gobierno)", "anuncios": 6},
+     {"bloque": "Morena y aliados", "anuncios": 4},
+     {"bloque": "Sin filiación (anti-Lemus)", "anuncios": 3},
+     {"bloque": "Medio", "anuncios": 2},
+     {"bloque": "PAN", "anuncios": 1},
+     {"bloque": "Oposición: otros", "anuncios": 1}
+   ]
+ },
+ "bloqueos_5oct": [
+   {"punto": "Av. Colón y Torres Bodet", "colonias": "El Sauz, Lomas del 4", "impacto": "Suspensión parcial Línea 1 Tren Ligero; ~5 h"},
+   {"punto": "Periférico Sur y 8 de Julio", "colonias": "Lomas de Santa María", "impacto": "Cierre ambos sentidos; filas a las 20:00 h"},
+   {"punto": "López Mateos / Las Fuentes", "colonias": "poniente-sur", "impacto": "Bloqueo ambos sentidos; retrasos masivos"}
+ ],
+ "probabilidad_escalamiento": {
+   "nota": "Inferencia analítica estructurada (no estadística medida). Horizontes 7/14/30 días desde el 6-oct.",
+   "horizontes": [
+     {"dias": 7, "al": "13-oct", "escalamiento_digital": "85-95%", "protestas": "70-85%", "ampliacion_politica": "75-90%", "retorno_tecnico": "<25%"},
+     {"dias": 14, "al": "20-oct", "escalamiento_digital": "80-90%", "protestas": "70-85%", "ampliacion_politica": "80-90%"},
+     {"dias": 30, "al": "5-nov", "escalamiento_digital": "70-80%", "protestas_episodicas": "55-70%", "desescalamiento": "<35%"}
+   ]
+ },
+ "senales_alerta": [
+   "Nueva evidencia de larvas/parásitos o brote gastrointestinal atribuido al agua (convertiría la crisis en sanitaria).",
+   "Fracaso de la reunión vecinos-SIAPA o uso de fuerza en protesta (activa CEDHJ como actor de 1ª línea).",
+   "La marcha del 11-oct supera 3,000 con bloqueos (lleva el índice a ~72).",
+   "Silencio prolongado o declaraciones minimizadoras del gobernador."
+ ],
+ "lectura_electoral": "La crisis del agua es el eje político de la intermedia 2027 en Guadalajara. Castiga al gobierno MC (Lemus/SIAPA estatal, Delgadillo municipal). La pauta de Morena capitaliza; el voto de castigo se concentra en D8 (bastión MC epicentro) y colonias del sur/centro-poniente. El único amortiguador de MC es que Delgadillo se despegue de Lemus y gestione agua municipal (escenario S4)."
+}

@@ -1,0 +1,135 @@
+/*
+ * Estilos de las páginas que vienen del tablero del motor (Territorio,
+ * Comparativo, Fuentes). ÚNICO punto de entrada: primero los estilos del propio
+ * tablero (generados, styles/tablero.css) y después los ajustes del sitio, que
+ * los corrigen. El orden importa: las dos partes escriben las mismas variables
+ * en `.tablero` y gana la que va después. Por eso las páginas no importan
+ * styles/tablero.css por su cuenta; lo trae PaginaTablero.tsx con este archivo.
+ *
+ * Los estilos del tablero miden todo en --tu: un píxel del tablero llevado a la
+ * escala del sitio. El tablero se pensó para leerse a tamaño real, así que aquí
+ * se amplía un poco (--tablero-zoom) para que el texto corrido no quede
+ * diminuto junto a las páginas del diseño.
+ */
+@import '../../styles/tablero.css';
+
+/*
+ * --tu se registra como longitud para que se calcule una sola vez, en `.tablero`
+ * (contra el ancho del frame), y baje ya resuelta. Sin registrar, cada
+ * componente del tablero que es contenedor (las barras apiladas, las tablas)
+ * la recalcularía contra su propio ancho.
+ */
+@property --tu {
+  syntax: '<length>';
+  inherits: true;
+  initial-value: 1PX;
+}
+
+.tablero {
+  --tablero-zoom: 1.18;
+  --tu: calc(var(--tablero-zoom) * 100cqw / 1440);
+
+  /* tipografías y marca del sitio */
+  --pp-f-titulo: var(--font-gotham);
+  --pp-f-texto: var(--font-helvetica);
+  --pp-g-tag: var(--grad-brand);
+  --pp-g-num: var(--grad-brand);
+  --pp-g-icono: var(--grad-brand);
+
+  width: 1260px;
+  margin: 0 90px;
+  padding-bottom: 110px;
+  color: var(--pp-tinta);
+  font-family: var(--pp-f-texto);
+}
+
+.tablero.pp-main {
+  margin-top: 0;
+}
+
+/* cada sección deja sitio al saltar a ella desde «Ir a una sección» */
+.tablero .pp-sec {
+  scroll-margin-top: 40px;
+}
+
+.tablero a {
+  color: var(--pp-verde);
+}
+
+.tablero a:hover {
+  color: var(--pp-azul-noche);
+}
+
+.tablero a[aria-disabled='true'] {
+  color: inherit;
+  text-decoration: none;
+  cursor: default;
+}
+
+.tablero [hidden] {
+  display: none !important;
+}
+
+.tablero img,
+.tablero svg {
+  max-width: 100%;
+}
+
+.tablero :focus-visible {
+  outline: calc(3 * var(--tu)) solid var(--pp-foco);
+  outline-offset: calc(2 * var(--tu));
+}
+
+/* ---------------------------------------------------------------------------
+ * Páginas del tablero hechas en React (Territorio, Comparativo)
+ * ------------------------------------------------------------------------ */
+
+/* ancla del tooltip: dentro de un `.frame` un elemento fijo no se ancla a la ventana */
+.tablero {
+  position: relative;
+}
+
+.tablero .pp-tip {
+  position: absolute;
+}
+
+/* la barra «Estás viendo», sus chips y el contenido, en columna */
+.tablero--pagina {
+  display: flex;
+  flex-direction: column;
+}
+
+/* El menú del sitio no se queda pegado: la barra pega casi al borde de la ventana. */
+.tablero .pp-ctx {
+  top: calc(10 * var(--tu));
+  margin-top: 0;
+}
+
+/* Mientras está pegada lleva detrás una franja opaca de lado a lado, para que lo
+   que pasa por debajo no asome alrededor de las píldoras. */
+.tablero .pp-ctx[data-pegada]::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  inset: calc(-10 * var(--tu)) -100vw;
+  border-bottom: 1PX solid var(--pp-borde);
+  background: rgb(243 244 245 / 0.97);
+  box-shadow: 0 calc(10 * var(--tu)) calc(18 * var(--tu)) calc(-16 * var(--tu)) rgb(3 26 42 / 0.5);
+}
+
+/* los chips del tablero que aquí son botones conservan su cara */
+.tablero button.pp-chip {
+  cursor: pointer;
+  font: inherit;
+}
+
+/* una caja sin contenido (sin avisos, sin zona abierta) no ocupa lugar ni separación */
+.tablero .pp-main > .pp-col:empty {
+  display: none;
+}
+
+/* contenedor que el tablero consulta con @container: su cuerpo de letra (16 px del
+   tablero, el del documento allá) fija la unidad de esas condiciones (ver scripts/tablero-css.mjs) */
+.tablero .pp-tpos {
+  font-size: calc(16 * var(--tu));
+}

@@ -1,0 +1,2758 @@
+{
+ "fecha": "2026-11-03",
+ "titulo": "Dashboard político · Guadalajara",
+ "indices_doc": "Monitoreo propio: notas de prensa fechadas por canal, con sentimiento por publicación de −2 (muy negativo) a +2 (muy positivo) y media mensual en la misma escala; nube de conceptos y publicaciones de redes verificadas. Encuestas: cifras de las casas citadas. Resultados: proyección del motor.",
+ "redes": {
+  "nota": "274 publicaciones de redes verificadas, con datos al 3-nov-2026.",
+  "n": 274,
+  "fecha": "2026-11-03"
+ },
+ "encuestas": {
+  "filas": [
+   {
+    "fecha": "2026-11-03",
+    "fecha_txt": "3-nov-2026",
+    "casa": "XtrategiaGDL para Grupo Reforma (MURAL)",
+    "casa_nota": "casa sin verificar en la fuente abierta",
+    "via": "Siker",
+    "boleta": "alcaldia",
+    "boleta_txt": "Alcaldía",
+    "boleta_clave": "ayun",
+    "tipo": "careo_candidatos",
+    "tipo_txt": "Careos entre aspirantes",
+    "ambito": "Guadalajara",
+    "medicion": "Seis careos para la alcaldía de GDL 2027 y popularidad de aspirantes de Morena",
+    "cifra": "Pozos 38–Delgadillo 33–Haro 19 · Pozos 37–Delgadillo 32–Colín 18 · Lomelí 35–Delgadillo 33 (con Haro) · Lomelí 36–Delgadillo 34 (con Monraz) · Chema 35–Delgadillo 36 (con Haro) · Chema 36–Delgadillo 35 (con Diana González) · Opinión: Pozos 22/12 (66% no la conoce), Chema 35/27, Lomelí 37/34",
+    "sin_cifra": false,
+    "campo": "19 al 25-oct-2026",
+    "campo_ini": "2026-10-19",
+    "campo_fin": "2026-10-25",
+    "metodo": "Encuesta en vivienda",
+    "muestra": "n=1,000 adultos",
+    "margen": "±3.1 general; ±5.4 entre morenistas (según MURAL)",
+    "ficha_tecnica": "Encuesta en vivienda · n=1,000 adultos · ±3.1 general; ±5.4 entre morenistas (según MURAL) (muestra y margen sin verificar en la fuente abierta)",
+    "sin_verificar": [
+     "casa",
+     "campo",
+     "muestra",
+     "margen"
+    ],
+    "sin_verificar_txt": "Sin verificar en la fuente abierta: casa, fecha de levantamiento, muestra y margen.",
+    "url": "https://siker.com.mx/guadalajara/morena-aventaja-en-5-de-6-careos-por-guadalajara-crisis-del-agua-impacta-a-mc/",
+    "urls": [
+     "https://siker.com.mx/guadalajara/morena-aventaja-en-5-de-6-careos-por-guadalajara-crisis-del-agua-impacta-a-mc/"
+    ],
+    "verificacion": "corregido",
+    "correccion": "Hay que marcar fecha de levantamiento (19-25 oct 2026), n (1 000) y margen (±3,1 / ±5,4) como «no verificado: no aparecen en Siker, vendrían de MURAL, que da 403». Sobre la casa: Siker solo dice «Grupo Reforma» y no menciona a XtrategiaGDL ni a MURAL. Las cifras y la fecha quedan como están.",
+    "n_fichas": 3,
+    "otras_fichas": [
+     {
+      "casa": "XtrategiaGDL para Grupo Reforma (MURAL)",
+      "via": null,
+      "url": "https://siker.com.mx/guadalajara/morena-aventaja-en-5-de-6-careos-por-guadalajara-crisis-del-agua-impacta-a-mc/",
+      "medicion": "Seis careos para la alcaldía 2027: Morena-PVEM-PT contra Delgadillo (MC) contra PAN-PRI. Morena gana 5 de 6 y Delgadillo solo gana el careo con Chema Martínez, por 1 punto.",
+      "cifra": "Pozos 38-Delgadillo 33-Haro 19 · Pozos 37-Delgadillo 32-Colín 18 · Lomelí 35-Delgadillo 33 (c/Haro) · Lomelí 36-Delgadillo 34 (c/Monraz) · Martínez 35-Delgadillo 36 (c/Haro) · Martínez 36-Delgadillo 35 (c/D. González)",
+      "verificacion": "confirmado"
+     },
+     {
+      "casa": "XtrategiaGDL para Grupo Reforma (MURAL)",
+      "via": null,
+      "url": "https://siker.com.mx/guadalajara/morena-aventaja-en-5-de-6-careos-por-guadalajara-crisis-del-agua-impacta-a-mc/",
+      "medicion": "Careos por la alcaldía de GDL + aprobación + problemas",
+      "cifra": "Pozos 38 vs Delgadillo 33 vs Haro 19 · Pozos 37 vs Delgadillo 32 vs Colín 18 · Lomelí 35 vs Delgadillo 33 (Haro) · Lomelí 36 vs Delgadillo 34 (Monraz) · Chema 35 vs Delgadillo 36 (Haro) · Chema 36 vs Delgadillo 35 (D. González) | Morena +5 sobre MC sin alianza, +10 con PVEM-PT | aprobación: Delgadillo 45/49 (era 62 en sep), Lemus 40/55, Sheinbaum 47/52 | agua 42% (antes 24%), inseguridad 32%",
+      "verificacion": "confirmado"
+     }
+    ]
+   },
+   {
+    "fecha": "2026-11-03",
+    "fecha_txt": "3-nov-2026",
+    "casa": "XtrategiaGDL para Grupo Reforma (MURAL)",
+    "casa_nota": "casa sin verificar en la fuente abierta",
+    "via": null,
+    "boleta": "alcaldia",
+    "boleta_txt": "Alcaldía",
+    "boleta_clave": "ayun",
+    "tipo": "intencion_partido",
+    "tipo_txt": "Intención de voto por partido",
+    "ambito": "Guadalajara",
+    "medicion": "Intención de voto por partido para la alcaldía de Guadalajara. Morena sin alianzas va 5 puntos arriba de MC, y 10 puntos con PVEM y PT.",
+    "cifra": "Morena +5 sobre MC (sin alianzas) · Morena-PVEM-PT +10 sobre MC",
+    "sin_cifra": false,
+    "campo": "19 al 25-oct-2026",
+    "campo_ini": "2026-10-19",
+    "campo_fin": "2026-10-25",
+    "metodo": "En vivienda",
+    "muestra": "n=1,000",
+    "margen": "±3.1",
+    "ficha_tecnica": "En vivienda · n=1,000 · ±3.1 (muestra y margen sin verificar en la fuente abierta)",
+    "sin_verificar": [
+     "casa",
+     "campo",
+     "muestra",
+     "margen"
+    ],
+    "sin_verificar_txt": "Sin verificar en la fuente abierta: casa, fecha de levantamiento, muestra y margen.",
+    "url": "https://siker.com.mx/guadalajara/morena-aventaja-en-5-de-6-careos-por-guadalajara-crisis-del-agua-impacta-a-mc/",
+    "urls": [
+     "https://siker.com.mx/guadalajara/morena-aventaja-en-5-de-6-careos-por-guadalajara-crisis-del-agua-impacta-a-mc/"
+    ],
+    "verificacion": "confirmado",
+    "n_fichas": 1
+   },
+   {
+    "fecha": "2026-11-03",
+    "fecha_txt": "3-nov-2026",
+    "casa": "Demoscopia Digital",
+    "casa_nota": null,
+    "via": null,
+    "boleta": "aprobacion",
+    "boleta_txt": "Aprobación",
+    "boleta_clave": null,
+    "tipo": "aprobacion",
+    "tipo_txt": "Aprobación",
+    "ambito": "Jalisco",
+    "medicion": "Ranking de gobernadores (octubre): aprobación de Lemus",
+    "cifra": "Lemus 45.6% (en el grupo por debajo del 50%)",
+    "sin_cifra": false,
+    "aprobacion_de": [
+     "Lemus"
+    ],
+    "campo": "oct-2026",
+    "campo_ini": "2026-10",
+    "campo_fin": "2026-10",
+    "metodo": null,
+    "muestra": null,
+    "margen": null,
+    "ficha_tecnica": null,
+    "url": "https://lajornadahidalgo.com/ranking-de-gobernadores-del-mes-de-otubre-2026/",
+    "urls": [
+     "https://lajornadahidalgo.com/ranking-de-gobernadores-del-mes-de-otubre-2026/"
+    ],
+    "verificacion": "confirmado",
+    "n_fichas": 1
+   },
+   {
+    "fecha": "2026-11-03",
+    "fecha_txt": "3-nov-2026",
+    "casa": "XtrategiaGDL para Grupo Reforma (MURAL)",
+    "casa_nota": "casa sin verificar en la fuente abierta",
+    "via": null,
+    "boleta": "aprobacion",
+    "boleta_txt": "Aprobación",
+    "boleta_clave": null,
+    "tipo": "aprobacion",
+    "tipo_txt": "Aprobación",
+    "ambito": "Guadalajara",
+    "medicion": "Aprobación de la alcaldesa Delgadillo, del gobernador Lemus y de la presidenta Sheinbaum entre habitantes de Guadalajara. La de Delgadillo cae 17 puntos desde septiembre por la crisis del agua.",
+    "cifra": "Delgadillo 45 aprueba / 49 desaprueba / 6 NS (62 en sep) · Lemus 40/55 · Sheinbaum 47/52",
+    "sin_cifra": false,
+    "aprobacion_de": [
+     "Delgadillo",
+     "Lemus",
+     "Sheinbaum"
+    ],
+    "campo": "19 al 25-oct-2026",
+    "campo_ini": "2026-10-19",
+    "campo_fin": "2026-10-25",
+    "metodo": "En vivienda, cuestionario en celular/tableta, 25 secciones electorales",
+    "muestra": "n=1,000",
+    "margen": "±3.1 (general)",
+    "ficha_tecnica": "En vivienda, cuestionario en celular/tableta, 25 secciones electorales · n=1,000 · ±3.1 (general) (sin verificar en la fuente abierta)",
+    "sin_verificar": [
+     "casa",
+     "campo",
+     "metodo",
+     "muestra",
+     "margen"
+    ],
+    "sin_verificar_txt": "Sin verificar en la fuente abierta: casa, fecha de levantamiento, método, muestra y margen.",
+    "url": "https://siker.com.mx/guadalajara/morena-aventaja-en-5-de-6-careos-por-guadalajara-crisis-del-agua-impacta-a-mc/",
+    "urls": [
+     "https://siker.com.mx/guadalajara/morena-aventaja-en-5-de-6-careos-por-guadalajara-crisis-del-agua-impacta-a-mc/"
+    ],
+    "verificacion": "corregido",
+    "correccion": "Quitar o marcar como «no verificado» que la casa sea XtrategiaGDL: Siker atribuye la encuesta solo a Grupo Reforma («encuesta en vivienda difundida hoy (03.11.26) por Grupo Reforma») y no menciona a XtrategiaGDL. La ficha técnica (n=1,000; ±3.1; campo 19-25 oct 2026; 25 secciones; cuestionario en celular o tableta) no aparece en Siker. Hay que marcar esos campos como pendientes de verificar. Las cifras de aprobación y la fecha se mantienen.",
+    "n_fichas": 1
+   },
+   {
+    "fecha": "2026-11-03",
+    "fecha_txt": "3-nov-2026",
+    "casa": "XtrategiaGDL para Grupo Reforma (MURAL)",
+    "casa_nota": "casa sin verificar en la fuente abierta",
+    "via": null,
+    "boleta": "contexto",
+    "boleta_txt": "Contexto",
+    "boleta_clave": null,
+    "tipo": "problemas",
+    "tipo_txt": "Problemas y servicios",
+    "ambito": "Guadalajara",
+    "medicion": "Principal problema de Guadalajara, septiembre frente a finales de octubre. El agua sucia y el desabasto pasan al primer lugar y desplazan a la inseguridad.",
+    "cifra": "Agua sucia/desabasto 42 (24 en sep) · Inseguridad 32 (37) · Calles 6 (9) · Corrupción 3 (3)",
+    "sin_cifra": false,
+    "campo": "19 al 25-oct-2026",
+    "campo_ini": "2026-10-19",
+    "campo_fin": "2026-10-25",
+    "metodo": "En vivienda",
+    "muestra": "n=1,000",
+    "margen": "±3.1",
+    "ficha_tecnica": "En vivienda · n=1,000 · ±3.1 (muestra y margen sin verificar en la fuente abierta)",
+    "sin_verificar": [
+     "casa",
+     "campo",
+     "muestra",
+     "margen"
+    ],
+    "sin_verificar_txt": "Sin verificar en la fuente abierta: casa, fecha de levantamiento, muestra y margen.",
+    "url": "https://siker.com.mx/guadalajara/morena-aventaja-en-5-de-6-careos-por-guadalajara-crisis-del-agua-impacta-a-mc/",
+    "urls": [
+     "https://siker.com.mx/guadalajara/morena-aventaja-en-5-de-6-careos-por-guadalajara-crisis-del-agua-impacta-a-mc/",
+     "https://www.mural.com.mx/lidera-4t-en-guadalajara-pozos-arriba-en-popularidad/ar3306994"
+    ],
+    "verificacion": "corregido",
+    "correccion": "Cambiar la dirección web por la de Siker (https://siker.com.mx/guadalajara/morena-aventaja-en-5-de-6-careos-por-guadalajara-crisis-del-agua-impacta-a-mc/), que sí abre. La de Mural da 403 y su titular trata de popularidad. Cambiar la evidencia por la frase literal de Siker, «aumentó a 42 por ciento». La casa XtrategiaGDL, el campo del 19 al 25 de octubre, n=1,000 y ±3.1 no aparecen en la fuente accesible, así que hay que marcarlos como «supuesto» o quitarlos. Siker solo dice «encuesta de Grupo Reforma», en vivienda.",
+    "correccion_aplicada": [
+     "url"
+    ],
+    "n_fichas": 1
+   },
+   {
+    "fecha": "2026-11-03",
+    "fecha_txt": "3-nov-2026",
+    "casa": "XtrategiaGDL para Grupo Reforma (MURAL)",
+    "casa_nota": "casa sin verificar en la fuente abierta",
+    "via": null,
+    "boleta": "contexto",
+    "boleta_txt": "Contexto",
+    "boleta_clave": null,
+    "tipo": "popularidad",
+    "tipo_txt": "Popularidad de aspirantes",
+    "ambito": "Guadalajara",
+    "medicion": "Popularidad de nueve aspirantes de Morena. Pozos, Lomelí y Martínez son los tres más populares; Lomelí es también el más impopular.",
+    "cifra": "Top 3 popularidad: Pozos, Lomelí, Martínez (sin % visibles); Lomelí el más impopular",
+    "sin_cifra": false,
+    "campo": "19 al 25-oct-2026",
+    "campo_ini": "2026-10-19",
+    "campo_fin": "2026-10-25",
+    "metodo": "En vivienda",
+    "muestra": null,
+    "margen": "±5.4 (pregunta entre morenistas)",
+    "ficha_tecnica": "En vivienda · ±5.4 (pregunta entre morenistas) (margen sin verificar en la fuente abierta)",
+    "sin_verificar": [
+     "casa",
+     "campo",
+     "margen"
+    ],
+    "sin_verificar_txt": "Sin verificar en la fuente abierta: casa, fecha de levantamiento y margen.",
+    "url": "https://www.mural.com.mx/lidera-4t-en-guadalajara-pozos-arriba-en-popularidad/ar3306994",
+    "urls": [
+     "https://www.mural.com.mx/lidera-4t-en-guadalajara-pozos-arriba-en-popularidad/ar3306994"
+    ],
+    "verificacion": "corregido",
+    "correccion": "Hay cifras en Siker y conviene añadirlas a cifras, con la dirección web de Siker como fuente verificable. Pozos: 22% positiva, 12% negativa, saldo +10, y el 66% no la conoce. Martínez: 35% y 27%, saldo +8. Lomelí: 37% y 34%, saldo +3, el 29% no lo conoce y tiene la mayor opinión negativa de los nueve. Por saldo el orden es Pozos, Martínez y Lomelí, no Pozos, Lomelí y Martínez. Siker solo detalla estos tres de los nueve y no dice expresamente que sean el top 3. El margen de ±5.4 sigue sin verificar.",
+    "n_fichas": 1
+   },
+   {
+    "fecha": "2026-10-31",
+    "fecha_txt": "31-oct-2026",
+    "casa": "GobernArte",
+    "casa_nota": null,
+    "via": null,
+    "boleta": "alcaldia",
+    "boleta_txt": "Alcaldía",
+    "boleta_clave": "ayun",
+    "tipo": "intencion_partido",
+    "tipo_txt": "Intención de voto por partido",
+    "ambito": "Guadalajara",
+    "medicion": "Alcaldía GDL 2027 por partido y aspirantes internos (también Zapopan, Tlaquepaque, Tlajomulco, El Salto y Vallarta)",
+    "cifra": "Morena 37.8 · MC 28.9 · PAN 12.1 · PRI 9.1 · PT 2.8 · PVEM 2.1 · ninguno 7.2 | internas: Pozos 41.2, Lomelí 30.3, Chema 16.3 (Morena); Delgadillo 41.8 (MC); D. González 26.3 (PAN); Haro 30.1 (PRI)",
+    "sin_cifra": false,
+    "campo": "25 al 30-oct-2026",
+    "campo_ini": "2026-10-25",
+    "campo_fin": "2026-10-30",
+    "metodo": "Muestreo aleatorio estratificado; cuestionarios digitales en app Odiseo",
+    "muestra": "n=500 por municipio (3,000 en total)",
+    "margen": "±2.5% a ±3.7% (95%)",
+    "ficha_tecnica": "Muestreo aleatorio estratificado; cuestionarios digitales en app Odiseo · n=500 por municipio (3,000 en total) · ±2.5% a ±3.7% (95%)",
+    "url": "https://gobernarte.com.mx/alcaldia-rumbo-a-las-elecciones-2027-en-jalisco-31-de-octubre-2026/",
+    "urls": [
+     "https://gobernarte.com.mx/alcaldia-rumbo-a-las-elecciones-2027-en-jalisco-31-de-octubre-2026/"
+    ],
+    "verificacion": "confirmado",
+    "n_fichas": 1
+   },
+   {
+    "fecha": "2026-10-30",
+    "fecha_txt": "30-oct-2026",
+    "casa": "Rubrum",
+    "casa_nota": null,
+    "via": null,
+    "boleta": "alcaldia",
+    "boleta_txt": "Alcaldía",
+    "boleta_clave": "ayun",
+    "tipo": "intencion_partido",
+    "tipo_txt": "Intención de voto por partido",
+    "ambito": "Guadalajara",
+    "medicion": "Tendencias de la elección municipal de GDL 2027, octubre",
+    "cifra": "Morena 33.6 · MC 23.7 · PAN 16.6 · PRI 9.0 · Aún no decide 17.1",
+    "sin_cifra": false,
+    "campo": "28-oct-2026",
+    "campo_ini": "2026-10-28",
+    "campo_fin": "2026-10-28",
+    "metodo": "Telefónica automatizada, aleatoria",
+    "muestra": "n=1,000 según el texto, 400 según la gráfica (inconsistente)",
+    "margen": "±3.8 (95%)",
+    "ficha_tecnica": "Telefónica automatizada, aleatoria · n=1,000 según el texto, 400 según la gráfica (inconsistente) · ±3.8 (95%)",
+    "aviso_muestra": "El texto de la página dice «1,000 levantamientos», pero el pie de la gráfica dice «400 levantamientos». Con 400 casos, el margen real sería de unos ±4.9, no de ±3.8.",
+    "url": "https://rubrum.info/tendencias-en-la-eleccion-del-municipio-de-guadalajara-jalisco-rumbo-al-2027-octubre-2026/",
+    "urls": [
+     "https://rubrum.info/tendencias-en-la-eleccion-del-municipio-de-guadalajara-jalisco-rumbo-al-2027-octubre-2026/",
+     "https://rubrum.info/tag/guadalajara-jalisco-2027/"
+    ],
+    "verificacion": "corregido",
+    "correccion": "Cambiar «cifras» por: Morena 33.6 · MC 23.7 · PAN 16.6 · PRI 9.0 · Aún no decide 17.1. Frente a septiembre, Morena sube 2.8 puntos, MC baja 4.1 y PAN sube 2.7. Añadir una advertencia sobre n: el texto de la página dice «1,000 levantamientos», pero el pie de la gráfica dice «400 levantamientos». Con 400 casos, el margen real sería de unos ±4.9, no de ±3.8. Registrar n como «1,000 según el texto, 400 según la gráfica (inconsistente)».",
+    "correccion_aplicada": [
+     "cifra",
+     "muestra"
+    ],
+    "n_fichas": 3,
+    "otras_fichas": [
+     {
+      "casa": "Rubrum",
+      "via": null,
+      "url": "https://rubrum.info/tendencias-en-la-eleccion-del-municipio-de-guadalajara-jalisco-rumbo-al-2027-octubre-2026/",
+      "medicion": "Tendencias de la elección municipal de GDL 2027, edición de octubre",
+      "cifra": null,
+      "verificacion": "confirmado"
+     },
+     {
+      "casa": "Rubrum",
+      "via": null,
+      "url": "https://rubrum.info/tag/guadalajara-jalisco-2027/",
+      "medicion": "Serie mensual de tendencias en GDL",
+      "cifra": null,
+      "verificacion": "confirmado"
+     }
+    ]
+   },
+   {
+    "fecha": "2026-10-30",
+    "fecha_txt": "30-oct-2026",
+    "casa": "Massive Caller",
+    "casa_nota": null,
+    "via": null,
+    "boleta": "aprobacion",
+    "boleta_txt": "Aprobación",
+    "boleta_clave": null,
+    "tipo": "aprobacion",
+    "tipo_txt": "Aprobación",
+    "ambito": "Jalisco",
+    "medicion": "Ranking de gobernadores del 29 de octubre: Lemus sigue por debajo del 50%. También mide confianza e inseguridad percibida en Jalisco.",
+    "cifra": "Lemus 48 (47.9 en sep) · confianza 33 (lugar 22) · inseguridad percibida 55.5",
+    "sin_cifra": false,
+    "aprobacion_de": [
+     "Lemus"
+    ],
+    "campo": "29-oct-2026 (fecha del ranking)",
+    "campo_ini": "2026-10-29",
+    "campo_fin": "2026-10-29",
+    "metodo": null,
+    "muestra": null,
+    "margen": null,
+    "ficha_tecnica": null,
+    "url": "https://vallartaindependiente.com/2026/10/30/aprobacion-de-pablo-lemus-se-mantiene-por-debajo-del-50-segun-massive-caller/",
+    "urls": [
+     "https://vallartaindependiente.com/2026/10/30/aprobacion-de-pablo-lemus-se-mantiene-por-debajo-del-50-segun-massive-caller/"
+    ],
+    "verificacion": "confirmado",
+    "n_fichas": 1
+   },
+   {
+    "fecha": "2026-10-24",
+    "fecha_txt": "24-oct-2026",
+    "casa": "CE Research",
+    "casa_nota": null,
+    "via": null,
+    "boleta": "aprobacion",
+    "boleta_txt": "Aprobación",
+    "boleta_clave": null,
+    "tipo": "aprobacion",
+    "tipo_txt": "Aprobación",
+    "ambito": "Nacional",
+    "medicion": "Ranking de 52 alcaldes de municipios de más de 600 mil habitantes. Delgadillo empata en el 9.º-10.º lugar con 64%.",
+    "cifra": "Delgadillo 64%",
+    "sin_cifra": false,
+    "aprobacion_de": [
+     "Delgadillo"
+    ],
+    "campo": null,
+    "campo_ini": null,
+    "campo_fin": null,
+    "metodo": null,
+    "muestra": null,
+    "margen": null,
+    "ficha_tecnica": null,
+    "url": "https://www.infobae.com/mexico/2026/10/24/queretaro-encabeza-el-ranking-de-aprobacion-de-alcaldes-de-grandes-urbes-de-acuerdo-con-encuesta/",
+    "urls": [
+     "https://www.infobae.com/mexico/2026/10/24/queretaro-encabeza-el-ranking-de-aprobacion-de-alcaldes-de-grandes-urbes-de-acuerdo-con-encuesta/"
+    ],
+    "verificacion": "confirmado",
+    "n_fichas": 1,
+    "repite_a": {
+     "casa": "CE Research",
+     "fecha": "2026-10-21",
+     "fecha_txt": "21-oct-2026",
+     "url": "https://ceonline.com.mx/65-ranking-alcaldes-grandes-urbes-2026-10/",
+     "motivo": "las mismas cifras, publicadas por otro medio en otra fecha"
+    }
+   },
+   {
+    "fecha": "2026-10-23",
+    "fecha_txt": "23-oct-2026",
+    "casa": "México Elige",
+    "casa_nota": null,
+    "via": null,
+    "boleta": "aprobacion",
+    "boleta_txt": "Aprobación",
+    "boleta_clave": null,
+    "tipo": "aprobacion",
+    "tipo_txt": "Aprobación",
+    "ambito": "Guadalajara",
+    "medicion": "Ranking de aprobación de alcaldes de capitales (octubre)",
+    "cifra": "Delgadillo 55.4% (10.º, último del top 10)",
+    "sin_cifra": false,
+    "aprobacion_de": [
+     "Delgadillo"
+    ],
+    "campo": "4 al 7-oct-2026",
+    "campo_ini": "2026-10-04",
+    "campo_fin": "2026-10-07",
+    "metodo": null,
+    "muestra": "n=2,248 (nacional)",
+    "margen": "±3.1% (95%) global",
+    "ficha_tecnica": "n=2,248 (nacional) · ±3.1% (95%) global",
+    "url": "https://polls.politico.mx/2026/10/23/oposicion-domina-ranking-de-aprobacion-de-alcaldes-de-capitales-mexico-elige/",
+    "urls": [
+     "https://polls.politico.mx/2026/10/23/oposicion-domina-ranking-de-aprobacion-de-alcaldes-de-capitales-mexico-elige/"
+    ],
+    "verificacion": "confirmado",
+    "n_fichas": 1
+   },
+   {
+    "fecha": "2026-10-21",
+    "fecha_txt": "21-oct-2026",
+    "casa": "CE Research",
+    "casa_nota": null,
+    "via": null,
+    "boleta": "aprobacion",
+    "boleta_txt": "Aprobación",
+    "boleta_clave": null,
+    "tipo": "aprobacion",
+    "tipo_txt": "Aprobación",
+    "ambito": "Guadalajara",
+    "medicion": "65.º Ranking de Alcaldes de Grandes Urbes (octubre): caída por el agua",
+    "cifra": "Delgadillo 64% (10.º; baja 8 lugares, de 70% a 64%)",
+    "sin_cifra": false,
+    "aprobacion_de": [
+     "Delgadillo"
+    ],
+    "campo": "14 al 18-oct-2026",
+    "campo_ini": "2026-10-14",
+    "campo_fin": "2026-10-18",
+    "metodo": "Entrevistas telefónicas robotizadas",
+    "muestra": "n=400 por ciudad",
+    "margen": "±4.5% (95%)",
+    "ficha_tecnica": "Entrevistas telefónicas robotizadas · n=400 por ciudad · ±4.5% (95%)",
+    "url": "https://ceonline.com.mx/65-ranking-alcaldes-grandes-urbes-2026-10/",
+    "urls": [
+     "https://ceonline.com.mx/65-ranking-alcaldes-grandes-urbes-2026-10/"
+    ],
+    "verificacion": "confirmado",
+    "n_fichas": 1
+   },
+   {
+    "fecha": "2026-10-20",
+    "fecha_txt": "20-oct-2026",
+    "casa": "Consulta Mitofsky",
+    "casa_nota": null,
+    "via": null,
+    "boleta": "aprobacion",
+    "boleta_txt": "Aprobación",
+    "boleta_clave": null,
+    "tipo": "aprobacion",
+    "tipo_txt": "Aprobación",
+    "ambito": "Guadalajara",
+    "medicion": "Ranking de alcaldes, octubre 2026 (top 10 de alcaldesas)",
+    "cifra": "Delgadillo 10.ª entre alcaldesas, con 53.9 · Promedio de 150 alcaldes 49.1",
+    "sin_cifra": false,
+    "aprobacion_de": [
+     "Delgadillo"
+    ],
+    "campo": null,
+    "campo_ini": null,
+    "campo_fin": null,
+    "metodo": null,
+    "muestra": null,
+    "margen": null,
+    "ficha_tecnica": null,
+    "url": "https://diariodenayarit.com/2026/10/20/blanca-simancas-se-ubica-entre-las-10-alcaldesas-mejor-evaluadas-del-pais-segun-mitofsky/",
+    "urls": [
+     "https://diariodenayarit.com/2026/10/20/blanca-simancas-se-ubica-entre-las-10-alcaldesas-mejor-evaluadas-del-pais-segun-mitofsky/"
+    ],
+    "verificacion": "confirmado",
+    "n_fichas": 1
+   },
+   {
+    "fecha": "2026-10-20",
+    "fecha_txt": "20-oct-2026",
+    "casa": "LaEncuesta.mx",
+    "casa_nota": "atribuida",
+    "via": null,
+    "boleta": "contexto",
+    "boleta_txt": "Contexto",
+    "boleta_clave": null,
+    "tipo": "otro",
+    "tipo_txt": "Preferencia interna (candidatura)",
+    "ambito": "Guadalajara",
+    "medicion": "Preferencia interna de Morena para la alcaldía de GDL",
+    "cifra": "Pozos 30.1 (no da cifras de los demás)",
+    "sin_cifra": false,
+    "campo": null,
+    "campo_ini": null,
+    "campo_fin": null,
+    "metodo": null,
+    "muestra": null,
+    "margen": null,
+    "ficha_tecnica": null,
+    "url": "https://afondojalisco.com/mery-pozos-remonta-en-morena-y-alcanza-30-1-de-preferencias-rumbo-a-guadalajara/",
+    "urls": [
+     "https://afondojalisco.com/mery-pozos-remonta-en-morena-y-alcanza-30-1-de-preferencias-rumbo-a-guadalajara/"
+    ],
+    "verificacion": "confirmado",
+    "n_fichas": 1
+   },
+   {
+    "fecha": "2026-10-19",
+    "fecha_txt": "19-oct-2026",
+    "casa": "Consulta Mitofsky",
+    "casa_nota": null,
+    "via": null,
+    "boleta": "aprobacion",
+    "boleta_txt": "Aprobación",
+    "boleta_clave": null,
+    "tipo": "aprobacion",
+    "tipo_txt": "Aprobación",
+    "ambito": "Nacional",
+    "medicion": "Delgadillo es la 10.ª del top 10 de alcaldesas (mujeres), sin porcentaje; NO está entre los 10 mejor evaluados del ranking general (tampoco en el top 20)",
+    "cifra": "Delgadillo 10.º lugar del top 10 de alcaldesas (sin %) · promedio de 150 gobiernos municipales 49.1%",
+    "sin_cifra": false,
+    "aprobacion_de": [
+     "Delgadillo"
+    ],
+    "campo": null,
+    "campo_ini": null,
+    "campo_fin": null,
+    "metodo": null,
+    "muestra": null,
+    "margen": null,
+    "ficha_tecnica": null,
+    "url": "https://www.mitofsky.mx/post/alcaldes-en-octubre-muchos-futuros-candidatos-aparecen-entre-los-mejor-evaluados",
+    "urls": [
+     "https://www.mitofsky.mx/post/alcaldes-en-octubre-muchos-futuros-candidatos-aparecen-entre-los-mejor-evaluados"
+    ],
+    "verificacion": "corregido",
+    "correccion": "La medición debe decir: «Delgadillo es la 10.ª del top 10 de alcaldesas (mujeres), sin porcentaje; NO está entre los 10 mejor evaluados del ranking general (tampoco en el top 20)». Las cifras deben quedar así: «Delgadillo 10.º lugar del top 10 de alcaldesas (sin %) · promedio de 150 gobiernos municipales 49.1%». El año 2026 se deduce de un enlace con fecha 20261019; la página solo dice «19 oct».",
+    "correccion_aplicada": [
+     "cifra",
+     "medicion"
+    ],
+    "n_fichas": 1,
+    "repite_a": {
+     "casa": "Consulta Mitofsky",
+     "fecha": "2026-10-20",
+     "fecha_txt": "20-oct-2026",
+     "url": "https://diariodenayarit.com/2026/10/20/blanca-simancas-se-ubica-entre-las-10-alcaldesas-mejor-evaluadas-del-pais-segun-mitofsky/",
+     "motivo": "las mismas cifras, publicadas por otro medio en otra fecha"
+    }
+   },
+   {
+    "fecha": "2026-10-15",
+    "fecha_txt": "15-oct-2026",
+    "casa": "MetaMetrics",
+    "casa_nota": null,
+    "via": null,
+    "boleta": "contexto",
+    "boleta_txt": "Contexto",
+    "boleta_clave": null,
+    "tipo": "otro",
+    "tipo_txt": "Preferencia interna (candidatura)",
+    "ambito": "Guadalajara",
+    "medicion": "Preferencia interna de Morena para la candidatura a Guadalajara, octubre de 2026. Pozos amplía su ventaja.",
+    "cifra": "Pozos 37.1 · Lomelí 26.7 · Martínez 19.4 · otros 7.3 · NS 9.5 (sep: 36.5/27.9/18.3)",
+    "sin_cifra": false,
+    "campo": "oct-2026",
+    "campo_ini": "2026-10",
+    "campo_fin": "2026-10",
+    "metodo": null,
+    "muestra": null,
+    "margen": null,
+    "ficha_tecnica": null,
+    "url": "https://afondojalisco.com/mery-pozos-ratifica-registro-por-guadalajara-y-encabeza-encuesta-de-meta-metrics-con-37-1/",
+    "urls": [
+     "https://afondojalisco.com/mery-pozos-ratifica-registro-por-guadalajara-y-encabeza-encuesta-de-meta-metrics-con-37-1/"
+    ],
+    "verificacion": "confirmado",
+    "n_fichas": 2,
+    "otras_fichas": [
+     {
+      "casa": "MetaMetrics",
+      "via": null,
+      "url": "https://afondojalisco.com/mery-pozos-ratifica-registro-por-guadalajara-y-encabeza-encuesta-de-meta-metrics-con-37-1/",
+      "medicion": "Preferencia interna de Morena para GDL, octubre",
+      "cifra": "Pozos 37.1 · Lomelí 26.7 · Chema 19.4 · Otros 7.3 · Indecisos 9.5",
+      "verificacion": "confirmado"
+     }
+    ]
+   },
+   {
+    "fecha": "2026-10-14",
+    "fecha_txt": "14-oct-2026",
+    "casa": "GobernArte",
+    "casa_nota": null,
+    "via": null,
+    "boleta": "aprobacion",
+    "boleta_txt": "Aprobación",
+    "boleta_clave": null,
+    "tipo": "aprobacion",
+    "tipo_txt": "Aprobación",
+    "ambito": "Guadalajara",
+    "medicion": "Aprobación de Delgadillo y de los alcaldes de la ZMG en el ranking de Jalisco",
+    "cifra": "Delgadillo 59.1% (2.º) · Tlajomulco 53.4 · Tlaquepaque 52.4 · Zapopan 48.8 · Tonalá 44.1",
+    "sin_cifra": false,
+    "aprobacion_de": [
+     "Delgadillo"
+    ],
+    "campo": "7 al 13-oct-2026",
+    "campo_ini": "2026-10-07",
+    "campo_fin": "2026-10-13",
+    "metodo": "Muestreo aleatorio estratificado vía app Odiseo",
+    "muestra": "n=585 promedio por municipio",
+    "margen": "±2.5% a ±3.7% (95%)",
+    "ficha_tecnica": "Muestreo aleatorio estratificado vía app Odiseo · n=585 promedio por municipio · ±2.5% a ±3.7% (95%)",
+    "url": "https://gobernarte.com.mx/ranking-de-aprobacion-de-alcaldes-en-jalisco-14-de-octubre-2026/",
+    "urls": [
+     "https://gobernarte.com.mx/ranking-de-aprobacion-de-alcaldes-en-jalisco-14-de-octubre-2026/"
+    ],
+    "verificacion": "confirmado",
+    "n_fichas": 1
+   },
+   {
+    "fecha": "2026-10-12",
+    "fecha_txt": "12-oct-2026",
+    "casa": "Consulta Mitofsky",
+    "casa_nota": "Ranking para El Economista",
+    "via": "Emsavalles",
+    "boleta": "aprobacion",
+    "boleta_txt": "Aprobación",
+    "boleta_clave": null,
+    "tipo": "aprobacion",
+    "tipo_txt": "Aprobación",
+    "ambito": "Jalisco",
+    "medicion": "Agosto de 2026: Jalisco es de los pocos estados donde el gobernador supera a Sheinbaum en aprobación.",
+    "cifra": "Lemus 59.7 · Sheinbaum en Jalisco 46.3",
+    "sin_cifra": false,
+    "aprobacion_de": [
+     "Lemus",
+     "Sheinbaum"
+    ],
+    "campo": "ago-2026",
+    "campo_ini": "2026-08",
+    "campo_fin": "2026-08",
+    "metodo": null,
+    "muestra": null,
+    "margen": null,
+    "ficha_tecnica": null,
+    "url": "https://emsavalles.com/NL286151/sheinbaum-supera-a-30-gobernadores-solo-jalisco-y-cdmx-quedan-abajo",
+    "urls": [
+     "https://emsavalles.com/NL286151/sheinbaum-supera-a-30-gobernadores-solo-jalisco-y-cdmx-quedan-abajo"
+    ],
+    "verificacion": "confirmado",
+    "n_fichas": 1,
+    "repite_a": {
+     "casa": "Consulta Mitofsky",
+     "fecha": "2026-09-17",
+     "fecha_txt": "17-sep-2026",
+     "url": "https://www.mitofsky.mx/post/ranking-gobernadores-mx-agosto-2026",
+     "motivo": "el mismo levantamiento de la misma casa, contado por otra publicación"
+    }
+   },
+   {
+    "fecha": "2026-10-09",
+    "fecha_txt": "9-oct-2026",
+    "casa": "GobernArte",
+    "casa_nota": null,
+    "via": null,
+    "boleta": "aprobacion",
+    "boleta_txt": "Aprobación",
+    "boleta_clave": null,
+    "tipo": "aprobacion",
+    "tipo_txt": "Aprobación",
+    "ambito": "Guadalajara",
+    "medicion": "Aprobación de Delgadillo en el ranking de capitales",
+    "cifra": "Delgadillo 55.2%",
+    "sin_cifra": false,
+    "aprobacion_de": [
+     "Delgadillo"
+    ],
+    "campo": "2 al 7-oct-2026",
+    "campo_ini": "2026-10-02",
+    "campo_fin": "2026-10-07",
+    "metodo": "Muestreo aleatorio estratificado vía app Odiseo",
+    "muestra": "n=550 promedio por capital",
+    "margen": "±2.5% a ±3.7% (95%)",
+    "ficha_tecnica": "Muestreo aleatorio estratificado vía app Odiseo · n=550 promedio por capital · ±2.5% a ±3.7% (95%)",
+    "url": "https://gobernarte.com.mx/ranking-capitales-de-mexico-9-de-octubre-2026/",
+    "urls": [
+     "https://gobernarte.com.mx/ranking-capitales-de-mexico-9-de-octubre-2026/"
+    ],
+    "verificacion": "confirmado",
+    "n_fichas": 1
+   },
+   {
+    "fecha": "2026-10-07",
+    "fecha_txt": "7-oct-2026",
+    "casa": "Consulta Mitofsky",
+    "casa_nota": null,
+    "via": null,
+    "boleta": "aprobacion",
+    "boleta_txt": "Aprobación",
+    "boleta_clave": null,
+    "tipo": "aprobacion",
+    "tipo_txt": "Aprobación",
+    "ambito": "Jalisco",
+    "medicion": "Aprobación presidencial por estado, septiembre de 2026: Jalisco es la entidad con la aprobación más baja de Sheinbaum.",
+    "cifra": "Sheinbaum en Jalisco 46.5 (la más baja)",
+    "sin_cifra": false,
+    "aprobacion_de": [
+     "Sheinbaum"
+    ],
+    "campo": "sep-2026",
+    "campo_ini": "2026-09",
+    "campo_fin": "2026-09",
+    "metodo": null,
+    "muestra": null,
+    "margen": null,
+    "ficha_tecnica": null,
+    "url": "https://www.mitofsky.mx/post/aprobacion-presidencial-estados-sep26",
+    "urls": [
+     "https://www.mitofsky.mx/post/aprobacion-presidencial-estados-sep26"
+    ],
+    "verificacion": "confirmado",
+    "n_fichas": 1
+   },
+   {
+    "fecha": "2026-10-07",
+    "fecha_txt": "7-oct-2026",
+    "casa": "Polls.mx",
+    "casa_nota": "Encuesta de encuestas, modelo bayesiano",
+    "via": null,
+    "boleta": "contexto",
+    "boleta_txt": "Contexto",
+    "boleta_clave": null,
+    "tipo": "otro",
+    "tipo_txt": "Preferencia interna (candidatura)",
+    "ambito": "Guadalajara",
+    "medicion": "Promedio de encuestas de la interna de Morena para GDL",
+    "cifra": "Pozos 28.2 · Lomelí 22.2 · Chema 13.1 · Mariana Fernández 10.7 · Salinas 9.1 · Palacios 7.4",
+    "sin_cifra": false,
+    "campo": null,
+    "campo_ini": null,
+    "campo_fin": null,
+    "metodo": "Agregador con modelo bayesiano dinámico",
+    "muestra": null,
+    "margen": null,
+    "ficha_tecnica": "Agregador con modelo bayesiano dinámico",
+    "url": "https://politico.mx/2026/10/07/mery-pozos-la-favorita-de-morena-para-la-candidatura-de-guadalajara-encuesta-de-encuestas/",
+    "urls": [
+     "https://politico.mx/2026/10/07/mery-pozos-la-favorita-de-morena-para-la-candidatura-de-guadalajara-encuesta-de-encuestas/"
+    ],
+    "verificacion": "confirmado",
+    "n_fichas": 2,
+    "otras_fichas": [
+     {
+      "casa": "Polls.mx",
+      "via": null,
+      "url": "https://politico.mx/2026/10/07/mery-pozos-la-favorita-de-morena-para-la-candidatura-de-guadalajara-encuesta-de-encuestas/",
+      "medicion": "Agregado de encuestas publicadas sobre la candidatura de Morena a Guadalajara. Pozos, favorita.",
+      "cifra": "Pozos 28.2 · Lomelí 22.2 · Martínez 13.1 · M. Fernández 10.7 · Salinas 9.1 · Palacios 7.4",
+      "verificacion": "confirmado"
+     }
+    ]
+   },
+   {
+    "fecha": "2026-10",
+    "fecha_txt": "oct-2026",
+    "casa": "CE Research",
+    "casa_nota": null,
+    "via": null,
+    "boleta": "aprobacion",
+    "boleta_txt": "Aprobación",
+    "boleta_clave": null,
+    "tipo": "aprobacion",
+    "tipo_txt": "Aprobación",
+    "ambito": "Jalisco",
+    "medicion": "79.º Ranking de Gobernadores: aprobación de Lemus",
+    "cifra": "Lemus 69% (1.º nacional por segunda vez)",
+    "sin_cifra": false,
+    "aprobacion_de": [
+     "Lemus"
+    ],
+    "campo": null,
+    "campo_ini": null,
+    "campo_fin": null,
+    "metodo": null,
+    "muestra": null,
+    "margen": null,
+    "ficha_tecnica": null,
+    "url": "https://ceonline.com.mx/pablo-lemus-encabeza-nuevamente-el-ranking-de-gobernadores-de-ce-research/",
+    "urls": [
+     "https://ceonline.com.mx/pablo-lemus-encabeza-nuevamente-el-ranking-de-gobernadores-de-ce-research/"
+    ],
+    "verificacion": "confirmado",
+    "n_fichas": 1
+   },
+   {
+    "fecha": "2026-09-30",
+    "fecha_txt": "30-sep-2026",
+    "casa": "GobernArte",
+    "casa_nota": null,
+    "via": null,
+    "boleta": "alcaldia",
+    "boleta_txt": "Alcaldía",
+    "boleta_clave": "ayun",
+    "tipo": "intencion_partido",
+    "tipo_txt": "Intención de voto por partido",
+    "ambito": "Guadalajara",
+    "medicion": "Alcaldía de GDL por partido e internas",
+    "cifra": "Morena 36.3 · MC 27.6 · PAN 13.9 · PRI 9.4 · PT 2.1 · PVEM 1.9 · Ninguno 8.8 · Internas: Pozos 40.2, Lomelí 29.9, Chema 15.4 (Morena); Delgadillo 43.5 (MC); Diana González 26.8 (PAN); Haro 29.9 (PRI)",
+    "sin_cifra": false,
+    "campo": "24 al 29-sep-2026",
+    "campo_ini": "2026-09-24",
+    "campo_fin": "2026-09-29",
+    "metodo": "Muestreo aleatorio estratificado con la app «Odiseo»; tasa de rechazo 55%",
+    "muestra": "n=500 por municipio",
+    "margen": "±2.5-3.7 (95%)",
+    "ficha_tecnica": "Muestreo aleatorio estratificado con la app «Odiseo»; tasa de rechazo 55% · n=500 por municipio · ±2.5-3.7 (95%)",
+    "url": "https://gobernarte.com.mx/alcaldia-rumbo-a-las-elecciones-2027-en-jalisco-30-de-septiembre-2026/",
+    "urls": [
+     "https://gobernarte.com.mx/alcaldia-rumbo-a-las-elecciones-2027-en-jalisco-30-de-septiembre-2026/"
+    ],
+    "verificacion": "confirmado",
+    "n_fichas": 3,
+    "otras_fichas": [
+     {
+      "casa": "GobernArte",
+      "via": null,
+      "url": "https://gobernarte.com.mx/alcaldia-rumbo-a-las-elecciones-2027-en-jalisco-30-de-septiembre-2026/",
+      "medicion": "Alcaldía GDL 2027 por partido y aspirantes internos",
+      "cifra": "Morena 36.3 · MC 27.6 · PAN 13.9 · PRI 9.4 · PT 2.1 · PVEM 1.9 · ninguno 8.8 | internas: Pozos 40.2, Lomelí 29.9, Chema 15.4 (Morena); Delgadillo 43.5 (MC); D. González 26.8 (PAN); Haro 29.9 (PRI)",
+      "verificacion": "confirmado"
+     },
+     {
+      "casa": "GobernArte",
+      "via": null,
+      "url": "https://gobernarte.com.mx/alcaldia-rumbo-a-las-elecciones-2027-en-jalisco-30-de-septiembre-2026/",
+      "medicion": "Alcaldía de Guadalajara por partido, con internas: Delgadillo 43.5% dentro de MC y Pozos 40.2% dentro de Morena.",
+      "cifra": "Morena 36.3 · MC 27.6 · PAN 13.9 · PRI 9.4 · PT 2.1 · PVEM 1.9 · Ninguno 8.8",
+      "verificacion": "confirmado"
+     }
+    ]
+   },
+   {
+    "fecha": "2026-09-30",
+    "fecha_txt": "30-sep-2026",
+    "casa": "Rubrum",
+    "casa_nota": null,
+    "via": null,
+    "boleta": "alcaldia",
+    "boleta_txt": "Alcaldía",
+    "boleta_clave": "ayun",
+    "tipo": "intencion_partido",
+    "tipo_txt": "Intención de voto por partido",
+    "ambito": "Guadalajara",
+    "medicion": "Tendencias de la elección municipal de GDL 2027, septiembre",
+    "cifra": "Morena 30.8 · MC 27.8 · PAN 13.9 · PRI 10.5 · Aún no decide 17.0",
+    "sin_cifra": false,
+    "campo": "29-sep-2026",
+    "campo_ini": "2026-09-29",
+    "campo_fin": "2026-09-29",
+    "metodo": "Telefónica automatizada, aleatoria",
+    "muestra": "n=1,000 según el texto, 600 según la gráfica (inconsistente)",
+    "margen": "±3.8 (95%)",
+    "ficha_tecnica": "Telefónica automatizada, aleatoria · n=1,000 según el texto, 600 según la gráfica (inconsistente) · ±3.8 (95%)",
+    "aviso_muestra": "El texto de la página dice «1,000 levantamientos», pero el pie de la gráfica dice «600 levantamientos». Un margen de ±3.8 al 95 % corresponde a unos 665 casos, así que encaja mejor con 600 que con 1,000.",
+    "url": "https://rubrum.info/tendencias-en-la-eleccion-del-municipio-de-guadalajara-jalisco-rumbo-al-2027-septiembre-2026/",
+    "urls": [
+     "https://rubrum.info/tendencias-en-la-eleccion-del-municipio-de-guadalajara-jalisco-rumbo-al-2027-septiembre-2026/"
+    ],
+    "verificacion": "corregido",
+    "correccion": "Cambiar «cifras» por: Morena 30.8 · MC 27.8 · PAN 13.9 · PRI 10.5 · Aún no decide 17.0. Esto confirma Morena 30.8 · MC 27.8. Añadir una advertencia sobre n: el texto de la página dice «1,000 levantamientos», pero el pie de la gráfica dice «600 levantamientos». Un margen de ±3.8 al 95 % corresponde a unos 665 casos, así que encaja mejor con 600 que con 1,000. Registrar n como «1,000 según el texto, 600 según la gráfica (inconsistente)».",
+    "correccion_aplicada": [
+     "cifra",
+     "muestra"
+    ],
+    "n_fichas": 3,
+    "otras_fichas": [
+     {
+      "casa": "Rubrum",
+      "via": null,
+      "url": "https://rubrum.info/tendencias-en-la-eleccion-del-municipio-de-guadalajara-jalisco-rumbo-al-2027-septiembre-2026/",
+      "medicion": "«Tendencias en la elección de Guadalajara rumbo a 2027, sep-2026».",
+      "cifra": "Morena 30.8 · MC 27.8 · PAN 13.9 · PRI 10.5 · Aún no decide 17.0",
+      "verificacion": "corregido",
+      "correccion": "Cifras: abrí la imagen de la página (ALC_GUADALAJARA_30SEP26_02.jpg) y quedan confirmadas: Morena 30.8 · MC 27.8 · PAN 13.9 · PRI 10.5 · Aún no decide 17.0. Hay que quitar «no se confirma» de «medición» y de «cifras». La misma gráfica trae la serie de abr a sep 2026: Morena pasa de 38.0 a 30.8 y MC de 21.3 a 27.8. n: hay una discrepancia. La gráfica dice «600 levantamientos» y el texto de la página dice 1,000. El ±3.8 encaja con unas 600–665 entrevistas, no con 1,000 (que daría ±3.1). Conviene poner n = 600 según la gráfica, o 600/1,000 marcado como dato inconsistente."
+     },
+     {
+      "casa": "Rubrum",
+      "via": null,
+      "url": "https://rubrum.info/tendencias-en-la-eleccion-del-municipio-de-guadalajara-jalisco-rumbo-al-2027-septiembre-2026/",
+      "medicion": "Tendencias de la elección municipal de GDL 2027, edición de septiembre",
+      "cifra": null,
+      "verificacion": "confirmado"
+     }
+    ]
+   },
+   {
+    "fecha": "2026-09-29",
+    "fecha_txt": "29-sep-2026",
+    "casa": "GobernArte",
+    "casa_nota": null,
+    "via": null,
+    "boleta": "aprobacion",
+    "boleta_txt": "Aprobación",
+    "boleta_clave": null,
+    "tipo": "aprobacion",
+    "tipo_txt": "Aprobación",
+    "ambito": "Guadalajara",
+    "medicion": "Aprobación de Delgadillo en el ranking de municipios metropolitanos de México",
+    "cifra": "Delgadillo 58.3% (8.º de 10)",
+    "sin_cifra": false,
+    "aprobacion_de": [
+     "Delgadillo"
+    ],
+    "campo": "20 al 25-sep-2026",
+    "campo_ini": "2026-09-20",
+    "campo_fin": "2026-09-25",
+    "metodo": "Muestreo aleatorio estratificado vía app Odiseo",
+    "muestra": "n=450 promedio por municipio",
+    "margen": "±2.5% a ±3.7% (95%)",
+    "ficha_tecnica": "Muestreo aleatorio estratificado vía app Odiseo · n=450 promedio por municipio · ±2.5% a ±3.7% (95%)",
+    "url": "https://gobernarte.com.mx/ranking-de-alcaldes-municipios-metropolitanos-de-mexico-29-de-septiembre-2026/",
+    "urls": [
+     "https://gobernarte.com.mx/ranking-de-alcaldes-municipios-metropolitanos-de-mexico-29-de-septiembre-2026/"
+    ],
+    "verificacion": "confirmado",
+    "n_fichas": 1
+   },
+   {
+    "fecha": "2026-09-28",
+    "fecha_txt": "28-sep-2026",
+    "casa": "Massive Caller",
+    "casa_nota": null,
+    "via": null,
+    "boleta": "aprobacion",
+    "boleta_txt": "Aprobación",
+    "boleta_clave": null,
+    "tipo": "aprobacion",
+    "tipo_txt": "Aprobación",
+    "ambito": "Jalisco",
+    "medicion": "Ranking de gobernadores de septiembre: Lemus en el lugar 15 nacional.",
+    "cifra": "Lemus 47.9 (lugar 15) · confianza 30.8 · inseguridad percibida 55.8",
+    "sin_cifra": false,
+    "aprobacion_de": [
+     "Lemus"
+    ],
+    "campo": "27-sep-2026",
+    "campo_ini": "2026-09-27",
+    "campo_fin": "2026-09-27",
+    "metodo": null,
+    "muestra": null,
+    "margen": null,
+    "ficha_tecnica": null,
+    "url": "https://vallartaindependiente.com/2026/09/28/pablo-lemus-registra-47-9-de-aprobacion-en-encuesta-de-massive-caller/",
+    "urls": [
+     "https://vallartaindependiente.com/2026/09/28/pablo-lemus-registra-47-9-de-aprobacion-en-encuesta-de-massive-caller/"
+    ],
+    "verificacion": "confirmado",
+    "n_fichas": 3,
+    "otras_fichas": [
+     {
+      "casa": "Massive Caller",
+      "via": null,
+      "url": "https://vallartaindependiente.com/2026/09/28/pablo-lemus-registra-47-9-de-aprobacion-en-encuesta-de-massive-caller/",
+      "medicion": "Ranking nacional de aprobación de gobernadores: Lemus",
+      "cifra": "Lemus 47.9% (lugar 15 nacional)",
+      "verificacion": "confirmado"
+     },
+     {
+      "casa": "Massive Caller",
+      "via": null,
+      "url": "https://vallartaindependiente.com/2026/09/28/pablo-lemus-registra-47-9-de-aprobacion-en-encuesta-de-massive-caller/",
+      "medicion": "Ranking nacional de aprobación de gobernadores",
+      "cifra": "Lemus 47.9 (15.º nacional)",
+      "verificacion": "confirmado"
+     }
+    ]
+   },
+   {
+    "fecha": "2026-09-27",
+    "fecha_txt": "27-sep-2026",
+    "casa": "XtrategiaGDL para Grupo Reforma (MURAL)",
+    "casa_nota": null,
+    "via": "Conciencia Pública",
+    "boleta": "dip_sin_precisar",
+    "boleta_txt": "Diputación del distrito 9 (la fuente no dice si local o federal)",
+    "boleta_clave": null,
+    "tipo": "otro",
+    "tipo_txt": "Otra medición",
+    "ambito": "Distrito 9",
+    "medicion": "Diputación del Distrito 9 de Guadalajara en la entrega de septiembre (la fuente no dice si es federal o local). Empate técnico MC-Morena.",
+    "cifra": "MC 33 · Morena 33",
+    "sin_cifra": false,
+    "campo": null,
+    "campo_ini": null,
+    "campo_fin": null,
+    "metodo": "En vivienda",
+    "muestra": "n≈300 en el distrito",
+    "margen": "±5.6",
+    "ficha_tecnica": "En vivienda · n≈300 en el distrito · ±5.6",
+    "url": "https://concienciapublica.com.mx/2026/09/27/encuestas-el-espejo-que-se-pinta-a-la-medida/",
+    "urls": [
+     "https://concienciapublica.com.mx/2026/09/27/encuestas-el-espejo-que-se-pinta-a-la-medida/"
+    ],
+    "verificacion": "confirmado",
+    "n_fichas": 1
+   },
+   {
+    "fecha": "2026-09-27",
+    "fecha_txt": "27-sep-2026",
+    "casa": "XtrategiaGDL para Grupo Reforma (MURAL)",
+    "casa_nota": null,
+    "via": "Conciencia Pública",
+    "boleta": "contexto",
+    "boleta_txt": "Contexto",
+    "boleta_clave": null,
+    "tipo": "problemas",
+    "tipo_txt": "Problemas y servicios",
+    "ambito": "Guadalajara",
+    "medicion": "Principal problema en la entrega de septiembre: la seguridad es el número uno. Además, el 54% dice que la alcaldesa no se ha esforzado por mejorar la seguridad.",
+    "cifra": "Inseguridad 37 (n.º 1) · Agua 24 (n.º 2, según Siker) · 54% «no se ha esforzado» en seguridad",
+    "sin_cifra": false,
+    "campo": null,
+    "campo_ini": null,
+    "campo_fin": null,
+    "metodo": "En vivienda, por etapas y conglomerados",
+    "muestra": "n=1,000",
+    "margen": "±5.6 por distrito",
+    "ficha_tecnica": "En vivienda, por etapas y conglomerados · n=1,000 · ±5.6 por distrito",
+    "url": "https://concienciapublica.com.mx/2026/09/27/encuestas-el-espejo-que-se-pinta-a-la-medida/",
+    "urls": [
+     "https://concienciapublica.com.mx/2026/09/27/encuestas-el-espejo-que-se-pinta-a-la-medida/"
+    ],
+    "verificacion": "confirmado",
+    "n_fichas": 1
+   },
+   {
+    "fecha": "2026-09-22",
+    "fecha_txt": "22-sep-2026",
+    "casa": "«Diario local» sin nombre",
+    "casa_nota": "probablemente MURAL/XtrategiaGDL del 21-sep",
+    "via": null,
+    "boleta": "alcaldia",
+    "boleta_txt": "Alcaldía (preferencia por partido, sin nombrar cargo)",
+    "boleta_clave": null,
+    "generica": true,
+    "tipo": "intencion_partido",
+    "tipo_txt": "Intención de voto por partido",
+    "ambito": "Guadalajara",
+    "medicion": "Preferencia por partido (pregunta abierta), aprobación y careos",
+    "cifra": "MC 36 · Morena 27 · Aprobación Delgadillo 62/32 · Careos: Delgadillo 41–Lomelí 34, 43–Pozos 31, 42–Chema 35, 40–Villanueva 30 (este último de una encuesta domiciliaria)",
+    "sin_cifra": false,
+    "campo": null,
+    "campo_ini": null,
+    "campo_fin": null,
+    "metodo": null,
+    "muestra": null,
+    "margen": null,
+    "ficha_tecnica": null,
+    "url": "https://www.milenio.com/opinion/carlos-martinez-macias/sin-pedir-audiencia/vero-delgadillo-camino-despejado",
+    "urls": [
+     "https://www.milenio.com/opinion/carlos-martinez-macias/sin-pedir-audiencia/vero-delgadillo-camino-despejado"
+    ],
+    "verificacion": "confirmado",
+    "n_fichas": 1
+   },
+   {
+    "fecha": "2026-09-22",
+    "fecha_txt": "22-sep-2026",
+    "casa": "Reforma (solo aprobación 62 %); preferencia por partido sin fuente; promedio de 17 casas sin fuente",
+    "casa_nota": null,
+    "via": null,
+    "boleta": "alcaldia",
+    "boleta_txt": "Alcaldía (preferencia por partido, sin nombrar cargo)",
+    "boleta_clave": null,
+    "generica": true,
+    "tipo": "intencion_partido",
+    "tipo_txt": "Intención de voto por partido",
+    "ambito": "Guadalajara",
+    "medicion": "Preferencia por partido, aprobación y promedio histórico de aprobación",
+    "cifra": "MC 34 · Morena 31 · PAN 8 · PRI 8 · Aprobación 62% (Grupo Reforma) · Promedio 59.3% en 72 mediciones de 17 casas desde ene-2025 · Delgadillo 40-43 en careos",
+    "sin_cifra": false,
+    "campo": null,
+    "campo_ini": null,
+    "campo_fin": null,
+    "metodo": null,
+    "muestra": null,
+    "margen": null,
+    "ficha_tecnica": null,
+    "url": "https://www.sdpnoticias.com/opinion/vero-delgadillo-ordena-la-eleccion-de-guadalajara/",
+    "urls": [
+     "https://www.sdpnoticias.com/opinion/vero-delgadillo-ordena-la-eleccion-de-guadalajara/"
+    ],
+    "verificacion": "corregido",
+    "correccion": "Precisar la casa: solo el 62 % de aprobación se atribuye a Reforma («El resultado publicado por Reforma»). La columna da MC 34 · Morena 31 · PAN 8 · PRI 8 sin nombrar casa ni fuente. Del promedio de 59.3 % (72 mediciones, 17 casas, desde ene-2025) tampoco da las casas ni la fuente del consolidado. Cambiar casa a: «Reforma (solo aprobación 62 %); preferencia por partido sin fuente; promedio de 17 casas sin fuente».",
+    "correccion_aplicada": [
+     "casa"
+    ],
+    "n_fichas": 1
+   },
+   {
+    "fecha": "2026-09-22",
+    "fecha_txt": "22-sep-2026",
+    "casa": "Consolidado de 17 encuestadoras (sin nombrar), columna SDP Noticias",
+    "casa_nota": null,
+    "via": null,
+    "boleta": "alcaldia",
+    "boleta_txt": "Alcaldía",
+    "boleta_clave": "ayun",
+    "tipo": "careo_candidatos",
+    "tipo_txt": "Careos entre aspirantes",
+    "ambito": "Guadalajara",
+    "medicion": "Columna de opinión con un consolidado de 72 mediciones desde ene-2025. Delgadillo entre 40 y 43% en todos los careos; preferencia MC 34 frente a Morena 31; aprobación media 59.3%.",
+    "cifra": "Delgadillo 40-43 en careos · MC 34 · Morena 31 · aprobación promedio 59.3",
+    "sin_cifra": false,
+    "campo": null,
+    "campo_ini": null,
+    "campo_fin": null,
+    "metodo": null,
+    "muestra": "n=72 mediciones agregadas",
+    "margen": null,
+    "ficha_tecnica": "n=72 mediciones agregadas",
+    "url": "https://www.sdpnoticias.com/opinion/vero-delgadillo-ordena-la-eleccion-de-guadalajara/",
+    "urls": [
+     "https://www.sdpnoticias.com/opinion/vero-delgadillo-ordena-la-eleccion-de-guadalajara/"
+    ],
+    "verificacion": "confirmado",
+    "n_fichas": 1,
+    "misma_fuente": {
+     "casa": "Reforma (solo aprobación 62 %); preferencia por partido sin fuente; promedio de 17 casas sin fuente",
+     "fecha": "2026-09-22",
+     "fecha_txt": "22-sep-2026",
+     "url": "https://www.sdpnoticias.com/opinion/vero-delgadillo-ordena-la-eleccion-de-guadalajara/",
+     "tipo_txt": "Intención de voto por partido",
+     "motivo": "sale de la misma página y sus cifras ya están en esa fila"
+    }
+   },
+   {
+    "fecha": "2026-09-22",
+    "fecha_txt": "22-sep-2026",
+    "casa": "CE Research",
+    "casa_nota": null,
+    "via": null,
+    "boleta": "aprobacion",
+    "boleta_txt": "Aprobación",
+    "boleta_clave": null,
+    "tipo": "aprobacion",
+    "tipo_txt": "Aprobación",
+    "ambito": "Guadalajara",
+    "medicion": "64.º Ranking de Alcaldes de Grandes Urbes (septiembre)",
+    "cifra": "Delgadillo 70% (2.º; 1.º FeliFer Macías 71%)",
+    "sin_cifra": false,
+    "aprobacion_de": [
+     "Delgadillo"
+    ],
+    "campo": null,
+    "campo_ini": null,
+    "campo_fin": null,
+    "metodo": "Entrevistas telefónicas robotizadas (serie)",
+    "muestra": null,
+    "margen": null,
+    "ficha_tecnica": "Entrevistas telefónicas robotizadas (serie)",
+    "url": "https://ceonline.com.mx/felifer-macias-y-veronica-delgadillo-los-mejor-evaluados-en-el-64-ranking-de-alcaldes-de-grandes-urbes-de-ce-research/",
+    "urls": [
+     "https://ceonline.com.mx/felifer-macias-y-veronica-delgadillo-los-mejor-evaluados-en-el-64-ranking-de-alcaldes-de-grandes-urbes-de-ce-research/"
+    ],
+    "verificacion": "confirmado",
+    "n_fichas": 1
+   },
+   {
+    "fecha": "2026-09-22",
+    "fecha_txt": "22-sep-2026",
+    "casa": "LaEncuesta.mx",
+    "casa_nota": null,
+    "via": null,
+    "boleta": "aprobacion",
+    "boleta_txt": "Aprobación",
+    "boleta_clave": null,
+    "tipo": "aprobacion",
+    "tipo_txt": "Aprobación",
+    "ambito": "Jalisco",
+    "medicion": "Ranking de aprobación de gobernadores (septiembre)",
+    "cifra": "Lemus 62.4 (2.º; 1.º Jiménez 62.8) · Economía 65.9 · Honestidad 57.0 · Seguridad 52.3",
+    "sin_cifra": false,
+    "aprobacion_de": [
+     "Lemus"
+    ],
+    "campo": null,
+    "campo_ini": null,
+    "campo_fin": null,
+    "metodo": null,
+    "muestra": null,
+    "margen": null,
+    "ficha_tecnica": null,
+    "url": "https://www.publimetro.com.mx/jalisco/2026/09/23/pablo-lemus-agradece-respaldo-de-jaliscienses-tras-aparecer-segundo-en-encuesta-nacional/",
+    "urls": [
+     "https://www.publimetro.com.mx/jalisco/2026/09/23/pablo-lemus-agradece-respaldo-de-jaliscienses-tras-aparecer-segundo-en-encuesta-nacional/"
+    ],
+    "verificacion": "confirmado",
+    "n_fichas": 2,
+    "otras_fichas": [
+     {
+      "casa": "LaEncuesta.mx",
+      "via": null,
+      "url": "https://www.publimetro.com.mx/jalisco/2026/09/23/pablo-lemus-agradece-respaldo-de-jaliscienses-tras-aparecer-segundo-en-encuesta-nacional/",
+      "medicion": "Ranking nacional de gobernadores de septiembre: Lemus 2.º lugar.",
+      "cifra": "Lemus 62.4 (2.º nacional)",
+      "verificacion": "corregido",
+      "correccion": "La evidencia no es literal. La frase publicada es «Lemus Navarro obtuvo 62.4% de aprobación ciudadana»; la nota dice que quedó 2.º entre los 32 gobernadores, pero no con las palabras «quedó en segundo lugar nacional». Fecha, casa, cifra y lugar son correctos. Contexto opcional: el 1.º es Manolo Jiménez (Coahuila), con 62.8%."
+     }
+    ]
+   },
+   {
+    "fecha": "2026-09-22",
+    "fecha_txt": "22-sep-2026",
+    "casa": "Casa no identificada",
+    "casa_nota": "Líder 91.9 no la nombra; coincide en fecha de campo y cifra con GobernArte (11-sep-2026)",
+    "via": null,
+    "boleta": "aprobacion",
+    "boleta_txt": "Aprobación",
+    "boleta_clave": null,
+    "tipo": "aprobacion",
+    "tipo_txt": "Aprobación",
+    "ambito": "Guadalajara",
+    "medicion": "Aprobación de la alcaldesa Delgadillo",
+    "cifra": "Delgadillo 58.3",
+    "sin_cifra": false,
+    "aprobacion_de": [
+     "Delgadillo"
+    ],
+    "campo": "5 al 10-sep-2026",
+    "campo_ini": "2026-09-05",
+    "campo_fin": "2026-09-10",
+    "metodo": "Entrevistas (sin más detalle)",
+    "muestra": "n≈585 por municipio",
+    "margen": "±2.5-3.7 (95%)",
+    "ficha_tecnica": "Entrevistas (sin más detalle) · n≈585 por municipio · ±2.5-3.7 (95%)",
+    "url": "https://lider919.com/alcanza-veronica-delgadillo-58-3-de-aprobacion-en-guadalajara-atribuye-resultado-a-inversion-en-servicios-publicos/",
+    "urls": [
+     "https://lider919.com/alcanza-veronica-delgadillo-58-3-de-aprobacion-en-guadalajara-atribuye-resultado-a-inversion-en-servicios-publicos/"
+    ],
+    "verificacion": "confirmado",
+    "n_fichas": 2,
+    "otras_fichas": [
+     {
+      "casa": "Casa no identificada",
+      "via": null,
+      "url": "https://lider919.com/alcanza-veronica-delgadillo-58-3-de-aprobacion-en-guadalajara-atribuye-resultado-a-inversion-en-servicios-publicos/",
+      "medicion": "Aprobación de Delgadillo antes de la crisis del agua, con ficha técnica pero sin casa encuestadora.",
+      "cifra": "Delgadillo 58.3%",
+      "verificacion": "confirmado"
+     }
+    ],
+    "coincide_con": {
+     "casa": "GobernArte",
+     "fecha": "2026-09-11"
+    }
+   },
+   {
+    "fecha": "2026-09-22",
+    "fecha_txt": "22-sep-2026",
+    "casa": "Consulta Mitofsky",
+    "casa_nota": null,
+    "via": null,
+    "boleta": "aprobacion",
+    "boleta_txt": "Aprobación",
+    "boleta_clave": null,
+    "tipo": "aprobacion",
+    "tipo_txt": "Aprobación",
+    "ambito": "Jalisco",
+    "medicion": "Ranking de agosto: Lemus 9.º nacional, sube 1.6 puntos y aventaja a Sheinbaum en Jalisco por 13 puntos (7 en julio).",
+    "cifra": "Lemus 9.º lugar (+1.6) · Lemus − Sheinbaum en Jalisco = +13 (jul +7)",
+    "sin_cifra": false,
+    "aprobacion_de": [
+     "Lemus",
+     "Sheinbaum"
+    ],
+    "campo": "ago-2026",
+    "campo_ini": "2026-08",
+    "campo_fin": "2026-08",
+    "metodo": null,
+    "muestra": null,
+    "margen": null,
+    "ficha_tecnica": null,
+    "url": "https://www.razon.com.mx/estados/2026/09/22/pablo-lemus-fortalece-aprobacion-y-se-mantiene-entre-los-gobernadores-mejor-evaluados-del-pais/",
+    "urls": [
+     "https://www.razon.com.mx/estados/2026/09/22/pablo-lemus-fortalece-aprobacion-y-se-mantiene-entre-los-gobernadores-mejor-evaluados-del-pais/"
+    ],
+    "verificacion": "confirmado",
+    "n_fichas": 1,
+    "repite_a": {
+     "casa": "Consulta Mitofsky",
+     "fecha": "2026-09-17",
+     "fecha_txt": "17-sep-2026",
+     "url": "https://www.mitofsky.mx/post/ranking-gobernadores-mx-agosto-2026",
+     "motivo": "el mismo levantamiento de la misma casa, contado por otra publicación"
+    }
+   },
+   {
+    "fecha": "2026-09-22",
+    "fecha_txt": "22-sep-2026",
+    "casa": "MetaMetrics",
+    "casa_nota": null,
+    "via": null,
+    "boleta": "contexto",
+    "boleta_txt": "Contexto",
+    "boleta_clave": null,
+    "tipo": "otro",
+    "tipo_txt": "Preferencia interna (candidatura)",
+    "ambito": "Guadalajara",
+    "medicion": "Preferencia interna de Morena para GDL (serie jul-sep)",
+    "cifra": "Sep: Pozos 36.5 · Lomelí 27.9 · Chema 18.3 · Serie de Pozos: jul 31.3, ago 33.1 · Lomelí: jul 27.2, ago 27.4",
+    "sin_cifra": false,
+    "campo": null,
+    "campo_ini": null,
+    "campo_fin": null,
+    "metodo": null,
+    "muestra": null,
+    "margen": null,
+    "ficha_tecnica": null,
+    "url": "https://afondojalisco.com/mery-pozos-crece-en-encuestas-de-morena-por-guadalajara/",
+    "urls": [
+     "https://afondojalisco.com/mery-pozos-crece-en-encuestas-de-morena-por-guadalajara/"
+    ],
+    "verificacion": "confirmado",
+    "n_fichas": 1
+   },
+   {
+    "fecha": "2026-09-21",
+    "fecha_txt": "21-sep-2026",
+    "casa": "Universidad de Guadalajara (CEED) para el IEPC Jalisco",
+    "casa_nota": null,
+    "via": null,
+    "boleta": "contexto",
+    "boleta_txt": "Contexto",
+    "boleta_clave": null,
+    "tipo": "otro",
+    "tipo_txt": "Otra medición",
+    "ambito": "Jalisco",
+    "medicion": "Encuesta de Cultura Cívica y Ciudadanía Activa 2026 (intención de votar en 2027)",
+    "cifra": "84.3% piensa votar en jun-2027 · 59.1% no sabe qué cargos se eligen · 58.3% se informa por redes · Confianza (1-5): UdeG 3.9, INE 3.6, IEPC 3.3, ayuntamientos 2.9",
+    "sin_cifra": false,
+    "campo": "29-ago al 5-sep-2026",
+    "campo_ini": "2026-08-29",
+    "campo_fin": "2026-09-05",
+    "metodo": "Cara a cara en vivienda, 68 secciones",
+    "muestra": "n=1,066 (615 en el AMG)",
+    "margen": "±3 estatal (95%)",
+    "ficha_tecnica": "Cara a cara en vivienda, 68 secciones · n=1,066 (615 en el AMG) · ±3 estatal (95%)",
+    "url": "https://talajalisconoticias.com/encuesta-jalisco-votara-elecciones-2027/",
+    "urls": [
+     "https://talajalisconoticias.com/encuesta-jalisco-votara-elecciones-2027/"
+    ],
+    "verificacion": "confirmado",
+    "n_fichas": 1
+   },
+   {
+    "fecha": "2026-09-17",
+    "fecha_txt": "17-sep-2026",
+    "casa": "Consulta Mitofsky",
+    "casa_nota": null,
+    "via": null,
+    "boleta": "aprobacion",
+    "boleta_txt": "Aprobación",
+    "boleta_clave": null,
+    "tipo": "aprobacion",
+    "tipo_txt": "Aprobación",
+    "ambito": "Jalisco",
+    "medicion": "Ranking de aprobación de gobernadores, agosto 2026",
+    "cifra": "Lemus 9.º nacional, +1.6 pts vs julio, 13 pts arriba de Sheinbaum en Jalisco · 59.7 (según Tus Buenas Noticias)",
+    "sin_cifra": false,
+    "aprobacion_de": [
+     "Lemus",
+     "Sheinbaum"
+    ],
+    "campo": "ago-2026",
+    "campo_ini": "2026-08",
+    "campo_fin": "2026-08",
+    "metodo": null,
+    "muestra": null,
+    "margen": null,
+    "ficha_tecnica": null,
+    "url": "https://www.mitofsky.mx/post/ranking-gobernadores-mx-agosto-2026",
+    "urls": [
+     "https://www.mitofsky.mx/post/ranking-gobernadores-mx-agosto-2026"
+    ],
+    "verificacion": "confirmado",
+    "n_fichas": 1
+   },
+   {
+    "fecha": "2026-09-11",
+    "fecha_txt": "11-sep-2026",
+    "casa": "GobernArte",
+    "casa_nota": null,
+    "via": null,
+    "boleta": "aprobacion",
+    "boleta_txt": "Aprobación",
+    "boleta_clave": null,
+    "tipo": "aprobacion",
+    "tipo_txt": "Aprobación",
+    "ambito": "Guadalajara",
+    "medicion": "Aprobación de Delgadillo en el ranking de alcaldes de Jalisco",
+    "cifra": "Delgadillo 58.3% (2.º; El Salto 65.2%)",
+    "sin_cifra": false,
+    "aprobacion_de": [
+     "Delgadillo"
+    ],
+    "campo": "5 al 10-sep-2026",
+    "campo_ini": "2026-09-05",
+    "campo_fin": "2026-09-10",
+    "metodo": "Muestreo aleatorio estratificado vía app Odiseo",
+    "muestra": "n=585 promedio por municipio",
+    "margen": "±2.5% a ±3.7% (95%)",
+    "ficha_tecnica": "Muestreo aleatorio estratificado vía app Odiseo · n=585 promedio por municipio · ±2.5% a ±3.7% (95%)",
+    "url": "https://gobernarte.com.mx/ranking-de-aprobacion-de-alcaldes-en-jalisco-11-de-septiembre-2026/",
+    "urls": [
+     "https://gobernarte.com.mx/ranking-de-aprobacion-de-alcaldes-en-jalisco-11-de-septiembre-2026/"
+    ],
+    "verificacion": "confirmado",
+    "n_fichas": 1
+   },
+   {
+    "fecha": "2026-09",
+    "fecha_txt": "sep-2026",
+    "casa": "Demoscopia Digital",
+    "casa_nota": null,
+    "via": null,
+    "boleta": "aprobacion",
+    "boleta_txt": "Aprobación",
+    "boleta_clave": null,
+    "tipo": "aprobacion",
+    "tipo_txt": "Aprobación",
+    "ambito": "Guadalajara",
+    "medicion": "Ranking mensual de alcaldes de Jalisco (septiembre)",
+    "cifra": "Delgadillo 60.9% (#3 en Jalisco)",
+    "sin_cifra": false,
+    "aprobacion_de": [
+     "Delgadillo"
+    ],
+    "campo": null,
+    "campo_ini": null,
+    "campo_fin": null,
+    "metodo": null,
+    "muestra": null,
+    "margen": null,
+    "ficha_tecnica": null,
+    "url": "https://demoscopiadigital.com/aprobacionEstado/jalisco/2026/8",
+    "urls": [
+     "https://demoscopiadigital.com/aprobacionEstado/jalisco/2026/8"
+    ],
+    "verificacion": "confirmado",
+    "n_fichas": 1
+   },
+   {
+    "fecha": "2026-09",
+    "fecha_txt": "sep-2026",
+    "fecha_nota": "actualizada al 15 sep 2026 (corte de datos 14 sep)",
+    "casa": "IMDEC",
+    "casa_nota": "consulta #ElSiapaQueQueremos",
+    "via": null,
+    "boleta": "contexto",
+    "boleta_txt": "Contexto",
+    "boleta_clave": null,
+    "tipo": "problemas",
+    "tipo_txt": "Problemas y servicios",
+    "ambito": "ZMG",
+    "medicion": "Consulta ciudadana NO probabilística sobre la calidad del agua y la respuesta del SIAPA. No pregunta a quién culpan.",
+    "cifra": "84% al menos una falla visible · olor 65.3 · turbia 50.1 · sedimentos 43.3 · reportó al SIAPA 53.1 · resueltos 0.77% (6/784) · afectación de salud 51.9",
+    "sin_cifra": false,
+    "campo": "11-mar al 14-sep-2026",
+    "campo_ini": "2026-03-11",
+    "campo_fin": "2026-09-14",
+    "metodo": "Cuestionario abierto (redes, territorio, formularios)",
+    "muestra": "n=1,477",
+    "margen": null,
+    "ficha_tecnica": "Cuestionario abierto (redes, territorio, formularios) · n=1,477",
+    "sin_verificar": [
+     "fecha"
+    ],
+    "sin_verificar_txt": "Sin verificar en la fuente abierta: fecha de publicación.",
+    "url": "https://www.imdecdhagua.org/diagnostico-metropolitano-agua/",
+    "urls": [
+     "https://www.imdecdhagua.org/diagnostico-metropolitano-agua/"
+    ],
+    "verificacion": "corregido",
+    "correccion": "cliente o medio: quitar «con aliados universitarios». La página solo nombra a IMDEC (campaña #ElSiapaQueQueremos) y no menciona universidades ni aliados. fecha de publicación «2026-09» no es verificable: la página no tiene fecha visible, solo el corte de datos (14-09-2026), y se presenta como pieza que se actualiza.",
+    "n_fichas": 2,
+    "otras_fichas": [
+     {
+      "casa": "IMDEC",
+      "via": null,
+      "url": "https://www.imdecdhagua.org/diagnostico-metropolitano-agua/",
+      "medicion": "Consulta ciudadana sobre la calidad del agua y las quejas al SIAPA",
+      "cifra": "84.0% reporta al menos un problema de calidad · Mal olor 65.3 · Turbia 50.1 · 51.9% reporta afectación de salud · 784 reportaron al SIAPA y 6 se resolvieron (0.77%)",
+      "verificacion": "corregido",
+      "correccion": "La fecha de publicación no es 2026-09. La página se publicó el 2026-04-23 y se actualizó por última vez el 2026-09-15. Es una «pieza viva» que se va actualizando. Conviene citarla como «actualizada al 15 sep 2026 (corte de datos 14 sep)». Las cifras no cambian."
+     }
+    ]
+   },
+   {
+    "fecha": "2026-08-27",
+    "fecha_txt": "27-ago-2026",
+    "casa": "Rubrum",
+    "casa_nota": null,
+    "via": null,
+    "boleta": "alcaldia",
+    "boleta_txt": "Alcaldía",
+    "boleta_clave": "ayun",
+    "tipo": "intencion_partido",
+    "tipo_txt": "Intención de voto por partido",
+    "ambito": "Guadalajara",
+    "medicion": "Tendencias de la elección municipal de GDL 2027, edición de agosto",
+    "cifra": "Sin cifras legibles: los resultados solo se publicaron en imagen o PDF.",
+    "sin_cifra": true,
+    "campo": "26-ago-2026",
+    "campo_ini": "2026-08-26",
+    "campo_fin": "2026-08-26",
+    "metodo": "Telefónica automatizada (IVR)",
+    "muestra": "n=1,000",
+    "margen": "±3.8 (95%)",
+    "ficha_tecnica": "Telefónica automatizada (IVR) · n=1,000 · ±3.8 (95%)",
+    "url": "https://rubrum.info/tendencias-en-la-eleccion-del-municipio-de-guadalajara-jalisco-rumbo-al-2027-agosto-2026/",
+    "urls": [
+     "https://rubrum.info/tendencias-en-la-eleccion-del-municipio-de-guadalajara-jalisco-rumbo-al-2027-agosto-2026/"
+    ],
+    "verificacion": "confirmado",
+    "n_fichas": 1
+   },
+   {
+    "fecha": "2026-08-25",
+    "fecha_txt": "25-ago-2026",
+    "casa": "CE Research",
+    "casa_nota": null,
+    "via": null,
+    "boleta": "aprobacion",
+    "boleta_txt": "Aprobación",
+    "boleta_clave": null,
+    "tipo": "aprobacion",
+    "tipo_txt": "Aprobación",
+    "ambito": "Guadalajara",
+    "medicion": "63.º Ranking de Alcaldes de Grandes Urbes (agosto)",
+    "cifra": "Delgadillo 70% (2.º; 1.º FeliFer Macías 72%)",
+    "sin_cifra": false,
+    "aprobacion_de": [
+     "Delgadillo"
+    ],
+    "campo": "20 al 24-ago-2026",
+    "campo_ini": "2026-08-20",
+    "campo_fin": "2026-08-24",
+    "metodo": "Entrevistas telefónicas robotizadas",
+    "muestra": "n=400 por ciudad",
+    "margen": "±4.5% (95%)",
+    "ficha_tecnica": "Entrevistas telefónicas robotizadas · n=400 por ciudad · ±4.5% (95%)",
+    "url": "https://ceonline.com.mx/63-ranking-alcaldes-grandes-urbes-2026-08/",
+    "urls": [
+     "https://ceonline.com.mx/63-ranking-alcaldes-grandes-urbes-2026-08/",
+     "https://ceonline.com.mx/wp-content/uploads/2026/08/Desempeno-63RA-Grandes-Urbes.pdf"
+    ],
+    "verificacion": "confirmado",
+    "n_fichas": 2,
+    "otras_fichas": [
+     {
+      "casa": "CE Research",
+      "via": null,
+      "url": "https://ceonline.com.mx/wp-content/uploads/2026/08/Desempeno-63RA-Grandes-Urbes.pdf",
+      "medicion": "Ranking de aprobación de alcaldes de grandes ciudades",
+      "cifra": "Delgadillo 2.º lugar con 70%",
+      "verificacion": "confirmado"
+     }
+    ]
+   },
+   {
+    "fecha": "2026-08-21",
+    "fecha_txt": "21-ago-2026",
+    "casa": "LaEncuesta.mx",
+    "casa_nota": null,
+    "via": null,
+    "boleta": "contexto",
+    "boleta_txt": "Contexto",
+    "boleta_clave": null,
+    "tipo": "intencion_partido",
+    "tipo_txt": "Intención de voto por partido",
+    "ambito": "ZMG",
+    "medicion": "Alcaldías 2027 (48 municipios), incluye GDL y Zapopan",
+    "cifra": "GDL: MC al frente (la nota no da cifra) · Zapopan: MC 42.1",
+    "sin_cifra": false,
+    "campo": "17 al 19-ago-2026",
+    "campo_ini": "2026-08-17",
+    "campo_fin": "2026-08-19",
+    "metodo": "Telefónica a celulares, tasa de rechazo 45%",
+    "muestra": "n=1,000 por municipio",
+    "margen": "±3.5 (95%)",
+    "ficha_tecnica": "Telefónica a celulares, tasa de rechazo 45% · n=1,000 por municipio · ±3.5 (95%)",
+    "url": "https://polls.politico.mx/2026/08/21/elecciones-2027-morena-aventaja-en-32-de-48-principales-alcaldias-segun-la-encuesta-mx/",
+    "urls": [
+     "https://polls.politico.mx/2026/08/21/elecciones-2027-morena-aventaja-en-32-de-48-principales-alcaldias-segun-la-encuesta-mx/"
+    ],
+    "verificacion": "confirmado",
+    "n_fichas": 1
+   },
+   {
+    "fecha": "2026-08-18",
+    "fecha_txt": "18-ago-2026",
+    "casa": "Consulta Mitofsky",
+    "casa_nota": null,
+    "via": null,
+    "boleta": "aprobacion",
+    "boleta_txt": "Aprobación",
+    "boleta_clave": null,
+    "tipo": "aprobacion",
+    "tipo_txt": "Aprobación",
+    "ambito": "Jalisco",
+    "medicion": "Ranking de aprobación de gobernadores, julio 2026",
+    "cifra": "Lemus 7 pts arriba de Sheinbaum en Jalisco · 5.º entre gobernadores hombres · 58.1 (según Tus Buenas Noticias)",
+    "sin_cifra": false,
+    "aprobacion_de": [
+     "Lemus",
+     "Sheinbaum"
+    ],
+    "campo": "jul-2026",
+    "campo_ini": "2026-07",
+    "campo_fin": "2026-07",
+    "metodo": null,
+    "muestra": null,
+    "margen": null,
+    "ficha_tecnica": null,
+    "url": "https://www.mitofsky.mx/post/ranking-gobernadores-julio-26",
+    "urls": [
+     "https://www.mitofsky.mx/post/ranking-gobernadores-julio-26"
+    ],
+    "verificacion": "confirmado",
+    "n_fichas": 1
+   },
+   {
+    "fecha": "2026-08-13",
+    "fecha_txt": "13-ago-2026",
+    "casa": "GobernArte",
+    "casa_nota": null,
+    "via": null,
+    "boleta": "aprobacion",
+    "boleta_txt": "Aprobación",
+    "boleta_clave": null,
+    "tipo": "aprobacion",
+    "tipo_txt": "Aprobación",
+    "ambito": "Guadalajara",
+    "medicion": "Aprobación de Delgadillo en el ranking de alcaldes de Jalisco",
+    "cifra": "Delgadillo 57.2% (2.º; El Salto 64.8%)",
+    "sin_cifra": false,
+    "aprobacion_de": [
+     "Delgadillo"
+    ],
+    "campo": "7 al 12-ago-2026",
+    "campo_ini": "2026-08-07",
+    "campo_fin": "2026-08-12",
+    "metodo": "Muestreo aleatorio estratificado vía app Odiseo",
+    "muestra": "n=585 promedio por municipio",
+    "margen": "±2.5% a ±3.7% (95%)",
+    "ficha_tecnica": "Muestreo aleatorio estratificado vía app Odiseo · n=585 promedio por municipio · ±2.5% a ±3.7% (95%)",
+    "url": "https://gobernarte.com.mx/ranking-de-aprobacion-de-alcaldes-en-jalisco-13-de-agosto-2026/",
+    "urls": [
+     "https://gobernarte.com.mx/ranking-de-aprobacion-de-alcaldes-en-jalisco-13-de-agosto-2026/"
+    ],
+    "verificacion": "confirmado",
+    "n_fichas": 1
+   },
+   {
+    "fecha": "2026-08-06",
+    "fecha_txt": "6-ago-2026",
+    "casa": "GobernArte",
+    "casa_nota": null,
+    "via": null,
+    "boleta": "aprobacion",
+    "boleta_txt": "Aprobación",
+    "boleta_clave": null,
+    "tipo": "aprobacion",
+    "tipo_txt": "Aprobación",
+    "ambito": "Guadalajara",
+    "medicion": "Aprobación de Delgadillo en el ranking de capitales",
+    "cifra": "Delgadillo 55.1% (10.º)",
+    "sin_cifra": false,
+    "aprobacion_de": [
+     "Delgadillo"
+    ],
+    "campo": "1 al 5-ago-2026",
+    "campo_ini": "2026-08-01",
+    "campo_fin": "2026-08-05",
+    "metodo": "Muestreo aleatorio estratificado vía app Odiseo",
+    "muestra": "n=550 promedio por capital",
+    "margen": "±2.5% a ±3.7% (95%)",
+    "ficha_tecnica": "Muestreo aleatorio estratificado vía app Odiseo · n=550 promedio por capital · ±2.5% a ±3.7% (95%)",
+    "url": "https://gobernarte.com.mx/ranking-capitales-de-mexico-6-de-agosto-2026/",
+    "urls": [
+     "https://gobernarte.com.mx/ranking-capitales-de-mexico-6-de-agosto-2026/"
+    ],
+    "verificacion": "confirmado",
+    "n_fichas": 1
+   },
+   {
+    "fecha": "2026-08",
+    "fecha_txt": "ago-2026",
+    "casa": "CE Research",
+    "casa_nota": null,
+    "via": null,
+    "boleta": "aprobacion",
+    "boleta_txt": "Aprobación",
+    "boleta_clave": null,
+    "tipo": "aprobacion",
+    "tipo_txt": "Aprobación",
+    "ambito": "Jalisco",
+    "medicion": "Ranking de gobernadores en manejo de finanzas estatales (agosto)",
+    "cifra": "Lemus 73% en finanzas (1.º nacional)",
+    "sin_cifra": false,
+    "aprobacion_de": [
+     "Lemus"
+    ],
+    "campo": null,
+    "campo_ini": null,
+    "campo_fin": null,
+    "metodo": null,
+    "muestra": null,
+    "margen": null,
+    "ficha_tecnica": null,
+    "url": "https://ceonline.com.mx/pablo-lemus-obtiene-el-primer-lugar-en-manejo-de-finanzas-estatales/",
+    "urls": [
+     "https://ceonline.com.mx/pablo-lemus-obtiene-el-primer-lugar-en-manejo-de-finanzas-estatales/"
+    ],
+    "verificacion": "confirmado",
+    "n_fichas": 1
+   },
+   {
+    "fecha": "2026-07-31",
+    "fecha_txt": "31-jul-2026",
+    "casa": "GobernArte",
+    "casa_nota": null,
+    "via": null,
+    "boleta": "alcaldia",
+    "boleta_txt": "Alcaldía",
+    "boleta_clave": "ayun",
+    "tipo": "intencion_partido",
+    "tipo_txt": "Intención de voto por partido",
+    "ambito": "Guadalajara",
+    "medicion": "Alcaldía GDL 2027 por partido y aspirantes internos",
+    "cifra": "Morena 35.6 · MC 28.5 · PAN 12.8 · PRI 8.6 · PT 2.1 · PVEM 1.2 · ninguno 11.2 | internas: Pozos 38.5, Lomelí 31.8, Chema 12.4 (Morena); Delgadillo 39.1 (MC); D. González 28.2 (PAN); Haro 30.1 (PRI)",
+    "sin_cifra": false,
+    "campo": "24 al 29-jul-2026",
+    "campo_ini": "2026-07-24",
+    "campo_fin": "2026-07-29",
+    "metodo": "Muestreo aleatorio estratificado vía app Odiseo",
+    "muestra": "n=500 por municipio",
+    "margen": "±2.5% a ±3.7% (95%)",
+    "ficha_tecnica": "Muestreo aleatorio estratificado vía app Odiseo · n=500 por municipio · ±2.5% a ±3.7% (95%)",
+    "url": "https://gobernarte.com.mx/alcaldias-rumbo-a-las-elecciones-2027-en-jalisco-31-de-julio-2026/",
+    "urls": [
+     "https://gobernarte.com.mx/alcaldias-rumbo-a-las-elecciones-2027-en-jalisco-31-de-julio-2026/"
+    ],
+    "verificacion": "confirmado",
+    "n_fichas": 3,
+    "otras_fichas": [
+     {
+      "casa": "GobernArte",
+      "via": null,
+      "url": "https://gobernarte.com.mx/alcaldias-rumbo-a-las-elecciones-2027-en-jalisco-31-de-julio-2026/",
+      "medicion": "Alcaldía de GDL por partido e internas",
+      "cifra": "Morena 35.6 · MC 28.5 · PAN 12.8 · PRI 8.6 · PT 2.1 · PVEM 1.2 · Ninguno 11.2 · Internas: Pozos 38.5, Lomelí 31.8, Chema 12.4 (Morena); Delgadillo 39.1 (MC); Diana González 28.2 (PAN); Haro 30.1 (PRI)",
+      "verificacion": "confirmado"
+     },
+     {
+      "casa": "GobernArte",
+      "via": null,
+      "url": "https://gobernarte.com.mx/alcaldias-rumbo-a-las-elecciones-2027-en-jalisco-31-de-julio-2026/",
+      "medicion": "Alcaldía de Guadalajara por partido en julio, con internas: Delgadillo 39.1% en MC y Pozos 38.5% en Morena.",
+      "cifra": "Morena 35.6 · MC 28.5 · PAN 12.8 · PRI 8.6 · PT 2.1 · PVEM 1.2 · Ninguno 11.2",
+      "verificacion": "corregido",
+      "correccion": "evidencia: la frase «Morena lleva 7.1 puntos de ventaja sobre Movimiento Ciudadano» no aparece literal. El texto publicado dice «La diferencia entre ambas fuerzas políticas es de 7.1 puntos porcentuales». Las cifras no cambian."
+     }
+    ]
+   },
+   {
+    "fecha": "2026-07-29",
+    "fecha_txt": "29-jul-2026",
+    "casa": "Rubrum",
+    "casa_nota": null,
+    "via": null,
+    "boleta": "alcaldia",
+    "boleta_txt": "Alcaldía",
+    "boleta_clave": "ayun",
+    "tipo": "intencion_partido",
+    "tipo_txt": "Intención de voto por partido",
+    "ambito": "Guadalajara",
+    "medicion": "Tendencias de la elección municipal de GDL 2027, edición de julio",
+    "cifra": "Sin cifras legibles: los resultados solo se publicaron en imagen o PDF.",
+    "sin_cifra": true,
+    "campo": "28-jul-2026",
+    "campo_ini": "2026-07-28",
+    "campo_fin": "2026-07-28",
+    "metodo": "Telefónica automatizada (IVR)",
+    "muestra": "n=1,000",
+    "margen": "±3.8 (95%)",
+    "ficha_tecnica": "Telefónica automatizada (IVR) · n=1,000 · ±3.8 (95%)",
+    "url": "https://rubrum.info/tendencias-en-la-eleccion-del-municipio-de-guadalajara-jalisco-rumbo-al-2027-julio-2026/",
+    "urls": [
+     "https://rubrum.info/tendencias-en-la-eleccion-del-municipio-de-guadalajara-jalisco-rumbo-al-2027-julio-2026/"
+    ],
+    "verificacion": "confirmado",
+    "n_fichas": 1
+   },
+   {
+    "fecha": "2026-07-27",
+    "fecha_txt": "27-jul-2026",
+    "casa": "LaEncuesta.mx",
+    "casa_nota": null,
+    "via": null,
+    "boleta": "alcaldia",
+    "boleta_txt": "Alcaldía",
+    "boleta_clave": "ayun",
+    "tipo": "intencion_partido",
+    "tipo_txt": "Intención de voto por partido",
+    "ambito": "Guadalajara",
+    "medicion": "Alcaldía de GDL por partido e interna de Morena",
+    "cifra": "MC 35.5 · Morena 34.2 · PAN 12.8 · PRI 8.2 · PT 2 · PVEM 1.3 · Sin decisión 6 · Interna Morena: Pozos 32.1, Lomelí 28.5, Salinas 11.5, Fernández 10.2, Ventura 9.5",
+    "sin_cifra": false,
+    "campo": "20 al 22-jul-2026",
+    "campo_ini": "2026-07-20",
+    "campo_fin": "2026-07-22",
+    "metodo": "Telefónica a celulares, tasa de rechazo 45%",
+    "muestra": "n=1,000 por municipio",
+    "margen": "±3.5 (95%)",
+    "ficha_tecnica": "Telefónica a celulares, tasa de rechazo 45% · n=1,000 por municipio · ±3.5 (95%)",
+    "url": "https://polls.politico.mx/2026/07/27/mery-pozos-encabeza-preferencias-internas-de-morena-para-guadalajara/",
+    "urls": [
+     "https://polls.politico.mx/2026/07/27/mery-pozos-encabeza-preferencias-internas-de-morena-para-guadalajara/"
+    ],
+    "verificacion": "confirmado",
+    "n_fichas": 3,
+    "otras_fichas": [
+     {
+      "casa": "LaEncuesta.mx",
+      "via": null,
+      "url": "https://polls.politico.mx/2026/07/27/mery-pozos-encabeza-preferencias-internas-de-morena-para-guadalajara/",
+      "medicion": "Alcaldía de Guadalajara por partido: empate técnico MC-Morena. En la interna de Morena, Pozos 32.1 frente a Lomelí 28.5.",
+      "cifra": "MC 35.5 · Morena 34.2 · PAN 12.8 · PRI 8.2 · PT 2 · PVEM 1.3 · Indecisos 6",
+      "verificacion": "confirmado"
+     },
+     {
+      "casa": "LaEncuesta.mx",
+      "via": null,
+      "url": "https://polls.politico.mx/2026/07/27/mery-pozos-encabeza-preferencias-internas-de-morena-para-guadalajara/",
+      "medicion": "Alcaldía GDL por partido e interna de Morena (ola de julio)",
+      "cifra": "MC 35.5 · Morena 34.2 · PAN 12.8 · PRI 8.2 · PT 2 · PVEM 1.3 · sin decisión 6 | Morena: Pozos 32.1, Lomelí 28.5",
+      "verificacion": "confirmado"
+     }
+    ]
+   },
+   {
+    "fecha": "2026-07-22",
+    "fecha_txt": "22-jul-2026",
+    "casa": "Consulta Mitofsky",
+    "casa_nota": null,
+    "via": null,
+    "boleta": "aprobacion",
+    "boleta_txt": "Aprobación",
+    "boleta_clave": null,
+    "tipo": "aprobacion",
+    "tipo_txt": "Aprobación",
+    "ambito": "Jalisco",
+    "medicion": "Ranking de gobernadores de junio de 2026: Lemus en el top 10.",
+    "cifra": "Lemus 57.1 (9.º; otra fuente dice 10.º)",
+    "sin_cifra": false,
+    "aprobacion_de": [
+     "Lemus"
+    ],
+    "campo": "jun-2026",
+    "campo_ini": "2026-06",
+    "campo_fin": "2026-06",
+    "metodo": null,
+    "muestra": null,
+    "margen": null,
+    "ficha_tecnica": null,
+    "url": "https://www.tusbuenasnoticias.com/noticias/actualidad/2026/07/22/62415-10-gobernadores-mejor-evaluados-en-junio-ranking-de-mitofsky",
+    "urls": [
+     "https://www.tusbuenasnoticias.com/noticias/actualidad/2026/07/22/62415-10-gobernadores-mejor-evaluados-en-junio-ranking-de-mitofsky"
+    ],
+    "verificacion": "confirmado",
+    "n_fichas": 1
+   },
+   {
+    "fecha": "2026-07-21",
+    "fecha_txt": "21-jul-2026",
+    "casa": "LaEncuesta.mx",
+    "casa_nota": null,
+    "via": null,
+    "boleta": "aprobacion",
+    "boleta_txt": "Aprobación",
+    "boleta_clave": null,
+    "tipo": "aprobacion",
+    "tipo_txt": "Aprobación",
+    "ambito": "Jalisco",
+    "medicion": "Ranking de aprobación de gobernadores (julio)",
+    "cifra": "Lemus 62.1 (1.º nacional) · Economía 63.9",
+    "sin_cifra": false,
+    "aprobacion_de": [
+     "Lemus"
+    ],
+    "campo": null,
+    "campo_ini": null,
+    "campo_fin": null,
+    "metodo": null,
+    "muestra": null,
+    "margen": null,
+    "ficha_tecnica": null,
+    "url": "https://www.cronica.com.mx/jalisco/guadalajara/2026/07/21/pablo-lemus-encabeza-ranking-nacional-de-aprobacion-entre-gobernadores/",
+    "urls": [
+     "https://www.cronica.com.mx/jalisco/guadalajara/2026/07/21/pablo-lemus-encabeza-ranking-nacional-de-aprobacion-entre-gobernadores/"
+    ],
+    "verificacion": "confirmado",
+    "n_fichas": 2,
+    "otras_fichas": [
+     {
+      "casa": "LaEncuesta.mx",
+      "via": null,
+      "url": "https://www.cronica.com.mx/jalisco/guadalajara/2026/07/21/pablo-lemus-encabeza-ranking-nacional-de-aprobacion-entre-gobernadores/",
+      "medicion": "Ranking de gobernadores de julio: Lemus 1.º nacional en aprobación.",
+      "cifra": "Lemus 62.1 · desempeño económico 63.9",
+      "verificacion": "corregido",
+      "correccion": "La evidencia no es literal. La frase publicada es «se ubicó como el mandatario estatal mejor evaluado del país al alcanzar 62.1 por ciento de aprobación ciudadana». La nota no dice el mes de la medición (habla de «la más reciente medición»), así que «de julio» es una deducción por la fecha de publicación."
+     }
+    ]
+   },
+   {
+    "fecha": "2026-07-21",
+    "fecha_txt": "21-jul-2026",
+    "casa": "Universidad Panamericana, campus Guadalajara",
+    "casa_nota": "Índice de Calidad en el Servicio del Agua, ICSA",
+    "via": null,
+    "boleta": "contexto",
+    "boleta_txt": "Contexto",
+    "boleta_clave": null,
+    "tipo": "problemas",
+    "tipo_txt": "Problemas y servicios",
+    "ambito": "ZMG",
+    "medicion": "Percepción del servicio de agua: GDL frente a Monterrey y Mérida",
+    "cifra": "GDL reprueba los 3 índices · Peor respuesta institucional; según el académico de la UP, la brecha frente a Monterrey (la mejor evaluada) es de “casi cuatro veces”. La nota no publica las puntuaciones · 1 de cada 2 en el AMG teme enfermarse por el agua del SIAPA (Monterrey 40%)",
+    "sin_cifra": false,
+    "campo": null,
+    "campo_ini": null,
+    "campo_fin": null,
+    "metodo": null,
+    "muestra": null,
+    "margen": null,
+    "ficha_tecnica": null,
+    "url": "https://www.informador.mx/jalisco/inoperancia-del-siapa-supera-a-la-mala-calidad-del-agua-como-aspecto-peor-evaluado-de-guadalajara-revela-encuesta-de-la-universidad-panamericana-20260721-0095.html",
+    "urls": [
+     "https://www.informador.mx/jalisco/inoperancia-del-siapa-supera-a-la-mala-calidad-del-agua-como-aspecto-peor-evaluado-de-guadalajara-revela-encuesta-de-la-universidad-panamericana-20260721-0095.html"
+    ],
+    "verificacion": "corregido",
+    "correccion": "Cambiar «La peor respuesta institucional (casi 4 veces menos que Monterrey)» por «Peor respuesta institucional; según el académico de la UP, la brecha frente a Monterrey (la mejor evaluada) es de “casi cuatro veces”. La nota no publica las puntuaciones». No es una cita de la encuesta, sino de un académico, y no dice «4 veces menos».",
+    "correccion_aplicada": [
+     "cifra"
+    ],
+    "n_fichas": 2,
+    "otras_fichas": [
+     {
+      "casa": "Universidad Panamericana, campus Guadalajara",
+      "via": null,
+      "url": "https://www.informador.mx/jalisco/inoperancia-del-siapa-supera-a-la-mala-calidad-del-agua-como-aspecto-peor-evaluado-de-guadalajara-revela-encuesta-de-la-universidad-panamericana-20260721-0095.html",
+      "medicion": "Percepción del servicio de agua en Guadalajara, Monterrey y Mérida. Guadalajara reprueba los tres índices, y lo peor evaluado es la respuesta institucional del SIAPA, por encima de la calidad del agua.",
+      "cifra": "GDL reprobada en 3 índices · ~1 de cada 2 teme enfermarse por agua del SIAPA · brecha de respuesta institucional ~4 veces la de Monterrey",
+      "verificacion": "confirmado"
+     }
+    ]
+   },
+   {
+    "fecha": "2026-07-20",
+    "fecha_txt": "20-jul-2026",
+    "casa": "Consulta Mitofsky",
+    "casa_nota": null,
+    "via": null,
+    "boleta": "aprobacion",
+    "boleta_txt": "Aprobación",
+    "boleta_clave": null,
+    "tipo": "aprobacion",
+    "tipo_txt": "Aprobación",
+    "ambito": "Jalisco",
+    "medicion": "Aprobación presidencial por estado, junio de 2026: Jalisco es la tercera más baja del país.",
+    "cifra": "Sheinbaum en Jalisco 50.7 (3.ª más baja)",
+    "sin_cifra": false,
+    "aprobacion_de": [
+     "Sheinbaum"
+    ],
+    "campo": "jun-2026",
+    "campo_ini": "2026-06",
+    "campo_fin": "2026-06",
+    "metodo": null,
+    "muestra": null,
+    "margen": null,
+    "ficha_tecnica": null,
+    "url": "https://www.mitofsky.mx/post/aprobacion-presidencial-por-estado-junio-2026",
+    "urls": [
+     "https://www.mitofsky.mx/post/aprobacion-presidencial-por-estado-junio-2026"
+    ],
+    "verificacion": "confirmado",
+    "n_fichas": 1
+   },
+   {
+    "fecha": "2026-07-17",
+    "fecha_txt": "17-jul-2026",
+    "casa": "GobernArte",
+    "casa_nota": null,
+    "via": null,
+    "boleta": "aprobacion",
+    "boleta_txt": "Aprobación",
+    "boleta_clave": null,
+    "tipo": "aprobacion",
+    "tipo_txt": "Aprobación",
+    "ambito": "Guadalajara",
+    "medicion": "Aprobación de Delgadillo en el ranking de alcaldes de Jalisco",
+    "cifra": "Delgadillo 57.8% (2.º; El Salto 64.1%, Zapopan 56.7%, Tlaquepaque 48.3%, Tonalá 49.7%)",
+    "sin_cifra": false,
+    "aprobacion_de": [
+     "Delgadillo"
+    ],
+    "campo": "11 al 16-jul-2026",
+    "campo_ini": "2026-07-11",
+    "campo_fin": "2026-07-16",
+    "metodo": "Muestreo aleatorio estratificado vía app Odiseo",
+    "muestra": "n=585 promedio por municipio",
+    "margen": "±2.5% a ±3.7% (95%)",
+    "ficha_tecnica": "Muestreo aleatorio estratificado vía app Odiseo · n=585 promedio por municipio · ±2.5% a ±3.7% (95%)",
+    "url": "https://gobernarte.com.mx/ranking-de-aprobacion-de-alcaldes-en-jalisco-17-de-julio-2026/",
+    "urls": [
+     "https://gobernarte.com.mx/ranking-de-aprobacion-de-alcaldes-en-jalisco-17-de-julio-2026/"
+    ],
+    "verificacion": "confirmado",
+    "n_fichas": 1
+   },
+   {
+    "fecha": "2026-07-17",
+    "fecha_txt": "17-jul-2026",
+    "casa": "Consulta Mitofsky",
+    "casa_nota": null,
+    "via": null,
+    "boleta": "aprobacion",
+    "boleta_txt": "Aprobación",
+    "boleta_clave": null,
+    "tipo": "aprobacion",
+    "tipo_txt": "Aprobación",
+    "ambito": "Jalisco",
+    "medicion": "Ranking de aprobación de gobernadores, junio 2026",
+    "cifra": "Lemus con aprobación superior a la de Sheinbaum en Jalisco (la página no da porcentaje)",
+    "sin_cifra": false,
+    "aprobacion_de": [
+     "Lemus",
+     "Sheinbaum"
+    ],
+    "campo": "jun-2026",
+    "campo_ini": "2026-06",
+    "campo_fin": "2026-06",
+    "metodo": null,
+    "muestra": null,
+    "margen": null,
+    "ficha_tecnica": null,
+    "url": "https://www.mitofsky.mx/post/ranking-aprobacion-gobernadores-junio-2026",
+    "urls": [
+     "https://www.mitofsky.mx/post/ranking-aprobacion-gobernadores-junio-2026"
+    ],
+    "verificacion": "confirmado",
+    "n_fichas": 1,
+    "repite_a": {
+     "casa": "Consulta Mitofsky",
+     "fecha": "2026-07-22",
+     "fecha_txt": "22-jul-2026",
+     "url": "https://www.tusbuenasnoticias.com/noticias/actualidad/2026/07/22/62415-10-gobernadores-mejor-evaluados-en-junio-ranking-de-mitofsky",
+     "motivo": "el mismo levantamiento de la misma casa, contado por otra publicación"
+    }
+   },
+   {
+    "fecha": "2026-07-13",
+    "fecha_txt": "13-jul-2026",
+    "casa": "INEGI (ENCIG 2025)",
+    "casa_nota": null,
+    "via": null,
+    "boleta": "contexto",
+    "boleta_txt": "Contexto",
+    "boleta_clave": null,
+    "tipo": "problemas",
+    "tipo_txt": "Problemas y servicios",
+    "ambito": "Jalisco",
+    "medicion": "Calidad y satisfacción con el agua potable en el Jalisco urbano",
+    "cifra": "8.9% dice recibir agua potable · 41.9% agua clara · 38% con tandeos · Satisfacción 45.1% (nacional 51.4%, Jalisco 21.º)",
+    "sin_cifra": false,
+    "campo": "31-oct al 16-dic-2025",
+    "campo_ini": "2025-10-31",
+    "campo_fin": "2025-12-16",
+    "metodo": "Encuesta oficial en vivienda (ENCIG)",
+    "muestra": null,
+    "margen": null,
+    "ficha_tecnica": "Encuesta oficial en vivienda (ENCIG)",
+    "url": "https://labcsa.org/2026/07/13/solo-el-9-confia-en-el-agua-potable/",
+    "urls": [
+     "https://labcsa.org/2026/07/13/solo-el-9-confia-en-el-agua-potable/"
+    ],
+    "verificacion": "confirmado",
+    "n_fichas": 1
+   },
+   {
+    "fecha": "2026-07-07",
+    "fecha_txt": "7-jul-2026",
+    "casa": "GobernArte",
+    "casa_nota": null,
+    "via": null,
+    "boleta": "aprobacion",
+    "boleta_txt": "Aprobación",
+    "boleta_clave": null,
+    "tipo": "aprobacion",
+    "tipo_txt": "Aprobación",
+    "ambito": "Guadalajara",
+    "medicion": "Aprobación de Delgadillo en el ranking de capitales",
+    "cifra": "Delgadillo 54.9% (10.º de 31)",
+    "sin_cifra": false,
+    "aprobacion_de": [
+     "Delgadillo"
+    ],
+    "campo": "28-jun al 2-jul-2026",
+    "campo_ini": "2026-06-28",
+    "campo_fin": "2026-07-02",
+    "metodo": "Muestreo aleatorio estratificado vía app Odiseo",
+    "muestra": "n=550 promedio por capital",
+    "margen": "±2.5% a ±3.7% (95%)",
+    "ficha_tecnica": "Muestreo aleatorio estratificado vía app Odiseo · n=550 promedio por capital · ±2.5% a ±3.7% (95%)",
+    "url": "https://gobernarte.com.mx/ranking-capitales-de-mexico-7-de-julio-2026/",
+    "urls": [
+     "https://gobernarte.com.mx/ranking-capitales-de-mexico-7-de-julio-2026/"
+    ],
+    "verificacion": "confirmado",
+    "n_fichas": 1
+   },
+   {
+    "fecha": "2026-07-01",
+    "fecha_txt": "1-jul-2026",
+    "casa": "GobernArte",
+    "casa_nota": null,
+    "via": null,
+    "boleta": "alcaldia",
+    "boleta_txt": "Alcaldía",
+    "boleta_clave": "ayun",
+    "tipo": "intencion_partido",
+    "tipo_txt": "Intención de voto por partido",
+    "ambito": "Guadalajara",
+    "medicion": "Alcaldía GDL 2027 por partido y aspirantes internos",
+    "cifra": "Morena 34.2 · MC 27.1 · PAN 15.2 (otros no reportados) | internas: Lomelí 47.3, Pozos 37.6 (Morena); Delgadillo 38.9, Castañeda 21.2 (MC)",
+    "sin_cifra": false,
+    "campo": "24 al 29-jun-2026",
+    "campo_ini": "2026-06-24",
+    "campo_fin": "2026-06-29",
+    "metodo": "App Odiseo, estratificación digital con IA",
+    "muestra": "n=500",
+    "margen": "±2.5% a ±3.7% (95%)",
+    "ficha_tecnica": "App Odiseo, estratificación digital con IA · n=500 · ±2.5% a ±3.7% (95%)",
+    "url": "https://gobernarte.com.mx/alcaldias-rumbo-a-las-elecciones-2027-en-jalisco-1-de-julio-2026/",
+    "urls": [
+     "https://gobernarte.com.mx/alcaldias-rumbo-a-las-elecciones-2027-en-jalisco-1-de-julio-2026/"
+    ],
+    "verificacion": "confirmado",
+    "n_fichas": 1
+   },
+   {
+    "fecha": "2026-07",
+    "fecha_txt": "jul-2026",
+    "casa": "CE Research",
+    "casa_nota": null,
+    "via": null,
+    "boleta": "aprobacion",
+    "boleta_txt": "Aprobación",
+    "boleta_clave": null,
+    "tipo": "aprobacion",
+    "tipo_txt": "Aprobación",
+    "ambito": "Guadalajara",
+    "medicion": "62.º Ranking de Alcaldes (julio)",
+    "cifra": "Delgadillo 67% (3.º nacional)",
+    "sin_cifra": false,
+    "aprobacion_de": [
+     "Delgadillo"
+    ],
+    "campo": null,
+    "campo_ini": null,
+    "campo_fin": null,
+    "metodo": null,
+    "muestra": null,
+    "margen": null,
+    "ficha_tecnica": null,
+    "url": "https://ceonline.com.mx/post/cecilia-patron-lidera-el-62-ranking-de-alcaldes-de-ce-research/",
+    "urls": [
+     "https://ceonline.com.mx/post/cecilia-patron-lidera-el-62-ranking-de-alcaldes-de-ce-research/"
+    ],
+    "verificacion": "confirmado",
+    "n_fichas": 1
+   },
+   {
+    "fecha": "2026-06-29",
+    "fecha_txt": "29-jun-2026",
+    "casa": "Rubrum",
+    "casa_nota": null,
+    "via": null,
+    "boleta": "alcaldia",
+    "boleta_txt": "Alcaldía",
+    "boleta_clave": "ayun",
+    "tipo": "intencion_partido",
+    "tipo_txt": "Intención de voto por partido",
+    "ambito": "Guadalajara",
+    "medicion": "Tendencias de la elección municipal de GDL 2027, edición de junio",
+    "cifra": "Sin cifras legibles: los resultados solo se publicaron en imagen o PDF.",
+    "sin_cifra": true,
+    "campo": "26-jun-2026",
+    "campo_ini": "2026-06-26",
+    "campo_fin": "2026-06-26",
+    "metodo": "Telefónica automatizada (IVR)",
+    "muestra": "n=1,000",
+    "margen": "±3.8 (95%)",
+    "ficha_tecnica": "Telefónica automatizada (IVR) · n=1,000 · ±3.8 (95%)",
+    "url": "https://rubrum.info/tendencias-en-la-eleccion-del-municipio-de-guadalajara-jalisco-rumbo-al-2027-junio-2026/",
+    "urls": [
+     "https://rubrum.info/tendencias-en-la-eleccion-del-municipio-de-guadalajara-jalisco-rumbo-al-2027-junio-2026/"
+    ],
+    "verificacion": "confirmado",
+    "n_fichas": 1
+   },
+   {
+    "fecha": "2026-06-17",
+    "fecha_txt": "17-jun-2026",
+    "casa": "GobernArte",
+    "casa_nota": null,
+    "via": null,
+    "boleta": "aprobacion",
+    "boleta_txt": "Aprobación",
+    "boleta_clave": null,
+    "tipo": "aprobacion",
+    "tipo_txt": "Aprobación",
+    "ambito": "Guadalajara",
+    "medicion": "Aprobación de Delgadillo en el ranking de alcaldes de Jalisco",
+    "cifra": "Delgadillo 56.1% (2.º; 1.º El Salto 63.5%)",
+    "sin_cifra": false,
+    "aprobacion_de": [
+     "Delgadillo"
+    ],
+    "campo": "11 al 16-jun-2026",
+    "campo_ini": "2026-06-11",
+    "campo_fin": "2026-06-16",
+    "metodo": "Muestreo aleatorio estratificado vía app Odiseo",
+    "muestra": "n=585 promedio por municipio",
+    "margen": "±2.5% a ±3.7% (95%)",
+    "ficha_tecnica": "Muestreo aleatorio estratificado vía app Odiseo · n=585 promedio por municipio · ±2.5% a ±3.7% (95%)",
+    "url": "https://gobernarte.com.mx/ranking-de-aprobacion-de-alcaldes-de-jalisco-17-de-junio-2026/",
+    "urls": [
+     "https://gobernarte.com.mx/ranking-de-aprobacion-de-alcaldes-de-jalisco-17-de-junio-2026/"
+    ],
+    "verificacion": "confirmado",
+    "n_fichas": 1
+   },
+   {
+    "fecha": "2026-06-03",
+    "fecha_txt": "3-jun-2026",
+    "casa": "GobernArte",
+    "casa_nota": null,
+    "via": null,
+    "boleta": "aprobacion",
+    "boleta_txt": "Aprobación",
+    "boleta_clave": null,
+    "tipo": "aprobacion",
+    "tipo_txt": "Aprobación",
+    "ambito": "Guadalajara",
+    "medicion": "Aprobación de Delgadillo en el ranking de capitales",
+    "cifra": "Delgadillo 54.2% (4.º del segundo bloque)",
+    "sin_cifra": false,
+    "aprobacion_de": [
+     "Delgadillo"
+    ],
+    "campo": "29-may al 2-jun-2026",
+    "campo_ini": "2026-05-29",
+    "campo_fin": "2026-06-02",
+    "metodo": "Muestreo aleatorio estratificado vía app Odiseo",
+    "muestra": "n=550 promedio por capital",
+    "margen": "±2.5% a ±3.7% (95%)",
+    "ficha_tecnica": "Muestreo aleatorio estratificado vía app Odiseo · n=550 promedio por capital · ±2.5% a ±3.7% (95%)",
+    "url": "https://gobernarte.com.mx/ranking-capitales-de-mexico-3-de-junio-2026/",
+    "urls": [
+     "https://gobernarte.com.mx/ranking-capitales-de-mexico-3-de-junio-2026/"
+    ],
+    "verificacion": "confirmado",
+    "n_fichas": 1
+   },
+   {
+    "fecha": "2026-05-29",
+    "fecha_txt": "29-may-2026",
+    "casa": "Rubrum",
+    "casa_nota": null,
+    "via": null,
+    "boleta": "alcaldia",
+    "boleta_txt": "Alcaldía",
+    "boleta_clave": "ayun",
+    "tipo": "intencion_partido",
+    "tipo_txt": "Intención de voto por partido",
+    "ambito": "Guadalajara",
+    "medicion": "Tendencias de la elección municipal de GDL 2027, edición de mayo",
+    "cifra": "Sin cifras legibles: los resultados solo se publicaron en imagen o PDF.",
+    "sin_cifra": true,
+    "campo": "27-may-2026",
+    "campo_ini": "2026-05-27",
+    "campo_fin": "2026-05-27",
+    "metodo": "Telefónica automatizada (IVR), muestra aleatoria",
+    "muestra": "n=1,000",
+    "margen": "±3.8 (95%)",
+    "ficha_tecnica": "Telefónica automatizada (IVR), muestra aleatoria · n=1,000 · ±3.8 (95%)",
+    "url": "https://rubrum.info/tendencias-en-la-eleccion-del-municipio-de-guadalajara-jalisco-rumbo-al-2027-mayo-2026/",
+    "urls": [
+     "https://rubrum.info/tendencias-en-la-eleccion-del-municipio-de-guadalajara-jalisco-rumbo-al-2027-mayo-2026/"
+    ],
+    "verificacion": "confirmado",
+    "n_fichas": 1
+   },
+   {
+    "fecha": "2026-05-27",
+    "fecha_txt": "27-may-2026",
+    "casa": "GobernArte",
+    "casa_nota": null,
+    "via": null,
+    "boleta": "alcaldia",
+    "boleta_txt": "Alcaldía",
+    "boleta_clave": "ayun",
+    "tipo": "intencion_partido",
+    "tipo_txt": "Intención de voto por partido",
+    "ambito": "Guadalajara",
+    "medicion": "Alcaldía GDL 2027 por partido y aspirantes internos (también Zapopan, Tlaquepaque, Tlajomulco)",
+    "cifra": "Morena 35.1 · MC 25.3 · PAN 13.7 · PRI 10.4 · PT 2.1 · PVEM 1.5 · ninguno 11.9 | internas: Lomelí 45.1, Chema Martínez 19.4 (Morena); Delgadillo 41.7 (MC); Haro 30.5 (PRI); D. González 27.2 (PAN)",
+    "sin_cifra": false,
+    "campo": "21 al 26-may-2026",
+    "campo_ini": "2026-05-21",
+    "campo_fin": "2026-05-26",
+    "metodo": "Muestreo aleatorio estratificado vía app Odiseo",
+    "muestra": "n=500 por municipio",
+    "margen": "±2.5% a ±3.7% (95%)",
+    "ficha_tecnica": "Muestreo aleatorio estratificado vía app Odiseo · n=500 por municipio · ±2.5% a ±3.7% (95%)",
+    "url": "https://gobernarte.com.mx/alcaldias-rumbo-a-las-elecciones-2027-en-jalisco-27-de-mayo-2026/",
+    "urls": [
+     "https://gobernarte.com.mx/alcaldias-rumbo-a-las-elecciones-2027-en-jalisco-27-de-mayo-2026/"
+    ],
+    "verificacion": "confirmado",
+    "n_fichas": 2,
+    "otras_fichas": [
+     {
+      "casa": "GobernArte",
+      "via": null,
+      "url": "https://gobernarte.com.mx/alcaldias-rumbo-a-las-elecciones-2027-en-jalisco-27-de-mayo-2026/",
+      "medicion": "Alcaldía de GDL por partido e internas",
+      "cifra": "Morena 35.1 · MC 25.3 · PAN 13.7 · PRI 10.4 · PT 2.1 · PVEM 1.5 · Ninguno 11.9 · Internas: Lomelí 45.1, Chema 19.4 (Morena); Delgadillo 41.7 (MC); Diana González 27.2 (PAN); Haro 30.5 (PRI)",
+      "verificacion": "confirmado"
+     }
+    ]
+   },
+   {
+    "fecha": "2026-05-27",
+    "fecha_txt": "27-may-2026",
+    "casa": "CE Research",
+    "casa_nota": null,
+    "via": null,
+    "boleta": "aprobacion",
+    "boleta_txt": "Aprobación",
+    "boleta_clave": null,
+    "tipo": "aprobacion",
+    "tipo_txt": "Aprobación",
+    "ambito": "Guadalajara",
+    "medicion": "60.º Ranking de Alcaldes de Grandes Urbes (mayo): top 10",
+    "cifra": "Delgadillo no figura en el top 10; el 10.º lugar tiene 61% y encabeza Cecilia Patrón (Mérida) con 65%",
+    "sin_cifra": false,
+    "aprobacion_de": [
+     "Delgadillo"
+    ],
+    "campo": "21 al 25-may-2026",
+    "campo_ini": "2026-05-21",
+    "campo_fin": "2026-05-25",
+    "metodo": "Entrevistas robotizadas (canal no especificado)",
+    "muestra": "n=400 por ciudad",
+    "margen": "±4.5% (95%)",
+    "ficha_tecnica": "Entrevistas robotizadas (canal no especificado) · n=400 por ciudad · ±4.5% (95%)",
+    "url": "https://ceonline.com.mx/post/cecilia-patron-lidera-el-ranking-de-alcaldes-de-grandes-urbes-de-ce-research/",
+    "urls": [
+     "https://ceonline.com.mx/post/cecilia-patron-lidera-el-ranking-de-alcaldes-de-grandes-urbes-de-ce-research/"
+    ],
+    "verificacion": "corregido",
+    "correccion": "Método: la fuente dice '400 entrevistas robotizadas por ciudad' (14,800 nacionales), sin decir que sean telefónicas. Conviene escribir 'entrevistas robotizadas (canal no especificado)'. La fecha y la metodología vienen del estudio completo (https://ceonline.com.mx/post/60-ranking-alcaldes-grandes-urbes-2026-05/, 'CE Research. 27 de mayo 2026'). La nota citada no muestra fecha y solo enseña la hora.",
+    "correccion_aplicada": [
+     "metodo"
+    ],
+    "n_fichas": 1
+   },
+   {
+    "fecha": "2026-05-24",
+    "fecha_txt": "24-may-2026",
+    "casa": "LaEncuesta.mx",
+    "casa_nota": null,
+    "via": null,
+    "boleta": "aprobacion",
+    "boleta_txt": "Aprobación",
+    "boleta_clave": null,
+    "tipo": "aprobacion",
+    "tipo_txt": "Aprobación",
+    "ambito": "Jalisco",
+    "medicion": "Ranking de aprobación de gobernadores",
+    "cifra": "Lemus 60.3 (2.º nacional, detrás de Manolo Jiménez)",
+    "sin_cifra": false,
+    "aprobacion_de": [
+     "Lemus"
+    ],
+    "campo": "16 al 18-may-2026",
+    "campo_ini": "2026-05-16",
+    "campo_fin": "2026-05-18",
+    "metodo": "Telefónica; usa además IA y datos de buscadores y redes",
+    "muestra": null,
+    "margen": null,
+    "ficha_tecnica": "Telefónica; usa además IA y datos de buscadores y redes",
+    "url": "https://jalisco.pagina24.com.mx/2026/05/24/local/encuestadora-aceptacion-de-lemus-del-60-3/",
+    "urls": [
+     "https://jalisco.pagina24.com.mx/2026/05/24/local/encuestadora-aceptacion-de-lemus-del-60-3/"
+    ],
+    "verificacion": "confirmado",
+    "n_fichas": 2,
+    "otras_fichas": [
+     {
+      "casa": "LaEncuesta.mx",
+      "via": null,
+      "url": "https://jalisco.pagina24.com.mx/2026/05/24/local/encuestadora-aceptacion-de-lemus-del-60-3/",
+      "medicion": "Ranking de gobernadores de mayo: Lemus 2.º nacional.",
+      "cifra": "Lemus 60.3 (2.º nacional)",
+      "verificacion": "confirmado"
+     }
+    ]
+   },
+   {
+    "fecha": "2026-05-14",
+    "fecha_txt": "14-may-2026",
+    "casa": "GobernArte",
+    "casa_nota": null,
+    "via": null,
+    "boleta": "aprobacion",
+    "boleta_txt": "Aprobación",
+    "boleta_clave": null,
+    "tipo": "aprobacion",
+    "tipo_txt": "Aprobación",
+    "ambito": "Guadalajara",
+    "medicion": "Aprobación de Delgadillo en el ranking de alcaldes de Jalisco",
+    "cifra": "Delgadillo 53.3% (4.º lugar en Jalisco)",
+    "sin_cifra": false,
+    "aprobacion_de": [
+     "Delgadillo"
+    ],
+    "campo": "9 al 13-may-2026",
+    "campo_ini": "2026-05-09",
+    "campo_fin": "2026-05-13",
+    "metodo": "Muestreo aleatorio estratificado vía app Odiseo",
+    "muestra": "n=585 promedio por municipio",
+    "margen": "±2.5% a ±3.7% (95%)",
+    "ficha_tecnica": "Muestreo aleatorio estratificado vía app Odiseo · n=585 promedio por municipio · ±2.5% a ±3.7% (95%)",
+    "url": "https://gobernarte.com.mx/ranking-de-aprobacion-de-alcaldes-de-jalisco-14-de-mayo-2026/",
+    "urls": [
+     "https://gobernarte.com.mx/ranking-de-aprobacion-de-alcaldes-de-jalisco-14-de-mayo-2026/"
+    ],
+    "verificacion": "confirmado",
+    "n_fichas": 1
+   },
+   {
+    "fecha": "2026-05-06",
+    "fecha_txt": "6-may-2026",
+    "casa": "GobernArte",
+    "casa_nota": null,
+    "via": null,
+    "boleta": "aprobacion",
+    "boleta_txt": "Aprobación",
+    "boleta_clave": null,
+    "tipo": "aprobacion",
+    "tipo_txt": "Aprobación",
+    "ambito": "Guadalajara",
+    "medicion": "Aprobación de Delgadillo en el ranking de capitales",
+    "cifra": "Delgadillo 54.1% (4.º del bloque del 11 al 20)",
+    "sin_cifra": false,
+    "aprobacion_de": [
+     "Delgadillo"
+    ],
+    "campo": "1 al 4-may-2026",
+    "campo_ini": "2026-05-01",
+    "campo_fin": "2026-05-04",
+    "metodo": "Muestreo aleatorio estratificado vía app Odiseo",
+    "muestra": "n=550 por capital",
+    "margen": "±2.5% a ±3.7% (95%)",
+    "ficha_tecnica": "Muestreo aleatorio estratificado vía app Odiseo · n=550 por capital · ±2.5% a ±3.7% (95%)",
+    "url": "https://gobernarte.com.mx/ranking-capitales-de-mexico-6-de-mayo-2026/",
+    "urls": [
+     "https://gobernarte.com.mx/ranking-capitales-de-mexico-6-de-mayo-2026/"
+    ],
+    "verificacion": "confirmado",
+    "n_fichas": 1
+   },
+   {
+    "fecha": "2026-05-05",
+    "fecha_txt": "5-may-2026",
+    "casa": "Demoscopia Digital",
+    "casa_nota": null,
+    "via": null,
+    "boleta": "contexto",
+    "boleta_txt": "Contexto",
+    "boleta_clave": null,
+    "tipo": "otro",
+    "tipo_txt": "Preferencia interna (candidatura)",
+    "ambito": "Guadalajara",
+    "medicion": "Preferencia interna de Morena para GDL",
+    "cifra": "Chema 29.7 · Lomelí 17.3 · Pozos 2.6 · Itzul Barrera 1.6 · No ha decidido 27.2 · NS/NC 17.5",
+    "sin_cifra": false,
+    "campo": "22 al 25-abr-2026",
+    "campo_ini": "2026-04-22",
+    "campo_fin": "2026-04-25",
+    "metodo": "Vivienda cara a cara con tableta, muestreo probabilístico",
+    "muestra": "n=1,000 adultos",
+    "margen": "±3.8 (95%)",
+    "ficha_tecnica": "Vivienda cara a cara con tableta, muestreo probabilístico · n=1,000 adultos · ±3.8 (95%) (sin verificar en la fuente abierta)",
+    "sin_verificar": [
+     "campo",
+     "metodo",
+     "muestra",
+     "margen"
+    ],
+    "sin_verificar_txt": "Sin verificar en la fuente abierta: fecha de levantamiento, método, muestra y margen.",
+    "url": "https://eldiariodeguadalajara.mx/2026/05/05/morena-perfila-aspirantes-rumbo-a-guadalajara-2027-encuesta-coloca-a-chema-martinez-al-frente/",
+    "urls": [
+     "https://eldiariodeguadalajara.mx/2026/05/05/morena-perfila-aspirantes-rumbo-a-guadalajara-2027-encuesta-coloca-a-chema-martinez-al-frente/"
+    ],
+    "verificacion": "corregido",
+    "correccion": "Se mantienen fecha, medio, casa, titular y cifras. Hay que marcar como «no verificado» o quitar los campos fecha de levantamiento (22-25 abr), n (1,000), margen (±3.8 al 95 %), método (vivienda cara a cara con tableta) y el origen «Revista Zócalo, 29-abr»: no aparecen en la dirección web citada. Si salen de la publicación de Zócalo, hay que citar esa dirección web aparte.",
+    "n_fichas": 1
+   },
+   {
+    "fecha": "2025-07-14",
+    "fecha_txt": "14-jul-2025",
+    "casa": "Massive Caller",
+    "casa_nota": null,
+    "via": null,
+    "boleta": "alcaldia",
+    "boleta_txt": "Alcaldía (preferencia por partido, sin nombrar cargo)",
+    "boleta_clave": null,
+    "generica": true,
+    "tipo": "intencion_partido",
+    "tipo_txt": "Intención de voto por partido",
+    "ambito": "Guadalajara",
+    "medicion": "Preferencia por partido en GDL 2027 y voto por la reelección de Delgadillo",
+    "cifra": "Morena 43.3 · MC 19.3 | 52% votaría por reelegir a Delgadillo",
+    "sin_cifra": false,
+    "campo": null,
+    "campo_ini": null,
+    "campo_fin": null,
+    "metodo": "Llamadas automatizadas con grabación, marcación aleatoria",
+    "muestra": null,
+    "margen": null,
+    "ficha_tecnica": "Llamadas automatizadas con grabación, marcación aleatoria",
+    "url": "https://polls.politico.mx/2025/07/14/mc-o-morena-asi-van-las-preferencias-en-3-alcaldias-de-jalisco-para-2027/",
+    "urls": [
+     "https://polls.politico.mx/2025/07/14/mc-o-morena-asi-van-las-preferencias-en-3-alcaldias-de-jalisco-para-2027/"
+    ],
+    "verificacion": "confirmado",
+    "n_fichas": 1
+   }
+  ],
+  "nota": "72 mediciones distintas, publicadas entre el 14-jul-2025 y el 3-nov-2026. Salen de 96 fichas verificadas contra su fuente: 24 repetían una medición ya contada y se juntaron con ella. 4 no traen cifras legibles (solo se publicaron en imagen o PDF). 5 más repiten una medición que ya está en la lista (otro medio la publicó en otra fecha, o es el mismo levantamiento de la misma casa): siguen en la lista, marcadas. 1 más sale de la misma página que otra fila, que ya trae sus cifras. 3 de las de Alcaldía preguntan la preferencia por partido sin nombrar el cargo: van marcadas, porque no son intención de voto para la alcaldía. 12 llevan una corrección de la verificación, que se muestra junto a la cifra, y 7 traen algún dato de la ficha sin verificar en la fuente abierta. Las cifras son de las casas citadas; los métodos (vivienda, telefónica, panel digital) son distintos y no se comparan entre sí. La serie de intención por partido de la gráfica de evolución usa solo las que reportan MC y Morena en Guadalajara.",
+  "conteo": {
+   "fichas": 96,
+   "mediciones": 72,
+   "repetidas": 24,
+   "sin_cifra": 4,
+   "repiten_otra_fecha": 5,
+   "misma_fuente": 1,
+   "genericas": 3,
+   "corregidas": 12,
+   "con_dato_sin_verificar": 7,
+   "por_boleta": {
+    "alcaldia": 18,
+    "dip_sin_precisar": 1,
+    "aprobacion": 40,
+    "contexto": 13
+   }
+  },
+  "marcas": {
+   "correccion": "Lo que la verificación cambió o matizó al abrir la fuente. Va en las filas con verificacion «corregido» y se muestra junto a la cifra. correccion_aplicada dice qué campos de la fila ya traen el cambio.",
+   "sin_verificar": "Datos de la ficha que quedaron sin verificar en la fuente abierta (casa, fecha, campo, metodo, muestra, margen). sin_verificar_txt es la frase lista para pintar; ficha_tecnica y casa_nota ya lo dicen.",
+   "aviso_muestra": "La fuente da dos tamaños de muestra distintos; es el aviso de la verificación.",
+   "fecha_nota": "Aclaración sobre la fecha de publicación cuando la verificación no la dio por buena.",
+   "generica": "Preferencia por partido sin nombrar el cargo. Sigue con la boleta «alcaldia», pero con boleta_clave null: no es intención de voto para la alcaldía.",
+   "repite_a": "La misma medición ya está en otra fila (repite_a.motivo dice por qué). No contarla dos veces.",
+   "misma_fuente": "Sale de la misma página que otra fila, que ya trae sus cifras. No contarla dos veces.",
+   "coincide_con": "Casa sin identificar cuya fecha de campo y cifra coinciden con las de otra casa.",
+   "dip_sin_precisar": "Boleta de una medición por distrito cuya fuente no dice si la diputación es local o federal."
+  }
+ },
+ "resultados": {
+  "mr24_real": {},
+  "mr27_s0": {
+   "MC": 1,
+   "MORENA": 3
+  },
+  "hemiciclo27": {},
+  "ayun27": {
+   "Guadalajara": "Empate técnico · MC 40.0% vs Morena y aliados 41.7% (S1, probabilidad MC 44%)"
+  },
+  "nota": "Motor v8, corte 2026-11-03. Alcaldía, probabilidad de que gane MC: línea base 49%, escenario central 44% (MC 40.0%, rango 32.0–47.5). Mejor escenario para MC: S4 (68%); peor: S11 (16%). En diputación local MC queda por debajo de Morena y aliados en el central (probabilidad MC 12%): el castigo pega más al partido que a la alcaldesa. Lo que más pesa en el margen es el punto de partida antes de octubre: las encuestas de septiembre lo miden de forma contradictoria (por partido, de MC +9 en un diario local no identificado a Morena +8.7 en GobernArte) y el modelo de agosto da otra cifra. La única medición de intención de voto en Guadalajara posterior a la marcha del 11-oct (LaEncuesta.mx, campo 16-18 oct) se usa solo como contraste, no como ancla. Estimación propia condicional al escenario; no es pronóstico.",
+  "fuente": "sim_v8.json (escenario central S1)"
+ },
+ "proy_actor": {
+  "nombre": "Verónica Delgadillo",
+  "partido": "MC",
+  "escenarios": [
+   {
+    "id": "S0",
+    "nombre": "Línea base antes del escalamiento de octubre",
+    "pct": 40.9,
+    "delta": 0.0
+   },
+   {
+    "id": "S1",
+    "nombre": "Inercia: tandeo hasta feb-abr y la represión se disipa (central)",
+    "pct": 40.0,
+    "delta": -0.6
+   },
+   {
+    "id": "S2",
+    "nombre": "La protesta escala: nuevas marchas y detenidos",
+    "pct": 39.0,
+    "delta": -1.6
+   },
+   {
+    "id": "S3",
+    "nombre": "Crisis sanitaria oficial (brote o contaminante)",
+    "pct": 38.6,
+    "delta": -1.8
+   },
+   {
+    "id": "S4",
+    "nombre": "Delgadillo se desmarca de Lemus y gestiona agua municipal",
+    "pct": 44.4,
+    "delta": 3.2
+   },
+   {
+    "id": "S5",
+    "nombre": "Delgadillo pierde el escudo: Morena le transfiere la culpa",
+    "pct": 38.9,
+    "delta": -1.5
+   },
+   {
+    "id": "S6",
+    "nombre": "Ola nacional a favor de Morena",
+    "pct": 37.1,
+    "delta": -3.6
+   },
+   {
+    "id": "S7",
+    "nombre": "El agua mejora antes: el tandeo acaba en enero",
+    "pct": 41.4,
+    "delta": 0.7
+   },
+   {
+    "id": "S8",
+    "nombre": "Castigo por abstención: la base de MC se queda en casa",
+    "pct": 37.9,
+    "delta": -2.7
+   },
+   {
+    "id": "S9",
+    "nombre": "Cierre de filas: la confrontación con Sheinbaum ayuda a MC",
+    "pct": 41.7,
+    "delta": 1.0
+   },
+   {
+    "id": "S10",
+    "nombre": "Evento de seguridad de alto impacto",
+    "pct": 39.4,
+    "delta": -1.1
+   },
+   {
+    "id": "S11",
+    "nombre": "Peor caso: protesta, crisis sanitaria, ola nacional y sin escudo",
+    "pct": 34.5,
+    "delta": -5.9
+   },
+   {
+    "id": "S12",
+    "nombre": "Pacto hídrico Sheinbaum-Lemus (24,700 mdp) despolariza el agua",
+    "pct": 40.0,
+    "delta": -0.6
+   },
+   {
+    "id": "S13",
+    "nombre": "El tandeo falla y se alarga hasta mayo",
+    "pct": 38.8,
+    "delta": -1.5
+   },
+   {
+    "id": "S14",
+    "nombre": "Morena convierte la crisis en juicio político y revocación",
+    "pct": 39.0,
+    "delta": -1.6
+   },
+   {
+    "id": "S15",
+    "nombre": "Morena postula a su perfil más competitivo en Guadalajara",
+    "pct": 37.6,
+    "delta": -3.0
+   },
+   {
+    "id": "S16",
+    "nombre": "Delgadillo capitaliza el pacto: gestiona agua y se suma al plan",
+    "pct": 43.7,
+    "delta": 2.7
+   },
+   {
+    "id": "S17",
+    "nombre": "Combinado de noticias: pacto, tandeo largo y candidatura fuerte de Morena",
+    "pct": 36.6,
+    "delta": -3.9
+   }
+  ],
+  "nota_interna": "Mediana de MC en la boleta de alcaldía por escenario y su efecto contra la línea base (mismas corridas). Estimación propia."
+ },
+ "fecha_encuestas": "2026-11-03",
+ "fecha_prensa": "2026-11-03",
+ "fecha_redes": "2026-11-03"
+}

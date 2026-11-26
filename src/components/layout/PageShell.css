@@ -9,7 +9,8 @@
   --u: calc(var(--frame-w) / 1440);
   position: relative;
   container-type: inline-size;
-  overflow: hidden;
+  /* recorta sin volverse contenedor de desplazamiento: así una barra pegada (sticky) sigue a la ventana */
+  overflow: clip;
   background: #fff;
 }
 
@@ -32,10 +33,11 @@
   z-index: 1;
 }
 
-/* ---------- Mapa (2163.5 px de alto) ---------- */
+/* ---------- Mapa ----------
+   En el PDF la página mide 2163.5 px porque el artboard deja 49.7 px en blanco
+   debajo del pie; aquí el pie cierra la página, como en las demás. */
 .page--mapa {
   --footer-height: 91.7;
-  padding-bottom: calc(49.7 * var(--u));
 }
 
 .page--mapa .page__bg {

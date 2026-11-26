@@ -1,4 +1,5 @@
-// Adapta css/pp.css del tablero para usarse dentro del sitio nuevo.  uso: node mkcss.mjs <carpeta> <salida.css>
+// Adapta css/pp.css del tablero para usarse dentro del sitio nuevo.
+// uso: node scripts/tablero-css.mjs <carpeta del paquete del tablero> src/styles/tablero.css
 import fs from 'node:fs'
 import path from 'node:path'
 const [, , root, out] = process.argv
@@ -21,7 +22,9 @@ while (i < css.length) {
 // Globales: lo que empieza por un elemento (svg, img, a, button…) o por el comodín alcanzaría a
 // todo el sitio, no solo al contenido del tablero. Cada selector de una lista se evalúa por separado.
 const GLOBAL = /^(\*|[a-z][a-z0-9]*(?![\w-])|:focus-visible|\[hidden\]|\.leaflet)/
-const SHELL = /\.pp-(nav|pie|heroe|pagina|errores|cargando|viendo|chat|mapa|panel|kfila|selector)\b/
+// Del marco del tablero solo se descarta lo que aquí pone el propio sitio (menú, encabezado, pie). La barra «Estás viendo»
+// (.pp-ctx), los chips bajo ella (.pp-heroe-chips) y el aviso de carga sí se usan en las páginas hechas en React.
+const SHELL = /\.pp-(nav|pie|heroe(?!-chips)|pagina|errores|viendo|chat|mapa|panel|selector)\b/
 const kept = []
 const dropped = []
 for (const r of rules) {
@@ -38,47 +41,44 @@ for (const r of rules) {
 }
 const fmt = (r) => r.sel.startsWith('@media') ? `${r.sel} {\n${r.body}\n}` : `${r.sel} {\n  ${r.body.split(';').map((d) => d.trim()).filter(Boolean).join(';\n  ')};\n}`
 const HEAD = `/*
- * GENERADO a partir de css/pp.css del tablero del motor (su sistema de componentes pp-*).
- * Se usa para pintar el contenido que se toma tal cual de ese tablero (ver
- * scripts/snapshot-tablero.mjs). Cambios frente al original: sin reglas globales
- * ni de su menú/encabezado/pie, sin puntos de quiebre, tokens dentro de .tablero y
- * cada medida en --tu (un píxel del tablero ya escalado al sitio; ver TableroContent.css).
+ * GENERADO por scripts/tablero-css.mjs a partir de css/pp.css del tablero del motor (su
+ * sistema de componentes pp-*). No se edita a mano. Lo usan las páginas que vienen de
+ * ese tablero (Territorio, Comparativo, Fuentes), cuyos componentes de React escriben
+ * las mismas clases (src/components/tablero/kit). Cambios frente al original: sin reglas
+ * globales ni de su menú/encabezado/pie, sin puntos de quiebre, tokens dentro de .tablero
+ * y cada medida en --tu (un píxel del tablero ya escalado al sitio). No se importa
+ * directo: lo trae src/components/tablero/tablero-sitio.css, que le pone encima los
+ * ajustes del sitio.
  */
 `
 const escalar = (s) => s.replace(/(-?\d*\.?\d+)px\b/g, (_, n) => (Number(n) === 0 ? '0' : `calc(${n} * var(--tu))`))
 
-// Las condiciones de @container no admiten variables, y la escala del sitio depende del ancho de
-// la ventana (un px del tablero mide ZOOM × ancho del frame / 1440). Cada regla se repite por
-// tramos de ancho de ventana, con sus px llevados a px reales con la escala de ese tramo.
-const ZOOM = 1.18 // --tablero-zoom (TableroContent.css)
-const tokens = fs.readFileSync(new URL('../src/styles/tokens.css', import.meta.url), 'utf8')
-const token = (nombre, porDefecto) => Number(new RegExp(`--frame-${nombre}:\\s*([\\d.]+)`).exec(tokens)?.[1] ?? porDefecto)
-const FRAME = { share: token('share', 1), min: token('min', 0), max: token('max', 1440) }
-/** Ancho del artboard para un ancho de ventana: la misma cuenta que --frame-w (PageShell.css). */
-const frame = (ventana) => Math.min(ventana, Math.max(FRAME.min, Math.min(FRAME.share * ventana, FRAME.max)))
-const TOPE = Math.ceil(FRAME.max / FRAME.share) // ventana a partir de la cual el artboard ya no crece
-const tramos = []
-for (let desde = 0, hasta = 360; desde < TOPE; desde = hasta, hasta = Math.min(TOPE, Math.round(hasta * 1.1))) {
-  tramos.push({ desde, hasta, ancho: frame(desde ? Math.sqrt(desde * hasta) : hasta) })
-  if (hasta === TOPE) break
+// Las condiciones de @container no admiten variables (--tu), pero sí unidades relativas, que se
+// miden contra el propio contenedor consultado: sus px se pasan a `em` de ese contenedor, cuyo
+// cuerpo de letra ya va en --tu. Así el umbral sigue a la escala del sitio a cualquier ancho.
+// Cuerpo de letra (px del tablero) de cada contenedor que el tablero consulta:
+//   .pp-apil__s  → 10 (lo fija su propia regla: «font: 800 10px»)
+//   .pp-tpos     → 16 (el del documento en el tablero; aquí lo fija tablero-sitio.css)
+const CUERPO_CONTENEDOR = [
+  { de: /\.pp-apil/, px: 10 },
+  { de: /\.pp-tpos/, px: 16 },
+]
+const enEm = (r) => {
+  const cuerpo = CUERPO_CONTENEDOR.find((c) => c.de.test(r.body))
+  if (!cuerpo) throw new Error(`No sé el cuerpo de letra del contenedor de: ${r.sel} { ${r.body.slice(0, 60)}… }`)
+  const condicion = r.sel.replace(/(\d*\.?\d+)px\b/g, (_, n) => `${Number((Number(n) / cuerpo.px).toFixed(4))}em`)
+  return `${condicion} {\n${r.body}\n}`
 }
-tramos.push({ desde: TOPE, hasta: Infinity, ancho: FRAME.max })
-const porTramos = (r) =>
-  tramos
-    .map(({ desde, hasta, ancho }) => {
-      const escala = (ZOOM * ancho) / 1440
-      const condicion = r.sel.replace(/(\d*\.?\d+)px\b/g, (_, n) => `${Math.round(Number(n) * escala)}px`)
-      const ventana = [desde ? `(min-width:${desde}px)` : '', hasta === Infinity ? '' : `(max-width:${hasta - 0.02}px)`].filter(Boolean).join(' and ')
-      return `@media ${ventana} {\n${condicion} {\n${r.body}\n}\n}`
-    })
-    .join('\n\n')
-
+// Dentro de un SVG con viewBox, los px de una regla son unidades del dibujo: ya crecen con él. Si
+// además se multiplicaran por --tu, los textos de las gráficas crecerían dos veces con la ventana.
+// Se dejan como están, en mayúsculas (PX) para que el plugin de px → cqw del sitio no los toque.
+const DIBUJO = /\.pp-serie text|\.pp-med__num|\.pp-dona__num/
 for (const r of kept) {
-  r.body = escalar(r.body)
+  r.body = DIBUJO.test(r.sel) ? r.body.replace(/(\d)px\b/g, '$1PX') : escalar(r.body)
   if (!r.sel.startsWith('@')) r.sel = escalar(r.sel)
 }
 const text = kept
-  .map((r) => (r.sel.startsWith('@container') ? porTramos(r) : fmt(r)))
+  .map((r) => (r.sel.startsWith('@container') ? enEm(r) : fmt(r)))
   .join('\n\n')
   .replace(/:root \{/, '.tablero {')
 fs.writeFileSync(out, HEAD + text + '\n')

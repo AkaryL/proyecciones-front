@@ -510,6 +510,48 @@ let secciones = 0
 for (const [id, data] of Object.entries(porEscenario)) secciones += writeJson(OUT_PUBLIC, `secciones/${id}.json`, data)
 sizes.push([`${rel(OUT_PUBLIC)}/secciones/S*.json (${Object.keys(porEscenario).length})`, secciones])
 
+/* ------------------------------------------------------------------ */
+/* Datos del motor para Territorio, Comparativo y Fuentes              */
+/* ------------------------------------------------------------------ */
+
+// Estas tres páginas leen los JSON del motor tal cual, con la capa de datos del
+// propio tablero (src/motor/vendor/pp-datos.js): aquí solo se copian los que usan.
+const MOTOR = [
+  'version.json',
+  'sim_v8.json',
+  'sim_agentes.json',
+  'sim_corridas.json',
+  'sim_concilio.json',
+  'proyecciones.json',
+  'grupos_variables.json',
+  'partidos_2024.json',
+  'federal_2024.js',
+  'sim_evolucion.json',
+  'sim_dashboard.json',
+  'sim_escenarios.json',
+  'sim_menciones.json',
+  'sim_dossier.json',
+  'sim_agua.json',
+  // la predicción por sección de cada escenario
+  ...fs.readdirSync(SOURCE).filter((file) => /^sim_secciones_S\d+\.json$/.test(file)),
+]
+const motorDir = path.join(OUT_PUBLIC, 'motor')
+fs.rmSync(motorDir, { recursive: true, force: true })
+fs.mkdirSync(motorDir, { recursive: true })
+let motorBytes = 0
+let motorFiles = 0
+for (const file of MOTOR) {
+  const source = path.join(SOURCE, file)
+  if (!fs.existsSync(source)) {
+    console.warn(`  (no viene en el paquete) ${file}`)
+    continue
+  }
+  fs.copyFileSync(source, path.join(motorDir, file))
+  motorBytes += fs.statSync(source).size
+  motorFiles++
+}
+sizes.push([`${rel(OUT_PUBLIC)}/motor/* (${motorFiles})`, motorBytes])
+
 const kb = (n) => `${(n / 1024).toFixed(0)} KB`
 console.log(`Datos generados desde ${SOURCE}`)
 for (const [name, size] of sizes) console.log(`  ${name.padEnd(44)} ${kb(size)}`)

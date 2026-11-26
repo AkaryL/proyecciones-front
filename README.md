@@ -20,9 +20,9 @@ npm run lint
 | `/`             | Mapa          | `src/pages/MapaPage.tsx`         |
 | `/diputaciones` | Diputaciones  | `src/pages/DiputacionesPage.tsx` |
 | `/simulacion`   | Simulación    | `src/pages/SimulacionPage.tsx`   |
-| `/fuentes`      | Fuentes       | `src/pages/FuentesPage.tsx`      |
-| `/territorio`   | Territorio    | `src/pages/TableroPage.tsx`      |
-| `/comparativo`  | Comparativo   | `src/pages/TableroPage.tsx`      |
+| `/comparativo`  | Comparativo   | `src/pages/comparativo/ComparativoPage.tsx` |
+| `/territorio`   | Territorio    | `src/pages/territorio/TerritorioPage.tsx`   |
+| `/fuentes`      | Fuentes       | `src/pages/fuentes/FuentesPage.tsx`         |
 | `/login`        | Iniciar sesión | `src/pages/LoginPage.tsx`       |
 
 El inicio de sesión tampoco tiene pantalla en el diseño: usa su mismo lenguaje
@@ -33,17 +33,44 @@ formulario solo revisa que los dos campos traigan algo y entra, y no se impide
 abrir las demás páginas sin pasar por él. El punto de conexión es
 `src/api/sesion.ts` (`iniciarSesion` y `cerrarSesion`).
 
-Territorio y Comparativo tampoco tienen pantalla en el diseño: se muestran como
-en el tablero del motor, con su propio código y sus filtros. El paquete del
-tablero está copiado en `public/tablero/` y se incrusta en un iframe
-(`src/components/tablero/TableroFrame.tsx`) al que se le quita su menú, su
-encabezado y su pie. Para actualizarlo, se vuelve a copiar el paquete ahí.
+### Territorio, Comparativo y Fuentes
 
-Fuentes no tiene pantalla en el diseño: usa el mismo encabezado y el contenido
-completo del tablero del motor, tomado tal cual (su HTML ya armado) con
-`node scripts/snapshot-tablero.mjs "ruta/al/paquete"` y pintado con sus propios
-estilos adaptados (`src/styles/tablero.css`, generado por
-`scripts/tablero-css.mjs`). Lo muestra `src/components/tablero/TableroContent.tsx`.
+Estas tres no tienen pantalla en el diseño: traen el contenido del tablero del
+motor (el de Trino), con el menú, el encabezado y el pie de este sitio. Están
+hechas en React, con el mismo contenido, los mismos filtros y las mismas ayudas
+que el original (se compararon con él texto por texto, tooltips incluidos).
+
+| Página      | Qué responde                               | Qué se elige                                   |
+| ----------- | ------------------------------------------ | ---------------------------------------------- |
+| Territorio  | dónde se gana y dónde se pierde            | boleta, escenario, distrito, zona, listas      |
+| Comparativo | ¿coinciden el modelo y las encuestas?      | escenario, filtro de encuestas, persona        |
+| Fuentes     | ¿de dónde sale cada cifra?                 | pestañas de supuestos y de fichas, índice      |
+
+- Lo que se está viendo va en la dirección (`/territorio?b=dip&e=S4&d=8&z=D8-C5`):
+  se conserva al recargar y se puede compartir. Boleta, escenario y distrito,
+  además, acompañan de una página a otra mientras dura la visita.
+- `src/components/tablero/kit/` es el sistema de componentes del tablero en
+  React: tarjetas, tablas de ranking, tabla y gráfica oscuras (un punto y su
+  fila se resaltan juntos), barras por partido, filtros, la barra «Estás
+  viendo», el tooltip… Cada componente escribe las mismas clases `pp-*` que el
+  original, y por eso sirven sus estilos.
+- `src/components/tablero/PaginaTablero.tsx` es el marco común de las tres y el
+  que trae los estilos: `tablero-sitio.css` importa primero los del tablero
+  (`src/styles/tablero.css`, **generado**, no se edita) y después los ajustes
+  del sitio. Se regenera con
+  `node scripts/tablero-css.mjs "ruta/al/paquete" src/styles/tablero.css`.
+- `src/motor/` es la capa de datos: `vendor/pp-datos.js` y `vendor/nombres.js`
+  son los módulos de cálculo y de nombres del propio tablero, tal cual (no
+  tienen interfaz; se actualizan copiándolos del paquete), `index.ts` los expone
+  con sus formatos y `hooks.ts` trae la carga y el estado. Leen los JSON del
+  motor de `public/data/motor/`, que copia `npm run data`. **Para conectar el
+  backend** basta darle a `D.configurar(...)` (en `index.ts`) un `lector` que
+  traiga cada archivo de la API.
+- El código y los estilos de estas páginas se cargan solo al entrar a ellas.
+
+Dos diferencias a propósito frente al original, en Fuentes: las notas «Huella de
+los archivos» (Validación) y «Dónde se publicó» (Fichas de encuestas) allá salen
+vacías por un descuido de su código; aquí muestran lo que debían decir.
 
 ## Cómo está armado
 
@@ -58,8 +85,11 @@ src/
     icons/       íconos vectoriales extraídos del diseño
     ui/          píldoras, círculos con ícono, títulos numerados, lista desplegable,
                  acordeón, cifra animada y texto que entra con fundido
+    tablero/     marco y sistema de componentes de las páginas del tablero (kit/)
   lib/           formato de cifras, reglas electorales, capas del mapa, movimiento
                  y navegación entre páginas
+  motor/         capa de datos del motor para las páginas del tablero (vendor/ = sus
+                 módulos de cálculo y nombres, sin tocar)
   pages/         una carpeta/archivo por página, con su hoja de estilos
   data/          los datos que muestra cada página (listos para conectarse a una API)
   assets/        fondos, logotipos y piezas vectoriales tomadas del PDF
@@ -82,9 +112,9 @@ El tamaño con el que se muestra se controla con tres variables en
 
 El contenido va centrado, con las proporciones exactas del PDF, y ocupa el 80 %
 del ancho de la ventana; el menú, el fondo, el mapa y el pie van de orilla a
-orilla. Si se cambian estos valores hay que regenerar `src/styles/tablero.css`
-(`node scripts/tablero-css.mjs "ruta/al/paquete" src/styles/tablero.css`), que
-los lee para sus puntos de quiebre.
+orilla. Las páginas del tablero siguen la misma escala: sus estilos miden todo
+en `--tu` (un píxel del tablero llevado a la escala del sitio, con el aumento
+`--tablero-zoom` de `tablero-sitio.css`).
 
 ### Movimiento
 
@@ -133,6 +163,7 @@ npm run data -- "ruta/al/paquete_del_tablero"   # regenera los datos
 | `src/data/generated/escenarios.json`   | 18 escenarios × 3 boletas, ciudad y distritos          | dentro del bundle     |
 | `public/data/mapa.json`                | secciones, límites, resultado 2024 y capas temáticas   | `fetch` al usarse     |
 | `public/data/secciones/S*.json`        | predicción por sección de cada escenario (dip. local)  | `fetch` al usarse     |
+| `public/data/motor/*`                  | los JSON del motor tal cual, para Territorio, Comparativo y Fuentes (16 MB) | `fetch` al usarse |
 
 Todo el acceso pasa por `src/api/` (`index.ts` y las formas en `types.ts`): para
 conectar una API basta con reescribir esas funciones.
@@ -159,6 +190,14 @@ conectar una API basta con reescribir esas funciones.
   (se pueden tener varios abiertos a la vez).
 - **Simulación**: selector de escenario para el veredicto, mapa de grupos
   enlazado con la tabla y simulador (boleta, ámbito y escenario).
+- **Territorio**: boleta, escenario y distrito; orden de las zonas, zona
+  abierta (con su escalera de escenarios), pestañas de la ciudad, listas de
+  secciones y ruta de votos.
+- **Comparativo**: escenario, filtro de encuestas (lo comparten la serie y la
+  lista de mediciones), gráficas en que cada punto se enlaza con su fila, y
+  persona de la tabla de aprobación.
+- **Fuentes**: índice que salta a cada sección, pestañas de supuestos y de
+  fichas de encuestas, enlaces a las publicaciones.
 
 Sin tocar nada, cada página se ve como el PDF, salvo tres cambios pedidos:
 

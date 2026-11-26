@@ -1,0 +1,220 @@
+{
+ "fecha": "2026-10-07",
+ "titulo": "Dossier · Delgadillo, MC y el terreno en Guadalajara",
+ "metodo": "Investigación web multi-fuente con evidencias fechadas + estructura demográfica del padrón INE por sección (corte 3-jul-2025) + reporte de inteligencia de la crisis del agua (corte 7-oct-2026). Cada evidencia lleva fuente y clase de confianza (alta/media/baja).",
+ "temas": [
+  {
+   "tema": "EL EJE 2027: la crisis del agua castiga al gobierno MC",
+   "impacto": "alto",
+   "resumen": "La crisis del agua sucia es el eje político de la intermedia 2027 en Guadalajara y castiga al gobierno MC (Lemus en el estado/SIAPA, Delgadillo en el municipio). Agua negra con mal olor en al menos 475 colonias desde hace más de 9 meses; el 6-oct Lemus anunció tandeo/racionamiento de hasta un cuarto del suministro por seis meses (el cambio de director del SIAPA fue en marzo de 2026 y no mejoró la percepción); mega marcha convocada el 11-oct (de La Minerva a Casa Jalisco). Índice de escalamiento 61/100 (6 de 7 variables en ALTO). La pauta de Morena (Chema Martínez, Mery Pozos) capitaliza; según el reporte de inteligencia del agua, el voto de castigo se concentraría en el D8 de la diputación local (bastión de MC y epicentro de reportes). El principal amortiguador de MC es el escenario «S4 · Delgadillo se desmarca de Lemus y gestiona agua municipal». El efecto de los escenarios de agua sobre la alcaldía y la diputación local está en la página «Simulación», sección «Escenarios».",
+   "evidencias": [
+    {
+     "fecha": "2026-10-07",
+     "hecho": "Agua negra y con mal olor «más sucia de lo que reconocen las autoridades» en al menos 475 colonias desde hace más de 9 meses; tras protestas, el gobierno aplicará tandeos.",
+     "fuente": "El Imparcial (elimparcial.com/mexico/2026/10/07/que-esta-pasando-en-guadalajara-...)",
+     "confianza": "alta"
+    },
+    {
+     "fecha": "2026-10-06",
+     "hecho": "Lemus anuncia recorte de hasta una cuarta parte del suministro durante seis meses mientras se hacen obras (acueducto bypass La Calera y ampliación de la Planta 1 de Miravalle). Descartó privatizar el SIAPA.",
+     "fuente": "La Jornada (jornada.com.mx/noticia/2026/10/06/estados/por-agua-contaminada-lemus-anuncia-recorte...)",
+     "confianza": "alta"
+    },
+    {
+     "fecha": "2026-03",
+     "hecho": "Hacia el 22-23 de marzo de 2026 (Día Mundial del Agua), tras denuncias de colectivos y vecinos por agua turbia, Lemus destituyó al director del SIAPA, Antonio Juárez Trueba. El cambio de director no redujo la percepción de la crisis. No es un hecho de octubre.",
+     "fuente": "UnoTV (unotv.com/estados/jalisco/crisis-de-agua-sucia-en-guadalajara-a-80-dias-del-inicio-del-mundial-2026/); nota de marzo de 2026, fecha inferida de la URL («a 80 días del inicio del Mundial», inaugurado el 11-jun-2026)",
+     "confianza": "media"
+    },
+    {
+     "fecha": "2026-10-06",
+     "hecho": "Convocatoria a mega marcha por el agua sucia el domingo 11-oct, 12:00 h, punto de reunión La Minerva, con destino a Casa Jalisco.",
+     "fuente": "UnoTV / Capital México (unotv.com/estados/jalisco/agua-sucia-en-guadalajara-convocan-a-megamarcha-ve-fecha-y-hora/)",
+     "confianza": "alta"
+    },
+    {
+     "fecha": "2026-10-05",
+     "hecho": "Tres bloqueos simultáneos el 5-oct (Av. Colón y Torres Bodet; Periférico Sur y 8 de Julio; López Mateos/Las Fuentes) con suspensión parcial de la Línea 1 del Tren Ligero; testimonios de vecinos («es pura defecación lo que nos dan de agua»), gasto de $800-1,200/mes en garrafones.",
+     "fuente": "La Silla Rota (lasillarota.com/estados/2026/10/5/es-pura-defecacion-lo-que-nos-dan-de-agua-531609.html)",
+     "confianza": "alta"
+    },
+    {
+     "fecha": "2026-10-06",
+     "hecho": "Índice de escalamiento propio 61/100 (escalamiento moderado-alto): 6 de 7 variables en ALTO (crecimiento de reportes, intensidad emocional, coordinación vecinal, cobertura mediática, participación de organizaciones, paso a protesta física). Pauta de Meta: Morena domina (27 de 53 anuncios con «SIAPA»/«agua puerca»).",
+     "fuente": "Reporte de inteligencia propio «Agua sucia en Guadalajara» V3/V4 (Biblioteca de Anuncios de Meta 8-jul a 5-oct)",
+     "confianza": "media"
+    }
+   ]
+  },
+  {
+   "tema": "DIAGNÓSTICO: MC en riesgo de perder Guadalajara",
+   "impacto": "alto",
+   "resumen": "El modelo ago-2026 (anterior al motor v8) proyectaba la alcaldía de GDL cayendo a Morena en 2027 (cifras vigentes por escenario en la página «Simulación», sección «Escenarios»), tras el 42.6% de Delgadillo en 2024. Pero Delgadillo rinde MUY por encima de su partido: 52% votaría por ella en reelección vs 19.3% de MC como partido (Massive Caller). Su activo personal es el escudo de MC. Morena perfila tres mujeres (Mery Pozos, Mariana Fernández, Itzul Barrera). MC explora alianza con PAN (resistencia notable del PAN).",
+   "evidencias": [
+    {
+     "fecha": "2026-07-27",
+     "hecho": "Diputada federal por el distrito 11, presidenta de la Comisión de Presupuesto en la Cámara de Diputados. Es la puntera morenista mejor posicionada rumbo a la alcaldía de Guadalajara 2027. Ha usado la crisis del agua como bandera de ataque contra la administración MC.",
+     "fuente": "Politico MX / La Encuesta.mx (polls.politico.mx/2026/07/27/mery-pozos-encabeza-preferencias-internas-de-morena-para-guadalajara/)",
+     "confianza": "alta"
+    },
+    {
+     "fecha": "2026-07-27",
+     "hecho": "Preferencia interna morenista: Merilyn Gómez Pozos 32.1%, Carlos Lomelí Bolaños 28.5%, Juan Alberto Salinas Macías 11.5%, María/Mariana Fernández Ramírez 10.2%, Carlos Ventura 9.5%, indecisos 8.2%. Ventaja de Pozos de 3.6 puntos sobre Lomelí. Levantamiento telefónico 20-22 jul 2026, 1,000 encuestas por municipio, margen ±3.5%, 95% confianza.",
+     "fuente": "La Encuesta.mx vía Politico MX (polls.politico.mx/2026/07/27/mery-pozos-encabeza-preferencias-internas-de-morena-para-guadalajara/)",
+     "confianza": "alta"
+    },
+    {
+     "fecha": "2026-08 (confirmación) / 2026-05-27 (GobernArte)",
+     "hecho": "Senador (electo 2024), empresario farmacéutico. Segundo lugar consistente en la interna morenista. A inicios de agosto 2026 confirmó que se registrará en el proceso interno de Morena para buscar la candidatura a la alcaldía de GDL. En encuestas GobernArte fue líder morenista (34.5% feb 2026, 45.1% may 2026).",
+     "fuente": "Milenio (milenio.com/politica/carlos-lomeli-destapa-intensiones-presidencia-guadalajara); GobernArte (gobernarte.com.mx)",
+     "confianza": "alta"
+    },
+    {
+     "fecha": "2026-05-05",
+     "hecho": "Aspirante morenista que lideró la interna en encuesta de Demoscopía Digital (may 2026): Chema Martínez 29.7%, Carlos Lomelí 17.3%, Mery Pozos 2.6%, Itzul Barrera 1.6%; 27.2% indeciso y 17.5% NS/NC. Su liderazgo NO es consistente con encuestas posteriores (jul 2026) donde Pozos y Lomelí encabezan; competencia interna aún abierta.",
+     "fuente": "Demoscopía Digital vía El Diario de Guadalajara / Revista Zócalo (eldiariodeguadalajara.mx/2026/05/05/...)",
+     "confianza": "media"
+    },
+    {
+     "fecha": "2026-07",
+     "hecho": "En la baraja de Morena para GDL también suenan: Itzul Barrera (diputada local), Mariana/María Fernández Ramírez, Juan Alberto Salinas Macías, Carlos Ventura, y se menciona a Padilla en columnas. Ninguno con posicionamiento competitivo frente a Pozos/Lomelí al corte.",
+     "fuente": "Marcatextos (marcatextos.com/guadalajara-2027-morena-con-merilyn-padilla-itzul-alguien-mas/); La Encuesta.mx",
+     "confianza": "media"
+    },
+    {
+     "fecha": "2026-05-27",
+     "hecho": "Intención por partido: Morena 35.1%, MC 25.3%, PAN 13.7%, PRI 10.4%, otros/indecisos 15.5%. Candidatos punteros por partido: Morena-Lomelí 45.1%, MC-Verónica Delgadillo 41.7%, PAN-Diana Araceli González 27.2%, PRI-Laura Haro 30.5%. Levantamiento 21-26 may 2026, 500 respuestas por municipio, app Odiseo AI, muestreo aleatorio estratificado, margen 2.5-3.7%, 95%.",
+     "fuente": "GobernArte (gobernarte.com.mx/alcaldias-rumbo-a-las-elecciones-2027-en-jalisco-27-de-mayo-2026/)",
+     "confianza": "alta"
+    },
+    {
+     "fecha": "2026-02-14",
+     "hecho": "Intención de voto alcaldía GDL: Morena 37.1%, MC 21.6%, PAN 13.7%, PRI 12.3%, indecisos 10.6%. Massive Caller, 600 encuestas por municipio, margen ±4.3%, campo 12 feb 2026. Nota: MC perdería Guadalajara y Zapopan ante Morena según este estudio.",
+     "fuente": "Massive Caller vía Politico MX (polls.politico.mx/2026/02/14/elecciones-2027-movimiento-ciudadano-perderia-guadalajara-y-zapopan-ante-morena/)",
+     "confianza": "alta"
+    },
+    {
+     "fecha": "2026-06-29",
+     "hecho": "RUBRUM publicó estudio de tendencias para el municipio de GDL. Campo 26 jun 2026, publicación 29 jun 2026, 1,000 entrevistas telefónicas automatizadas, margen ±3.8%, 95%. Los porcentajes exactos por partido/candidato están en el PDF descargable (ALC-GUADALAJARA-29JUN26.pdf), no transcritos en la página; requiere abrir el PDF para el dato numérico.",
+     "fuente": "RUBRUM (rubrum.info/tendencias-en-la-eleccion-del-municipio-de-guadalajara-jalisco-rumbo-al-2027-junio-2026/)",
+     "confianza": "media"
+    }
+   ]
+  },
+  {
+   "tema": "PERFIL Y GESTIÓN DE VERÓNICA DELGADILLO",
+   "impacto": "alto",
+   "resumen": "Verónica Delgadillo llega a mediados de 2026 como una alcaldesa fuerte pero con flancos crecientes. Su capital político descansa en (a) una trayectoria legislativa sólida y homogénea en MC (local→federal→Senado→GDL) que la hizo la primera mujer alcaldesa de Guadalajara en 2024, y (b) un consistente «efecto candidata» que supera a su partido: en GDL su intención de voto personal (52%, Massive Caller jul-2025) rebasa con mucho la preferencia por MC (19.3% vs 43.3% de Morena), lo que la vuelve la carta natural e insustituible de MC rumbo a 2027.",
+   "evidencias": [
+    {
+     "fecha": "2024-06-29",
+     "hecho": "Trayectoria: Verónica Delgadillo García (n. Guadalajara), militante de Movimiento Ciudadano. Estudió Ciencias de la Comunicación en el ITESM Campus Guadalajara (2000-2005) y máster en Gestión de la Comunicación Política y Electoral por la Universidad Autónoma de Barcelona (2019-2020). Carrera legislativa completa en MC: diputada local (2012-2015), diputada federal (2015-2018) y senadora por Jalisco (2018-2024), donde fue vicepresidenta del Senado.",
+     "fuente": "Wikipedia / SDP Noticias / Publimetro (es.wikipedia.org/wiki/Verónica_Delgadillo_García; sdpnoticias.com/estados/jalisco/quien-es-veronica-delgadillo-presidenta-municipal-de-guadalajara)",
+     "confianza": "alta"
+    },
+    {
+     "fecha": "2024-09-30",
+     "hecho": "Elección 2024: Ganó la alcaldía de Guadalajara en la jornada del 2 de junio de 2024 con MC, convirtiéndose en la primera mujer presidenta municipal de GDL en casi 500 años. El resultado (~42.6% referido por el cliente) fue ratificado por el Tribunal Electoral de Jalisco, que desestimó las impugnaciones de Morena. Tomó protesta el 30 de septiembre de 2024 para el periodo 2024-2027.",
+     "fuente": "El Universal / Infobae / El Respetable / guadalajara.gob.mx (eluniversal.com.mx/nacion/tribunal-electoral-de-jalisco-ratifica-triunfos...; elrespetable.com/2024/09/30/veronica-delgadillo-asume...)",
+     "confianza": "alta"
+    },
+    {
+     "fecha": "2026-07",
+     "hecho": "Aprobación - evolución: Serie por encuestadora: SRC ene-2025 65.9% (1er lugar Jalisco); Massive Caller jul-2025 52% de intención de voto por ella si busca reelección (vs 19.3% para MC como partido); Demoscopia Digital dic-2025 62.9% (3er lugar Jalisco, n=1,000, ±3.8%); Demoscopia Digital feb-2026 57.2% (9ª posición entre alcaldes de MC nacionales); Demoscopia Digital jul-2026 66.3% aprobación nacional (2º lugar entre alcaldes de Jalisco). Tendencia: fuerte pero volátil según encuestadora/metodología; repunte hacia mediados de 2026.",
+     "fuente": "SRC (src.org.mx); Massive Caller vía PollsMX (polls.politico.mx/2025/07/14); Demoscopia Digital vía PollsMX (polls.politico.mx/2026/01/08) y demoscopiadigital.com/aprobacionEstado/jalisco",
+     "confianza": "media"
+    },
+    {
+     "fecha": "2026-07",
+     "hecho": "Aprobación - dato vigente: 66.3% de aprobación (Demoscopia Digital, julio 2026), 2º lugar entre alcaldes de Jalisco. Nota de confianza: la cifra de julio 2026 proviene de la ficha en vivo del sitio de Demoscopia; recomendable revalidar con reporte publicado formal antes de citar como definitiva.",
+     "fuente": "Demoscopia Digital (demoscopiadigital.com/aprobacionEstado/jalisco)",
+     "confianza": "media"
+    },
+    {
+     "fecha": "2026-02-25",
+     "hecho": "Gestión - obra pública: Presentó el Plan de Obra Pública 2026 con inversión de 2,200 millones de pesos ante la CMIC, bajo el lema «Guadalajara, la Ciudad que te Cuida». Más del 42% (939 mdp) se destina a pavimentación y mantenimiento de vialidades estratégicas, con énfasis en la zona oriente de alta demanda social. Cuatro ejes: policía de proximidad, mejores espacios/servicios, política social de cuidados y corresponsabilidad ciudadana.",
+     "fuente": "La Crónica / El Informador / guadalajara.gob.mx (cronica.com.mx/jalisco/guadalajara/2026/02/25/vero-delgadillo-presenta-plan-de-obra-publica-2026...)",
+     "confianza": "alta"
+    },
+    {
+     "fecha": "2026",
+     "hecho": "Gestión - basura (programa insignia): Remunicipalización de la recolección de basura tras 30 años de concesión a Caabsa Eagle. Adquisición de 160 camiones nuevos (banderazo desde la Glorieta Minerva), operando 185 rutas en 441 colonias para recolección diaria. Estrategia acompañada del «Pacto Limpia Guadalajara», «Escuadrones/Guardianes de la Limpieza» (11 escuadras de 31 personas, solicitables por línea 070) y refuerzo contra dengue. Reto señalado por analistas: sostenibilidad a largo plazo.",
+     "fuente": "Reporte Indigo / La Jornada / El Informador / Conciencia Pública (reporteindigo.com/reporte/guadalajara-control-recoleccion-basura-160-camiones-nuevos)",
+     "confianza": "alta"
+    },
+    {
+     "fecha": "2026-07-27",
+     "hecho": "Flanco - agua/SIAPA: Guadalajara asumió liderazgo en la crisis hídrica reclamando a la federación. Aprobó Programa de Mejoramiento y Gestión del Agua (ampliado a ~50-60 mdp) que reparte filtros, pastillas de cloro y tinacos en colonias con agua de mala calidad, con seguimiento a reportes en coordinación con SIAPA. A nivel estatal se impulsa el descuento de 80% en la tarifa («Sin agua limpia, no hay pago») para colonias con agua sucia; requiere decreto del gobernador en el periódico oficial; SIAPA y la CEDHJ tienen 8 días para listar colonias y la Junta de Gobierno de SIAPA 15 días para aprobar el padrón. Morena (Marta Arizmendi) advirtió que vigilará su aplicación.",
+     "fuente": "Quadratín / El Informador / La Crónica / Conciencia Pública (cronica.com.mx/.../2026/07/27/advierte-morena-que-vigilara-la-aplicacion-del-descuento-de-80...; concienciapublica.com.mx/2026/07/26/guerra-de-narrativas-por-crisis-del-agua...)",
+     "confianza": "alta"
+    },
+    {
+     "fecha": "2026-08-09",
+     "hecho": "Flanco - oposición interna en Cabildo: Ruptura con el regidor morenista José María «Chema» Martínez (agosto 2026, a 22 meses de gestión). Acusa: nula comunicación (lo dejó «en visto»), censura de micrófonos en sesiones, bloqueo de propuestas de Morena que luego se adoptan con otro nombre, y contratación de +1,000 empleados eventuales «Guardianes de Guadalajara» con fines políticos. Presupuesto municipal >13,000 mdp con ~50% en nómina y +13,000 empleados. Sobre agua denuncia enfermedades gastrointestinales/de piel y materia fecal en el suministro; SIAPA «colapsado».",
+     "fuente": "Semanario Conciencia Pública (concienciapublica.com.mx/2026/08/09/ruptura-chema-martinez-vero-delgadillo/)",
+     "confianza": "media"
+    },
+    {
+     "fecha": "2026-04-19",
+     "hecho": "Relación con Lemus y MC estatal: Alineación estrecha con el gobernador Pablo Lemus (MC), electo en 2024: aparecieron juntos convocando a «defender los triunfos electorales» (ago-2024) y sus victorias fueron ratificadas en bloque por el Tribunal Electoral. La coordinación GDL-estado es visible en la agenda del agua (reclamo conjunto a la federación) y el Mundial 2026. Dentro de MC estatal Delgadillo es figura consolidada sin rivales internos relevantes.",
+     "fuente": "El Informador / El Universal / Movimiento Ciudadano (informador.mx/jalisco/Pablo-Lemus-y-Vero-Delgadillo-convocan-a-defender-triunfos-electorales-20240816-0019.html)",
+     "confianza": "alta"
+    },
+    {
+     "fecha": "2026-04-19",
+     "hecho": "Reelección 2027 - fuerza: Perfilada como «candidata natural» de MC a la reelección 2027, sin retadores internos serios, con estabilidad para consolidar y buscar «seis años más». Fortaleza personal por encima de su partido: Massive Caller (jul-2025) mostró 52% dispuesto a votar por ella pese a que Morena lideraba preferencia partidista en GDL con 43.3% vs 19.3% de MC. Morena perfila tres mujeres (Mery Pozos, Mariana Fernández Ramírez, Itzul Barrera). MC explora alianza opositora con PAN y PRI, con «resistencia notable» del PAN.",
+     "fuente": "Conciencia Pública / Massive Caller vía PollsMX (concienciapublica.com.mx/2026/04/19/el-tablero-politico-de-jalisco-rumbo-a-2027...; polls.politico.mx/2025/07/14)",
+     "confianza": "media"
+    },
+    {
+     "fecha": "2026-04-19",
+     "hecho": "Reelección 2027 - confirmación: No hay declaración pública formal de Delgadillo confirmando que competirá por la reelección al corte de esta investigación (publicado al 7-ago-2026). Su candidatura se da por descontada en el análisis político estatal, pero como expectativa/rumor de posicionamiento, no como anuncio oficial. Etiquetar como confianza baja hasta anuncio explícito.",
+     "fuente": "Conciencia Pública (concienciapublica.com.mx/2026/04/19/el-tablero-politico-de-jalisco-rumbo-a-2027...)",
+     "confianza": "baja"
+    }
+   ]
+  },
+  {
+   "tema": "ESTRUCTURA DEMOGRÁFICA FINA: el voto por edad dentro de cada clima",
+   "impacto": "medio",
+   "resumen": "La segmentación se afinó de 3 bandas gruesas (de 18 a 24, de 25 a 59 y de 60 o más años) a 6 bandas (18-24, 25-29, 30-39, 40-49, 50-64, 65+) usando la lista nominal quinquenal REAL del padrón INE por sección (corte 3-jul-2025, 1,230,095 electores en la lista nominal de Guadalajara). Esto separa comportamientos que antes quedaban fundidos: MC sobre-rinde fuerte en el voto joven-adulto (18-24 y 25-29) y se hunde con la edad, mientras Morena (sola) sube de forma monótona hacia los mayores. En un clima competido, las mujeres pasan de ~48% MC en 18-24 a ~11% MC en 65+ (diferencia de ~37 puntos que antes no se veía). Reparto de la lista nominal: 18-24 12.9% · 25-29 10.2% · 30-39 20.2% · 40-49 17.0% · 50-64 22.4% · 65+ 17.3%.",
+   "evidencias": [
+    {
+     "fecha": "2025-07-03",
+     "hecho": "Lista nominal de Guadalajara por banda fina (padrón INE): 18-24 158,259 (12.9%), 25-29 126,059 (10.2%), 30-39 248,602 (20.2%), 40-49 209,617 (17.0%), 50-64 274,981 (22.4%), 65+ 212,577 (17.3%). La suma por bandas coincide exactamente con la lista nominal total (control de integridad).",
+     "fuente": "INE, padrón/lista nominal por sección con edad quinquenal, corte 3-jul-2025",
+     "confianza": "alta"
+    },
+    {
+     "fecha": "2025-07-03",
+     "hecho": "Composición por género de la lista nominal: mujeres 640,566 (52.1%), hombres 589,505 (47.9%). Población no binaria registrada: 24 personas (0.002%), por debajo del umbral de k-anonimato para segmentar voto (se documenta, no genera agentes).",
+     "fuente": "INE, padrón/lista nominal por sección, corte 3-jul-2025",
+     "confianza": "alta"
+    },
+    {
+     "fecha": "2026-10-07",
+     "hecho": "Gradiente de intención por banda (estimación propia por interpolación monótona de las anclas v4, ajustada paso a paso al voto oficial de cada clúster): MC decae de 2.33 a 0.35 del voto joven al mayor; Morena (sola) sube de 0.87 a 1.14. El agregado de los agentes finos reproduce el voto oficial del clúster con desviación <0.05 pp (control de calibración).",
+     "fuente": "Motor propio GDL (agentes = clúster x banda INE x género)",
+     "confianza": "media"
+    }
+   ]
+  }
+ ],
+ "sintesis": "Investigación al 7-oct-2026. El eje de la intermedia 2027 en Guadalajara es la crisis del agua sucia, que castiga al gobierno MC: 475 colonias afectadas desde hace más de 9 meses, tandeo de 6 meses anunciado el 6-oct y mega marcha el 11-oct. El modelo lleva la alcaldía de un empate entre MC y Morena y aliados a una ventaja de Morena y aliados en los escenarios de agua dura (cifras vigentes en la página «Simulación», sección «Escenarios»); el D8 de la diputación local es el epicentro de reportes. El principal amortiguador es el «efecto Delgadillo»: el escenario «S4 · Delgadillo se desmarca de Lemus y gestiona agua municipal».",
+ "recomendaciones": [
+  "URGENTE (semana del 11-oct): preparar la postura municipal ante la mega marcha del 11-oct. Delgadillo debe aparecer gestionando agua municipal y separada de la responsabilidad estatal/SIAPA (Lemus), no a la defensiva. El escenario «S4 · Delgadillo se desmarca de Lemus y gestiona agua municipal» es el más favorable para MC en la alcaldía entre los del modelo (cifras vigentes en la página «Simulación», sección «Escenarios»).",
+  "Blindar la narrativa del agua: separar públicamente lo que es responsabilidad de SIAPA (organismo intermunicipal/estatal) de lo municipal, y capitalizar las medidas propias (filtros, tinacos, descuento 80%) como acción concreta frente a la inacción federal, antes de que Morena fije el marco de «agua sucia = mala gestión de Delgadillo».",
+  "Verificar y estandarizar la cifra de aprobación vigente antes de usarla en cualquier entregable: la serie es volátil por metodología (Demoscopia, Massive Caller, SRC). Citar siempre encuestadora, fecha, n y margen de error; contrastar el 66.3% de jul-2026 (ficha en vivo) contra un reporte publicado formal.",
+  "Explotar el «efecto candidata» en el diseño de 2027: dada la brecha entre su intención de voto personal (52%) y la de MC (19.3%) en GDL, la estrategia debe personalizarse en ella más que en el partido, especialmente frente a un Morena competitivo a nivel partidista (43.3%).",
+  "Monitorear el conflicto en Cabildo con Chema Martínez y Morena: las acusaciones de nómina abultada, empleados eventuales «Guardianes» y censura de micrófonos son munición reputacional de cara a 2027; conviene una respuesta de transparencia sobre plantilla y gasto.",
+  "Confirmar el estatus real de la reelección: rastrear declaraciones directas de Delgadillo y tiempos legales (registro, licencia) antes de afirmar que va por la reelección; hoy es expectativa política, no anuncio.",
+  "Mapear la variable de alianza opositora MC-PAN-PRI: la «resistencia notable» del PAN condiciona el escenario 2027 en GDL; es un cruce estratégico relevante a vigilar.",
+  "Para el tablero MC: usar como fuentes primarias vigentes La Encuesta.mx (27-jul-2026, interna Morena), GobernArte (27-may-2026, partido y candidatos), Massive Caller vía Politico MX (14-feb-2026) y RUBRUM (29-jun-2026). Etiquetar explícitamente Morena ~35-37% vs MC ~21-27% como el escenario base adverso para MC.",
+  "DESCARTAR o marcar en rojo los careos de El Universal (Chema 38.5/Delgadillo 36.4 y 35/32/19): son de mayo-julio 2024 (elección pasada), no de 2027. Incluirlos como dato vigente sería un error grave en el tablero.",
+  "Abrir el PDF de RUBRUM (ALC-GUADALAJARA-29JUN26.pdf, páginas 2-6) para extraer los porcentajes exactos por partido/candidato que no aparecen transcritos en la página web; es la pieza faltante de datos numéricos vigentes.",
+  "Modelar la crisis del agua/SIAPA como la principal vulnerabilidad de MC y vector de ataque de Morena (Mery Pozos ya la usa: «es un crimen», «8 años de abandono»). Cruzar los 5,606 reportes de fallas y el estudio de contaminación por sección/colonia con el tablero territorial de MC.",
+  "Tratar el calendario como ventaja para MC: el retraso de Morena a fin de año 2026 (por el Mundial) le da a MC/Delgadillo meses de anticipación para consolidar candidatura y narrativa antes de que Morena defina su carta.",
+  "Recabar la fuente primaria abierta de la probabilidad de reelección de Delgadillo (61%) y la aprobación de su gobierno; la nota de Mural es de pago (no se pudo abrir). Mantener ese dato como confianza baja hasta verificar metodología y casa encuestadora.",
+  "Monitorear la definición interna de Morena entre Pozos y Lomelí: la identidad del rival cambia el escenario para MC (Pozos aporta la bandera del agua y perfil legislativo; Lomelí aporta recursos y liderazgo previo en encuestas GobernArte)."
+ ]
+}

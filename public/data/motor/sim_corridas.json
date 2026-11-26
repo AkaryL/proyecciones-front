@@ -1,0 +1,2698 @@
+{
+ "fecha": "2026-11-03",
+ "datos_al": "Datos al 3-nov-2026",
+ "tipo": "Lectura automática: resume con reglas fijas los números del modelo; no es una deliberación de IA",
+ "corridas": [
+  {
+   "cluster": "D8-C1",
+   "dl": "8",
+   "distrito": "D8",
+   "n_secciones": 29,
+   "lista_nominal": 32388,
+   "escolaridad": "alta escolaridad",
+   "agua": 40,
+   "rol": "zona fuerte de MC",
+   "rol_clave": "mc",
+   "margen_s0": 54.6,
+   "margen_s1": 54.0,
+   "mc_a_s0": 68.0,
+   "mor_a_s0": 13.4,
+   "mc_a_s1": 67.6,
+   "mor_a_s1": 13.6,
+   "mc_d_s0": 59.5,
+   "mor_d_s0": 12.1,
+   "mc_d_s1": 57.2,
+   "mor_d_s1": 12.9,
+   "mc_f_s1": 34.0,
+   "mor_f_s1": 9.3,
+   "pp_a_s0": 18.7,
+   "pp_a_s1": 18.7,
+   "pp_d_s0": 28.3,
+   "pp_d_s1": 29.4,
+   "pp_f_s1": 56.4,
+   "brecha_alc_dip_s0": 8.5,
+   "brecha_alc_dip_s1": 10.4,
+   "mejor": {
+    "id": "S4",
+    "ids": [
+     "S4"
+    ],
+    "rotulo": "S4 · Delgadillo se desmarca de Lemus y gestiona agua municipal",
+    "dif_mc_vs_s1": 3.2,
+    "mc_a": 70.8,
+    "igual_que_ciudad": true
+   },
+   "peor": {
+    "id": "S8",
+    "ids": [
+     "S8"
+    ],
+    "rotulo": "S8 · Castigo por abstención",
+    "dif_mc_vs_s1": -4.4,
+    "mc_a": 63.2,
+    "igual_que_ciudad": false
+   },
+   "lineas": [
+    {
+     "rotulo": "Alcaldía · S1 · Inercia (central)",
+     "texto": "MC 67.6 %, Coalición PAN-PRI 18.7 %, Coalición de Morena 13.6 %. MC va primero y le saca 48.9 pp a Coalición PAN-PRI, y 54.0 pp a Coalición de Morena.",
+     "boleta": "ayun",
+     "escenario": "S1"
+    },
+    {
+     "rotulo": "Alcaldía · S0 · sin la crisis de octubre (referencia, no posible hoy)",
+     "texto": "MC 68.0 %, Coalición PAN-PRI 18.7 %, Coalición de Morena 13.4 %. MC va primero y le saca 49.3 pp a Coalición PAN-PRI, y 54.6 pp a Coalición de Morena.",
+     "boleta": "ayun",
+     "escenario": "S0"
+    },
+    {
+     "rotulo": "Dip. local · S1 · Inercia (central)",
+     "texto": "MC 57.2 %, Coalición PAN-PRI 29.4 %, Coalición de Morena 12.9 %. MC va primero y le saca 27.8 pp a Coalición PAN-PRI, y 44.3 pp a Coalición de Morena. MC tiene 10.4 pp menos que en la alcaldía; en S0 la diferencia ya era de 8.5 pp.",
+     "boleta": "dip",
+     "escenario": "S1"
+    },
+    {
+     "rotulo": "Dip. federal (preliminar) · S1 · Inercia (central)",
+     "texto": "Coalición PAN-PRI 56.4 %, MC 34.0 %, Coalición de Morena 9.3 %. Coalición PAN-PRI va primero y le saca 22.4 pp a MC, y 47.1 pp a Coalición de Morena.",
+     "boleta": "fed",
+     "escenario": "S1"
+    },
+    {
+     "rotulo": "Alcaldía · entre escenarios, frente a S1 · Inercia (central)",
+     "boleta": "ayun",
+     "texto": "Lo que más ayuda a MC aquí: S4 · Delgadillo se desmarca de Lemus y gestiona agua municipal; MC pasaría de 67.6 % a 70.8 % (+3.2 pp). Lo que más le resta: S8 · Castigo por abstención; MC pasaría de 67.6 % a 63.2 % (−4.4 pp)."
+    }
+   ],
+   "simulacion": {
+    "dictamen": "D8-C1 · zona fuerte de MC · 29 secciones · lista nominal 32,388 · alta escolaridad · exposición al agua 40/100. Alcaldía · S1 · Inercia (central): MC 67.6 %, Coalición PAN-PRI 18.7 %, Coalición de Morena 13.6 %. MC va primero y le saca 48.9 pp a Coalición PAN-PRI, y 54.0 pp a Coalición de Morena. Alcaldía · S0 · sin la crisis de octubre (referencia, no posible hoy): MC 68.0 %, Coalición PAN-PRI 18.7 %, Coalición de Morena 13.4 %. MC va primero y le saca 49.3 pp a Coalición PAN-PRI, y 54.6 pp a Coalición de Morena. Dip. local · S1 · Inercia (central): MC 57.2 %, Coalición PAN-PRI 29.4 %, Coalición de Morena 12.9 %. MC va primero y le saca 27.8 pp a Coalición PAN-PRI, y 44.3 pp a Coalición de Morena. MC tiene 10.4 pp menos que en la alcaldía; en S0 la diferencia ya era de 8.5 pp. Dip. federal (preliminar) · S1 · Inercia (central): Coalición PAN-PRI 56.4 %, MC 34.0 %, Coalición de Morena 9.3 %. Coalición PAN-PRI va primero y le saca 22.4 pp a MC, y 47.1 pp a Coalición de Morena. Alcaldía · entre escenarios, frente a S1 · Inercia (central): Lo que más ayuda a MC aquí: S4 · Delgadillo se desmarca de Lemus y gestiona agua municipal; MC pasaría de 67.6 % a 70.8 % (+3.2 pp). Lo que más le resta: S8 · Castigo por abstención; MC pasaría de 67.6 % a 63.2 % (−4.4 pp).",
+    "escenario_riesgo": "S8 · Castigo por abstención: MC 63.2 % en la alcaldía (−4.4 pp frente a S1 · Inercia (central)). Aquí resta más que S11 · Peor caso (−4.0 pp), que es el de mayor riesgo en toda la ciudad."
+   }
+  },
+  {
+   "cluster": "D8-C2",
+   "dl": "8",
+   "distrito": "D8",
+   "n_secciones": 51,
+   "lista_nominal": 48639,
+   "escolaridad": "alta escolaridad",
+   "agua": 55,
+   "rol": "zona fuerte de MC",
+   "rol_clave": "mc",
+   "margen_s0": 38.3,
+   "margen_s1": 37.7,
+   "mc_a_s0": 57.7,
+   "mor_a_s0": 19.4,
+   "mc_a_s1": 57.3,
+   "mor_a_s1": 19.6,
+   "mc_d_s0": 48.8,
+   "mor_d_s0": 19.0,
+   "mc_d_s1": 46.3,
+   "mor_d_s1": 20.0,
+   "mc_f_s1": 29.7,
+   "mor_f_s1": 15.6,
+   "pp_a_s0": 22.8,
+   "pp_a_s1": 22.7,
+   "pp_d_s0": 32.2,
+   "pp_d_s1": 33.3,
+   "pp_f_s1": 54.4,
+   "brecha_alc_dip_s0": 8.9,
+   "brecha_alc_dip_s1": 11.0,
+   "mejor": {
+    "id": "S4",
+    "ids": [
+     "S4"
+    ],
+    "rotulo": "S4 · Delgadillo se desmarca de Lemus y gestiona agua municipal",
+    "dif_mc_vs_s1": 4.1,
+    "mc_a": 61.4,
+    "igual_que_ciudad": true
+   },
+   "peor": {
+    "id": "S11",
+    "ids": [
+     "S11"
+    ],
+    "rotulo": "S11 · Peor caso",
+    "dif_mc_vs_s1": -4.2,
+    "mc_a": 53.1,
+    "igual_que_ciudad": true
+   },
+   "lineas": [
+    {
+     "rotulo": "Alcaldía · S1 · Inercia (central)",
+     "texto": "MC 57.3 %, Coalición PAN-PRI 22.7 %, Coalición de Morena 19.6 %. MC va primero y le saca 34.6 pp a Coalición PAN-PRI, y 37.7 pp a Coalición de Morena.",
+     "boleta": "ayun",
+     "escenario": "S1"
+    },
+    {
+     "rotulo": "Alcaldía · S0 · sin la crisis de octubre (referencia, no posible hoy)",
+     "texto": "MC 57.7 %, Coalición PAN-PRI 22.8 %, Coalición de Morena 19.4 %. MC va primero y le saca 34.9 pp a Coalición PAN-PRI, y 38.3 pp a Coalición de Morena.",
+     "boleta": "ayun",
+     "escenario": "S0"
+    },
+    {
+     "rotulo": "Dip. local · S1 · Inercia (central)",
+     "texto": "MC 46.3 %, Coalición PAN-PRI 33.3 %, Coalición de Morena 20.0 %. MC va primero y le saca 13.0 pp a Coalición PAN-PRI, y 26.3 pp a Coalición de Morena. MC tiene 11.0 pp menos que en la alcaldía; en S0 la diferencia ya era de 8.9 pp.",
+     "boleta": "dip",
+     "escenario": "S1"
+    },
+    {
+     "rotulo": "Dip. federal (preliminar) · S1 · Inercia (central)",
+     "texto": "Coalición PAN-PRI 54.4 %, MC 29.7 %, Coalición de Morena 15.6 %. Coalición PAN-PRI va primero y le saca 24.7 pp a MC, y 38.8 pp a Coalición de Morena.",
+     "boleta": "fed",
+     "escenario": "S1"
+    },
+    {
+     "rotulo": "Alcaldía · entre escenarios, frente a S1 · Inercia (central)",
+     "boleta": "ayun",
+     "texto": "Lo que más ayuda a MC aquí: S4 · Delgadillo se desmarca de Lemus y gestiona agua municipal; MC pasaría de 57.3 % a 61.4 % (+4.1 pp). Lo que más le resta: S11 · Peor caso; MC pasaría de 57.3 % a 53.1 % (−4.2 pp)."
+    }
+   ],
+   "simulacion": {
+    "dictamen": "D8-C2 · zona fuerte de MC · 51 secciones · lista nominal 48,639 · alta escolaridad · exposición al agua 55/100. Alcaldía · S1 · Inercia (central): MC 57.3 %, Coalición PAN-PRI 22.7 %, Coalición de Morena 19.6 %. MC va primero y le saca 34.6 pp a Coalición PAN-PRI, y 37.7 pp a Coalición de Morena. Alcaldía · S0 · sin la crisis de octubre (referencia, no posible hoy): MC 57.7 %, Coalición PAN-PRI 22.8 %, Coalición de Morena 19.4 %. MC va primero y le saca 34.9 pp a Coalición PAN-PRI, y 38.3 pp a Coalición de Morena. Dip. local · S1 · Inercia (central): MC 46.3 %, Coalición PAN-PRI 33.3 %, Coalición de Morena 20.0 %. MC va primero y le saca 13.0 pp a Coalición PAN-PRI, y 26.3 pp a Coalición de Morena. MC tiene 11.0 pp menos que en la alcaldía; en S0 la diferencia ya era de 8.9 pp. Dip. federal (preliminar) · S1 · Inercia (central): Coalición PAN-PRI 54.4 %, MC 29.7 %, Coalición de Morena 15.6 %. Coalición PAN-PRI va primero y le saca 24.7 pp a MC, y 38.8 pp a Coalición de Morena. Alcaldía · entre escenarios, frente a S1 · Inercia (central): Lo que más ayuda a MC aquí: S4 · Delgadillo se desmarca de Lemus y gestiona agua municipal; MC pasaría de 57.3 % a 61.4 % (+4.1 pp). Lo que más le resta: S11 · Peor caso; MC pasaría de 57.3 % a 53.1 % (−4.2 pp)."
+   }
+  },
+  {
+   "cluster": "D8-C3",
+   "dl": "8",
+   "distrito": "D8",
+   "n_secciones": 48,
+   "lista_nominal": 55118,
+   "escolaridad": "alta escolaridad",
+   "agua": 42,
+   "rol": "zona fuerte de MC",
+   "rol_clave": "mc",
+   "margen_s0": 16.8,
+   "margen_s1": 15.9,
+   "mc_a_s0": 47.7,
+   "mor_a_s0": 30.9,
+   "mc_a_s1": 47.1,
+   "mor_a_s1": 31.2,
+   "mc_d_s0": 42.3,
+   "mor_d_s0": 30.2,
+   "mc_d_s1": 39.5,
+   "mor_d_s1": 31.6,
+   "mc_f_s1": 30.2,
+   "mor_f_s1": 28.0,
+   "pp_a_s0": 21.3,
+   "pp_a_s1": 21.4,
+   "pp_d_s0": 27.4,
+   "pp_d_s1": 28.5,
+   "pp_f_s1": 41.5,
+   "brecha_alc_dip_s0": 5.4,
+   "brecha_alc_dip_s1": 7.6,
+   "mejor": {
+    "id": "S4",
+    "ids": [
+     "S4"
+    ],
+    "rotulo": "S4 · Delgadillo se desmarca de Lemus y gestiona agua municipal",
+    "dif_mc_vs_s1": 4.4,
+    "mc_a": 51.5,
+    "igual_que_ciudad": true
+   },
+   "peor": {
+    "id": "S11",
+    "ids": [
+     "S11"
+    ],
+    "rotulo": "S11 · Peor caso",
+    "dif_mc_vs_s1": -4.3,
+    "mc_a": 42.8,
+    "igual_que_ciudad": true
+   },
+   "lineas": [
+    {
+     "rotulo": "Alcaldía · S1 · Inercia (central)",
+     "texto": "MC 47.1 %, Coalición de Morena 31.2 %, Coalición PAN-PRI 21.4 %. MC va primero y le saca 15.9 pp a Coalición de Morena.",
+     "boleta": "ayun",
+     "escenario": "S1"
+    },
+    {
+     "rotulo": "Alcaldía · S0 · sin la crisis de octubre (referencia, no posible hoy)",
+     "texto": "MC 47.7 %, Coalición de Morena 30.9 %, Coalición PAN-PRI 21.3 %. MC va primero y le saca 16.8 pp a Coalición de Morena.",
+     "boleta": "ayun",
+     "escenario": "S0"
+    },
+    {
+     "rotulo": "Dip. local · S1 · Inercia (central)",
+     "texto": "MC 39.5 %, Coalición de Morena 31.6 %, Coalición PAN-PRI 28.5 %. MC va primero y le saca 7.9 pp a Coalición de Morena. MC tiene 7.6 pp menos que en la alcaldía; en S0 la diferencia ya era de 5.4 pp.",
+     "boleta": "dip",
+     "escenario": "S1"
+    },
+    {
+     "rotulo": "Dip. federal (preliminar) · S1 · Inercia (central)",
+     "texto": "Coalición PAN-PRI 41.5 %, MC 30.2 %, Coalición de Morena 28.0 %. Coalición PAN-PRI va primero y le saca 11.3 pp a MC, y 13.5 pp a Coalición de Morena.",
+     "boleta": "fed",
+     "escenario": "S1"
+    },
+    {
+     "rotulo": "Alcaldía · entre escenarios, frente a S1 · Inercia (central)",
+     "boleta": "ayun",
+     "texto": "Lo que más ayuda a MC aquí: S4 · Delgadillo se desmarca de Lemus y gestiona agua municipal; MC pasaría de 47.1 % a 51.5 % (+4.4 pp). Lo que más le resta: S11 · Peor caso; MC pasaría de 47.1 % a 42.8 % (−4.3 pp)."
+    }
+   ],
+   "simulacion": {
+    "dictamen": "D8-C3 · zona fuerte de MC · 48 secciones · lista nominal 55,118 · alta escolaridad · exposición al agua 42/100. Alcaldía · S1 · Inercia (central): MC 47.1 %, Coalición de Morena 31.2 %, Coalición PAN-PRI 21.4 %. MC va primero y le saca 15.9 pp a Coalición de Morena. Alcaldía · S0 · sin la crisis de octubre (referencia, no posible hoy): MC 47.7 %, Coalición de Morena 30.9 %, Coalición PAN-PRI 21.3 %. MC va primero y le saca 16.8 pp a Coalición de Morena. Dip. local · S1 · Inercia (central): MC 39.5 %, Coalición de Morena 31.6 %, Coalición PAN-PRI 28.5 %. MC va primero y le saca 7.9 pp a Coalición de Morena. MC tiene 7.6 pp menos que en la alcaldía; en S0 la diferencia ya era de 5.4 pp. Dip. federal (preliminar) · S1 · Inercia (central): Coalición PAN-PRI 41.5 %, MC 30.2 %, Coalición de Morena 28.0 %. Coalición PAN-PRI va primero y le saca 11.3 pp a MC, y 13.5 pp a Coalición de Morena. Alcaldía · entre escenarios, frente a S1 · Inercia (central): Lo que más ayuda a MC aquí: S4 · Delgadillo se desmarca de Lemus y gestiona agua municipal; MC pasaría de 47.1 % a 51.5 % (+4.4 pp). Lo que más le resta: S11 · Peor caso; MC pasaría de 47.1 % a 42.8 % (−4.3 pp)."
+   }
+  },
+  {
+   "cluster": "D8-C4",
+   "dl": "8",
+   "distrito": "D8",
+   "n_secciones": 49,
+   "lista_nominal": 39768,
+   "escolaridad": "alta escolaridad",
+   "agua": 81,
+   "rol": "zona fuerte de MC",
+   "rol_clave": "mc",
+   "margen_s0": 13.1,
+   "margen_s1": 11.5,
+   "mc_a_s0": 45.7,
+   "mor_a_s0": 32.6,
+   "mc_a_s1": 44.6,
+   "mor_a_s1": 33.1,
+   "mc_d_s0": 39.2,
+   "mor_d_s0": 32.6,
+   "mc_d_s1": 35.4,
+   "mor_d_s1": 34.4,
+   "mc_f_s1": 27.6,
+   "mor_f_s1": 30.1,
+   "pp_a_s0": 21.7,
+   "pp_a_s1": 21.9,
+   "pp_d_s0": 28.2,
+   "pp_d_s1": 29.6,
+   "pp_f_s1": 42.0,
+   "brecha_alc_dip_s0": 6.5,
+   "brecha_alc_dip_s1": 9.2,
+   "mejor": {
+    "id": "S4",
+    "ids": [
+     "S4"
+    ],
+    "rotulo": "S4 · Delgadillo se desmarca de Lemus y gestiona agua municipal",
+    "dif_mc_vs_s1": 5.0,
+    "mc_a": 49.6,
+    "igual_que_ciudad": true
+   },
+   "peor": {
+    "id": "S11",
+    "ids": [
+     "S11"
+    ],
+    "rotulo": "S11 · Peor caso",
+    "dif_mc_vs_s1": -6.8,
+    "mc_a": 37.8,
+    "igual_que_ciudad": true
+   },
+   "lineas": [
+    {
+     "rotulo": "Alcaldía · S1 · Inercia (central)",
+     "texto": "MC 44.6 %, Coalición de Morena 33.1 %, Coalición PAN-PRI 21.9 %. MC va primero y le saca 11.5 pp a Coalición de Morena.",
+     "boleta": "ayun",
+     "escenario": "S1"
+    },
+    {
+     "rotulo": "Alcaldía · S0 · sin la crisis de octubre (referencia, no posible hoy)",
+     "texto": "MC 45.7 %, Coalición de Morena 32.6 %, Coalición PAN-PRI 21.7 %. MC va primero y le saca 13.1 pp a Coalición de Morena.",
+     "boleta": "ayun",
+     "escenario": "S0"
+    },
+    {
+     "rotulo": "Dip. local · S1 · Inercia (central)",
+     "texto": "MC 35.4 %, Coalición de Morena 34.4 %, Coalición PAN-PRI 29.6 %. Parejo: diferencia 1.0 puntos entre MC y Coalición de Morena. MC tiene 9.2 pp menos que en la alcaldía; en S0 la diferencia ya era de 6.5 pp.",
+     "boleta": "dip",
+     "escenario": "S1"
+    },
+    {
+     "rotulo": "Dip. federal (preliminar) · S1 · Inercia (central)",
+     "texto": "Coalición PAN-PRI 42.0 %, Coalición de Morena 30.1 %, MC 27.6 %. Coalición PAN-PRI va primero y le saca 11.9 pp a Coalición de Morena, y 14.4 pp a MC.",
+     "boleta": "fed",
+     "escenario": "S1"
+    },
+    {
+     "rotulo": "Alcaldía · entre escenarios, frente a S1 · Inercia (central)",
+     "boleta": "ayun",
+     "texto": "Lo que más ayuda a MC aquí: S4 · Delgadillo se desmarca de Lemus y gestiona agua municipal; MC pasaría de 44.6 % a 49.6 % (+5.0 pp). Lo que más le resta: S11 · Peor caso; MC pasaría de 44.6 % a 37.8 % (−6.8 pp)."
+    }
+   ],
+   "simulacion": {
+    "dictamen": "D8-C4 · zona fuerte de MC · 49 secciones · lista nominal 39,768 · alta escolaridad · exposición al agua 81/100. Alcaldía · S1 · Inercia (central): MC 44.6 %, Coalición de Morena 33.1 %, Coalición PAN-PRI 21.9 %. MC va primero y le saca 11.5 pp a Coalición de Morena. Alcaldía · S0 · sin la crisis de octubre (referencia, no posible hoy): MC 45.7 %, Coalición de Morena 32.6 %, Coalición PAN-PRI 21.7 %. MC va primero y le saca 13.1 pp a Coalición de Morena. Dip. local · S1 · Inercia (central): MC 35.4 %, Coalición de Morena 34.4 %, Coalición PAN-PRI 29.6 %. Parejo: diferencia 1.0 puntos entre MC y Coalición de Morena. MC tiene 9.2 pp menos que en la alcaldía; en S0 la diferencia ya era de 6.5 pp. Dip. federal (preliminar) · S1 · Inercia (central): Coalición PAN-PRI 42.0 %, Coalición de Morena 30.1 %, MC 27.6 %. Coalición PAN-PRI va primero y le saca 11.9 pp a Coalición de Morena, y 14.4 pp a MC. Alcaldía · entre escenarios, frente a S1 · Inercia (central): Lo que más ayuda a MC aquí: S4 · Delgadillo se desmarca de Lemus y gestiona agua municipal; MC pasaría de 44.6 % a 49.6 % (+5.0 pp). Lo que más le resta: S11 · Peor caso; MC pasaría de 44.6 % a 37.8 % (−6.8 pp)."
+   }
+  },
+  {
+   "cluster": "D8-C5",
+   "dl": "8",
+   "distrito": "D8",
+   "n_secciones": 60,
+   "lista_nominal": 60747,
+   "escolaridad": "escolaridad media",
+   "agua": 52,
+   "rol": "zona competida",
+   "rol_clave": "competida",
+   "margen_s0": 5.7,
+   "margen_s1": 4.2,
+   "mc_a_s0": 43.0,
+   "mor_a_s0": 37.3,
+   "mc_a_s1": 42.0,
+   "mor_a_s1": 37.8,
+   "mc_d_s0": 38.2,
+   "mor_d_s0": 36.8,
+   "mc_d_s1": 34.6,
+   "mor_d_s1": 38.8,
+   "mc_f_s1": 29.2,
+   "mor_f_s1": 35.5,
+   "pp_a_s0": 19.7,
+   "pp_a_s1": 19.8,
+   "pp_d_s0": 24.9,
+   "pp_d_s1": 26.0,
+   "pp_f_s1": 35.1,
+   "brecha_alc_dip_s0": 4.8,
+   "brecha_alc_dip_s1": 7.4,
+   "mejor": {
+    "id": "S4",
+    "ids": [
+     "S4"
+    ],
+    "rotulo": "S4 · Delgadillo se desmarca de Lemus y gestiona agua municipal",
+    "dif_mc_vs_s1": 4.6,
+    "mc_a": 46.6,
+    "igual_que_ciudad": true
+   },
+   "peor": {
+    "id": "S11",
+    "ids": [
+     "S11"
+    ],
+    "rotulo": "S11 · Peor caso",
+    "dif_mc_vs_s1": -5.5,
+    "mc_a": 36.5,
+    "igual_que_ciudad": true
+   },
+   "lineas": [
+    {
+     "rotulo": "Alcaldía · S1 · Inercia (central)",
+     "texto": "MC 42.0 %, Coalición de Morena 37.8 %, Coalición PAN-PRI 19.8 %. Parejo: diferencia 4.2 puntos entre MC y Coalición de Morena.",
+     "boleta": "ayun",
+     "escenario": "S1"
+    },
+    {
+     "rotulo": "Alcaldía · S0 · sin la crisis de octubre (referencia, no posible hoy)",
+     "texto": "MC 43.0 %, Coalición de Morena 37.3 %, Coalición PAN-PRI 19.7 %. MC va primero y le saca 5.7 pp a Coalición de Morena.",
+     "boleta": "ayun",
+     "escenario": "S0"
+    },
+    {
+     "rotulo": "Dip. local · S1 · Inercia (central)",
+     "texto": "Coalición de Morena 38.8 %, MC 34.6 %, Coalición PAN-PRI 26.0 %. Parejo: diferencia 4.2 puntos entre Coalición de Morena y MC. MC tiene 7.4 pp menos que en la alcaldía; en S0 la diferencia ya era de 4.8 pp.",
+     "boleta": "dip",
+     "escenario": "S1"
+    },
+    {
+     "rotulo": "Dip. federal (preliminar) · S1 · Inercia (central)",
+     "texto": "Coalición de Morena 35.5 %, Coalición PAN-PRI 35.1 %, MC 29.2 %. Parejo: diferencia 0.4 puntos entre Coalición de Morena y Coalición PAN-PRI.",
+     "boleta": "fed",
+     "escenario": "S1"
+    },
+    {
+     "rotulo": "Alcaldía · entre escenarios, frente a S1 · Inercia (central)",
+     "boleta": "ayun",
+     "texto": "Lo que más ayuda a MC aquí: S4 · Delgadillo se desmarca de Lemus y gestiona agua municipal; MC pasaría de 42.0 % a 46.6 % (+4.6 pp). Lo que más le resta: S11 · Peor caso; MC pasaría de 42.0 % a 36.5 % (−5.5 pp)."
+    }
+   ],
+   "simulacion": {
+    "dictamen": "D8-C5 · zona competida · 60 secciones · lista nominal 60,747 · escolaridad media · exposición al agua 52/100. Alcaldía · S1 · Inercia (central): MC 42.0 %, Coalición de Morena 37.8 %, Coalición PAN-PRI 19.8 %. Parejo: diferencia 4.2 puntos entre MC y Coalición de Morena. Alcaldía · S0 · sin la crisis de octubre (referencia, no posible hoy): MC 43.0 %, Coalición de Morena 37.3 %, Coalición PAN-PRI 19.7 %. MC va primero y le saca 5.7 pp a Coalición de Morena. Dip. local · S1 · Inercia (central): Coalición de Morena 38.8 %, MC 34.6 %, Coalición PAN-PRI 26.0 %. Parejo: diferencia 4.2 puntos entre Coalición de Morena y MC. MC tiene 7.4 pp menos que en la alcaldía; en S0 la diferencia ya era de 4.8 pp. Dip. federal (preliminar) · S1 · Inercia (central): Coalición de Morena 35.5 %, Coalición PAN-PRI 35.1 %, MC 29.2 %. Parejo: diferencia 0.4 puntos entre Coalición de Morena y Coalición PAN-PRI. Alcaldía · entre escenarios, frente a S1 · Inercia (central): Lo que más ayuda a MC aquí: S4 · Delgadillo se desmarca de Lemus y gestiona agua municipal; MC pasaría de 42.0 % a 46.6 % (+4.6 pp). Lo que más le resta: S11 · Peor caso; MC pasaría de 42.0 % a 36.5 % (−5.5 pp)."
+   }
+  },
+  {
+   "cluster": "D8-C6",
+   "dl": "8",
+   "distrito": "D8",
+   "n_secciones": 35,
+   "lista_nominal": 35983,
+   "escolaridad": "escolaridad media",
+   "agua": 41,
+   "rol": "zona competida",
+   "rol_clave": "competida",
+   "margen_s0": -2.8,
+   "margen_s1": -4.1,
+   "mc_a_s0": 39.9,
+   "mor_a_s0": 42.7,
+   "mc_a_s1": 39.0,
+   "mor_a_s1": 43.1,
+   "mc_d_s0": 36.5,
+   "mor_d_s0": 42.2,
+   "mc_d_s1": 33.0,
+   "mor_d_s1": 44.4,
+   "mc_f_s1": 29.7,
+   "mor_f_s1": 41.4,
+   "pp_a_s0": 17.4,
+   "pp_a_s1": 17.5,
+   "pp_d_s0": 21.2,
+   "pp_d_s1": 22.2,
+   "pp_f_s1": 28.6,
+   "brecha_alc_dip_s0": 3.4,
+   "brecha_alc_dip_s1": 6.0,
+   "mejor": {
+    "id": "S4",
+    "ids": [
+     "S4"
+    ],
+    "rotulo": "S4 · Delgadillo se desmarca de Lemus y gestiona agua municipal",
+    "dif_mc_vs_s1": 4.5,
+    "mc_a": 43.5,
+    "igual_que_ciudad": true
+   },
+   "peor": {
+    "id": "S11",
+    "ids": [
+     "S11"
+    ],
+    "rotulo": "S11 · Peor caso",
+    "dif_mc_vs_s1": -5.3,
+    "mc_a": 33.7,
+    "igual_que_ciudad": true
+   },
+   "lineas": [
+    {
+     "rotulo": "Alcaldía · S1 · Inercia (central)",
+     "texto": "Coalición de Morena 43.1 %, MC 39.0 %, Coalición PAN-PRI 17.5 %. Parejo: diferencia 4.1 puntos entre Coalición de Morena y MC.",
+     "boleta": "ayun",
+     "escenario": "S1"
+    },
+    {
+     "rotulo": "Alcaldía · S0 · sin la crisis de octubre (referencia, no posible hoy)",
+     "texto": "Coalición de Morena 42.7 %, MC 39.9 %, Coalición PAN-PRI 17.4 %. Parejo: diferencia 2.8 puntos entre Coalición de Morena y MC.",
+     "boleta": "ayun",
+     "escenario": "S0"
+    },
+    {
+     "rotulo": "Dip. local · S1 · Inercia (central)",
+     "texto": "Coalición de Morena 44.4 %, MC 33.0 %, Coalición PAN-PRI 22.2 %. Coalición de Morena va primero y le saca 11.4 pp a MC. MC tiene 6.0 pp menos que en la alcaldía; en S0 la diferencia ya era de 3.4 pp.",
+     "boleta": "dip",
+     "escenario": "S1"
+    },
+    {
+     "rotulo": "Dip. federal (preliminar) · S1 · Inercia (central)",
+     "texto": "Coalición de Morena 41.4 %, MC 29.7 %, Coalición PAN-PRI 28.6 %. Coalición de Morena va primero y le saca 11.7 pp a MC.",
+     "boleta": "fed",
+     "escenario": "S1"
+    },
+    {
+     "rotulo": "Alcaldía · entre escenarios, frente a S1 · Inercia (central)",
+     "boleta": "ayun",
+     "texto": "Lo que más ayuda a MC aquí: S4 · Delgadillo se desmarca de Lemus y gestiona agua municipal; MC pasaría de 39.0 % a 43.5 % (+4.5 pp). Lo que más le resta: S11 · Peor caso; MC pasaría de 39.0 % a 33.7 % (−5.3 pp)."
+    }
+   ],
+   "simulacion": {
+    "dictamen": "D8-C6 · zona competida · 35 secciones · lista nominal 35,983 · escolaridad media · exposición al agua 41/100. Alcaldía · S1 · Inercia (central): Coalición de Morena 43.1 %, MC 39.0 %, Coalición PAN-PRI 17.5 %. Parejo: diferencia 4.1 puntos entre Coalición de Morena y MC. Alcaldía · S0 · sin la crisis de octubre (referencia, no posible hoy): Coalición de Morena 42.7 %, MC 39.9 %, Coalición PAN-PRI 17.4 %. Parejo: diferencia 2.8 puntos entre Coalición de Morena y MC. Dip. local · S1 · Inercia (central): Coalición de Morena 44.4 %, MC 33.0 %, Coalición PAN-PRI 22.2 %. Coalición de Morena va primero y le saca 11.4 pp a MC. MC tiene 6.0 pp menos que en la alcaldía; en S0 la diferencia ya era de 3.4 pp. Dip. federal (preliminar) · S1 · Inercia (central): Coalición de Morena 41.4 %, MC 29.7 %, Coalición PAN-PRI 28.6 %. Coalición de Morena va primero y le saca 11.7 pp a MC. Alcaldía · entre escenarios, frente a S1 · Inercia (central): Lo que más ayuda a MC aquí: S4 · Delgadillo se desmarca de Lemus y gestiona agua municipal; MC pasaría de 39.0 % a 43.5 % (+4.5 pp). Lo que más le resta: S11 · Peor caso; MC pasaría de 39.0 % a 33.7 % (−5.3 pp)."
+   }
+  },
+  {
+   "cluster": "D8-C7",
+   "dl": "8",
+   "distrito": "D8",
+   "n_secciones": 26,
+   "lista_nominal": 28754,
+   "escolaridad": "alta escolaridad",
+   "agua": 50,
+   "rol": "zona fuerte de MC",
+   "rol_clave": "mc",
+   "margen_s0": 18.7,
+   "margen_s1": 17.8,
+   "mc_a_s0": 47.7,
+   "mor_a_s0": 29.0,
+   "mc_a_s1": 47.2,
+   "mor_a_s1": 29.4,
+   "mc_d_s0": 39.0,
+   "mor_d_s0": 29.6,
+   "mc_d_s1": 36.3,
+   "mor_d_s1": 30.9,
+   "mc_f_s1": 28.4,
+   "mor_f_s1": 25.9,
+   "pp_a_s0": 23.2,
+   "pp_a_s1": 23.1,
+   "pp_d_s0": 31.3,
+   "pp_d_s1": 32.4,
+   "pp_f_s1": 45.4,
+   "brecha_alc_dip_s0": 8.7,
+   "brecha_alc_dip_s1": 10.9,
+   "mejor": {
+    "id": "S4",
+    "ids": [
+     "S4"
+    ],
+    "rotulo": "S4 · Delgadillo se desmarca de Lemus y gestiona agua municipal",
+    "dif_mc_vs_s1": 4.5,
+    "mc_a": 51.7,
+    "igual_que_ciudad": true
+   },
+   "peor": {
+    "id": "S11",
+    "ids": [
+     "S11"
+    ],
+    "rotulo": "S11 · Peor caso",
+    "dif_mc_vs_s1": -4.9,
+    "mc_a": 42.3,
+    "igual_que_ciudad": true
+   },
+   "lineas": [
+    {
+     "rotulo": "Alcaldía · S1 · Inercia (central)",
+     "texto": "MC 47.2 %, Coalición de Morena 29.4 %, Coalición PAN-PRI 23.1 %. MC va primero y le saca 17.8 pp a Coalición de Morena.",
+     "boleta": "ayun",
+     "escenario": "S1"
+    },
+    {
+     "rotulo": "Alcaldía · S0 · sin la crisis de octubre (referencia, no posible hoy)",
+     "texto": "MC 47.7 %, Coalición de Morena 29.0 %, Coalición PAN-PRI 23.2 %. MC va primero y le saca 18.7 pp a Coalición de Morena.",
+     "boleta": "ayun",
+     "escenario": "S0"
+    },
+    {
+     "rotulo": "Dip. local · S1 · Inercia (central)",
+     "texto": "MC 36.3 %, Coalición PAN-PRI 32.4 %, Coalición de Morena 30.9 %. Parejo: diferencia 3.9 puntos entre MC y Coalición PAN-PRI. MC tiene 10.9 pp menos que en la alcaldía; en S0 la diferencia ya era de 8.7 pp.",
+     "boleta": "dip",
+     "escenario": "S1"
+    },
+    {
+     "rotulo": "Dip. federal (preliminar) · S1 · Inercia (central)",
+     "texto": "Coalición PAN-PRI 45.4 %, MC 28.4 %, Coalición de Morena 25.9 %. Coalición PAN-PRI va primero y le saca 17.0 pp a MC, y 19.5 pp a Coalición de Morena.",
+     "boleta": "fed",
+     "escenario": "S1"
+    },
+    {
+     "rotulo": "Alcaldía · entre escenarios, frente a S1 · Inercia (central)",
+     "boleta": "ayun",
+     "texto": "Lo que más ayuda a MC aquí: S4 · Delgadillo se desmarca de Lemus y gestiona agua municipal; MC pasaría de 47.2 % a 51.7 % (+4.5 pp). Lo que más le resta: S11 · Peor caso; MC pasaría de 47.2 % a 42.3 % (−4.9 pp)."
+    }
+   ],
+   "simulacion": {
+    "dictamen": "D8-C7 · zona fuerte de MC · 26 secciones · lista nominal 28,754 · alta escolaridad · exposición al agua 50/100. Alcaldía · S1 · Inercia (central): MC 47.2 %, Coalición de Morena 29.4 %, Coalición PAN-PRI 23.1 %. MC va primero y le saca 17.8 pp a Coalición de Morena. Alcaldía · S0 · sin la crisis de octubre (referencia, no posible hoy): MC 47.7 %, Coalición de Morena 29.0 %, Coalición PAN-PRI 23.2 %. MC va primero y le saca 18.7 pp a Coalición de Morena. Dip. local · S1 · Inercia (central): MC 36.3 %, Coalición PAN-PRI 32.4 %, Coalición de Morena 30.9 %. Parejo: diferencia 3.9 puntos entre MC y Coalición PAN-PRI. MC tiene 10.9 pp menos que en la alcaldía; en S0 la diferencia ya era de 8.7 pp. Dip. federal (preliminar) · S1 · Inercia (central): Coalición PAN-PRI 45.4 %, MC 28.4 %, Coalición de Morena 25.9 %. Coalición PAN-PRI va primero y le saca 17.0 pp a MC, y 19.5 pp a Coalición de Morena. Alcaldía · entre escenarios, frente a S1 · Inercia (central): Lo que más ayuda a MC aquí: S4 · Delgadillo se desmarca de Lemus y gestiona agua municipal; MC pasaría de 47.2 % a 51.7 % (+4.5 pp). Lo que más le resta: S11 · Peor caso; MC pasaría de 47.2 % a 42.3 % (−4.9 pp)."
+   }
+  },
+  {
+   "cluster": "D8-C8",
+   "dl": "8",
+   "distrito": "D8",
+   "n_secciones": 40,
+   "lista_nominal": 37620,
+   "escolaridad": "escolaridad media",
+   "agua": 71,
+   "rol": "zona competida",
+   "rol_clave": "competida",
+   "margen_s0": -1.7,
+   "margen_s1": -3.9,
+   "mc_a_s0": 39.4,
+   "mor_a_s0": 41.1,
+   "mc_a_s1": 37.9,
+   "mor_a_s1": 41.8,
+   "mc_d_s0": 35.1,
+   "mor_d_s0": 41.0,
+   "mc_d_s1": 30.9,
+   "mor_d_s1": 43.5,
+   "mc_f_s1": 26.8,
+   "mor_f_s1": 40.1,
+   "pp_a_s0": 19.6,
+   "pp_a_s1": 19.8,
+   "pp_d_s0": 23.9,
+   "pp_d_s1": 25.1,
+   "pp_f_s1": 32.7,
+   "brecha_alc_dip_s0": 4.3,
+   "brecha_alc_dip_s1": 7.0,
+   "mejor": {
+    "id": "S4",
+    "ids": [
+     "S4"
+    ],
+    "rotulo": "S4 · Delgadillo se desmarca de Lemus y gestiona agua municipal",
+    "dif_mc_vs_s1": 4.8,
+    "mc_a": 42.7,
+    "igual_que_ciudad": true
+   },
+   "peor": {
+    "id": "S11",
+    "ids": [
+     "S11"
+    ],
+    "rotulo": "S11 · Peor caso",
+    "dif_mc_vs_s1": -6.4,
+    "mc_a": 31.5,
+    "igual_que_ciudad": true
+   },
+   "lineas": [
+    {
+     "rotulo": "Alcaldía · S1 · Inercia (central)",
+     "texto": "Coalición de Morena 41.8 %, MC 37.9 %, Coalición PAN-PRI 19.8 %. Parejo: diferencia 3.9 puntos entre Coalición de Morena y MC.",
+     "boleta": "ayun",
+     "escenario": "S1"
+    },
+    {
+     "rotulo": "Alcaldía · S0 · sin la crisis de octubre (referencia, no posible hoy)",
+     "texto": "Coalición de Morena 41.1 %, MC 39.4 %, Coalición PAN-PRI 19.6 %. Parejo: diferencia 1.7 puntos entre Coalición de Morena y MC.",
+     "boleta": "ayun",
+     "escenario": "S0"
+    },
+    {
+     "rotulo": "Dip. local · S1 · Inercia (central)",
+     "texto": "Coalición de Morena 43.5 %, MC 30.9 %, Coalición PAN-PRI 25.1 %. Coalición de Morena va primero y le saca 12.6 pp a MC. MC tiene 7.0 pp menos que en la alcaldía; en S0 la diferencia ya era de 4.3 pp.",
+     "boleta": "dip",
+     "escenario": "S1"
+    },
+    {
+     "rotulo": "Dip. federal (preliminar) · S1 · Inercia (central)",
+     "texto": "Coalición de Morena 40.1 %, Coalición PAN-PRI 32.7 %, MC 26.8 %. Coalición de Morena va primero y le saca 7.4 pp a Coalición PAN-PRI, y 13.3 pp a MC.",
+     "boleta": "fed",
+     "escenario": "S1"
+    },
+    {
+     "rotulo": "Alcaldía · entre escenarios, frente a S1 · Inercia (central)",
+     "boleta": "ayun",
+     "texto": "Lo que más ayuda a MC aquí: S4 · Delgadillo se desmarca de Lemus y gestiona agua municipal; MC pasaría de 37.9 % a 42.7 % (+4.8 pp). Lo que más le resta: S11 · Peor caso; MC pasaría de 37.9 % a 31.5 % (−6.4 pp)."
+    }
+   ],
+   "simulacion": {
+    "dictamen": "D8-C8 · zona competida · 40 secciones · lista nominal 37,620 · escolaridad media · exposición al agua 71/100. Alcaldía · S1 · Inercia (central): Coalición de Morena 41.8 %, MC 37.9 %, Coalición PAN-PRI 19.8 %. Parejo: diferencia 3.9 puntos entre Coalición de Morena y MC. Alcaldía · S0 · sin la crisis de octubre (referencia, no posible hoy): Coalición de Morena 41.1 %, MC 39.4 %, Coalición PAN-PRI 19.6 %. Parejo: diferencia 1.7 puntos entre Coalición de Morena y MC. Dip. local · S1 · Inercia (central): Coalición de Morena 43.5 %, MC 30.9 %, Coalición PAN-PRI 25.1 %. Coalición de Morena va primero y le saca 12.6 pp a MC. MC tiene 7.0 pp menos que en la alcaldía; en S0 la diferencia ya era de 4.3 pp. Dip. federal (preliminar) · S1 · Inercia (central): Coalición de Morena 40.1 %, Coalición PAN-PRI 32.7 %, MC 26.8 %. Coalición de Morena va primero y le saca 7.4 pp a Coalición PAN-PRI, y 13.3 pp a MC. Alcaldía · entre escenarios, frente a S1 · Inercia (central): Lo que más ayuda a MC aquí: S4 · Delgadillo se desmarca de Lemus y gestiona agua municipal; MC pasaría de 37.9 % a 42.7 % (+4.8 pp). Lo que más le resta: S11 · Peor caso; MC pasaría de 37.9 % a 31.5 % (−6.4 pp)."
+   }
+  },
+  {
+   "cluster": "D8-C9",
+   "dl": "8",
+   "distrito": "D8",
+   "n_secciones": 33,
+   "lista_nominal": 42508,
+   "escolaridad": "baja escolaridad",
+   "agua": 54,
+   "rol": "zona fuerte de la coalición de Morena",
+   "rol_clave": "morena",
+   "margen_s0": -17.7,
+   "margen_s1": -19.9,
+   "mc_a_s0": 33.6,
+   "mor_a_s0": 51.3,
+   "mc_a_s1": 32.3,
+   "mor_a_s1": 52.2,
+   "mc_d_s0": 31.9,
+   "mor_d_s0": 50.7,
+   "mc_d_s1": 27.7,
+   "mor_d_s1": 53.4,
+   "mc_f_s1": 25.6,
+   "mor_f_s1": 51.7,
+   "pp_a_s0": 15.0,
+   "pp_a_s1": 15.2,
+   "pp_d_s0": 17.5,
+   "pp_d_s1": 18.4,
+   "pp_f_s1": 22.4,
+   "brecha_alc_dip_s0": 1.7,
+   "brecha_alc_dip_s1": 4.6,
+   "mejor": {
+    "id": "S4",
+    "ids": [
+     "S4"
+    ],
+    "rotulo": "S4 · Delgadillo se desmarca de Lemus y gestiona agua municipal",
+    "dif_mc_vs_s1": 4.4,
+    "mc_a": 36.7,
+    "igual_que_ciudad": true
+   },
+   "peor": {
+    "id": "S11",
+    "ids": [
+     "S11"
+    ],
+    "rotulo": "S11 · Peor caso",
+    "dif_mc_vs_s1": -5.9,
+    "mc_a": 26.4,
+    "igual_que_ciudad": true
+   },
+   "lineas": [
+    {
+     "rotulo": "Alcaldía · S1 · Inercia (central)",
+     "texto": "Coalición de Morena 52.2 %, MC 32.3 %, Coalición PAN-PRI 15.2 %. Coalición de Morena va primero y le saca 19.9 pp a MC.",
+     "boleta": "ayun",
+     "escenario": "S1"
+    },
+    {
+     "rotulo": "Alcaldía · S0 · sin la crisis de octubre (referencia, no posible hoy)",
+     "texto": "Coalición de Morena 51.3 %, MC 33.6 %, Coalición PAN-PRI 15.0 %. Coalición de Morena va primero y le saca 17.7 pp a MC.",
+     "boleta": "ayun",
+     "escenario": "S0"
+    },
+    {
+     "rotulo": "Dip. local · S1 · Inercia (central)",
+     "texto": "Coalición de Morena 53.4 %, MC 27.7 %, Coalición PAN-PRI 18.4 %. Coalición de Morena va primero y le saca 25.7 pp a MC. MC tiene 4.6 pp menos que en la alcaldía; en S0 la diferencia ya era de 1.7 pp.",
+     "boleta": "dip",
+     "escenario": "S1"
+    },
+    {
+     "rotulo": "Dip. federal (preliminar) · S1 · Inercia (central)",
+     "texto": "Coalición de Morena 51.7 %, MC 25.6 %, Coalición PAN-PRI 22.4 %. Coalición de Morena va primero y le saca 26.1 pp a MC.",
+     "boleta": "fed",
+     "escenario": "S1"
+    },
+    {
+     "rotulo": "Alcaldía · entre escenarios, frente a S1 · Inercia (central)",
+     "boleta": "ayun",
+     "texto": "Lo que más ayuda a MC aquí: S4 · Delgadillo se desmarca de Lemus y gestiona agua municipal; MC pasaría de 32.3 % a 36.7 % (+4.4 pp). Lo que más le resta: S11 · Peor caso; MC pasaría de 32.3 % a 26.4 % (−5.9 pp)."
+    }
+   ],
+   "simulacion": {
+    "dictamen": "D8-C9 · zona fuerte de la coalición de Morena · 33 secciones · lista nominal 42,508 · baja escolaridad · exposición al agua 54/100. Alcaldía · S1 · Inercia (central): Coalición de Morena 52.2 %, MC 32.3 %, Coalición PAN-PRI 15.2 %. Coalición de Morena va primero y le saca 19.9 pp a MC. Alcaldía · S0 · sin la crisis de octubre (referencia, no posible hoy): Coalición de Morena 51.3 %, MC 33.6 %, Coalición PAN-PRI 15.0 %. Coalición de Morena va primero y le saca 17.7 pp a MC. Dip. local · S1 · Inercia (central): Coalición de Morena 53.4 %, MC 27.7 %, Coalición PAN-PRI 18.4 %. Coalición de Morena va primero y le saca 25.7 pp a MC. MC tiene 4.6 pp menos que en la alcaldía; en S0 la diferencia ya era de 1.7 pp. Dip. federal (preliminar) · S1 · Inercia (central): Coalición de Morena 51.7 %, MC 25.6 %, Coalición PAN-PRI 22.4 %. Coalición de Morena va primero y le saca 26.1 pp a MC. Alcaldía · entre escenarios, frente a S1 · Inercia (central): Lo que más ayuda a MC aquí: S4 · Delgadillo se desmarca de Lemus y gestiona agua municipal; MC pasaría de 32.3 % a 36.7 % (+4.4 pp). Lo que más le resta: S11 · Peor caso; MC pasaría de 32.3 % a 26.4 % (−5.9 pp)."
+   }
+  },
+  {
+   "cluster": "D9-C1",
+   "dl": "9",
+   "distrito": "D9",
+   "n_secciones": 27,
+   "lista_nominal": 31749,
+   "escolaridad": "alta escolaridad",
+   "agua": 51,
+   "rol": "zona fuerte de MC",
+   "rol_clave": "mc",
+   "margen_s0": 21.1,
+   "margen_s1": 20.4,
+   "mc_a_s0": 50.2,
+   "mor_a_s0": 29.1,
+   "mc_a_s1": 49.7,
+   "mor_a_s1": 29.3,
+   "mc_d_s0": 43.1,
+   "mor_d_s0": 28.8,
+   "mc_d_s1": 40.1,
+   "mor_d_s1": 30.0,
+   "mc_f_s1": 30.1,
+   "mor_f_s1": 24.9,
+   "pp_a_s0": 20.6,
+   "pp_a_s1": 20.7,
+   "pp_d_s0": 28.3,
+   "pp_d_s1": 29.4,
+   "pp_f_s1": 44.7,
+   "brecha_alc_dip_s0": 7.1,
+   "brecha_alc_dip_s1": 9.6,
+   "mejor": {
+    "id": "S4",
+    "ids": [
+     "S4"
+    ],
+    "rotulo": "S4 · Delgadillo se desmarca de Lemus y gestiona agua municipal",
+    "dif_mc_vs_s1": 4.4,
+    "mc_a": 54.1,
+    "igual_que_ciudad": true
+   },
+   "peor": {
+    "id": "S11",
+    "ids": [
+     "S11"
+    ],
+    "rotulo": "S11 · Peor caso",
+    "dif_mc_vs_s1": -4.5,
+    "mc_a": 45.2,
+    "igual_que_ciudad": true
+   },
+   "lineas": [
+    {
+     "rotulo": "Alcaldía · S1 · Inercia (central)",
+     "texto": "MC 49.7 %, Coalición de Morena 29.3 %, Coalición PAN-PRI 20.7 %. MC va primero y le saca 20.4 pp a Coalición de Morena.",
+     "boleta": "ayun",
+     "escenario": "S1"
+    },
+    {
+     "rotulo": "Alcaldía · S0 · sin la crisis de octubre (referencia, no posible hoy)",
+     "texto": "MC 50.2 %, Coalición de Morena 29.1 %, Coalición PAN-PRI 20.6 %. MC va primero y le saca 21.1 pp a Coalición de Morena.",
+     "boleta": "ayun",
+     "escenario": "S0"
+    },
+    {
+     "rotulo": "Dip. local · S1 · Inercia (central)",
+     "texto": "MC 40.1 %, Coalición de Morena 30.0 %, Coalición PAN-PRI 29.4 %. MC va primero y le saca 10.1 pp a Coalición de Morena. MC tiene 9.6 pp menos que en la alcaldía; en S0 la diferencia ya era de 7.1 pp.",
+     "boleta": "dip",
+     "escenario": "S1"
+    },
+    {
+     "rotulo": "Dip. federal (preliminar) · S1 · Inercia (central)",
+     "texto": "Coalición PAN-PRI 44.7 %, MC 30.1 %, Coalición de Morena 24.9 %. Coalición PAN-PRI va primero y le saca 14.6 pp a MC, y 19.8 pp a Coalición de Morena.",
+     "boleta": "fed",
+     "escenario": "S1"
+    },
+    {
+     "rotulo": "Alcaldía · entre escenarios, frente a S1 · Inercia (central)",
+     "boleta": "ayun",
+     "texto": "Lo que más ayuda a MC aquí: S4 · Delgadillo se desmarca de Lemus y gestiona agua municipal; MC pasaría de 49.7 % a 54.1 % (+4.4 pp). Lo que más le resta: S11 · Peor caso; MC pasaría de 49.7 % a 45.2 % (−4.5 pp)."
+    }
+   ],
+   "simulacion": {
+    "dictamen": "D9-C1 · zona fuerte de MC · 27 secciones · lista nominal 31,749 · alta escolaridad · exposición al agua 51/100. Alcaldía · S1 · Inercia (central): MC 49.7 %, Coalición de Morena 29.3 %, Coalición PAN-PRI 20.7 %. MC va primero y le saca 20.4 pp a Coalición de Morena. Alcaldía · S0 · sin la crisis de octubre (referencia, no posible hoy): MC 50.2 %, Coalición de Morena 29.1 %, Coalición PAN-PRI 20.6 %. MC va primero y le saca 21.1 pp a Coalición de Morena. Dip. local · S1 · Inercia (central): MC 40.1 %, Coalición de Morena 30.0 %, Coalición PAN-PRI 29.4 %. MC va primero y le saca 10.1 pp a Coalición de Morena. MC tiene 9.6 pp menos que en la alcaldía; en S0 la diferencia ya era de 7.1 pp. Dip. federal (preliminar) · S1 · Inercia (central): Coalición PAN-PRI 44.7 %, MC 30.1 %, Coalición de Morena 24.9 %. Coalición PAN-PRI va primero y le saca 14.6 pp a MC, y 19.8 pp a Coalición de Morena. Alcaldía · entre escenarios, frente a S1 · Inercia (central): Lo que más ayuda a MC aquí: S4 · Delgadillo se desmarca de Lemus y gestiona agua municipal; MC pasaría de 49.7 % a 54.1 % (+4.4 pp). Lo que más le resta: S11 · Peor caso; MC pasaría de 49.7 % a 45.2 % (−4.5 pp)."
+   }
+  },
+  {
+   "cluster": "D9-C2",
+   "dl": "9",
+   "distrito": "D9",
+   "n_secciones": 16,
+   "lista_nominal": 29053,
+   "escolaridad": "escolaridad media",
+   "agua": 40,
+   "rol": "zona competida",
+   "rol_clave": "competida",
+   "margen_s0": 4.8,
+   "margen_s1": 3.9,
+   "mc_a_s0": 43.9,
+   "mor_a_s0": 39.1,
+   "mc_a_s1": 43.2,
+   "mor_a_s1": 39.3,
+   "mc_d_s0": 39.2,
+   "mor_d_s0": 39.6,
+   "mc_d_s1": 36.1,
+   "mor_d_s1": 41.3,
+   "mc_f_s1": 30.6,
+   "mor_f_s1": 35.6,
+   "pp_a_s0": 17.0,
+   "pp_a_s1": 17.1,
+   "pp_d_s0": 21.3,
+   "pp_d_s1": 22.3,
+   "pp_f_s1": 33.4,
+   "brecha_alc_dip_s0": 4.7,
+   "brecha_alc_dip_s1": 7.1,
+   "mejor": {
+    "id": "S4",
+    "ids": [
+     "S4"
+    ],
+    "rotulo": "S4 · Delgadillo se desmarca de Lemus y gestiona agua municipal",
+    "dif_mc_vs_s1": 4.4,
+    "mc_a": 47.6,
+    "igual_que_ciudad": true
+   },
+   "peor": {
+    "id": "S11",
+    "ids": [
+     "S11"
+    ],
+    "rotulo": "S11 · Peor caso",
+    "dif_mc_vs_s1": -4.9,
+    "mc_a": 38.3,
+    "igual_que_ciudad": true
+   },
+   "lineas": [
+    {
+     "rotulo": "Alcaldía · S1 · Inercia (central)",
+     "texto": "MC 43.2 %, Coalición de Morena 39.3 %, Coalición PAN-PRI 17.1 %. Parejo: diferencia 3.9 puntos entre MC y Coalición de Morena.",
+     "boleta": "ayun",
+     "escenario": "S1"
+    },
+    {
+     "rotulo": "Alcaldía · S0 · sin la crisis de octubre (referencia, no posible hoy)",
+     "texto": "MC 43.9 %, Coalición de Morena 39.1 %, Coalición PAN-PRI 17.0 %. Parejo: diferencia 4.8 puntos entre MC y Coalición de Morena.",
+     "boleta": "ayun",
+     "escenario": "S0"
+    },
+    {
+     "rotulo": "Dip. local · S1 · Inercia (central)",
+     "texto": "Coalición de Morena 41.3 %, MC 36.1 %, Coalición PAN-PRI 22.3 %. Coalición de Morena va primero y le saca 5.2 pp a MC. MC tiene 7.1 pp menos que en la alcaldía; en S0 la diferencia ya era de 4.7 pp.",
+     "boleta": "dip",
+     "escenario": "S1"
+    },
+    {
+     "rotulo": "Dip. federal (preliminar) · S1 · Inercia (central)",
+     "texto": "Coalición de Morena 35.6 %, Coalición PAN-PRI 33.4 %, MC 30.6 %. Parejo: diferencia 2.2 puntos entre Coalición de Morena y Coalición PAN-PRI.",
+     "boleta": "fed",
+     "escenario": "S1"
+    },
+    {
+     "rotulo": "Alcaldía · entre escenarios, frente a S1 · Inercia (central)",
+     "boleta": "ayun",
+     "texto": "Lo que más ayuda a MC aquí: S4 · Delgadillo se desmarca de Lemus y gestiona agua municipal; MC pasaría de 43.2 % a 47.6 % (+4.4 pp). Lo que más le resta: S11 · Peor caso; MC pasaría de 43.2 % a 38.3 % (−4.9 pp)."
+    }
+   ],
+   "simulacion": {
+    "dictamen": "D9-C2 · zona competida · 16 secciones · lista nominal 29,053 · escolaridad media · exposición al agua 40/100. Alcaldía · S1 · Inercia (central): MC 43.2 %, Coalición de Morena 39.3 %, Coalición PAN-PRI 17.1 %. Parejo: diferencia 3.9 puntos entre MC y Coalición de Morena. Alcaldía · S0 · sin la crisis de octubre (referencia, no posible hoy): MC 43.9 %, Coalición de Morena 39.1 %, Coalición PAN-PRI 17.0 %. Parejo: diferencia 4.8 puntos entre MC y Coalición de Morena. Dip. local · S1 · Inercia (central): Coalición de Morena 41.3 %, MC 36.1 %, Coalición PAN-PRI 22.3 %. Coalición de Morena va primero y le saca 5.2 pp a MC. MC tiene 7.1 pp menos que en la alcaldía; en S0 la diferencia ya era de 4.7 pp. Dip. federal (preliminar) · S1 · Inercia (central): Coalición de Morena 35.6 %, Coalición PAN-PRI 33.4 %, MC 30.6 %. Parejo: diferencia 2.2 puntos entre Coalición de Morena y Coalición PAN-PRI. Alcaldía · entre escenarios, frente a S1 · Inercia (central): Lo que más ayuda a MC aquí: S4 · Delgadillo se desmarca de Lemus y gestiona agua municipal; MC pasaría de 43.2 % a 47.6 % (+4.4 pp). Lo que más le resta: S11 · Peor caso; MC pasaría de 43.2 % a 38.3 % (−4.9 pp)."
+   }
+  },
+  {
+   "cluster": "D9-C3",
+   "dl": "9",
+   "distrito": "D9",
+   "n_secciones": 36,
+   "lista_nominal": 57679,
+   "escolaridad": "escolaridad media",
+   "agua": 47,
+   "rol": "zona fuerte de la coalición de Morena",
+   "rol_clave": "morena",
+   "margen_s0": -7.0,
+   "margen_s1": -8.7,
+   "mc_a_s0": 38.3,
+   "mor_a_s0": 45.3,
+   "mc_a_s1": 37.3,
+   "mor_a_s1": 46.0,
+   "mc_d_s0": 35.0,
+   "mor_d_s0": 45.6,
+   "mc_d_s1": 31.3,
+   "mor_d_s1": 47.8,
+   "mc_f_s1": 28.1,
+   "mor_f_s1": 43.4,
+   "pp_a_s0": 16.4,
+   "pp_a_s1": 16.5,
+   "pp_d_s0": 19.4,
+   "pp_d_s1": 20.4,
+   "pp_f_s1": 28.1,
+   "brecha_alc_dip_s0": 3.3,
+   "brecha_alc_dip_s1": 6.0,
+   "mejor": {
+    "id": "S4",
+    "ids": [
+     "S4"
+    ],
+    "rotulo": "S4 · Delgadillo se desmarca de Lemus y gestiona agua municipal",
+    "dif_mc_vs_s1": 4.5,
+    "mc_a": 41.8,
+    "igual_que_ciudad": true
+   },
+   "peor": {
+    "id": "S11",
+    "ids": [
+     "S11"
+    ],
+    "rotulo": "S11 · Peor caso",
+    "dif_mc_vs_s1": -5.5,
+    "mc_a": 31.8,
+    "igual_que_ciudad": true
+   },
+   "lineas": [
+    {
+     "rotulo": "Alcaldía · S1 · Inercia (central)",
+     "texto": "Coalición de Morena 46.0 %, MC 37.3 %, Coalición PAN-PRI 16.5 %. Coalición de Morena va primero y le saca 8.7 pp a MC.",
+     "boleta": "ayun",
+     "escenario": "S1"
+    },
+    {
+     "rotulo": "Alcaldía · S0 · sin la crisis de octubre (referencia, no posible hoy)",
+     "texto": "Coalición de Morena 45.3 %, MC 38.3 %, Coalición PAN-PRI 16.4 %. Coalición de Morena va primero y le saca 7.0 pp a MC.",
+     "boleta": "ayun",
+     "escenario": "S0"
+    },
+    {
+     "rotulo": "Dip. local · S1 · Inercia (central)",
+     "texto": "Coalición de Morena 47.8 %, MC 31.3 %, Coalición PAN-PRI 20.4 %. Coalición de Morena va primero y le saca 16.5 pp a MC. MC tiene 6.0 pp menos que en la alcaldía; en S0 la diferencia ya era de 3.3 pp.",
+     "boleta": "dip",
+     "escenario": "S1"
+    },
+    {
+     "rotulo": "Dip. federal (preliminar) · S1 · Inercia (central)",
+     "texto": "Coalición de Morena 43.4 %, MC 28.1 %, Coalición PAN-PRI 28.1 %. Coalición de Morena va primero y le saca 15.3 pp a MC y a Coalición PAN-PRI, que van empatados.",
+     "boleta": "fed",
+     "escenario": "S1"
+    },
+    {
+     "rotulo": "Alcaldía · entre escenarios, frente a S1 · Inercia (central)",
+     "boleta": "ayun",
+     "texto": "Lo que más ayuda a MC aquí: S4 · Delgadillo se desmarca de Lemus y gestiona agua municipal; MC pasaría de 37.3 % a 41.8 % (+4.5 pp). Lo que más le resta: S11 · Peor caso; MC pasaría de 37.3 % a 31.8 % (−5.5 pp)."
+    }
+   ],
+   "simulacion": {
+    "dictamen": "D9-C3 · zona fuerte de la coalición de Morena · 36 secciones · lista nominal 57,679 · escolaridad media · exposición al agua 47/100. Alcaldía · S1 · Inercia (central): Coalición de Morena 46.0 %, MC 37.3 %, Coalición PAN-PRI 16.5 %. Coalición de Morena va primero y le saca 8.7 pp a MC. Alcaldía · S0 · sin la crisis de octubre (referencia, no posible hoy): Coalición de Morena 45.3 %, MC 38.3 %, Coalición PAN-PRI 16.4 %. Coalición de Morena va primero y le saca 7.0 pp a MC. Dip. local · S1 · Inercia (central): Coalición de Morena 47.8 %, MC 31.3 %, Coalición PAN-PRI 20.4 %. Coalición de Morena va primero y le saca 16.5 pp a MC. MC tiene 6.0 pp menos que en la alcaldía; en S0 la diferencia ya era de 3.3 pp. Dip. federal (preliminar) · S1 · Inercia (central): Coalición de Morena 43.4 %, MC 28.1 %, Coalición PAN-PRI 28.1 %. Coalición de Morena va primero y le saca 15.3 pp a MC y a Coalición PAN-PRI, que van empatados. Alcaldía · entre escenarios, frente a S1 · Inercia (central): Lo que más ayuda a MC aquí: S4 · Delgadillo se desmarca de Lemus y gestiona agua municipal; MC pasaría de 37.3 % a 41.8 % (+4.5 pp). Lo que más le resta: S11 · Peor caso; MC pasaría de 37.3 % a 31.8 % (−5.5 pp)."
+   }
+  },
+  {
+   "cluster": "D9-C4",
+   "dl": "9",
+   "distrito": "D9",
+   "n_secciones": 24,
+   "lista_nominal": 41181,
+   "escolaridad": "baja escolaridad",
+   "agua": 25,
+   "rol": "zona fuerte de la coalición de Morena",
+   "rol_clave": "morena",
+   "margen_s0": -9.2,
+   "margen_s1": -10.3,
+   "mc_a_s0": 37.5,
+   "mor_a_s0": 46.7,
+   "mc_a_s1": 36.8,
+   "mor_a_s1": 47.1,
+   "mc_d_s0": 34.6,
+   "mor_d_s0": 47.1,
+   "mc_d_s1": 31.4,
+   "mor_d_s1": 49.2,
+   "mc_f_s1": 28.1,
+   "mor_f_s1": 44.9,
+   "pp_a_s0": 15.6,
+   "pp_a_s1": 15.7,
+   "pp_d_s0": 18.3,
+   "pp_d_s1": 19.1,
+   "pp_f_s1": 26.7,
+   "brecha_alc_dip_s0": 2.9,
+   "brecha_alc_dip_s1": 5.4,
+   "mejor": {
+    "id": "S4",
+    "ids": [
+     "S4"
+    ],
+    "rotulo": "S4 · Delgadillo se desmarca de Lemus y gestiona agua municipal",
+    "dif_mc_vs_s1": 4.1,
+    "mc_a": 40.9,
+    "igual_que_ciudad": true
+   },
+   "peor": {
+    "id": "S11",
+    "ids": [
+     "S11"
+    ],
+    "rotulo": "S11 · Peor caso",
+    "dif_mc_vs_s1": -5.4,
+    "mc_a": 31.4,
+    "igual_que_ciudad": true
+   },
+   "lineas": [
+    {
+     "rotulo": "Alcaldía · S1 · Inercia (central)",
+     "texto": "Coalición de Morena 47.1 %, MC 36.8 %, Coalición PAN-PRI 15.7 %. Coalición de Morena va primero y le saca 10.3 pp a MC.",
+     "boleta": "ayun",
+     "escenario": "S1"
+    },
+    {
+     "rotulo": "Alcaldía · S0 · sin la crisis de octubre (referencia, no posible hoy)",
+     "texto": "Coalición de Morena 46.7 %, MC 37.5 %, Coalición PAN-PRI 15.6 %. Coalición de Morena va primero y le saca 9.2 pp a MC.",
+     "boleta": "ayun",
+     "escenario": "S0"
+    },
+    {
+     "rotulo": "Dip. local · S1 · Inercia (central)",
+     "texto": "Coalición de Morena 49.2 %, MC 31.4 %, Coalición PAN-PRI 19.1 %. Coalición de Morena va primero y le saca 17.8 pp a MC. MC tiene 5.4 pp menos que en la alcaldía; en S0 la diferencia ya era de 2.9 pp.",
+     "boleta": "dip",
+     "escenario": "S1"
+    },
+    {
+     "rotulo": "Dip. federal (preliminar) · S1 · Inercia (central)",
+     "texto": "Coalición de Morena 44.9 %, MC 28.1 %, Coalición PAN-PRI 26.7 %. Coalición de Morena va primero y le saca 16.8 pp a MC.",
+     "boleta": "fed",
+     "escenario": "S1"
+    },
+    {
+     "rotulo": "Alcaldía · entre escenarios, frente a S1 · Inercia (central)",
+     "boleta": "ayun",
+     "texto": "Lo que más ayuda a MC aquí: S4 · Delgadillo se desmarca de Lemus y gestiona agua municipal; MC pasaría de 36.8 % a 40.9 % (+4.1 pp). Lo que más le resta: S11 · Peor caso; MC pasaría de 36.8 % a 31.4 % (−5.4 pp)."
+    }
+   ],
+   "simulacion": {
+    "dictamen": "D9-C4 · zona fuerte de la coalición de Morena · 24 secciones · lista nominal 41,181 · baja escolaridad · exposición al agua 25/100. Alcaldía · S1 · Inercia (central): Coalición de Morena 47.1 %, MC 36.8 %, Coalición PAN-PRI 15.7 %. Coalición de Morena va primero y le saca 10.3 pp a MC. Alcaldía · S0 · sin la crisis de octubre (referencia, no posible hoy): Coalición de Morena 46.7 %, MC 37.5 %, Coalición PAN-PRI 15.6 %. Coalición de Morena va primero y le saca 9.2 pp a MC. Dip. local · S1 · Inercia (central): Coalición de Morena 49.2 %, MC 31.4 %, Coalición PAN-PRI 19.1 %. Coalición de Morena va primero y le saca 17.8 pp a MC. MC tiene 5.4 pp menos que en la alcaldía; en S0 la diferencia ya era de 2.9 pp. Dip. federal (preliminar) · S1 · Inercia (central): Coalición de Morena 44.9 %, MC 28.1 %, Coalición PAN-PRI 26.7 %. Coalición de Morena va primero y le saca 16.8 pp a MC. Alcaldía · entre escenarios, frente a S1 · Inercia (central): Lo que más ayuda a MC aquí: S4 · Delgadillo se desmarca de Lemus y gestiona agua municipal; MC pasaría de 36.8 % a 40.9 % (+4.1 pp). Lo que más le resta: S11 · Peor caso; MC pasaría de 36.8 % a 31.4 % (−5.4 pp)."
+   }
+  },
+  {
+   "cluster": "D9-C5",
+   "dl": "9",
+   "distrito": "D9",
+   "n_secciones": 32,
+   "lista_nominal": 42607,
+   "escolaridad": "escolaridad media",
+   "agua": 45,
+   "rol": "zona fuerte de la coalición de Morena",
+   "rol_clave": "morena",
+   "margen_s0": -17.3,
+   "margen_s1": -19.0,
+   "mc_a_s0": 34.1,
+   "mor_a_s0": 51.4,
+   "mc_a_s1": 33.0,
+   "mor_a_s1": 52.0,
+   "mc_d_s0": 31.3,
+   "mor_d_s0": 52.1,
+   "mc_d_s1": 27.6,
+   "mor_d_s1": 54.5,
+   "mc_f_s1": 26.4,
+   "mor_f_s1": 50.4,
+   "pp_a_s0": 14.5,
+   "pp_a_s1": 14.6,
+   "pp_d_s0": 16.6,
+   "pp_d_s1": 17.5,
+   "pp_f_s1": 23.0,
+   "brecha_alc_dip_s0": 2.8,
+   "brecha_alc_dip_s1": 5.4,
+   "mejor": {
+    "id": "S4",
+    "ids": [
+     "S4"
+    ],
+    "rotulo": "S4 · Delgadillo se desmarca de Lemus y gestiona agua municipal",
+    "dif_mc_vs_s1": 4.4,
+    "mc_a": 37.4,
+    "igual_que_ciudad": true
+   },
+   "peor": {
+    "id": "S11",
+    "ids": [
+     "S11"
+    ],
+    "rotulo": "S11 · Peor caso",
+    "dif_mc_vs_s1": -5.3,
+    "mc_a": 27.7,
+    "igual_que_ciudad": true
+   },
+   "lineas": [
+    {
+     "rotulo": "Alcaldía · S1 · Inercia (central)",
+     "texto": "Coalición de Morena 52.0 %, MC 33.0 %, Coalición PAN-PRI 14.6 %. Coalición de Morena va primero y le saca 19.0 pp a MC.",
+     "boleta": "ayun",
+     "escenario": "S1"
+    },
+    {
+     "rotulo": "Alcaldía · S0 · sin la crisis de octubre (referencia, no posible hoy)",
+     "texto": "Coalición de Morena 51.4 %, MC 34.1 %, Coalición PAN-PRI 14.5 %. Coalición de Morena va primero y le saca 17.3 pp a MC.",
+     "boleta": "ayun",
+     "escenario": "S0"
+    },
+    {
+     "rotulo": "Dip. local · S1 · Inercia (central)",
+     "texto": "Coalición de Morena 54.5 %, MC 27.6 %, Coalición PAN-PRI 17.5 %. Coalición de Morena va primero y le saca 26.9 pp a MC. MC tiene 5.4 pp menos que en la alcaldía; en S0 la diferencia ya era de 2.8 pp.",
+     "boleta": "dip",
+     "escenario": "S1"
+    },
+    {
+     "rotulo": "Dip. federal (preliminar) · S1 · Inercia (central)",
+     "texto": "Coalición de Morena 50.4 %, MC 26.4 %, Coalición PAN-PRI 23.0 %. Coalición de Morena va primero y le saca 24.0 pp a MC.",
+     "boleta": "fed",
+     "escenario": "S1"
+    },
+    {
+     "rotulo": "Alcaldía · entre escenarios, frente a S1 · Inercia (central)",
+     "boleta": "ayun",
+     "texto": "Lo que más ayuda a MC aquí: S4 · Delgadillo se desmarca de Lemus y gestiona agua municipal; MC pasaría de 33.0 % a 37.4 % (+4.4 pp). Lo que más le resta: S11 · Peor caso; MC pasaría de 33.0 % a 27.7 % (−5.3 pp)."
+    }
+   ],
+   "simulacion": {
+    "dictamen": "D9-C5 · zona fuerte de la coalición de Morena · 32 secciones · lista nominal 42,607 · escolaridad media · exposición al agua 45/100. Alcaldía · S1 · Inercia (central): Coalición de Morena 52.0 %, MC 33.0 %, Coalición PAN-PRI 14.6 %. Coalición de Morena va primero y le saca 19.0 pp a MC. Alcaldía · S0 · sin la crisis de octubre (referencia, no posible hoy): Coalición de Morena 51.4 %, MC 34.1 %, Coalición PAN-PRI 14.5 %. Coalición de Morena va primero y le saca 17.3 pp a MC. Dip. local · S1 · Inercia (central): Coalición de Morena 54.5 %, MC 27.6 %, Coalición PAN-PRI 17.5 %. Coalición de Morena va primero y le saca 26.9 pp a MC. MC tiene 5.4 pp menos que en la alcaldía; en S0 la diferencia ya era de 2.8 pp. Dip. federal (preliminar) · S1 · Inercia (central): Coalición de Morena 50.4 %, MC 26.4 %, Coalición PAN-PRI 23.0 %. Coalición de Morena va primero y le saca 24.0 pp a MC. Alcaldía · entre escenarios, frente a S1 · Inercia (central): Lo que más ayuda a MC aquí: S4 · Delgadillo se desmarca de Lemus y gestiona agua municipal; MC pasaría de 33.0 % a 37.4 % (+4.4 pp). Lo que más le resta: S11 · Peor caso; MC pasaría de 33.0 % a 27.7 % (−5.3 pp)."
+   }
+  },
+  {
+   "cluster": "D9-C6",
+   "dl": "9",
+   "distrito": "D9",
+   "n_secciones": 27,
+   "lista_nominal": 37971,
+   "escolaridad": "baja escolaridad",
+   "agua": 47,
+   "rol": "zona fuerte de la coalición de Morena",
+   "rol_clave": "morena",
+   "margen_s0": -14.5,
+   "margen_s1": -16.4,
+   "mc_a_s0": 34.4,
+   "mor_a_s0": 48.9,
+   "mc_a_s1": 33.2,
+   "mor_a_s1": 49.6,
+   "mc_d_s0": 31.0,
+   "mor_d_s0": 49.1,
+   "mc_d_s1": 27.5,
+   "mor_d_s1": 51.4,
+   "mc_f_s1": 26.0,
+   "mor_f_s1": 46.7,
+   "pp_a_s0": 16.6,
+   "pp_a_s1": 16.8,
+   "pp_d_s0": 19.8,
+   "pp_d_s1": 20.7,
+   "pp_f_s1": 27.1,
+   "brecha_alc_dip_s0": 3.4,
+   "brecha_alc_dip_s1": 5.7,
+   "mejor": {
+    "id": "S4",
+    "ids": [
+     "S4"
+    ],
+    "rotulo": "S4 · Delgadillo se desmarca de Lemus y gestiona agua municipal",
+    "dif_mc_vs_s1": 4.5,
+    "mc_a": 37.7,
+    "igual_que_ciudad": true
+   },
+   "peor": {
+    "id": "S11",
+    "ids": [
+     "S11"
+    ],
+    "rotulo": "S11 · Peor caso",
+    "dif_mc_vs_s1": -5.6,
+    "mc_a": 27.6,
+    "igual_que_ciudad": true
+   },
+   "lineas": [
+    {
+     "rotulo": "Alcaldía · S1 · Inercia (central)",
+     "texto": "Coalición de Morena 49.6 %, MC 33.2 %, Coalición PAN-PRI 16.8 %. Coalición de Morena va primero y le saca 16.4 pp a MC.",
+     "boleta": "ayun",
+     "escenario": "S1"
+    },
+    {
+     "rotulo": "Alcaldía · S0 · sin la crisis de octubre (referencia, no posible hoy)",
+     "texto": "Coalición de Morena 48.9 %, MC 34.4 %, Coalición PAN-PRI 16.6 %. Coalición de Morena va primero y le saca 14.5 pp a MC.",
+     "boleta": "ayun",
+     "escenario": "S0"
+    },
+    {
+     "rotulo": "Dip. local · S1 · Inercia (central)",
+     "texto": "Coalición de Morena 51.4 %, MC 27.5 %, Coalición PAN-PRI 20.7 %. Coalición de Morena va primero y le saca 23.9 pp a MC. MC tiene 5.7 pp menos que en la alcaldía; en S0 la diferencia ya era de 3.4 pp.",
+     "boleta": "dip",
+     "escenario": "S1"
+    },
+    {
+     "rotulo": "Dip. federal (preliminar) · S1 · Inercia (central)",
+     "texto": "Coalición de Morena 46.7 %, Coalición PAN-PRI 27.1 %, MC 26.0 %. Coalición de Morena va primero y le saca 19.6 pp a Coalición PAN-PRI, y 20.7 pp a MC.",
+     "boleta": "fed",
+     "escenario": "S1"
+    },
+    {
+     "rotulo": "Alcaldía · entre escenarios, frente a S1 · Inercia (central)",
+     "boleta": "ayun",
+     "texto": "Lo que más ayuda a MC aquí: S4 · Delgadillo se desmarca de Lemus y gestiona agua municipal; MC pasaría de 33.2 % a 37.7 % (+4.5 pp). Lo que más le resta: S11 · Peor caso; MC pasaría de 33.2 % a 27.6 % (−5.6 pp)."
+    }
+   ],
+   "simulacion": {
+    "dictamen": "D9-C6 · zona fuerte de la coalición de Morena · 27 secciones · lista nominal 37,971 · baja escolaridad · exposición al agua 47/100. Alcaldía · S1 · Inercia (central): Coalición de Morena 49.6 %, MC 33.2 %, Coalición PAN-PRI 16.8 %. Coalición de Morena va primero y le saca 16.4 pp a MC. Alcaldía · S0 · sin la crisis de octubre (referencia, no posible hoy): Coalición de Morena 48.9 %, MC 34.4 %, Coalición PAN-PRI 16.6 %. Coalición de Morena va primero y le saca 14.5 pp a MC. Dip. local · S1 · Inercia (central): Coalición de Morena 51.4 %, MC 27.5 %, Coalición PAN-PRI 20.7 %. Coalición de Morena va primero y le saca 23.9 pp a MC. MC tiene 5.7 pp menos que en la alcaldía; en S0 la diferencia ya era de 3.4 pp. Dip. federal (preliminar) · S1 · Inercia (central): Coalición de Morena 46.7 %, Coalición PAN-PRI 27.1 %, MC 26.0 %. Coalición de Morena va primero y le saca 19.6 pp a Coalición PAN-PRI, y 20.7 pp a MC. Alcaldía · entre escenarios, frente a S1 · Inercia (central): Lo que más ayuda a MC aquí: S4 · Delgadillo se desmarca de Lemus y gestiona agua municipal; MC pasaría de 33.2 % a 37.7 % (+4.5 pp). Lo que más le resta: S11 · Peor caso; MC pasaría de 33.2 % a 27.6 % (−5.6 pp)."
+   }
+  },
+  {
+   "cluster": "D9-C7",
+   "dl": "9",
+   "distrito": "D9",
+   "n_secciones": 56,
+   "lista_nominal": 87184,
+   "escolaridad": "baja escolaridad",
+   "agua": 37,
+   "rol": "zona fuerte de la coalición de Morena",
+   "rol_clave": "morena",
+   "margen_s0": -25.5,
+   "margen_s1": -27.1,
+   "mc_a_s0": 30.3,
+   "mor_a_s0": 55.8,
+   "mc_a_s1": 29.4,
+   "mor_a_s1": 56.5,
+   "mc_d_s0": 28.4,
+   "mor_d_s0": 55.9,
+   "mc_d_s1": 24.8,
+   "mor_d_s1": 58.4,
+   "mc_f_s1": 24.4,
+   "mor_f_s1": 54.8,
+   "pp_a_s0": 13.9,
+   "pp_a_s1": 14.0,
+   "pp_d_s0": 15.7,
+   "pp_d_s1": 16.3,
+   "pp_f_s1": 20.6,
+   "brecha_alc_dip_s0": 1.9,
+   "brecha_alc_dip_s1": 4.6,
+   "mejor": {
+    "id": "S4",
+    "ids": [
+     "S4"
+    ],
+    "rotulo": "S4 · Delgadillo se desmarca de Lemus y gestiona agua municipal",
+    "dif_mc_vs_s1": 4.1,
+    "mc_a": 33.5,
+    "igual_que_ciudad": true
+   },
+   "peor": {
+    "id": "S11",
+    "ids": [
+     "S11"
+    ],
+    "rotulo": "S11 · Peor caso",
+    "dif_mc_vs_s1": -5.7,
+    "mc_a": 23.7,
+    "igual_que_ciudad": true
+   },
+   "lineas": [
+    {
+     "rotulo": "Alcaldía · S1 · Inercia (central)",
+     "texto": "Coalición de Morena 56.5 %, MC 29.4 %, Coalición PAN-PRI 14.0 %. Coalición de Morena va primero y le saca 27.1 pp a MC.",
+     "boleta": "ayun",
+     "escenario": "S1"
+    },
+    {
+     "rotulo": "Alcaldía · S0 · sin la crisis de octubre (referencia, no posible hoy)",
+     "texto": "Coalición de Morena 55.8 %, MC 30.3 %, Coalición PAN-PRI 13.9 %. Coalición de Morena va primero y le saca 25.5 pp a MC.",
+     "boleta": "ayun",
+     "escenario": "S0"
+    },
+    {
+     "rotulo": "Dip. local · S1 · Inercia (central)",
+     "texto": "Coalición de Morena 58.4 %, MC 24.8 %, Coalición PAN-PRI 16.3 %. Coalición de Morena va primero y le saca 33.6 pp a MC. MC tiene 4.6 pp menos que en la alcaldía; en S0 la diferencia ya era de 1.9 pp.",
+     "boleta": "dip",
+     "escenario": "S1"
+    },
+    {
+     "rotulo": "Dip. federal (preliminar) · S1 · Inercia (central)",
+     "texto": "Coalición de Morena 54.8 %, MC 24.4 %, Coalición PAN-PRI 20.6 %. Coalición de Morena va primero y le saca 30.4 pp a MC.",
+     "boleta": "fed",
+     "escenario": "S1"
+    },
+    {
+     "rotulo": "Alcaldía · entre escenarios, frente a S1 · Inercia (central)",
+     "boleta": "ayun",
+     "texto": "Lo que más ayuda a MC aquí: S4 · Delgadillo se desmarca de Lemus y gestiona agua municipal; MC pasaría de 29.4 % a 33.5 % (+4.1 pp). Lo que más le resta: S11 · Peor caso; MC pasaría de 29.4 % a 23.7 % (−5.7 pp)."
+    }
+   ],
+   "simulacion": {
+    "dictamen": "D9-C7 · zona fuerte de la coalición de Morena · 56 secciones · lista nominal 87,184 · baja escolaridad · exposición al agua 37/100. Alcaldía · S1 · Inercia (central): Coalición de Morena 56.5 %, MC 29.4 %, Coalición PAN-PRI 14.0 %. Coalición de Morena va primero y le saca 27.1 pp a MC. Alcaldía · S0 · sin la crisis de octubre (referencia, no posible hoy): Coalición de Morena 55.8 %, MC 30.3 %, Coalición PAN-PRI 13.9 %. Coalición de Morena va primero y le saca 25.5 pp a MC. Dip. local · S1 · Inercia (central): Coalición de Morena 58.4 %, MC 24.8 %, Coalición PAN-PRI 16.3 %. Coalición de Morena va primero y le saca 33.6 pp a MC. MC tiene 4.6 pp menos que en la alcaldía; en S0 la diferencia ya era de 1.9 pp. Dip. federal (preliminar) · S1 · Inercia (central): Coalición de Morena 54.8 %, MC 24.4 %, Coalición PAN-PRI 20.6 %. Coalición de Morena va primero y le saca 30.4 pp a MC. Alcaldía · entre escenarios, frente a S1 · Inercia (central): Lo que más ayuda a MC aquí: S4 · Delgadillo se desmarca de Lemus y gestiona agua municipal; MC pasaría de 29.4 % a 33.5 % (+4.1 pp). Lo que más le resta: S11 · Peor caso; MC pasaría de 29.4 % a 23.7 % (−5.7 pp)."
+   }
+  },
+  {
+   "cluster": "D9-C8",
+   "dl": "9",
+   "distrito": "D9",
+   "n_secciones": 12,
+   "lista_nominal": 24103,
+   "escolaridad": "baja escolaridad",
+   "agua": 32,
+   "rol": "zona fuerte de la coalición de Morena",
+   "rol_clave": "morena",
+   "margen_s0": -34.3,
+   "margen_s1": -35.5,
+   "mc_a_s0": 27.2,
+   "mor_a_s0": 61.5,
+   "mc_a_s1": 26.4,
+   "mor_a_s1": 61.9,
+   "mc_d_s0": 25.8,
+   "mor_d_s0": 62.0,
+   "mc_d_s1": 22.7,
+   "mor_d_s1": 64.3,
+   "mc_f_s1": 21.0,
+   "mor_f_s1": 63.0,
+   "pp_a_s0": 11.2,
+   "pp_a_s1": 11.3,
+   "pp_d_s0": 12.1,
+   "pp_d_s1": 12.7,
+   "pp_f_s1": 15.9,
+   "brecha_alc_dip_s0": 1.4,
+   "brecha_alc_dip_s1": 3.7,
+   "mejor": {
+    "id": "S4",
+    "ids": [
+     "S4"
+    ],
+    "rotulo": "S4 · Delgadillo se desmarca de Lemus y gestiona agua municipal",
+    "dif_mc_vs_s1": 4.1,
+    "mc_a": 30.5,
+    "igual_que_ciudad": true
+   },
+   "peor": {
+    "id": "S11",
+    "ids": [
+     "S11"
+    ],
+    "rotulo": "S11 · Peor caso",
+    "dif_mc_vs_s1": -5.2,
+    "mc_a": 21.2,
+    "igual_que_ciudad": true
+   },
+   "lineas": [
+    {
+     "rotulo": "Alcaldía · S1 · Inercia (central)",
+     "texto": "Coalición de Morena 61.9 %, MC 26.4 %, Coalición PAN-PRI 11.3 %. Coalición de Morena va primero y le saca 35.5 pp a MC.",
+     "boleta": "ayun",
+     "escenario": "S1"
+    },
+    {
+     "rotulo": "Alcaldía · S0 · sin la crisis de octubre (referencia, no posible hoy)",
+     "texto": "Coalición de Morena 61.5 %, MC 27.2 %, Coalición PAN-PRI 11.2 %. Coalición de Morena va primero y le saca 34.3 pp a MC.",
+     "boleta": "ayun",
+     "escenario": "S0"
+    },
+    {
+     "rotulo": "Dip. local · S1 · Inercia (central)",
+     "texto": "Coalición de Morena 64.3 %, MC 22.7 %, Coalición PAN-PRI 12.7 %. Coalición de Morena va primero y le saca 41.6 pp a MC. MC tiene 3.7 pp menos que en la alcaldía; en S0 la diferencia ya era de 1.4 pp.",
+     "boleta": "dip",
+     "escenario": "S1"
+    },
+    {
+     "rotulo": "Dip. federal (preliminar) · S1 · Inercia (central)",
+     "texto": "Coalición de Morena 63.0 %, MC 21.0 %, Coalición PAN-PRI 15.9 %. Coalición de Morena va primero y le saca 42.0 pp a MC.",
+     "boleta": "fed",
+     "escenario": "S1"
+    },
+    {
+     "rotulo": "Alcaldía · entre escenarios, frente a S1 · Inercia (central)",
+     "boleta": "ayun",
+     "texto": "Lo que más ayuda a MC aquí: S4 · Delgadillo se desmarca de Lemus y gestiona agua municipal; MC pasaría de 26.4 % a 30.5 % (+4.1 pp). Lo que más le resta: S11 · Peor caso; MC pasaría de 26.4 % a 21.2 % (−5.2 pp)."
+    }
+   ],
+   "simulacion": {
+    "dictamen": "D9-C8 · zona fuerte de la coalición de Morena · 12 secciones · lista nominal 24,103 · baja escolaridad · exposición al agua 32/100. Alcaldía · S1 · Inercia (central): Coalición de Morena 61.9 %, MC 26.4 %, Coalición PAN-PRI 11.3 %. Coalición de Morena va primero y le saca 35.5 pp a MC. Alcaldía · S0 · sin la crisis de octubre (referencia, no posible hoy): Coalición de Morena 61.5 %, MC 27.2 %, Coalición PAN-PRI 11.2 %. Coalición de Morena va primero y le saca 34.3 pp a MC. Dip. local · S1 · Inercia (central): Coalición de Morena 64.3 %, MC 22.7 %, Coalición PAN-PRI 12.7 %. Coalición de Morena va primero y le saca 41.6 pp a MC. MC tiene 3.7 pp menos que en la alcaldía; en S0 la diferencia ya era de 1.4 pp. Dip. federal (preliminar) · S1 · Inercia (central): Coalición de Morena 63.0 %, MC 21.0 %, Coalición PAN-PRI 15.9 %. Coalición de Morena va primero y le saca 42.0 pp a MC. Alcaldía · entre escenarios, frente a S1 · Inercia (central): Lo que más ayuda a MC aquí: S4 · Delgadillo se desmarca de Lemus y gestiona agua municipal; MC pasaría de 26.4 % a 30.5 % (+4.1 pp). Lo que más le resta: S11 · Peor caso; MC pasaría de 26.4 % a 21.2 % (−5.2 pp)."
+   }
+  },
+  {
+   "cluster": "D11-C1",
+   "dl": "11",
+   "distrito": "D11",
+   "n_secciones": 29,
+   "lista_nominal": 34908,
+   "escolaridad": "alta escolaridad",
+   "agua": 54,
+   "rol": "zona fuerte de MC",
+   "rol_clave": "mc",
+   "margen_s0": 9.6,
+   "margen_s1": 8.5,
+   "mc_a_s0": 44.1,
+   "mor_a_s0": 34.5,
+   "mc_a_s1": 43.3,
+   "mor_a_s1": 34.8,
+   "mc_d_s0": 36.9,
+   "mor_d_s0": 35.9,
+   "mc_d_s1": 33.5,
+   "mor_d_s1": 37.6,
+   "mc_f_s1": 28.9,
+   "mor_f_s1": 31.2,
+   "pp_a_s0": 21.4,
+   "pp_a_s1": 21.5,
+   "pp_d_s0": 27.3,
+   "pp_d_s1": 28.5,
+   "pp_f_s1": 39.6,
+   "brecha_alc_dip_s0": 7.2,
+   "brecha_alc_dip_s1": 9.8,
+   "mejor": {
+    "id": "S4",
+    "ids": [
+     "S4"
+    ],
+    "rotulo": "S4 · Delgadillo se desmarca de Lemus y gestiona agua municipal",
+    "dif_mc_vs_s1": 5.0,
+    "mc_a": 48.3,
+    "igual_que_ciudad": true
+   },
+   "peor": {
+    "id": "S11",
+    "ids": [
+     "S11"
+    ],
+    "rotulo": "S11 · Peor caso",
+    "dif_mc_vs_s1": -4.6,
+    "mc_a": 38.7,
+    "igual_que_ciudad": true
+   },
+   "lineas": [
+    {
+     "rotulo": "Alcaldía · S1 · Inercia (central)",
+     "texto": "MC 43.3 %, Coalición de Morena 34.8 %, Coalición PAN-PRI 21.5 %. MC va primero y le saca 8.5 pp a Coalición de Morena.",
+     "boleta": "ayun",
+     "escenario": "S1"
+    },
+    {
+     "rotulo": "Alcaldía · S0 · sin la crisis de octubre (referencia, no posible hoy)",
+     "texto": "MC 44.1 %, Coalición de Morena 34.5 %, Coalición PAN-PRI 21.4 %. MC va primero y le saca 9.6 pp a Coalición de Morena.",
+     "boleta": "ayun",
+     "escenario": "S0"
+    },
+    {
+     "rotulo": "Dip. local · S1 · Inercia (central)",
+     "texto": "Coalición de Morena 37.6 %, MC 33.5 %, Coalición PAN-PRI 28.5 %. Parejo: diferencia 4.1 puntos entre Coalición de Morena y MC. MC tiene 9.8 pp menos que en la alcaldía; en S0 la diferencia ya era de 7.2 pp.",
+     "boleta": "dip",
+     "escenario": "S1"
+    },
+    {
+     "rotulo": "Dip. federal (preliminar) · S1 · Inercia (central)",
+     "texto": "Coalición PAN-PRI 39.6 %, Coalición de Morena 31.2 %, MC 28.9 %. Coalición PAN-PRI va primero y le saca 8.4 pp a Coalición de Morena, y 10.7 pp a MC.",
+     "boleta": "fed",
+     "escenario": "S1"
+    },
+    {
+     "rotulo": "Alcaldía · entre escenarios, frente a S1 · Inercia (central)",
+     "boleta": "ayun",
+     "texto": "Lo que más ayuda a MC aquí: S4 · Delgadillo se desmarca de Lemus y gestiona agua municipal; MC pasaría de 43.3 % a 48.3 % (+5.0 pp). Lo que más le resta: S11 · Peor caso; MC pasaría de 43.3 % a 38.7 % (−4.6 pp)."
+    }
+   ],
+   "simulacion": {
+    "dictamen": "D11-C1 · zona fuerte de MC · 29 secciones · lista nominal 34,908 · alta escolaridad · exposición al agua 54/100. Alcaldía · S1 · Inercia (central): MC 43.3 %, Coalición de Morena 34.8 %, Coalición PAN-PRI 21.5 %. MC va primero y le saca 8.5 pp a Coalición de Morena. Alcaldía · S0 · sin la crisis de octubre (referencia, no posible hoy): MC 44.1 %, Coalición de Morena 34.5 %, Coalición PAN-PRI 21.4 %. MC va primero y le saca 9.6 pp a Coalición de Morena. Dip. local · S1 · Inercia (central): Coalición de Morena 37.6 %, MC 33.5 %, Coalición PAN-PRI 28.5 %. Parejo: diferencia 4.1 puntos entre Coalición de Morena y MC. MC tiene 9.8 pp menos que en la alcaldía; en S0 la diferencia ya era de 7.2 pp. Dip. federal (preliminar) · S1 · Inercia (central): Coalición PAN-PRI 39.6 %, Coalición de Morena 31.2 %, MC 28.9 %. Coalición PAN-PRI va primero y le saca 8.4 pp a Coalición de Morena, y 10.7 pp a MC. Alcaldía · entre escenarios, frente a S1 · Inercia (central): Lo que más ayuda a MC aquí: S4 · Delgadillo se desmarca de Lemus y gestiona agua municipal; MC pasaría de 43.3 % a 48.3 % (+5.0 pp). Lo que más le resta: S11 · Peor caso; MC pasaría de 43.3 % a 38.7 % (−4.6 pp)."
+   }
+  },
+  {
+   "cluster": "D11-C2",
+   "dl": "11",
+   "distrito": "D11",
+   "n_secciones": 24,
+   "lista_nominal": 40483,
+   "escolaridad": "escolaridad media",
+   "agua": 44,
+   "rol": "zona competida",
+   "rol_clave": "competida",
+   "margen_s0": 0.6,
+   "margen_s1": -0.7,
+   "mc_a_s0": 42.0,
+   "mor_a_s0": 41.4,
+   "mc_a_s1": 41.1,
+   "mor_a_s1": 41.8,
+   "mc_d_s0": 36.2,
+   "mor_d_s0": 43.3,
+   "mc_d_s1": 32.9,
+   "mor_d_s1": 45.1,
+   "mc_f_s1": 31.5,
+   "mor_f_s1": 39.8,
+   "pp_a_s0": 16.6,
+   "pp_a_s1": 16.8,
+   "pp_d_s0": 20.5,
+   "pp_d_s1": 21.5,
+   "pp_f_s1": 28.5,
+   "brecha_alc_dip_s0": 5.8,
+   "brecha_alc_dip_s1": 8.2,
+   "mejor": {
+    "id": "S4",
+    "ids": [
+     "S4"
+    ],
+    "rotulo": "S4 · Delgadillo se desmarca de Lemus y gestiona agua municipal",
+    "dif_mc_vs_s1": 4.5,
+    "mc_a": 45.6,
+    "igual_que_ciudad": true
+   },
+   "peor": {
+    "id": "S11",
+    "ids": [
+     "S11"
+    ],
+    "rotulo": "S11 · Peor caso",
+    "dif_mc_vs_s1": -5.1,
+    "mc_a": 36.0,
+    "igual_que_ciudad": true
+   },
+   "lineas": [
+    {
+     "rotulo": "Alcaldía · S1 · Inercia (central)",
+     "texto": "Coalición de Morena 41.8 %, MC 41.1 %, Coalición PAN-PRI 16.8 %. Parejo: diferencia 0.7 puntos entre Coalición de Morena y MC.",
+     "boleta": "ayun",
+     "escenario": "S1"
+    },
+    {
+     "rotulo": "Alcaldía · S0 · sin la crisis de octubre (referencia, no posible hoy)",
+     "texto": "MC 42.0 %, Coalición de Morena 41.4 %, Coalición PAN-PRI 16.6 %. Parejo: diferencia 0.6 puntos entre MC y Coalición de Morena.",
+     "boleta": "ayun",
+     "escenario": "S0"
+    },
+    {
+     "rotulo": "Dip. local · S1 · Inercia (central)",
+     "texto": "Coalición de Morena 45.1 %, MC 32.9 %, Coalición PAN-PRI 21.5 %. Coalición de Morena va primero y le saca 12.2 pp a MC. MC tiene 8.2 pp menos que en la alcaldía; en S0 la diferencia ya era de 5.8 pp.",
+     "boleta": "dip",
+     "escenario": "S1"
+    },
+    {
+     "rotulo": "Dip. federal (preliminar) · S1 · Inercia (central)",
+     "texto": "Coalición de Morena 39.8 %, MC 31.5 %, Coalición PAN-PRI 28.5 %. Coalición de Morena va primero y le saca 8.3 pp a MC.",
+     "boleta": "fed",
+     "escenario": "S1"
+    },
+    {
+     "rotulo": "Alcaldía · entre escenarios, frente a S1 · Inercia (central)",
+     "boleta": "ayun",
+     "texto": "Lo que más ayuda a MC aquí: S4 · Delgadillo se desmarca de Lemus y gestiona agua municipal; MC pasaría de 41.1 % a 45.6 % (+4.5 pp). Lo que más le resta: S11 · Peor caso; MC pasaría de 41.1 % a 36.0 % (−5.1 pp)."
+    }
+   ],
+   "simulacion": {
+    "dictamen": "D11-C2 · zona competida · 24 secciones · lista nominal 40,483 · escolaridad media · exposición al agua 44/100. Alcaldía · S1 · Inercia (central): Coalición de Morena 41.8 %, MC 41.1 %, Coalición PAN-PRI 16.8 %. Parejo: diferencia 0.7 puntos entre Coalición de Morena y MC. Alcaldía · S0 · sin la crisis de octubre (referencia, no posible hoy): MC 42.0 %, Coalición de Morena 41.4 %, Coalición PAN-PRI 16.6 %. Parejo: diferencia 0.6 puntos entre MC y Coalición de Morena. Dip. local · S1 · Inercia (central): Coalición de Morena 45.1 %, MC 32.9 %, Coalición PAN-PRI 21.5 %. Coalición de Morena va primero y le saca 12.2 pp a MC. MC tiene 8.2 pp menos que en la alcaldía; en S0 la diferencia ya era de 5.8 pp. Dip. federal (preliminar) · S1 · Inercia (central): Coalición de Morena 39.8 %, MC 31.5 %, Coalición PAN-PRI 28.5 %. Coalición de Morena va primero y le saca 8.3 pp a MC. Alcaldía · entre escenarios, frente a S1 · Inercia (central): Lo que más ayuda a MC aquí: S4 · Delgadillo se desmarca de Lemus y gestiona agua municipal; MC pasaría de 41.1 % a 45.6 % (+4.5 pp). Lo que más le resta: S11 · Peor caso; MC pasaría de 41.1 % a 36.0 % (−5.1 pp)."
+   }
+  },
+  {
+   "cluster": "D11-C3",
+   "dl": "11",
+   "distrito": "D11",
+   "n_secciones": 54,
+   "lista_nominal": 57294,
+   "escolaridad": "escolaridad media",
+   "agua": 56,
+   "rol": "zona competida",
+   "rol_clave": "competida",
+   "margen_s0": -2.0,
+   "margen_s1": -4.1,
+   "mc_a_s0": 39.4,
+   "mor_a_s0": 41.4,
+   "mc_a_s1": 38.1,
+   "mor_a_s1": 42.2,
+   "mc_d_s0": 32.8,
+   "mor_d_s0": 43.2,
+   "mc_d_s1": 29.2,
+   "mor_d_s1": 45.3,
+   "mc_f_s1": 27.5,
+   "mor_f_s1": 39.6,
+   "pp_a_s0": 19.3,
+   "pp_a_s1": 19.4,
+   "pp_d_s0": 24.1,
+   "pp_d_s1": 25.1,
+   "pp_f_s1": 32.5,
+   "brecha_alc_dip_s0": 6.6,
+   "brecha_alc_dip_s1": 8.9,
+   "mejor": {
+    "id": "S4",
+    "ids": [
+     "S4"
+    ],
+    "rotulo": "S4 · Delgadillo se desmarca de Lemus y gestiona agua municipal",
+    "dif_mc_vs_s1": 4.7,
+    "mc_a": 42.8,
+    "igual_que_ciudad": true
+   },
+   "peor": {
+    "id": "S11",
+    "ids": [
+     "S11"
+    ],
+    "rotulo": "S11 · Peor caso",
+    "dif_mc_vs_s1": -5.8,
+    "mc_a": 32.3,
+    "igual_que_ciudad": true
+   },
+   "lineas": [
+    {
+     "rotulo": "Alcaldía · S1 · Inercia (central)",
+     "texto": "Coalición de Morena 42.2 %, MC 38.1 %, Coalición PAN-PRI 19.4 %. Parejo: diferencia 4.1 puntos entre Coalición de Morena y MC.",
+     "boleta": "ayun",
+     "escenario": "S1"
+    },
+    {
+     "rotulo": "Alcaldía · S0 · sin la crisis de octubre (referencia, no posible hoy)",
+     "texto": "Coalición de Morena 41.4 %, MC 39.4 %, Coalición PAN-PRI 19.3 %. Parejo: diferencia 2.0 puntos entre Coalición de Morena y MC.",
+     "boleta": "ayun",
+     "escenario": "S0"
+    },
+    {
+     "rotulo": "Dip. local · S1 · Inercia (central)",
+     "texto": "Coalición de Morena 45.3 %, MC 29.2 %, Coalición PAN-PRI 25.1 %. Coalición de Morena va primero y le saca 16.1 pp a MC. MC tiene 8.9 pp menos que en la alcaldía; en S0 la diferencia ya era de 6.6 pp.",
+     "boleta": "dip",
+     "escenario": "S1"
+    },
+    {
+     "rotulo": "Dip. federal (preliminar) · S1 · Inercia (central)",
+     "texto": "Coalición de Morena 39.6 %, Coalición PAN-PRI 32.5 %, MC 27.5 %. Coalición de Morena va primero y le saca 7.1 pp a Coalición PAN-PRI, y 12.1 pp a MC.",
+     "boleta": "fed",
+     "escenario": "S1"
+    },
+    {
+     "rotulo": "Alcaldía · entre escenarios, frente a S1 · Inercia (central)",
+     "boleta": "ayun",
+     "texto": "Lo que más ayuda a MC aquí: S4 · Delgadillo se desmarca de Lemus y gestiona agua municipal; MC pasaría de 38.1 % a 42.8 % (+4.7 pp). Lo que más le resta: S11 · Peor caso; MC pasaría de 38.1 % a 32.3 % (−5.8 pp)."
+    }
+   ],
+   "simulacion": {
+    "dictamen": "D11-C3 · zona competida · 54 secciones · lista nominal 57,294 · escolaridad media · exposición al agua 56/100. Alcaldía · S1 · Inercia (central): Coalición de Morena 42.2 %, MC 38.1 %, Coalición PAN-PRI 19.4 %. Parejo: diferencia 4.1 puntos entre Coalición de Morena y MC. Alcaldía · S0 · sin la crisis de octubre (referencia, no posible hoy): Coalición de Morena 41.4 %, MC 39.4 %, Coalición PAN-PRI 19.3 %. Parejo: diferencia 2.0 puntos entre Coalición de Morena y MC. Dip. local · S1 · Inercia (central): Coalición de Morena 45.3 %, MC 29.2 %, Coalición PAN-PRI 25.1 %. Coalición de Morena va primero y le saca 16.1 pp a MC. MC tiene 8.9 pp menos que en la alcaldía; en S0 la diferencia ya era de 6.6 pp. Dip. federal (preliminar) · S1 · Inercia (central): Coalición de Morena 39.6 %, Coalición PAN-PRI 32.5 %, MC 27.5 %. Coalición de Morena va primero y le saca 7.1 pp a Coalición PAN-PRI, y 12.1 pp a MC. Alcaldía · entre escenarios, frente a S1 · Inercia (central): Lo que más ayuda a MC aquí: S4 · Delgadillo se desmarca de Lemus y gestiona agua municipal; MC pasaría de 38.1 % a 42.8 % (+4.7 pp). Lo que más le resta: S11 · Peor caso; MC pasaría de 38.1 % a 32.3 % (−5.8 pp)."
+   }
+  },
+  {
+   "cluster": "D11-C4",
+   "dl": "11",
+   "distrito": "D11",
+   "n_secciones": 36,
+   "lista_nominal": 34051,
+   "escolaridad": "escolaridad media",
+   "agua": 42,
+   "rol": "zona competida",
+   "rol_clave": "competida",
+   "margen_s0": -2.6,
+   "margen_s1": -4.2,
+   "mc_a_s0": 38.5,
+   "mor_a_s0": 41.1,
+   "mc_a_s1": 37.4,
+   "mor_a_s1": 41.6,
+   "mc_d_s0": 32.0,
+   "mor_d_s0": 42.6,
+   "mc_d_s1": 28.7,
+   "mor_d_s1": 44.6,
+   "mc_f_s1": 26.4,
+   "mor_f_s1": 39.3,
+   "pp_a_s0": 20.4,
+   "pp_a_s1": 20.5,
+   "pp_d_s0": 25.4,
+   "pp_d_s1": 26.4,
+   "pp_f_s1": 34.0,
+   "brecha_alc_dip_s0": 6.5,
+   "brecha_alc_dip_s1": 8.7,
+   "mejor": {
+    "id": "S4",
+    "ids": [
+     "S4"
+    ],
+    "rotulo": "S4 · Delgadillo se desmarca de Lemus y gestiona agua municipal",
+    "dif_mc_vs_s1": 4.7,
+    "mc_a": 42.1,
+    "igual_que_ciudad": true
+   },
+   "peor": {
+    "id": "S11",
+    "ids": [
+     "S11"
+    ],
+    "rotulo": "S11 · Peor caso",
+    "dif_mc_vs_s1": -5.7,
+    "mc_a": 31.7,
+    "igual_que_ciudad": true
+   },
+   "lineas": [
+    {
+     "rotulo": "Alcaldía · S1 · Inercia (central)",
+     "texto": "Coalición de Morena 41.6 %, MC 37.4 %, Coalición PAN-PRI 20.5 %. Parejo: diferencia 4.2 puntos entre Coalición de Morena y MC.",
+     "boleta": "ayun",
+     "escenario": "S1"
+    },
+    {
+     "rotulo": "Alcaldía · S0 · sin la crisis de octubre (referencia, no posible hoy)",
+     "texto": "Coalición de Morena 41.1 %, MC 38.5 %, Coalición PAN-PRI 20.4 %. Parejo: diferencia 2.6 puntos entre Coalición de Morena y MC.",
+     "boleta": "ayun",
+     "escenario": "S0"
+    },
+    {
+     "rotulo": "Dip. local · S1 · Inercia (central)",
+     "texto": "Coalición de Morena 44.6 %, MC 28.7 %, Coalición PAN-PRI 26.4 %. Coalición de Morena va primero y le saca 15.9 pp a MC. MC tiene 8.7 pp menos que en la alcaldía; en S0 la diferencia ya era de 6.5 pp.",
+     "boleta": "dip",
+     "escenario": "S1"
+    },
+    {
+     "rotulo": "Dip. federal (preliminar) · S1 · Inercia (central)",
+     "texto": "Coalición de Morena 39.3 %, Coalición PAN-PRI 34.0 %, MC 26.4 %. Coalición de Morena va primero y le saca 5.3 pp a Coalición PAN-PRI, y 12.9 pp a MC.",
+     "boleta": "fed",
+     "escenario": "S1"
+    },
+    {
+     "rotulo": "Alcaldía · entre escenarios, frente a S1 · Inercia (central)",
+     "boleta": "ayun",
+     "texto": "Lo que más ayuda a MC aquí: S4 · Delgadillo se desmarca de Lemus y gestiona agua municipal; MC pasaría de 37.4 % a 42.1 % (+4.7 pp). Lo que más le resta: S11 · Peor caso; MC pasaría de 37.4 % a 31.7 % (−5.7 pp)."
+    }
+   ],
+   "simulacion": {
+    "dictamen": "D11-C4 · zona competida · 36 secciones · lista nominal 34,051 · escolaridad media · exposición al agua 42/100. Alcaldía · S1 · Inercia (central): Coalición de Morena 41.6 %, MC 37.4 %, Coalición PAN-PRI 20.5 %. Parejo: diferencia 4.2 puntos entre Coalición de Morena y MC. Alcaldía · S0 · sin la crisis de octubre (referencia, no posible hoy): Coalición de Morena 41.1 %, MC 38.5 %, Coalición PAN-PRI 20.4 %. Parejo: diferencia 2.6 puntos entre Coalición de Morena y MC. Dip. local · S1 · Inercia (central): Coalición de Morena 44.6 %, MC 28.7 %, Coalición PAN-PRI 26.4 %. Coalición de Morena va primero y le saca 15.9 pp a MC. MC tiene 8.7 pp menos que en la alcaldía; en S0 la diferencia ya era de 6.5 pp. Dip. federal (preliminar) · S1 · Inercia (central): Coalición de Morena 39.3 %, Coalición PAN-PRI 34.0 %, MC 26.4 %. Coalición de Morena va primero y le saca 5.3 pp a Coalición PAN-PRI, y 12.9 pp a MC. Alcaldía · entre escenarios, frente a S1 · Inercia (central): Lo que más ayuda a MC aquí: S4 · Delgadillo se desmarca de Lemus y gestiona agua municipal; MC pasaría de 37.4 % a 42.1 % (+4.7 pp). Lo que más le resta: S11 · Peor caso; MC pasaría de 37.4 % a 31.7 % (−5.7 pp)."
+   }
+  },
+  {
+   "cluster": "D11-C5",
+   "dl": "11",
+   "distrito": "D11",
+   "n_secciones": 61,
+   "lista_nominal": 73719,
+   "escolaridad": "escolaridad media",
+   "agua": 39,
+   "rol": "zona fuerte de la coalición de Morena",
+   "rol_clave": "morena",
+   "margen_s0": -7.2,
+   "margen_s1": -8.6,
+   "mc_a_s0": 37.9,
+   "mor_a_s0": 45.1,
+   "mc_a_s1": 37.0,
+   "mor_a_s1": 45.6,
+   "mc_d_s0": 31.5,
+   "mor_d_s0": 47.2,
+   "mc_d_s1": 28.3,
+   "mor_d_s1": 49.3,
+   "mc_f_s1": 27.8,
+   "mor_f_s1": 43.8,
+   "pp_a_s0": 17.1,
+   "pp_a_s1": 17.2,
+   "pp_d_s0": 21.3,
+   "pp_d_s1": 22.2,
+   "pp_f_s1": 28.0,
+   "brecha_alc_dip_s0": 6.4,
+   "brecha_alc_dip_s1": 8.7,
+   "mejor": {
+    "id": "S4",
+    "ids": [
+     "S4"
+    ],
+    "rotulo": "S4 · Delgadillo se desmarca de Lemus y gestiona agua municipal",
+    "dif_mc_vs_s1": 4.3,
+    "mc_a": 41.3,
+    "igual_que_ciudad": true
+   },
+   "peor": {
+    "id": "S11",
+    "ids": [
+     "S11"
+    ],
+    "rotulo": "S11 · Peor caso",
+    "dif_mc_vs_s1": -5.7,
+    "mc_a": 31.3,
+    "igual_que_ciudad": true
+   },
+   "lineas": [
+    {
+     "rotulo": "Alcaldía · S1 · Inercia (central)",
+     "texto": "Coalición de Morena 45.6 %, MC 37.0 %, Coalición PAN-PRI 17.2 %. Coalición de Morena va primero y le saca 8.6 pp a MC.",
+     "boleta": "ayun",
+     "escenario": "S1"
+    },
+    {
+     "rotulo": "Alcaldía · S0 · sin la crisis de octubre (referencia, no posible hoy)",
+     "texto": "Coalición de Morena 45.1 %, MC 37.9 %, Coalición PAN-PRI 17.1 %. Coalición de Morena va primero y le saca 7.2 pp a MC.",
+     "boleta": "ayun",
+     "escenario": "S0"
+    },
+    {
+     "rotulo": "Dip. local · S1 · Inercia (central)",
+     "texto": "Coalición de Morena 49.3 %, MC 28.3 %, Coalición PAN-PRI 22.2 %. Coalición de Morena va primero y le saca 21.0 pp a MC. MC tiene 8.7 pp menos que en la alcaldía; en S0 la diferencia ya era de 6.4 pp.",
+     "boleta": "dip",
+     "escenario": "S1"
+    },
+    {
+     "rotulo": "Dip. federal (preliminar) · S1 · Inercia (central)",
+     "texto": "Coalición de Morena 43.8 %, Coalición PAN-PRI 28.0 %, MC 27.8 %. Coalición de Morena va primero y le saca 15.8 pp a Coalición PAN-PRI, y 16.0 pp a MC.",
+     "boleta": "fed",
+     "escenario": "S1"
+    },
+    {
+     "rotulo": "Alcaldía · entre escenarios, frente a S1 · Inercia (central)",
+     "boleta": "ayun",
+     "texto": "Lo que más ayuda a MC aquí: S4 · Delgadillo se desmarca de Lemus y gestiona agua municipal; MC pasaría de 37.0 % a 41.3 % (+4.3 pp). Lo que más le resta: S11 · Peor caso; MC pasaría de 37.0 % a 31.3 % (−5.7 pp)."
+    }
+   ],
+   "simulacion": {
+    "dictamen": "D11-C5 · zona fuerte de la coalición de Morena · 61 secciones · lista nominal 73,719 · escolaridad media · exposición al agua 39/100. Alcaldía · S1 · Inercia (central): Coalición de Morena 45.6 %, MC 37.0 %, Coalición PAN-PRI 17.2 %. Coalición de Morena va primero y le saca 8.6 pp a MC. Alcaldía · S0 · sin la crisis de octubre (referencia, no posible hoy): Coalición de Morena 45.1 %, MC 37.9 %, Coalición PAN-PRI 17.1 %. Coalición de Morena va primero y le saca 7.2 pp a MC. Dip. local · S1 · Inercia (central): Coalición de Morena 49.3 %, MC 28.3 %, Coalición PAN-PRI 22.2 %. Coalición de Morena va primero y le saca 21.0 pp a MC. MC tiene 8.7 pp menos que en la alcaldía; en S0 la diferencia ya era de 6.4 pp. Dip. federal (preliminar) · S1 · Inercia (central): Coalición de Morena 43.8 %, Coalición PAN-PRI 28.0 %, MC 27.8 %. Coalición de Morena va primero y le saca 15.8 pp a Coalición PAN-PRI, y 16.0 pp a MC. Alcaldía · entre escenarios, frente a S1 · Inercia (central): Lo que más ayuda a MC aquí: S4 · Delgadillo se desmarca de Lemus y gestiona agua municipal; MC pasaría de 37.0 % a 41.3 % (+4.3 pp). Lo que más le resta: S11 · Peor caso; MC pasaría de 37.0 % a 31.3 % (−5.7 pp)."
+   }
+  },
+  {
+   "cluster": "D11-C6",
+   "dl": "11",
+   "distrito": "D11",
+   "n_secciones": 41,
+   "lista_nominal": 58040,
+   "escolaridad": "baja escolaridad",
+   "agua": 36,
+   "rol": "zona fuerte de la coalición de Morena",
+   "rol_clave": "morena",
+   "margen_s0": -17.7,
+   "margen_s1": -19.3,
+   "mc_a_s0": 34.2,
+   "mor_a_s0": 51.9,
+   "mc_a_s1": 33.2,
+   "mor_a_s1": 52.5,
+   "mc_d_s0": 30.1,
+   "mor_d_s0": 53.9,
+   "mc_d_s1": 26.8,
+   "mor_d_s1": 56.1,
+   "mc_f_s1": 29.7,
+   "mor_f_s1": 50.0,
+   "pp_a_s0": 13.8,
+   "pp_a_s1": 14.0,
+   "pp_d_s0": 16.0,
+   "pp_d_s1": 16.7,
+   "pp_f_s1": 20.1,
+   "brecha_alc_dip_s0": 4.1,
+   "brecha_alc_dip_s1": 6.4,
+   "mejor": {
+    "id": "S4",
+    "ids": [
+     "S4"
+    ],
+    "rotulo": "S4 · Delgadillo se desmarca de Lemus y gestiona agua municipal",
+    "dif_mc_vs_s1": 4.1,
+    "mc_a": 37.3,
+    "igual_que_ciudad": true
+   },
+   "peor": {
+    "id": "S11",
+    "ids": [
+     "S11"
+    ],
+    "rotulo": "S11 · Peor caso",
+    "dif_mc_vs_s1": -6.1,
+    "mc_a": 27.1,
+    "igual_que_ciudad": true
+   },
+   "lineas": [
+    {
+     "rotulo": "Alcaldía · S1 · Inercia (central)",
+     "texto": "Coalición de Morena 52.5 %, MC 33.2 %, Coalición PAN-PRI 14.0 %. Coalición de Morena va primero y le saca 19.3 pp a MC.",
+     "boleta": "ayun",
+     "escenario": "S1"
+    },
+    {
+     "rotulo": "Alcaldía · S0 · sin la crisis de octubre (referencia, no posible hoy)",
+     "texto": "Coalición de Morena 51.9 %, MC 34.2 %, Coalición PAN-PRI 13.8 %. Coalición de Morena va primero y le saca 17.7 pp a MC.",
+     "boleta": "ayun",
+     "escenario": "S0"
+    },
+    {
+     "rotulo": "Dip. local · S1 · Inercia (central)",
+     "texto": "Coalición de Morena 56.1 %, MC 26.8 %, Coalición PAN-PRI 16.7 %. Coalición de Morena va primero y le saca 29.3 pp a MC. MC tiene 6.4 pp menos que en la alcaldía; en S0 la diferencia ya era de 4.1 pp.",
+     "boleta": "dip",
+     "escenario": "S1"
+    },
+    {
+     "rotulo": "Dip. federal (preliminar) · S1 · Inercia (central)",
+     "texto": "Coalición de Morena 50.0 %, MC 29.7 %, Coalición PAN-PRI 20.1 %. Coalición de Morena va primero y le saca 20.3 pp a MC.",
+     "boleta": "fed",
+     "escenario": "S1"
+    },
+    {
+     "rotulo": "Alcaldía · entre escenarios, frente a S1 · Inercia (central)",
+     "boleta": "ayun",
+     "texto": "Lo que más ayuda a MC aquí: S4 · Delgadillo se desmarca de Lemus y gestiona agua municipal; MC pasaría de 33.2 % a 37.3 % (+4.1 pp). Lo que más le resta: S11 · Peor caso; MC pasaría de 33.2 % a 27.1 % (−6.1 pp)."
+    }
+   ],
+   "simulacion": {
+    "dictamen": "D11-C6 · zona fuerte de la coalición de Morena · 41 secciones · lista nominal 58,040 · baja escolaridad · exposición al agua 36/100. Alcaldía · S1 · Inercia (central): Coalición de Morena 52.5 %, MC 33.2 %, Coalición PAN-PRI 14.0 %. Coalición de Morena va primero y le saca 19.3 pp a MC. Alcaldía · S0 · sin la crisis de octubre (referencia, no posible hoy): Coalición de Morena 51.9 %, MC 34.2 %, Coalición PAN-PRI 13.8 %. Coalición de Morena va primero y le saca 17.7 pp a MC. Dip. local · S1 · Inercia (central): Coalición de Morena 56.1 %, MC 26.8 %, Coalición PAN-PRI 16.7 %. Coalición de Morena va primero y le saca 29.3 pp a MC. MC tiene 6.4 pp menos que en la alcaldía; en S0 la diferencia ya era de 4.1 pp. Dip. federal (preliminar) · S1 · Inercia (central): Coalición de Morena 50.0 %, MC 29.7 %, Coalición PAN-PRI 20.1 %. Coalición de Morena va primero y le saca 20.3 pp a MC. Alcaldía · entre escenarios, frente a S1 · Inercia (central): Lo que más ayuda a MC aquí: S4 · Delgadillo se desmarca de Lemus y gestiona agua municipal; MC pasaría de 33.2 % a 37.3 % (+4.1 pp). Lo que más le resta: S11 · Peor caso; MC pasaría de 33.2 % a 27.1 % (−6.1 pp)."
+   }
+  },
+  {
+   "cluster": "D11-C7",
+   "dl": "11",
+   "distrito": "D11",
+   "n_secciones": 36,
+   "lista_nominal": 35804,
+   "escolaridad": "baja escolaridad",
+   "agua": 56,
+   "rol": "zona fuerte de la coalición de Morena",
+   "rol_clave": "morena",
+   "margen_s0": -12.2,
+   "margen_s1": -14.6,
+   "mc_a_s0": 35.3,
+   "mor_a_s0": 47.5,
+   "mc_a_s1": 33.7,
+   "mor_a_s1": 48.3,
+   "mc_d_s0": 30.2,
+   "mor_d_s0": 49.2,
+   "mc_d_s1": 26.5,
+   "mor_d_s1": 51.7,
+   "mc_f_s1": 26.2,
+   "mor_f_s1": 47.1,
+   "pp_a_s0": 17.2,
+   "pp_a_s1": 17.4,
+   "pp_d_s0": 20.7,
+   "pp_d_s1": 21.6,
+   "pp_f_s1": 26.4,
+   "brecha_alc_dip_s0": 5.1,
+   "brecha_alc_dip_s1": 7.2,
+   "mejor": {
+    "id": "S4",
+    "ids": [
+     "S4"
+    ],
+    "rotulo": "S4 · Delgadillo se desmarca de Lemus y gestiona agua municipal",
+    "dif_mc_vs_s1": 4.8,
+    "mc_a": 38.5,
+    "igual_que_ciudad": true
+   },
+   "peor": {
+    "id": "S11",
+    "ids": [
+     "S11"
+    ],
+    "rotulo": "S11 · Peor caso",
+    "dif_mc_vs_s1": -6.1,
+    "mc_a": 27.6,
+    "igual_que_ciudad": true
+   },
+   "lineas": [
+    {
+     "rotulo": "Alcaldía · S1 · Inercia (central)",
+     "texto": "Coalición de Morena 48.3 %, MC 33.7 %, Coalición PAN-PRI 17.4 %. Coalición de Morena va primero y le saca 14.6 pp a MC.",
+     "boleta": "ayun",
+     "escenario": "S1"
+    },
+    {
+     "rotulo": "Alcaldía · S0 · sin la crisis de octubre (referencia, no posible hoy)",
+     "texto": "Coalición de Morena 47.5 %, MC 35.3 %, Coalición PAN-PRI 17.2 %. Coalición de Morena va primero y le saca 12.2 pp a MC.",
+     "boleta": "ayun",
+     "escenario": "S0"
+    },
+    {
+     "rotulo": "Dip. local · S1 · Inercia (central)",
+     "texto": "Coalición de Morena 51.7 %, MC 26.5 %, Coalición PAN-PRI 21.6 %. Coalición de Morena va primero y le saca 25.2 pp a MC. MC tiene 7.2 pp menos que en la alcaldía; en S0 la diferencia ya era de 5.1 pp.",
+     "boleta": "dip",
+     "escenario": "S1"
+    },
+    {
+     "rotulo": "Dip. federal (preliminar) · S1 · Inercia (central)",
+     "texto": "Coalición de Morena 47.1 %, Coalición PAN-PRI 26.4 %, MC 26.2 %. Coalición de Morena va primero y le saca 20.7 pp a Coalición PAN-PRI, y 20.9 pp a MC.",
+     "boleta": "fed",
+     "escenario": "S1"
+    },
+    {
+     "rotulo": "Alcaldía · entre escenarios, frente a S1 · Inercia (central)",
+     "boleta": "ayun",
+     "texto": "Lo que más ayuda a MC aquí: S4 · Delgadillo se desmarca de Lemus y gestiona agua municipal; MC pasaría de 33.7 % a 38.5 % (+4.8 pp). Lo que más le resta: S11 · Peor caso; MC pasaría de 33.7 % a 27.6 % (−6.1 pp)."
+    }
+   ],
+   "simulacion": {
+    "dictamen": "D11-C7 · zona fuerte de la coalición de Morena · 36 secciones · lista nominal 35,804 · baja escolaridad · exposición al agua 56/100. Alcaldía · S1 · Inercia (central): Coalición de Morena 48.3 %, MC 33.7 %, Coalición PAN-PRI 17.4 %. Coalición de Morena va primero y le saca 14.6 pp a MC. Alcaldía · S0 · sin la crisis de octubre (referencia, no posible hoy): Coalición de Morena 47.5 %, MC 35.3 %, Coalición PAN-PRI 17.2 %. Coalición de Morena va primero y le saca 12.2 pp a MC. Dip. local · S1 · Inercia (central): Coalición de Morena 51.7 %, MC 26.5 %, Coalición PAN-PRI 21.6 %. Coalición de Morena va primero y le saca 25.2 pp a MC. MC tiene 7.2 pp menos que en la alcaldía; en S0 la diferencia ya era de 5.1 pp. Dip. federal (preliminar) · S1 · Inercia (central): Coalición de Morena 47.1 %, Coalición PAN-PRI 26.4 %, MC 26.2 %. Coalición de Morena va primero y le saca 20.7 pp a Coalición PAN-PRI, y 20.9 pp a MC. Alcaldía · entre escenarios, frente a S1 · Inercia (central): Lo que más ayuda a MC aquí: S4 · Delgadillo se desmarca de Lemus y gestiona agua municipal; MC pasaría de 33.7 % a 38.5 % (+4.8 pp). Lo que más le resta: S11 · Peor caso; MC pasaría de 33.7 % a 27.6 % (−6.1 pp)."
+   }
+  },
+  {
+   "cluster": "D11-C8",
+   "dl": "11",
+   "distrito": "D11",
+   "n_secciones": 30,
+   "lista_nominal": 39419,
+   "escolaridad": "baja escolaridad",
+   "agua": 35,
+   "rol": "zona fuerte de la coalición de Morena",
+   "rol_clave": "morena",
+   "margen_s0": -17.9,
+   "margen_s1": -19.4,
+   "mc_a_s0": 33.3,
+   "mor_a_s0": 51.2,
+   "mc_a_s1": 32.3,
+   "mor_a_s1": 51.7,
+   "mc_d_s0": 28.5,
+   "mor_d_s0": 53.2,
+   "mc_d_s1": 25.2,
+   "mor_d_s1": 55.3,
+   "mc_f_s1": 26.1,
+   "mor_f_s1": 50.9,
+   "pp_a_s0": 15.6,
+   "pp_a_s1": 15.7,
+   "pp_d_s0": 18.3,
+   "pp_d_s1": 19.0,
+   "pp_f_s1": 22.7,
+   "brecha_alc_dip_s0": 4.8,
+   "brecha_alc_dip_s1": 7.1,
+   "mejor": {
+    "id": "S4",
+    "ids": [
+     "S4"
+    ],
+    "rotulo": "S4 · Delgadillo se desmarca de Lemus y gestiona agua municipal",
+    "dif_mc_vs_s1": 4.4,
+    "mc_a": 36.7,
+    "igual_que_ciudad": true
+   },
+   "peor": {
+    "id": "S11",
+    "ids": [
+     "S11"
+    ],
+    "rotulo": "S11 · Peor caso",
+    "dif_mc_vs_s1": -5.2,
+    "mc_a": 27.1,
+    "igual_que_ciudad": true
+   },
+   "lineas": [
+    {
+     "rotulo": "Alcaldía · S1 · Inercia (central)",
+     "texto": "Coalición de Morena 51.7 %, MC 32.3 %, Coalición PAN-PRI 15.7 %. Coalición de Morena va primero y le saca 19.4 pp a MC.",
+     "boleta": "ayun",
+     "escenario": "S1"
+    },
+    {
+     "rotulo": "Alcaldía · S0 · sin la crisis de octubre (referencia, no posible hoy)",
+     "texto": "Coalición de Morena 51.2 %, MC 33.3 %, Coalición PAN-PRI 15.6 %. Coalición de Morena va primero y le saca 17.9 pp a MC.",
+     "boleta": "ayun",
+     "escenario": "S0"
+    },
+    {
+     "rotulo": "Dip. local · S1 · Inercia (central)",
+     "texto": "Coalición de Morena 55.3 %, MC 25.2 %, Coalición PAN-PRI 19.0 %. Coalición de Morena va primero y le saca 30.1 pp a MC. MC tiene 7.1 pp menos que en la alcaldía; en S0 la diferencia ya era de 4.8 pp.",
+     "boleta": "dip",
+     "escenario": "S1"
+    },
+    {
+     "rotulo": "Dip. federal (preliminar) · S1 · Inercia (central)",
+     "texto": "Coalición de Morena 50.9 %, MC 26.1 %, Coalición PAN-PRI 22.7 %. Coalición de Morena va primero y le saca 24.8 pp a MC.",
+     "boleta": "fed",
+     "escenario": "S1"
+    },
+    {
+     "rotulo": "Alcaldía · entre escenarios, frente a S1 · Inercia (central)",
+     "boleta": "ayun",
+     "texto": "Lo que más ayuda a MC aquí: S4 · Delgadillo se desmarca de Lemus y gestiona agua municipal; MC pasaría de 32.3 % a 36.7 % (+4.4 pp). Lo que más le resta: S11 · Peor caso; MC pasaría de 32.3 % a 27.1 % (−5.2 pp)."
+    }
+   ],
+   "simulacion": {
+    "dictamen": "D11-C8 · zona fuerte de la coalición de Morena · 30 secciones · lista nominal 39,419 · baja escolaridad · exposición al agua 35/100. Alcaldía · S1 · Inercia (central): Coalición de Morena 51.7 %, MC 32.3 %, Coalición PAN-PRI 15.7 %. Coalición de Morena va primero y le saca 19.4 pp a MC. Alcaldía · S0 · sin la crisis de octubre (referencia, no posible hoy): Coalición de Morena 51.2 %, MC 33.3 %, Coalición PAN-PRI 15.6 %. Coalición de Morena va primero y le saca 17.9 pp a MC. Dip. local · S1 · Inercia (central): Coalición de Morena 55.3 %, MC 25.2 %, Coalición PAN-PRI 19.0 %. Coalición de Morena va primero y le saca 30.1 pp a MC. MC tiene 7.1 pp menos que en la alcaldía; en S0 la diferencia ya era de 4.8 pp. Dip. federal (preliminar) · S1 · Inercia (central): Coalición de Morena 50.9 %, MC 26.1 %, Coalición PAN-PRI 22.7 %. Coalición de Morena va primero y le saca 24.8 pp a MC. Alcaldía · entre escenarios, frente a S1 · Inercia (central): Lo que más ayuda a MC aquí: S4 · Delgadillo se desmarca de Lemus y gestiona agua municipal; MC pasaría de 32.3 % a 36.7 % (+4.4 pp). Lo que más le resta: S11 · Peor caso; MC pasaría de 32.3 % a 27.1 % (−5.2 pp)."
+   }
+  },
+  {
+   "cluster": "D13-C1",
+   "dl": "13",
+   "distrito": "D13*",
+   "n_secciones": 12,
+   "lista_nominal": 22284,
+   "escolaridad": "escolaridad media",
+   "agua": 48,
+   "rol": "zona competida",
+   "rol_clave": "competida",
+   "margen_s0": 1.3,
+   "margen_s1": 0.2,
+   "mc_a_s0": 41.4,
+   "mor_a_s0": 40.1,
+   "mc_a_s1": 40.6,
+   "mor_a_s1": 40.4,
+   "mc_d_s0": 36.1,
+   "mor_d_s0": 40.1,
+   "mc_d_s1": 32.7,
+   "mor_d_s1": 42.0,
+   "mc_f_s1": 28.7,
+   "mor_f_s1": 37.7,
+   "pp_a_s0": 18.4,
+   "pp_a_s1": 18.6,
+   "pp_d_s0": 23.7,
+   "pp_d_s1": 24.8,
+   "pp_f_s1": 33.4,
+   "brecha_alc_dip_s0": 5.3,
+   "brecha_alc_dip_s1": 7.9,
+   "mejor": {
+    "id": "S4",
+    "ids": [
+     "S4"
+    ],
+    "rotulo": "S4 · Delgadillo se desmarca de Lemus y gestiona agua municipal",
+    "dif_mc_vs_s1": 4.6,
+    "mc_a": 45.2,
+    "igual_que_ciudad": true
+   },
+   "peor": {
+    "id": "S11",
+    "ids": [
+     "S11"
+    ],
+    "rotulo": "S11 · Peor caso",
+    "dif_mc_vs_s1": -4.9,
+    "mc_a": 35.7,
+    "igual_que_ciudad": true
+   },
+   "lineas": [
+    {
+     "rotulo": "Alcaldía · S1 · Inercia (central)",
+     "texto": "MC 40.6 %, Coalición de Morena 40.4 %, Coalición PAN-PRI 18.6 %. Parejo: diferencia 0.2 puntos entre MC y Coalición de Morena.",
+     "boleta": "ayun",
+     "escenario": "S1"
+    },
+    {
+     "rotulo": "Alcaldía · S0 · sin la crisis de octubre (referencia, no posible hoy)",
+     "texto": "MC 41.4 %, Coalición de Morena 40.1 %, Coalición PAN-PRI 18.4 %. Parejo: diferencia 1.3 puntos entre MC y Coalición de Morena.",
+     "boleta": "ayun",
+     "escenario": "S0"
+    },
+    {
+     "rotulo": "Dip. local · S1 · Inercia (central)",
+     "texto": "Coalición de Morena 42.0 %, MC 32.7 %, Coalición PAN-PRI 24.8 %. Coalición de Morena va primero y le saca 9.3 pp a MC. MC tiene 7.9 pp menos que en la alcaldía; en S0 la diferencia ya era de 5.3 pp.",
+     "boleta": "dip",
+     "escenario": "S1"
+    },
+    {
+     "rotulo": "Dip. federal (preliminar) · S1 · Inercia (central)",
+     "texto": "Coalición de Morena 37.7 %, Coalición PAN-PRI 33.4 %, MC 28.7 %. Parejo: diferencia 4.3 puntos entre Coalición de Morena y Coalición PAN-PRI.",
+     "boleta": "fed",
+     "escenario": "S1"
+    },
+    {
+     "rotulo": "Alcaldía · entre escenarios, frente a S1 · Inercia (central)",
+     "boleta": "ayun",
+     "texto": "Lo que más ayuda a MC aquí: S4 · Delgadillo se desmarca de Lemus y gestiona agua municipal; MC pasaría de 40.6 % a 45.2 % (+4.6 pp). Lo que más le resta: S11 · Peor caso; MC pasaría de 40.6 % a 35.7 % (−4.9 pp)."
+    }
+   ],
+   "simulacion": {
+    "dictamen": "D13-C1 · zona competida · 12 secciones · lista nominal 22,284 · escolaridad media · exposición al agua 48/100. Alcaldía · S1 · Inercia (central): MC 40.6 %, Coalición de Morena 40.4 %, Coalición PAN-PRI 18.6 %. Parejo: diferencia 0.2 puntos entre MC y Coalición de Morena. Alcaldía · S0 · sin la crisis de octubre (referencia, no posible hoy): MC 41.4 %, Coalición de Morena 40.1 %, Coalición PAN-PRI 18.4 %. Parejo: diferencia 1.3 puntos entre MC y Coalición de Morena. Dip. local · S1 · Inercia (central): Coalición de Morena 42.0 %, MC 32.7 %, Coalición PAN-PRI 24.8 %. Coalición de Morena va primero y le saca 9.3 pp a MC. MC tiene 7.9 pp menos que en la alcaldía; en S0 la diferencia ya era de 5.3 pp. Dip. federal (preliminar) · S1 · Inercia (central): Coalición de Morena 37.7 %, Coalición PAN-PRI 33.4 %, MC 28.7 %. Parejo: diferencia 4.3 puntos entre Coalición de Morena y Coalición PAN-PRI. Alcaldía · entre escenarios, frente a S1 · Inercia (central): Lo que más ayuda a MC aquí: S4 · Delgadillo se desmarca de Lemus y gestiona agua municipal; MC pasaría de 40.6 % a 45.2 % (+4.6 pp). Lo que más le resta: S11 · Peor caso; MC pasaría de 40.6 % a 35.7 % (−4.9 pp)."
+   }
+  },
+  {
+   "cluster": "D13-C2",
+   "dl": "13",
+   "distrito": "D13*",
+   "n_secciones": 23,
+   "lista_nominal": 30894,
+   "escolaridad": "baja escolaridad",
+   "agua": 59,
+   "rol": "zona fuerte de la coalición de Morena",
+   "rol_clave": "morena",
+   "margen_s0": -12.9,
+   "margen_s1": -15.7,
+   "mc_a_s0": 36.3,
+   "mor_a_s0": 49.2,
+   "mc_a_s1": 34.5,
+   "mor_a_s1": 50.2,
+   "mc_d_s0": 32.5,
+   "mor_d_s0": 50.4,
+   "mc_d_s1": 28.2,
+   "mor_d_s1": 53.2,
+   "mc_f_s1": 27.7,
+   "mor_f_s1": 49.7,
+   "pp_a_s0": 14.6,
+   "pp_a_s1": 14.9,
+   "pp_d_s0": 17.2,
+   "pp_d_s1": 18.2,
+   "pp_f_s1": 22.3,
+   "brecha_alc_dip_s0": 3.8,
+   "brecha_alc_dip_s1": 6.3,
+   "mejor": {
+    "id": "S4",
+    "ids": [
+     "S4"
+    ],
+    "rotulo": "S4 · Delgadillo se desmarca de Lemus y gestiona agua municipal",
+    "dif_mc_vs_s1": 4.6,
+    "mc_a": 39.1,
+    "igual_que_ciudad": true
+   },
+   "peor": {
+    "id": "S11",
+    "ids": [
+     "S11"
+    ],
+    "rotulo": "S11 · Peor caso",
+    "dif_mc_vs_s1": -5.8,
+    "mc_a": 28.7,
+    "igual_que_ciudad": true
+   },
+   "lineas": [
+    {
+     "rotulo": "Alcaldía · S1 · Inercia (central)",
+     "texto": "Coalición de Morena 50.2 %, MC 34.5 %, Coalición PAN-PRI 14.9 %. Coalición de Morena va primero y le saca 15.7 pp a MC.",
+     "boleta": "ayun",
+     "escenario": "S1"
+    },
+    {
+     "rotulo": "Alcaldía · S0 · sin la crisis de octubre (referencia, no posible hoy)",
+     "texto": "Coalición de Morena 49.2 %, MC 36.3 %, Coalición PAN-PRI 14.6 %. Coalición de Morena va primero y le saca 12.9 pp a MC.",
+     "boleta": "ayun",
+     "escenario": "S0"
+    },
+    {
+     "rotulo": "Dip. local · S1 · Inercia (central)",
+     "texto": "Coalición de Morena 53.2 %, MC 28.2 %, Coalición PAN-PRI 18.2 %. Coalición de Morena va primero y le saca 25.0 pp a MC. MC tiene 6.3 pp menos que en la alcaldía; en S0 la diferencia ya era de 3.8 pp.",
+     "boleta": "dip",
+     "escenario": "S1"
+    },
+    {
+     "rotulo": "Dip. federal (preliminar) · S1 · Inercia (central)",
+     "texto": "Coalición de Morena 49.7 %, MC 27.7 %, Coalición PAN-PRI 22.3 %. Coalición de Morena va primero y le saca 22.0 pp a MC.",
+     "boleta": "fed",
+     "escenario": "S1"
+    },
+    {
+     "rotulo": "Alcaldía · entre escenarios, frente a S1 · Inercia (central)",
+     "boleta": "ayun",
+     "texto": "Lo que más ayuda a MC aquí: S4 · Delgadillo se desmarca de Lemus y gestiona agua municipal; MC pasaría de 34.5 % a 39.1 % (+4.6 pp). Lo que más le resta: S11 · Peor caso; MC pasaría de 34.5 % a 28.7 % (−5.8 pp)."
+    }
+   ],
+   "simulacion": {
+    "dictamen": "D13-C2 · zona fuerte de la coalición de Morena · 23 secciones · lista nominal 30,894 · baja escolaridad · exposición al agua 59/100. Alcaldía · S1 · Inercia (central): Coalición de Morena 50.2 %, MC 34.5 %, Coalición PAN-PRI 14.9 %. Coalición de Morena va primero y le saca 15.7 pp a MC. Alcaldía · S0 · sin la crisis de octubre (referencia, no posible hoy): Coalición de Morena 49.2 %, MC 36.3 %, Coalición PAN-PRI 14.6 %. Coalición de Morena va primero y le saca 12.9 pp a MC. Dip. local · S1 · Inercia (central): Coalición de Morena 53.2 %, MC 28.2 %, Coalición PAN-PRI 18.2 %. Coalición de Morena va primero y le saca 25.0 pp a MC. MC tiene 6.3 pp menos que en la alcaldía; en S0 la diferencia ya era de 3.8 pp. Dip. federal (preliminar) · S1 · Inercia (central): Coalición de Morena 49.7 %, MC 27.7 %, Coalición PAN-PRI 22.3 %. Coalición de Morena va primero y le saca 22.0 pp a MC. Alcaldía · entre escenarios, frente a S1 · Inercia (central): Lo que más ayuda a MC aquí: S4 · Delgadillo se desmarca de Lemus y gestiona agua municipal; MC pasaría de 34.5 % a 39.1 % (+4.6 pp). Lo que más le resta: S11 · Peor caso; MC pasaría de 34.5 % a 28.7 % (−5.8 pp)."
+   }
+  },
+  {
+   "cluster": "D13-C3",
+   "dl": "13",
+   "distrito": "D13*",
+   "n_secciones": 38,
+   "lista_nominal": 70123,
+   "escolaridad": "baja escolaridad",
+   "agua": 57,
+   "rol": "zona fuerte de la coalición de Morena",
+   "rol_clave": "morena",
+   "margen_s0": -27.7,
+   "margen_s1": -30.0,
+   "mc_a_s0": 29.1,
+   "mor_a_s0": 56.8,
+   "mc_a_s1": 27.7,
+   "mor_a_s1": 57.7,
+   "mc_d_s0": 26.3,
+   "mor_d_s0": 57.4,
+   "mc_d_s1": 22.4,
+   "mor_d_s1": 60.3,
+   "mc_f_s1": 22.6,
+   "mor_f_s1": 57.1,
+   "pp_a_s0": 14.1,
+   "pp_a_s1": 14.3,
+   "pp_d_s0": 16.2,
+   "pp_d_s1": 17.0,
+   "pp_f_s1": 20.1,
+   "brecha_alc_dip_s0": 2.8,
+   "brecha_alc_dip_s1": 5.3,
+   "mejor": {
+    "id": "S4",
+    "ids": [
+     "S4"
+    ],
+    "rotulo": "S4 · Delgadillo se desmarca de Lemus y gestiona agua municipal",
+    "dif_mc_vs_s1": 4.5,
+    "mc_a": 32.2,
+    "igual_que_ciudad": true
+   },
+   "peor": {
+    "id": "S11",
+    "ids": [
+     "S11"
+    ],
+    "rotulo": "S11 · Peor caso",
+    "dif_mc_vs_s1": -5.8,
+    "mc_a": 21.9,
+    "igual_que_ciudad": true
+   },
+   "lineas": [
+    {
+     "rotulo": "Alcaldía · S1 · Inercia (central)",
+     "texto": "Coalición de Morena 57.7 %, MC 27.7 %, Coalición PAN-PRI 14.3 %. Coalición de Morena va primero y le saca 30.0 pp a MC.",
+     "boleta": "ayun",
+     "escenario": "S1"
+    },
+    {
+     "rotulo": "Alcaldía · S0 · sin la crisis de octubre (referencia, no posible hoy)",
+     "texto": "Coalición de Morena 56.8 %, MC 29.1 %, Coalición PAN-PRI 14.1 %. Coalición de Morena va primero y le saca 27.7 pp a MC.",
+     "boleta": "ayun",
+     "escenario": "S0"
+    },
+    {
+     "rotulo": "Dip. local · S1 · Inercia (central)",
+     "texto": "Coalición de Morena 60.3 %, MC 22.4 %, Coalición PAN-PRI 17.0 %. Coalición de Morena va primero y le saca 37.9 pp a MC. MC tiene 5.3 pp menos que en la alcaldía; en S0 la diferencia ya era de 2.8 pp.",
+     "boleta": "dip",
+     "escenario": "S1"
+    },
+    {
+     "rotulo": "Dip. federal (preliminar) · S1 · Inercia (central)",
+     "texto": "Coalición de Morena 57.1 %, MC 22.6 %, Coalición PAN-PRI 20.1 %. Coalición de Morena va primero y le saca 34.5 pp a MC.",
+     "boleta": "fed",
+     "escenario": "S1"
+    },
+    {
+     "rotulo": "Alcaldía · entre escenarios, frente a S1 · Inercia (central)",
+     "boleta": "ayun",
+     "texto": "Lo que más ayuda a MC aquí: S4 · Delgadillo se desmarca de Lemus y gestiona agua municipal; MC pasaría de 27.7 % a 32.2 % (+4.5 pp). Lo que más le resta: S11 · Peor caso; MC pasaría de 27.7 % a 21.9 % (−5.8 pp)."
+    }
+   ],
+   "simulacion": {
+    "dictamen": "D13-C3 · zona fuerte de la coalición de Morena · 38 secciones · lista nominal 70,123 · baja escolaridad · exposición al agua 57/100. Alcaldía · S1 · Inercia (central): Coalición de Morena 57.7 %, MC 27.7 %, Coalición PAN-PRI 14.3 %. Coalición de Morena va primero y le saca 30.0 pp a MC. Alcaldía · S0 · sin la crisis de octubre (referencia, no posible hoy): Coalición de Morena 56.8 %, MC 29.1 %, Coalición PAN-PRI 14.1 %. Coalición de Morena va primero y le saca 27.7 pp a MC. Dip. local · S1 · Inercia (central): Coalición de Morena 60.3 %, MC 22.4 %, Coalición PAN-PRI 17.0 %. Coalición de Morena va primero y le saca 37.9 pp a MC. MC tiene 5.3 pp menos que en la alcaldía; en S0 la diferencia ya era de 2.8 pp. Dip. federal (preliminar) · S1 · Inercia (central): Coalición de Morena 57.1 %, MC 22.6 %, Coalición PAN-PRI 20.1 %. Coalición de Morena va primero y le saca 34.5 pp a MC. Alcaldía · entre escenarios, frente a S1 · Inercia (central): Lo que más ayuda a MC aquí: S4 · Delgadillo se desmarca de Lemus y gestiona agua municipal; MC pasaría de 27.7 % a 32.2 % (+4.5 pp). Lo que más le resta: S11 · Peor caso; MC pasaría de 27.7 % a 21.9 % (−5.8 pp)."
+   }
+  }
+ ],
+ "resumen_estatal": "Datos al 3-nov-2026. Alcaldía (elección de ayuntamiento), S1 · Inercia (central), toda Guadalajara: Empate técnico (Coalición de Morena 55.9 % · MC 44.1 % de las corridas · nadie llega a 60 %). Voto: MC 40.0 % (entre 32.0 y 47.5) frente a la coalición de Morena 41.7 % (entre 34.2 y 49.1); margen de MC −1.8 pp (entre −17.1 y 13.4). Los rangos son de 8 de cada 10 corridas. En S0 · sin la crisis de octubre (referencia, no posible hoy), MC iba por delante en 49.1 % de las corridas. De los 17 escenarios (sin contar S0), MC queda mejor en S4 · Delgadillo se desmarca de Lemus y gestiona agua municipal (por delante en 68.3 % de las corridas) y peor en S11 · Peor caso (15.8 % de las corridas). Dip. local, voto sumado de los 4 distritos (no elige a nadie), S1: MC 32.5 %. MC tiene 7.5 pp menos que en la alcaldía; en S0 la diferencia ya era de 5.0 pp. Dip. federal (preliminar), también sumada, S1: MC 28.0 %.",
+ "sintesis": {
+  "rotulo": "ALCALDÍA · S1 · toda Guadalajara",
+  "veredicto": "Empate técnico",
+  "resumen_estatal": "Datos al 3-nov-2026. Alcaldía (elección de ayuntamiento), S1 · Inercia (central), toda Guadalajara: Empate técnico (Coalición de Morena 55.9 % · MC 44.1 % de las corridas · nadie llega a 60 %). Voto: MC 40.0 % (entre 32.0 y 47.5) frente a la coalición de Morena 41.7 % (entre 34.2 y 49.1); margen de MC −1.8 pp (entre −17.1 y 13.4). Los rangos son de 8 de cada 10 corridas. En S0 · sin la crisis de octubre (referencia, no posible hoy), MC iba por delante en 49.1 % de las corridas. De los 17 escenarios (sin contar S0), MC queda mejor en S4 · Delgadillo se desmarca de Lemus y gestiona agua municipal (por delante en 68.3 % de las corridas) y peor en S11 · Peor caso (15.8 % de las corridas). Dip. local, voto sumado de los 4 distritos (no elige a nadie), S1: MC 32.5 %. MC tiene 7.5 pp menos que en la alcaldía; en S0 la diferencia ya era de 5.0 pp. Dip. federal (preliminar), también sumada, S1: MC 28.0 %.",
+  "escenario_ganador_mc": "S4 · Delgadillo se desmarca de Lemus y gestiona agua municipal",
+  "donde_concentrar": "Las zonas más cerradas de la alcaldía en S1 · Inercia (central) son D13-C1 (parejo: diferencia 0.2 puntos entre MC y Coalición de Morena; lista nominal 22,284), D11-C2 (parejo: diferencia 0.7 puntos entre Coalición de Morena y MC; lista nominal 40,483) y D8-C8 (parejo: diferencia 3.9 puntos entre Coalición de Morena y MC; lista nominal 37,620). En total hay 8 zonas competidas (menos de 8 pp entre MC y la coalición de Morena en S1), con 317,515 electores en lista nominal, el 25.8 % de la ciudad. Con el margen de S0 serían 10: entrarían D9-C3 y D11-C5.",
+  "pan_pri_por_zona": "La coalición PAN-PRI por zona en S1 · Inercia (central), de las 28 zonas: en la alcaldía, primera en ninguna y segunda en 2 (D8-C1 y D8-C2); en la Dip. local, primera en ninguna y segunda en 3 (D8-C1, D8-C2 y D8-C7); en la Dip. federal (preliminar), primera en 7 (D8-C1, D8-C2, D8-C3, D8-C4, D8-C7, D9-C1 y D11-C1) y segunda en 9 (D8-C5, D8-C8, D9-C2, D9-C6, D11-C3, D11-C4, D11-C5, D11-C7 y D13-C1). En el resto va tercera. En la Dip. federal (preliminar) empata a un decimal con otro bloque en D9-C3. Donde va primera o segunda, el renglón de la zona da las distancias entre los tres bloques.",
+  "riesgo_principal": "S11 · Peor caso (protesta, crisis sanitaria, ola nacional y sin escudo): MC por delante en 15.8 % de las corridas, la cifra más baja de los 17 escenarios. Lo que más mueve el margen de la alcaldía en S1 · Inercia (central) es, sobre todo, el punto de partida (lo que dicen las encuestas frente al modelo); mucho menos, la magnitud del castigo por agua y el escudo de Delgadillo.",
+  "nota_gestion": "Frente a S0 · sin la crisis de octubre (referencia, no posible hoy), MC solo mejora en la alcaldía en 4 de los 17 escenarios: S4 · Delgadillo se desmarca de Lemus y gestiona agua municipal (+3.2 pp vs S0), S16 · Delgadillo capitaliza el pacto (+2.7 pp vs S0), S9 · Cierre de filas (+1.0 pp vs S0) y S7 · El agua mejora antes (+0.7 pp vs S0). Los cambios «vs S0» se calculan corrida por corrida y se toma la mediana; por eso pueden diferir hasta 0.6 pp de restar los porcentajes de MC de los dos escenarios.",
+  "confianza_global": "media-baja",
+  "palanca": "La palanca que más ayuda a MC en la alcaldía es la de S4 · Delgadillo se desmarca de Lemus y gestiona agua municipal. Qué supone: «La alcaldesa rompe el silencio, separa su responsabilidad de la del estado y el SIAPA y gestiona agua municipal (pipas, tinacos, filtros).» Por edad y género, en S1 · Inercia (central) quienes más se alejan de MC en la alcaldía son hombres de 18-24 años (−1.4 pp vs S0) y hombres de 25-29 años (−1.3 pp vs S0).",
+  "escenario_favorable": "S4 · Delgadillo se desmarca de Lemus y gestiona agua municipal. Toda Guadalajara, alcaldía: MC 44.4 % frente a la coalición de Morena 39.0 % (MC +3.2 pp vs S0); MC por delante en 68.3 % de las corridas. Es lo que más ayuda a MC en las 28 zonas: frente a S1 · Inercia (central), MC sube entre 3.2 y 5.0 pp según la zona.",
+  "escenario_riesgo": "S11 · Peor caso (protesta, crisis sanitaria, ola nacional y sin escudo). Toda Guadalajara, alcaldía: MC 34.5 % frente a la coalición de Morena 47.2 % (MC −5.9 pp vs S0); MC por delante en 15.8 % de las corridas. Es lo que más le resta a MC en 27 de las 28 zonas: frente a S1 · Inercia (central), MC baja entre 4.2 y 6.8 pp según la zona; en D8-C1 le resta más S8 · Castigo por abstención.",
+  "supuestos": [
+   "Escudo de Delgadillo en S1 · Inercia (central): en la mediana, 45 % del castigo al gobierno estatal no llega a la boleta de la alcaldía (en 8 de cada 10 corridas, entre 25 y 65 %).",
+   "Quien deja a MC se va sobre todo a la abstención (50 %); luego, a la coalición de Morena (25 %), al PAN (12 %), a otros partidos o al voto nulo (10 %) y al PRI (3 %). Es el reparto de partida del motor y cambia con la escolaridad de cada sección.",
+   "Cada zona es un grupo fijo de secciones parecidas dentro de un mismo distrito local (28 zonas en total); sus secciones no cambian de un escenario a otro.",
+   "Por zona, el motor publica solo medianas: la de MC, la de la coalición de Morena y la de la coalición PAN-PRI. No hay rango de las corridas; por eso «va primero» y «le saca» comparan medianas y no dicen qué tan seguro es ese orden."
+  ],
+  "critica": "(1) El punto de partida es incierto. Las 5 referencias con que se fija (1 patrón histórico, 1 modelo propio y 3 encuestas previas) no coinciden: según cuál se tome, el margen de MC en la alcaldía cambiaría entre −20.2 pp y +7.3 pp respecto del resultado oficial de 2024, cuando MC le sacó 4.1 pp a la coalición de Morena. La dispersión entre ellas (desviación típica, ponderada por el peso de cada una) es de 11.4 pp. Después de la marcha del 11-oct-2026 se levantaron 4 encuestas de la alcaldía con cifras: LaEncuesta.mx, del 16 al 18-oct-2026; XtrategiaGDL para Grupo Reforma (MURAL), del 19 al 25-oct-2026, pendiente de cotejar con el original; Rubrum, el 28-oct-2026; y GobernArte, del 25 al 30-oct-2026. Sirven de contraste: el punto de partida de la alcaldía no se fija con ellas (sus encuestas de referencia son anteriores a la marcha). (2) Cuánto pesa cada factor (agua, represión, ola nacional y los demás) no se midió en Guadalajara: se calibró con metas declaradas, apoyadas en otros casos (Monterrey, Bogotá, Cole et al., Chong et al.). (3) La exposición al agua de cada sección es una estimación propia. (4) El escudo de Delgadillo es un supuesto con rango, no una medición; entre los supuestos del motor es el 3.º que más mueve el margen de la alcaldía en S1 · Inercia (central).",
+  "ajuste": "Para reducir la incertidumbre convendría medir con encuesta en Guadalajara a quién se culpa por el agua (gobierno del estado o municipio) y cuál es la segunda preferencia de quienes hoy votan por MC, y seguir la aprobación de Delgadillo después del 11-oct-2026."
+ },
+ "_meta": {
+  "motor": "v8.1",
+  "formato": "por zona (cluster)",
+  "esquema_version": 3,
+  "generado_por": "scripts/09_corridas.py",
+  "escenarios": [
+   "S0",
+   "S1",
+   "S2",
+   "S3",
+   "S4",
+   "S5",
+   "S6",
+   "S7",
+   "S8",
+   "S9",
+   "S10",
+   "S11",
+   "S12",
+   "S13",
+   "S14",
+   "S15",
+   "S16",
+   "S17"
+  ],
+  "datos_al": "Datos al 3-nov-2026",
+  "boleta": "ayun",
+  "escenario_central": "S1",
+  "escenario_referencia": "S0",
+  "rotulo": "Alcaldía · S1 · Inercia (central) · por zona; se compara con S0, con la Dip. local y con la Dip. federal (preliminar)",
+  "federal_preliminar": true,
+  "no_sigue": "Esta lectura es fija: no cambia con la boleta ni con el escenario elegidos; el distrito sí filtra (campo dl).",
+  "orden": "numérico por distrito y por zona (D8, D9, D11, D13)",
+  "rol_criterio": "Distancia en la alcaldía, en S1 · Inercia (central), entre MC y el otro bloque con más votos de la zona (la coalición de Morena en 26 zonas; la coalición PAN-PRI en D8-C1 y D8-C2): MC 8 pp o más arriba = «zona fuerte de MC»; menos de 8 pp de diferencia = «zona competida»; la coalición de Morena 8 pp o más arriba de MC = «zona fuerte de la coalición de Morena». Comparando solo con la coalición de Morena (margen_s1) saldrían los mismos 28 rótulos.",
+  "rol_escenario": "S1",
+  "rol_supuesto": "Supuesto revocable (lo decide el propietario): el rótulo de cada zona se fija con el margen de S1. Con el de S0 cambiarían 2 zonas (están en rol_distinto_con_s0). Para cambiarlo: ROL_ESC en scripts/09_corridas.py y regenerar.",
+  "rol_umbral_pp": 8.0,
+  "parejo_zona_pp": 5.0,
+  "rol_conteo": {
+   "zona fuerte de MC": {
+    "zonas": 7,
+    "lista_nominal": 271324
+   },
+   "zona competida": {
+    "zonas": 8,
+    "lista_nominal": 317515
+   },
+   "zona fuerte de la coalición de Morena": {
+    "zonas": 13,
+    "lista_nominal": 641232
+   }
+  },
+  "rol_distinto_con_s0": {
+   "D9-C3": "zona competida",
+   "D11-C5": "zona competida"
+  },
+  "mejor_peor_criterio": "Cambio del voto de MC en la alcaldía frente a S1, como diferencia de las medianas que publica sim_v8.json por zona. Los empates a un decimal se nombran todos.",
+  "cambio_vs_s0_criterio": "Los cambios «vs S0» de toda la ciudad (escenario favorable, escenario de riesgo, nota de gestión y los de edad y género) son la mediana del cambio corrida a corrida que publica el motor. No son la resta de las dos medianas: hoy difieren de ella hasta 0.6 pp. Por zona el motor solo publica medianas, así que ahí el cambio frente a S1 sí es la resta de dos medianas.",
+  "margen_criterio": "margen_s0 y margen_s1 son MC menos la coalición de Morena en la alcaldía, con las medianas por zona de sim_v8.json. El motor también publica la coalición PAN-PRI por zona (campos pp_*): cada renglón ordena los tres bloques y dice quién va primero y por cuánto.",
+  "pan_pri_por_zona": {
+   "publicado_en": [
+    "ayun",
+    "dip",
+    "fed"
+   ],
+   "escenario": "S1",
+   "criterio": "Puesto de la coalición PAN-PRI entre los bloques que el motor publica por zona (medianas a un decimal), en S1. Si empata con otro bloque se cuenta detrás de él; esas zonas están además en «empates».",
+   "ayun": {
+    "primero": [],
+    "segundo": [
+     "D8-C1",
+     "D8-C2"
+    ],
+    "tercero": [
+     "D8-C3",
+     "D8-C4",
+     "D8-C5",
+     "D8-C6",
+     "D8-C7",
+     "D8-C8",
+     "D8-C9",
+     "D9-C1",
+     "D9-C2",
+     "D9-C3",
+     "D9-C4",
+     "D9-C5",
+     "D9-C6",
+     "D9-C7",
+     "D9-C8",
+     "D11-C1",
+     "D11-C2",
+     "D11-C3",
+     "D11-C4",
+     "D11-C5",
+     "D11-C6",
+     "D11-C7",
+     "D11-C8",
+     "D13-C1",
+     "D13-C2",
+     "D13-C3"
+    ],
+    "empates": []
+   },
+   "dip": {
+    "primero": [],
+    "segundo": [
+     "D8-C1",
+     "D8-C2",
+     "D8-C7"
+    ],
+    "tercero": [
+     "D8-C3",
+     "D8-C4",
+     "D8-C5",
+     "D8-C6",
+     "D8-C8",
+     "D8-C9",
+     "D9-C1",
+     "D9-C2",
+     "D9-C3",
+     "D9-C4",
+     "D9-C5",
+     "D9-C6",
+     "D9-C7",
+     "D9-C8",
+     "D11-C1",
+     "D11-C2",
+     "D11-C3",
+     "D11-C4",
+     "D11-C5",
+     "D11-C6",
+     "D11-C7",
+     "D11-C8",
+     "D13-C1",
+     "D13-C2",
+     "D13-C3"
+    ],
+    "empates": []
+   },
+   "fed": {
+    "primero": [
+     "D8-C1",
+     "D8-C2",
+     "D8-C3",
+     "D8-C4",
+     "D8-C7",
+     "D9-C1",
+     "D11-C1"
+    ],
+    "segundo": [
+     "D8-C5",
+     "D8-C8",
+     "D9-C2",
+     "D9-C6",
+     "D11-C3",
+     "D11-C4",
+     "D11-C5",
+     "D11-C7",
+     "D13-C1"
+    ],
+    "tercero": [
+     "D8-C6",
+     "D8-C9",
+     "D9-C3",
+     "D9-C4",
+     "D9-C5",
+     "D9-C7",
+     "D9-C8",
+     "D11-C2",
+     "D11-C6",
+     "D11-C8",
+     "D13-C2",
+     "D13-C3"
+    ],
+    "empates": [
+     "D9-C3"
+    ]
+   }
+  },
+  "agua_criterio": "Exposición al agua de la zona, de 0 a 100: media de sus secciones ponderada por lista nominal (estimación propia). Se lee de la descripción de la zona en sim_agentes.json (la misma cifra que muestran las demás pantallas) y se comprueba con sim_v8.json: si difieren en más de 1.5, este archivo no se escribe. Una diferencia menor puede hacer que la cifra escrita no sea el redondeo de la recalculada: hoy pasa en D8-C7 (50 frente a 49.4); el detalle está en agua_difiere.",
+  "agua_difiere": [
+   {
+    "cluster": "D8-C7",
+    "descripcion": 50,
+    "recalculada": 49.4
+   }
+  ],
+  "escudo": {
+   "escenario": "S1",
+   "mediana": 45.0,
+   "desde": 25.0,
+   "hasta": 65.0,
+   "que_es": "Porcentaje del castigo al gobierno estatal que no llega a la boleta de la alcaldía. «desde» y «hasta» acotan 8 de cada 10 corridas; no son el mínimo y el máximo que prueba el motor.",
+   "fuente": "scripts/14_motor_v8.py · ESC (leído como texto, sin ejecutar el motor); el tramo de 8 de cada 10 corridas sale de la fórmula del sorteo del mismo script"
+  },
+  "encuestas_tras_marcha": {
+   "marcha": "2026-10-11",
+   "con_cifras": 4,
+   "sin_cifras": 0,
+   "criterio": "Encuestas de la alcaldía (intención por partido o careos) cuyo levantamiento terminó después de la marcha. Se unen la serie de la gráfica de evolución y el monitoreo verificado; una misma encuesta (misma casa y fechas de campo que se cruzan) se cuenta una sola vez.",
+   "lista": [
+    {
+     "casa": "LaEncuesta.mx",
+     "campo_ini": "2026-10-16",
+     "campo_fin": "2026-10-18",
+     "con_cifras": true,
+     "pendiente_de_cotejar": false,
+     "fuentes": [
+      "data/insumos/encuestas_gdl.json"
+     ]
+    },
+    {
+     "casa": "XtrategiaGDL para Grupo Reforma (MURAL)",
+     "campo_ini": "2026-10-19",
+     "campo_fin": "2026-10-25",
+     "con_cifras": true,
+     "pendiente_de_cotejar": true,
+     "fuentes": [
+      "data/insumos/encuestas_gdl.json",
+      "web/sim_dashboard.json"
+     ]
+    },
+    {
+     "casa": "Rubrum",
+     "campo_ini": "2026-10-28",
+     "campo_fin": "2026-10-28",
+     "con_cifras": true,
+     "pendiente_de_cotejar": false,
+     "fuentes": [
+      "web/sim_dashboard.json"
+     ]
+    },
+    {
+     "casa": "GobernArte",
+     "campo_ini": "2026-10-25",
+     "campo_fin": "2026-10-30",
+     "con_cifras": true,
+     "pendiente_de_cotejar": false,
+     "fuentes": [
+      "web/sim_dashboard.json"
+     ]
+    }
+   ],
+   "referencias_del_punto_de_partida": {
+    "encuestas": 3,
+    "posteriores_a_la_marcha": 0,
+    "sin_fecha_clara": 0
+   }
+  },
+  "nota_d13": "* D13: aquí solo cuenta su franja de Guadalajara (73 secciones); la cabecera del distrito está en Tlaquepaque.",
+  "comunes": [
+   "palanca",
+   "escenario_favorable",
+   "escenario_riesgo",
+   "supuestos",
+   "critica",
+   "ajuste",
+   "nota_gestion",
+   "confianza_global"
+  ],
+  "zonas_con_favorable_propio": [],
+  "zonas_con_riesgo_propio": [
+   "D8-C1"
+  ],
+  "fuentes": [
+   "web/sim_v8.json (escenarios[].alcaldia|diputacion|federal.clusters [MC, MORENA_ALIADOS y, si viene, PAN_PRI], bloques, p_gana, delta_vs_s0, segmentos, tornado; _meta)",
+   "web/sim_agentes.json (distritos[].clusters: secciones, lista nominal y descripción)",
+   "data/insumos/encuestas_gdl.json (serie de la gráfica de evolución: encuestas de la alcaldía levantadas después de la marcha)",
+   "web/sim_dashboard.json (encuestas.filas: monitoreo verificado; encuestas de la alcaldía levantadas después de la marcha)",
+   "scripts/14_motor_v8.py · ESC (leído como texto, sin ejecutar el motor); el tramo de 8 de cada 10 corridas sale de la fórmula del sorteo del mismo script"
+  ],
+  "regenerar": "Hay que volver a correr scripts/09_corridas.py después de relanzar el motor (14_motor_v8.py: de sim_v8.json salen todas las cifras, también las de la coalición PAN-PRI y las federales por zona), 23_clusters_finos.py (zonas) o 24_monitoreo.py (encuestas), y también si cambian encuestas_gdl.json, nombres.py o este script. Basta que cambie uno solo de los archivos de insumos.sha256 para que esta lectura quede vieja: se comprueba comparando cada huella con el SHA-256 del archivo vigente (insumos.sim_v8_sha256 repite la de web/sim_v8.json; insumos.generador_sha256 es la de scripts/09_corridas.py).",
+  "insumos": {
+   "sim_v8_sha256": "292e76a718e65d01ca74039926cd12fdc6f5d4b528f78ddc9b0b70b186b175b3",
+   "sim_v8_corte": "2026-11-03",
+   "sim_v8_fecha": "2026-11-18",
+   "sim_v8_semilla": 20261012,
+   "sim_v8_corridas": 1500,
+   "sha256": {
+    "data/insumos/encuestas_gdl.json": "b9551fa1737bfc669e2bdb660b6c352a2725869e8bcdc765a9d0ebbc71137d5c",
+    "scripts/14_motor_v8.py": "bc3fff1782dd837d087d1d58cbff66c38c125b628678c2b452709feebb2e0241",
+    "scripts/nombres.py": "1c819b4de8cb6fecb4ec8a2ed47718f4c4d559c88d6e3a677dbe46533a322042",
+    "web/sim_agentes.json": "29eb0c0e4c60f696f20feec71d0b93bf86e41f1e8195042c8d82523269b2f0b7",
+    "web/sim_dashboard.json": "6cd0b4d06704026363a858b9677a3906cf7dea051dcc0c129944e8627fa7487a",
+    "web/sim_v8.json": "292e76a718e65d01ca74039926cd12fdc6f5d4b528f78ddc9b0b70b186b175b3"
+   },
+   "generador_sha256": "4cc5c836c3968df520d67c6c791b85fe6a58e2c3f512c0ef5e14568f9f6d3372"
+  },
+  "esquema": {
+   "corridas[]": "Una entrada por zona, en orden numérico. Todo es de la alcaldía salvo los campos _d_, de la Dip. local, y _f_, de la Dip. federal (preliminar).",
+   "corridas[].cluster / dl / distrito": "Id de la zona («D8-C1»), número de distrito local («8») y su rótulo corto («D8», «D13*»).",
+   "corridas[].rol / rol_clave": "Rótulo de la zona según _meta.rol_criterio y su clave (mc, competida, morena).",
+   "corridas[].margen_s0 / margen_s1": "MC menos la coalición de Morena en la alcaldía, en pp, en S0 y en S1.",
+   "corridas[].mc_a_* / mor_a_*": "Voto de MC y de la coalición de Morena en la alcaldía (%), en S0 y en S1.",
+   "corridas[].mc_d_* / mor_d_* / mc_f_s1 / mor_f_s1": "Lo mismo en la Dip. local (S0 y S1) y en la Dip. federal (S1).",
+   "corridas[].pp_a_* / pp_d_* / pp_f_s1": "Voto de la coalición PAN-PRI en la zona (%), en las mismas boletas y escenarios. Solo existen si sim_v8.json lo publica por zona (_meta.pan_pri_por_zona.publicado_en).",
+   "corridas[].brecha_alc_dip_*": "Voto de MC en la alcaldía menos voto de MC en la Dip. local, en pp.",
+   "corridas[].mejor / peor": "Escenarios que más suman y más restan a MC frente a S1 (ids, rótulo, diferencia en pp, voto de MC y si coinciden con los de toda la ciudad).",
+   "corridas[].lineas[]": "La lectura de la zona en renglones {rotulo, texto, boleta, escenario}; el rótulo dice boleta y escenario, y boleta (ayun, dip, fed) y escenario (id) los repiten como claves. El renglón «entre escenarios» no lleva escenario. El texto ordena los bloques de mayor a menor y dice quién va primero y por cuánto.",
+   "corridas[].simulacion.dictamen": "La misma lectura en un solo párrafo.",
+   "corridas[].simulacion.escenario_favorable / escenario_riesgo": "Solo existen si los de la zona no son los de toda la ciudad.",
+   "sintesis": "Textos que valen para toda la ciudad; los de _meta.comunes se muestran una sola vez, no por zona.",
+   "sintesis.resumen_estatal": "Nombre heredado: es el resumen de toda Guadalajara (alcaldía). Se repite en la raíz por compatibilidad.",
+   "sintesis.pan_pri_por_zona": "En cuántas zonas, y en cuáles, la coalición PAN-PRI va primera o segunda en S1, boleta por boleta. Solo existe si sim_v8.json lo publica por zona; las listas están en _meta.pan_pri_por_zona.",
+   "_meta.rol_criterio / margen_criterio": "El rótulo mide a MC contra su rival con más votos en la alcaldía; margen_s0 y margen_s1 siguen siendo MC menos la coalición de Morena.",
+   "_meta.agua_criterio / agua_difiere": "De dónde sale la exposición al agua y en qué zonas no es el redondeo de la recalculada.",
+   "_meta.rol_supuesto / rol_distinto_con_*": "Con qué escenario se fija el rótulo de las zonas y cuáles cambiarían con el otro (S0 o S1).",
+   "_meta.cambio_vs_s0_criterio": "Por qué un cambio «vs S0» puede no coincidir con restar dos porcentajes.",
+   "_meta.encuestas_tras_marcha": "Las encuestas de la alcaldía levantadas después de la marcha que cuenta sintesis.critica, una por una.",
+   "_meta.escudo": "El escudo de Delgadillo que cita sintesis.supuestos[0]: mediana y los dos valores que acotan 8 de cada 10 corridas.",
+   "_meta.insumos / regenerar": "Huella (SHA-256) de cada archivo que se leyó (insumos.sha256) y de este script (insumos.generador_sha256), y cuándo hay que volver a generar este archivo.",
+   "cambios_version_3": "Se añaden pp_*, lineas[].boleta y lineas[].escenario, sintesis.pan_pri_por_zona, _meta.pan_pri_por_zona, _meta.agua_difiere, _meta.insumos.sha256 e insumos.generador_sha256. Los renglones nombran los tres bloques. No se quita ningún campo de la versión 2.",
+   "ya_no_existen": "Por zona: escenarios, simulacion.veredicto, simulacion.palanca, simulacion.supuestos y auditoria (pasaron a sintesis y a _meta)."
+  }
+ }
+}

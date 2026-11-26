@@ -1,0 +1,8 @@
+{
+ "corte": "2026-11-03",
+ "modelo": "2026-11-18",
+ "version_motor": "v8.1",
+ "tablero": "2026-11-24",
+ "que_es": "Datos: fecha hasta la que llegan encuestas, notas y redes (sim_v8._meta.corte). Modelo: fecha del motor v8.1 con sus grupos por sección (sim_v8._meta.fecha). Tablero: fecha en que se armó este paquete.",
+ "generador": "scripts/36_version.py"
+}
